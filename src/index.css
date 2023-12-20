@@ -46,53 +46,53 @@
 
 :root {
   --base-font-size: 16px; /* Set your base font size here */
+  --primary-color: #025464; /* Define primary color variable */
 }
 
 .heading {
   font-family: 'Merriweather-Bold';
-  font-size: 1.75rem; /* 28px / 16px = 1.75rem */
-  color: primary;
+  font-size: 1.75rem;
+  color: var(--primary-color); /* Use primary color variable */
 }
 
 .phone-heading {
   font-family: 'Merriweather-Bold';
-  font-size: 1.3125rem; /* 21px / 16px = 1.3125rem */
-  color: primary;
+  font-size: 1.3125rem;
+  color: var(--primary-color);
 }
 
 .subheading {
   font-family: 'Merriweather-Bold';
-  font-size: 1.3125rem; /* 21px / 16px = 1.3125rem */
+  font-size: 1.3125rem;
   color: black;
 }
 
 .phone-subheading {
   font-family: 'Merriweather-Bold';
-  font-size: 1rem; /* Use the corresponding rem value for your phone subheading */
+  font-size: 1rem;
   color: black;
 }
 
 .text {
   font-family: 'Amiko-Regular';
-  font-size: 1rem; /* 16px / 16px = 1rem */
+  font-size: 1rem;
   color: black;
 }
 
 .smalltext {
   font-family: 'Amiko-Regular';
-  font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+  font-size: 0.875rem;
   color: black;
 }
 
 .cardtext {
   font-family: 'Amiko-Regular';
-  font-size: 0.625rem; /* 10px / 16px = 0.625rem */
+  font-size: 0.625rem;
   color: black;
 }
 
 .herotext {
   font-family: 'Nunito-Regular';
-  font-size: 3rem; /* 48px / 16px = 3rem */
-  color: primary;
+  font-size: 3rem;
+  color: var(--primary-color); /* Use primary color variable */
 }
-

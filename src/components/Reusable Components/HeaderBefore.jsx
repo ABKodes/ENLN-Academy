@@ -67,12 +67,11 @@ const HeaderBefore = () => {
             </ul>
           </div>
           <img src="/public/header individual.png" className="h-8" />
-
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <details>
+          <ul className="menu dropdown-hover menu-dropdown menu-horizontal px-1">
+            <li className="relative">
+              <details className="z-10">
                 <summary>Parent</summary>
-                <ul className="p-2">
+                <ul className="absolute left-0 top-full p-2">
                   <li>
                     <a>Submenu 1</a>
                   </li>
@@ -81,9 +80,6 @@ const HeaderBefore = () => {
                   </li>
                 </ul>
               </details>
-            </li>
-            <li>
-              <a>Item 3</a>
             </li>
           </ul>
         </div>

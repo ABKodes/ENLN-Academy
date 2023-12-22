@@ -1,7 +1,7 @@
-import HeaderGov from "./components/Reusable Components/Header Gov";
+import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 function App() {
   return (
-    <HeaderGov/>
+    <HeaderBefore/>
   );
 }
 

@@ -36,26 +36,23 @@ const HeaderGov = () => {
             />
           </Link>
         </div>
-        <div className="navbar-center ml-20 hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              {/* <Link className="px-3 py-2 text-primary transition-all duration-300 hover:font-bold hover:underline">
-                About Us
-              </Link> */}
-              <Link className="group relative px-0 py-1 text-primary">
+        <div className="navbar-center  hidden lg:flex">
+          <div className=" menu  menu-horizontal space-x-5">
+           
+              <Link className="group relative  text-primary hover:font-bold">
                 About Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
-            </li>
-            <li>
-              <Link className="px-3 py-1 text-primary hover:font-bold">
+           
+              <Link className="group relative text-primary hover:font-bold">
                 Why Us
+                <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
-            </li>
-          </ul>
+            
+          </div>
         </div>
         <div className="navbar-end">
-          <Link className="btn mr-8 rounded-e-md border-none bg-primary px-3 py-2 text-white">
+          <Link className="btn mr-8 rounded-sm border-none bg-slate-300 px-2 py-0 text-white">
             Contact Sales
           </Link>
         </div>

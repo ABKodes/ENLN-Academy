@@ -30,7 +30,7 @@ const HeaderGov = () => {
           <Link to="/" className="">
             <img
               className="btn btn-ghost h-8"
-              src="/gov header.png"
+              src="/header gov.png"
               alt="GOV Logo"
               // Adjust dimensions as needed
             />
@@ -42,13 +42,13 @@ const HeaderGov = () => {
               {/* <Link className="px-3 py-2 text-primary transition-all duration-300 hover:font-bold hover:underline">
                 About Us
               </Link> */}
-              <Link className="group relative px-0 py-2 text-primary">
+              <Link className="group relative px-0 py-1 text-primary">
                 About Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
             </li>
             <li>
-              <Link className="px-3 py-2 text-primary hover:font-bold">
+              <Link className="px-3 py-1 text-primary hover:font-bold">
                 Why Us
               </Link>
             </li>

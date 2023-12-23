@@ -7,7 +7,7 @@ import { PiLinkedinLogoLight } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-const Footer = () => {
+const FooterOrg = () => {
   return (
     <footer className="bg-accent">
       <footer className="mx-auto w-11/12 bg-accent uppercase">
@@ -117,11 +117,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <a href="#">
-              <img
-                className="h-10"
-                src="/public/footer individual.png"
-                alt=""
-              />
+              <img className="h-10" src="/public/footer org.png" alt="" />
             </a>
 
             <p className="mt-4 text-sm text-secondary sm:mt-0">
@@ -134,4 +130,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterOrg;

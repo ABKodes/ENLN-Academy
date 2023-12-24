@@ -7,7 +7,7 @@ import { PiLinkedinLogoLight } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-const Footer = () => {
+const FooterGov = () => {
   return (
     <footer className="bg-accent">
       <footer className="mx-auto w-11/12 bg-accent uppercase">
@@ -85,7 +85,7 @@ const Footer = () => {
             <div>
               <p className="font-bold text-secondary">our socials</p>
 
-              <div className="mt-5 flex flex-col items-start space-y-2">
+              <div className="mt-5 flex flex-row md:flex-col items-start space-y-2 ">
                 <div className="grid grid-cols-3 gap-4">
                   {/* First Row */}
                   <div>
@@ -119,7 +119,7 @@ const Footer = () => {
             <a href="#">
               <img
                 className="h-10"
-                src="/public/footer individual.png"
+                src="/public/footer gov.png"
                 alt=""
               />
             </a>
@@ -134,4 +134,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterGov;

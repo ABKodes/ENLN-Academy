@@ -3,6 +3,15 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 const HeaderBefore = () => {
     const [isClicked, setIsClicked] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+      const toggleMenu = () => {
+        setIsOpen(!isOpen);
+      };
+
+      const closeMenu = () => {
+        setIsOpen(false);
+      };
 
     const handleSearchBarClick = () => {
       setIsClicked(true);
@@ -36,59 +45,76 @@ const HeaderBefore = () => {
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost lg:hidden"
+                onClick={toggleMenu}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
+                {isOpen ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#025464"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="#025464"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                )}
               </div>
-              <ul
-                tabIndex={0}
-                className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+              <div
+                className={`absolute inset-x-0  z-20 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
+                  isOpen
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-full opacity-0"
+                }`}
               >
-                <li>
-                  <a>Item 1</a>
-                </li>
-                <li>
-                  <a>Parent</a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a>Item 3</a>
-                </li>
-              </ul>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                >
+                  <li>
+                    <Link className="group relative  text-primary hover:font-bold">
+                      About Us
+                      <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="group relative text-primary hover:font-bold">
+                      Why Us
+                      <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             {/* Logo */}
             <div className="mx-4 hidden lg:block">
               <img src="/public/header individual.png" className="h-8" />
             </div>
             {/* Categories */}
-            <div className="dropdown dropdown-start dropdown-hover">
-              <div
-                tabIndex={0}
-                role="button"
-                className="button"
-              >
+            <div className="dropdown-start dropdown dropdown-hover">
+              <div tabIndex={0} role="button" className="button">
                 <div tabIndex={0} role="link" className="link m-1 no-underline">
-                Categories
-              </div>
+                  Categories
+                </div>
               </div>
               <div
                 tabIndex={0}
@@ -137,6 +163,7 @@ const HeaderBefore = () => {
           <div className="navbar-center lg:hidden">
             <img src="/public/header individual.png" className="h-8" />
           </div>
+          {/* Cart Icon, sign in and sign up button */}
           <div className="navbar-end space-x-2">
             <div className="dropdown dropdown-end dropdown-hover">
               <div
@@ -181,15 +208,16 @@ const HeaderBefore = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-outline btn-primary"
+              className="btn btn-outline btn-primary hidden lg:flex lg:items-center"
             >
               Log In
             </motion.a>
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-primary"
+              className="btn btn-primary hidden lg:flex lg:items-center"
             >
               Sign Up
             </motion.a>

@@ -91,6 +91,7 @@ const Footer = () => {
                   <div>
                     <PiInstagramLogoThin className="text-3xl text-secondary" />
                   </div>
+                  
                   <div>
                     <PiTelegramLogoThin className="text-3xl text-secondary" />
                   </div>
@@ -100,7 +101,7 @@ const Footer = () => {
 
                   {/* Second Row */}
                   <div>
-                    <RiFacebookCircleLine className="text-3xl text-secondary" />
+                    <RiFacebookCircleLine className="text-3xl text-secondary hover:bg-blue-800 hover:rounded-full" /> 
                   </div>
                   <div>
                     <PiLinkedinLogoLight className="text-3xl text-secondary" />
@@ -125,7 +126,7 @@ const Footer = () => {
             </a>
 
             <p className="mt-4 text-sm text-secondary sm:mt-0">
-              © Copyright 2021. All Rights Reserved.
+              © Copyright 2023. All Rights Reserved.
             </p>
           </div>
         </div>

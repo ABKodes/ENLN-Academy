@@ -8,10 +8,6 @@ const HeaderGov = () => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
     <>
       <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
@@ -98,21 +94,21 @@ const HeaderGov = () => {
           {/* Logo */}
           <div className="mx-4 hidden lg:block">
             <Link>
-              <img src="/public/header org.png" className="h-8" />
+              <img src="/public/header gov.png" className="h-8" />
             </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="group relative  text-lg text-primary hover:font-bold lg:text-base">
+              <Link className="group relative  text-lg text-lg text-primary hover:font-bold lg:text-base lg:text-base">
                 About Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
             </li>
-            <li></li>
+
             <li>
-              <Link className="group relative  text-lg text-primary hover:font-bold lg:text-base">
+              <Link className="group relative  text-lg text-lg text-primary hover:font-bold lg:text-base lg:text-base">
                 Why Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
@@ -121,7 +117,7 @@ const HeaderGov = () => {
         </div>
         {/* Mobile Logo */}
         <div className="navbar-center lg:hidden">
-          <img src="/public/header individual.png" className="h-8" />
+          <img src="/public/header gov.png" className="h-8" />
         </div>
         <div className="navbar-end space-x-2 lg:mr-7">
           <motion.a

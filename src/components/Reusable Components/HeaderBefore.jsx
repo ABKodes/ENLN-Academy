@@ -225,6 +225,7 @@ const HeaderBefore = () => {
           </div>
         </div>
       </div>
+      <InstagramIcon/>
     </>
   );
 };

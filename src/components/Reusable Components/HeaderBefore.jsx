@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import InstagramIcon from "./InstagramIcon";
 const HeaderBefore = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -225,7 +224,6 @@ const HeaderBefore = () => {
           </div>
         </div>
       </div>
-      <InstagramIcon/>
     </>
   );
 };

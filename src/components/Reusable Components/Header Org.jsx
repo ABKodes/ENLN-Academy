@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
- const HeaderGov = () => {
+ const HeaderOrg = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
       setIsOpen(!isOpen);
@@ -100,14 +100,14 @@ import { motion } from "framer-motion";
          <div className="navbar-center hidden lg:flex">
            <ul className="menu menu-horizontal px-1">
              <li>
-               <Link className="group relative  text-primary hover:font-bold">
+               <Link className="group relative  text-lg text-primary hover:font-bold lg:text-base">
                  About Us
                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
                </Link>
              </li>
-             <li></li>
+
              <li>
-               <Link className="group relative text-primary hover:font-bold">
+               <Link className="group relative text-lg text-primary hover:font-bold lg:text-base">
                  Why Us
                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
                </Link>
@@ -116,7 +116,7 @@ import { motion } from "framer-motion";
          </div>
          {/* Mobile Logo */}
          <div className="navbar-center lg:hidden">
-           <img src="/public/header individual.png" className="h-8" />
+           <img src="/public/header org.png" className="h-8" />
          </div>
          <div className="navbar-end space-x-2 lg:mr-7">
            <motion.a
@@ -133,4 +133,4 @@ import { motion } from "framer-motion";
      </>
    );
  };
-export default HeaderGov
+export default HeaderOrg

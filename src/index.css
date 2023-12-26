@@ -78,6 +78,11 @@
   font-size: 1rem;
   color: black;
 }
+.heroinnertext {
+  font-family: 'Amiko-Regular';
+  font-size: 1rem;
+  color: var(--primary-color);
+}
 
 .smalltext {
   font-family: 'Amiko-Regular';

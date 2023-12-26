@@ -101,14 +101,14 @@ const HeaderGov = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="group relative  text-lg text-primary hover:font-bold lg:text-base">
+              <Link className="group relative  text-lg text-lg text-primary hover:font-bold lg:text-base lg:text-base">
                 About Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
             </li>
 
             <li>
-              <Link className="group relative text-lg text-primary hover:font-bold lg:text-base">
+              <Link className="group relative  text-lg text-lg text-primary hover:font-bold lg:text-base lg:text-base">
                 Why Us
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>
@@ -130,7 +130,6 @@ const HeaderGov = () => {
           </motion.a>
         </div>
       </div>
-      ;
     </>
   );
 };

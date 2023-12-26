@@ -92,9 +92,11 @@ import { motion } from "framer-motion";
            </div>
            {/* Logo */}
            <div className="mx-4 hidden lg:block">
-             <Link>
-               <img src="/public/header org.png" className="h-8" />
-             </Link>
+             <marquee behavior="" direction="">
+               <Link>
+                 <img src="/public/header org.png" className="h-8" />
+               </Link>
+             </marquee>
            </div>
          </div>
          <div className="navbar-center hidden lg:flex">

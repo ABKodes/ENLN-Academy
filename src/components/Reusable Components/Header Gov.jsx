@@ -130,7 +130,6 @@ const HeaderGov = () => {
           </motion.a>
         </div>
       </div>
-      ;
     </>
   );
 };

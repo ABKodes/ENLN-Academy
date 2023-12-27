@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 // Header component containing navigation and hero section
 const Header = () => {
@@ -13,7 +15,7 @@ const Header = () => {
   return (
     <header className="bg-secondary">
       {/* Hero section */}
-      <div className="container mx-auto w-11/12 px-6">
+      <div className="container mx-auto w-11/12 px-6 py-8 lg:py-0">
         <div className="items-center lg:flex">
           <div className="w-full lg:w-1/2">
             <div className="lg:max-w-lg">
@@ -26,25 +28,51 @@ const Header = () => {
                 />
               </div>
               {/* Hero title */}
-              <h1 className="herotext font-bold text-primary lg:text-4xl">
-                Best place to choose <br /> your{" "}
-                <span className="text-accent ">clothes</span>
+              <h1 className="herotext font-bold text-left hidden lg:block ">
+                ENLN Academy is the place where you can <br />
               </h1>
+              <h1 className="phoneherotext font-bold text-left lg:hidden ">
+                ENLN Academy is the place where you can <br />
+              </h1>
+              <span className="text-4xl lg:text-5xl font-bold text-primary text-left">
+                <TypeAnimation
+                  sequence={[
+                    "Unlock Your Potential",
+                    2000,
+                    "Explore Vast Subjects",
+                    2000,
+                    "Connect and Learn",
+                    2000,
+                  ]}
+                  wrapper="div"
+                  speed={50}
+                  style={{
+                    fontSize: "1em",
+                    display: "inline-block",
+                    paddingLeft: "5px",
+                  }}
+                  className="py-5 text-left text-primary"
+                  repeat={Infinity}
+                />
+              </span>
 
               {/* Hero description */}
               <p className="heroinnertext mt-3 text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-                beatae error laborum ab amet sunt recusandae? Reiciendis natus
-                perspiciatis optio.
+                Unlock your potential at ENLN Academy with expert instructors,
+                interactive learning, and a supportive community.
               </p>
 
               {/* Call to action button */}
-              <button className="mt-6 w-full transform rounded-lg bg-blue-600 px-5 py-2 text-sm uppercase tracking-wider text-white transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none lg:w-auto">
-                Shop Now
-              </button>
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto "
+              >
+                Enroll Now
+              </motion.a>
             </div>
           </div>
-
           {/* Hero image */}
           <div className="mt-6 flex hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
             <img

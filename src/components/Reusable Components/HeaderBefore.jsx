@@ -36,7 +36,7 @@ const HeaderBefore = () => {
           <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
         </Link>
       </div>
-      <div className="bg-slate-300">
+      <div className="sticky top-0 z-50 bg-slate-300">
         <div className="navbar mx-auto w-11/12 ">
           <div className="navbar-start">
             {/* Mobile hamburger */}
@@ -186,7 +186,9 @@ const HeaderBefore = () => {
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
-                  <span className="badge indicator-item badge-xs lg:badge-sm badge-primary ">8</span>
+                  <span className="badge indicator-item badge-primary badge-xs lg:badge-sm ">
+                    8
+                  </span>
                 </div>
               </div>
               <div

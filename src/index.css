@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font Definitions */
 /* Amiko Bold */
 @font-face {
   font-family: 'Amiko-Bold';
@@ -44,67 +46,91 @@
   font-style: normal;
 }
 
+/* Global Variables */
 :root {
   --base-font-size: 16px; /* Set your base font size here */
   --primary-color: #025464; /* Define primary color variable */
 }
 
+/* Heading Styles for Large Screens */
 .heading {
   font-family: 'Merriweather-Bold';
   font-size: 1.75rem;
   color: var(--primary-color); /* Use primary color variable */
 }
 
+/* Heading Styles for Small Screens */
 .phone-heading {
   font-family: 'Merriweather-Bold';
   font-size: 1.3125rem;
   color: var(--primary-color);
 }
 
+/* Subheading Styles for Large Screens */
 .subheading {
   font-family: 'Merriweather-Bold';
   font-size: 1.3125rem;
   color: black;
 }
 
+/* Subheading Styles for Small Screens */
 .phone-subheading {
   font-family: 'Merriweather-Bold';
   font-size: 1rem;
   color: black;
 }
 
+/* Default Text Styles */
 .text {
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: black;
 }
+
+/* Button Text Styles */
+.buttontext {
+  font-family: 'Amiko-Regular';
+  font-size: 1rem;
+  color: white;
+}
+
+/* Outline Text Styles */
+.outlinetext {
+  font-family: 'Amiko-Regular';
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Hero Inner Text Styles */
 .heroinnertext {
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: var(--primary-color);
 }
 
+/* Small Text Styles */
 .smalltext {
   font-family: 'Amiko-Regular';
   font-size: 0.875rem;
   color: black;
 }
 
+/* Card Text Styles */
 .cardtext {
   font-family: 'Amiko-Regular';
   font-size: 0.625rem;
   color: black;
 }
 
+/* Hero Text Styles */
 .herotext {
   font-family: 'Nunito-Regular';
   font-size: 3rem;
+  color: #001014; /* Use primary color variable */
+}
+/* Phone Hero Text Styles */
+.phoneherotext {
+  font-family: 'Nunito-Regular';
+  font-size: 2rem;
   color: var(--primary-color); /* Use primary color variable */
 }
-
-
-
-
-
-
-

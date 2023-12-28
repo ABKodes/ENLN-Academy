@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { GoQuestion } from "react-icons/go";
-//import Search from "./Search";
 
 function HeaderLesson() {
   const [isClicked, setIsClicked] = useState(false);

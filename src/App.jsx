@@ -4,6 +4,7 @@ import FooterOrg from "./components/Reusable Components/FooterOrg";
 import HeaderAfter from "./components/Reusable Components/HeaderAfter";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import Hero from "./components/Home Ind/Hero"
+import Search from "./components/Reusable Components/Search";
 function App() {
   return (
     <>
@@ -11,7 +12,8 @@ function App() {
       <br />
       {/* <HeaderGov /> */}
       <br />
-      <br />
+      {/* <Search/> */}
+      {/* <br />
       <br />
       <HeaderAfter />
       <Hero />
@@ -20,7 +22,7 @@ function App() {
       <br />
       <FooterGov />
       <br />
-      <FooterOrg />
+      <FooterOrg /> */}
     </>
   );
 }

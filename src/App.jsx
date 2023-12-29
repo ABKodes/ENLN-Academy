@@ -7,6 +7,7 @@ import Hero from "./components/Home Ind/Hero";
 import VerticalCard from "./components/Reusable Components/VerticalCard";
 // import Companies from "./components/Home Ind/Companies";
 import CardDescription from "./components/Reusable Components/Card Description";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <br />
       <VerticalCard />
       <br />
-      <CardDescription />
+      <Login />
       <br />
       <br />
       {/* <HeaderAfter /> */}
@@ -26,7 +27,7 @@ function App() {
       <FooterGov />
       <br />
       <FooterOrg />
-      <HorizontalCard />
+      {/* <HorizontalCard /> */}
       {/* <Companies /> */}
     </>
   );

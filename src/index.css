@@ -57,6 +57,7 @@
   font-family: 'Merriweather-Bold';
   font-size: 1.75rem;
   color: var(--primary-color); /* Use primary color variable */
+  text-align: justify;
 }
 
 /* Heading Styles for Small Screens */
@@ -64,6 +65,7 @@
   font-family: 'Merriweather-Bold';
   font-size: 1.3125rem;
   color: var(--primary-color);
+  text-align: justify;
 }
 
 /* Subheading Styles for Large Screens */
@@ -71,6 +73,7 @@
   font-family: 'Merriweather-Bold';
   font-size: 1.3125rem;
   color: black;
+  text-align: justify;
 }
 
 /* Subheading Styles for Small Screens */
@@ -78,6 +81,7 @@
   font-family: 'Merriweather-Bold';
   font-size: 1rem;
   color: black;
+  text-align: justify;
 }
 
 /* Default Text Styles */
@@ -85,6 +89,7 @@
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: black;
+  text-align: justify;
 }
 
 /* Button Text Styles */
@@ -92,13 +97,15 @@
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: white;
+  text-align: justify;
 }
 
 /* Outline Text Styles */
-.outlinetext {
+.btnoutlinetext {
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: var(--primary-color);
+  text-align: justify;
 }
 
 /* Hero Inner Text Styles */
@@ -106,6 +113,7 @@
   font-family: 'Amiko-Regular';
   font-size: 1rem;
   color: var(--primary-color);
+  text-align: justify;
 }
 
 /* Small Text Styles */
@@ -113,13 +121,22 @@
   font-family: 'Amiko-Regular';
   font-size: 0.875rem;
   color: black;
+  text-align: justify;
 }
 
 /* Card Text Styles */
 .cardtext {
   font-family: 'Amiko-Regular';
-  font-size: 0.625rem;
+  font-size: 0.75rem;
   color: black;
+  text-align: justify;
+}
+/* Rating Card Text Styles */
+.ratingcardtext {
+  font-family: 'Amiko-Regular';
+  font-size: 0.75rem;
+  color: var(--primary-color);
+  text-align: justify;
 }
 
 /* Hero Text Styles */
@@ -127,10 +144,36 @@
   font-family: 'Nunito-Regular';
   font-size: 3rem;
   color: #001014; /* Use primary color variable */
+  text-align: justify;
 }
 /* Phone Hero Text Styles */
 .phoneherotext {
   font-family: 'Nunito-Regular';
   font-size: 2rem;
   color: var(--primary-color); /* Use primary color variable */
+  text-align: justify;
+}
+.phonetext {
+  font-family: 'Amiko-Regular';
+  font-size: 1 rem;
+  color: black;
+  text-align: justify;
+}
+.phonecardtext {
+  font-family: 'Amiko-Regular';
+  font-size: 0.875rem;
+  color: black;
+  text-align: justify;
+}
+.phonesmalltext {
+  font-family: 'Amiko-Regular';
+  font-size: 0.875rem;
+  color: black;
+  text-align: justify;
+}
+.phoneratingcardtext {
+  font-family: 'Amiko-Regular';
+  font-size: 0.625rem;
+  color: var(--primary-color);
+  text-align: justify;
 }

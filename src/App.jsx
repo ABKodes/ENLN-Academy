@@ -26,6 +26,8 @@ function App() {
       <FooterGov />
       <br />
       <FooterOrg />
+      <HorizontalCard />
+      {/* <Companies /> */}
     </>
   );
 }

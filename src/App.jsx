@@ -6,6 +6,7 @@ import VerticalCard from "./components/Reusable Components/VerticalCard";
 // import Companies from "./components/Home Ind/Companies";
 import CardDescription from "./components/Reusable Components/Card Description";
 import HorizontalCard from "./components/Reusable Components/HorizontalCard";
+import Login from "./pages/Login";
 
 function App() {
   return (

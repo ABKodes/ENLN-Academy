@@ -14,7 +14,7 @@ function App() {
       <br />
       <VerticalCard />
       <br />
-      <CardDescription />
+      <Login />
       <br />
       <br />
       {/* <HeaderAfter /> */}
@@ -25,7 +25,7 @@ function App() {
       <FooterGov />
       <br />
       <FooterOrg />
-      <HorizontalCard />
+      {/* <HorizontalCard /> */}
       {/* <Companies /> */}
     </>
   );

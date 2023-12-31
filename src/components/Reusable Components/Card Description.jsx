@@ -3,16 +3,16 @@ import React from 'react'
 function CardDescription() {
   return (
     <>
-      <div className="card w-1/4 bg-base-100 shadow-xl ">
+      <div className="card w-1/4 bg-base-100 shadow-xl hidden lg:block">
         <div className="card-body ">
-          <h2 className="text">The Complete Nutrition Course</h2>
+          <h2 className="text ">The Complete Nutrition Course</h2>
           <div className="flex ">
             <span className="flex items-center space-x-2">
               {" "}
-              <p className="cardtext text-gray-500 dark:text-gray-400">
+              <p className="cardtext  text-gray-500 dark:text-gray-400">
                 25 Total Hours
               </p>
-              <p className="cardtext text-gray-500 dark:text-gray-400 ">
+              <p className="cardtext  text-gray-500 dark:text-gray-400 ">
                 . All levels
               </p>
               <span className="badge badge-primary badge-outline">
@@ -20,12 +20,12 @@ function CardDescription() {
               </span>
             </span>
           </div>
-          <p className="cardtext">
+          <p className="cardtext ">
             Unlock the secrets to optimal health with our Complete Nutrition
             Course, designed for individuals seeking a holistic understanding of
             nutrition.
           </p>
-          <div className="cardtext flex items-center">
+          <div className="cardtext  flex items-center">
             <ul className="list-none">
               <li className="flex">
                 <svg

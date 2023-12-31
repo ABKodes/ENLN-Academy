@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import zxcvbn from "zxcvbn"; 
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 function Login() {
 
 const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -30,11 +33,14 @@ function getStrengthLabel(strength) {
 
   return (
     <>
+      <div className='flex justify-center items-center my-5 pl-10'>
+        <h1 className="heading">Welcome Back</h1>
+      </div>
       <div className=" flex items-center">
-        <div className="mx-4 hidden w-1/2 lg:block">
+        <div className=" hidden w-1/3 lg:block ml-32">
           <img src="/sign in.svg" />
         </div>
-        <div className='flex flex-col relative gap-3'>
+        <div className="relative ml-48 flex flex-col gap-3">
           <form
             action=""
             className=" top-5 flex flex-col gap-5 font-sans  lg:w-1/2"
@@ -135,7 +141,49 @@ function getStrengthLabel(strength) {
               )}
             </div>
           </form>
-          <Link className="relative flex hover:text-primary hover:underline text hover:text-bold"> Forgot Password? </Link>
+          <Link className="text hover:text-bold relative flex hover:text-primary hover:underline">
+            {" "}
+            Forgot Password?{" "}
+          </Link>
+          <div className="card-actions justify-end">
+            <button className="buttontext btn btn-primary w-full">
+              Log in
+            </button>
+          </div>
+          <div className="items-center ml-32">
+            <h2 className="items-center">OR</h2>
+          </div>
+          <div className="card-actions justify-end">
+            <button className="text btn w-full border-primary">
+              <div className="text-3xl">
+                <FcGoogle />
+              </div>
+              Continue With Google
+            </button>
+          </div>
+          <div className="card-actions justify-end">
+            <button className="text btn w-full border-primary">
+              <div className="text-3xl text-[#1877F2]">
+                <FaFacebook />
+              </div>
+              Continue With Facebook
+            </button>
+          </div>
+          <div className="card-actions justify-end">
+            <button className="text btn w-full border-primary">
+              <div className="text-3xl text-[#0A66C2]">
+                <FaLinkedin />
+              </div>
+              Continue With LinkedIn
+            </button>
+          </div>
+          <Link className="text hover:text-bold relative flex ">
+            {" "}
+            Don't have account?
+            <span className="px-2 font-bold text-primary hover:underline">
+              SIGN UP
+            </span>
+          </Link>
         </div>
       </div>
     </>

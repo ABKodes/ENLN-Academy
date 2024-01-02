@@ -13,9 +13,6 @@ function App() {
       <br />
       <VerticalCard />
       <br />
-      <Login/>
-      <br />
-      <br />
       <Login />
       <ForgetPassword/>
       {/* <Hero /> */}

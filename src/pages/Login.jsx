@@ -121,12 +121,11 @@ return (
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2"
           >
-            <span>
               <div className="text-2xl">
                 <FcGoogle />
               </div>
               Continue With Google
-            </span>
+            
           </motion.a>
         </div>
         <div className="card-actions flex justify-start">
@@ -139,7 +138,7 @@ return (
               <div className="text-2xl text-[#1877F2]">
                 <FaFacebook />
               </div>
-            
+            Continue With Facebook
           </motion.a>
         </div>
 

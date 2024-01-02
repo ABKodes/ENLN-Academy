@@ -5,7 +5,7 @@ function VerticalCard() {
      const [isHovered, setHovered] = useState(false);
   return (
     <>
-      <div className={`isHovered ? "flex flex-col lg:flex-row ":""`}>
+      <div className={`isHovered ? "grid gird-col ":"" lg:flex-row`}>
         <div
           className="group card card-compact relative m-10 w-3/4 bg-base-100  shadow-xl lg:w-1/4"
           onMouseEnter={() => setHovered(true)}
@@ -52,10 +52,34 @@ function VerticalCard() {
           </div>
         </div>
         {isHovered && (
-          <div className="">
+          <div className="grid">
             <CardDescription />
           </div>
         )}
+      </div>
+      <button
+        data-popover-target="popover-right"
+        data-popover-placement="right"
+        type="button"
+        class="mb-3 me-4 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Right popover
+      </button>
+      <div
+        data-popover
+        id="popover-right"
+        role="tooltip"
+        class="invisible absolute z-10 inline-block w-64 rounded-lg border border-gray-200 bg-white text-sm text-gray-500 opacity-0 shadow-sm transition-opacity duration-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400"
+      >
+        <div class="rounded-t-lg border-b border-gray-200 bg-gray-100 px-3 py-2 dark:border-gray-600 dark:bg-gray-700">
+          <h3 class="font-semibold text-gray-900 dark:text-white">
+            Popover right
+          </h3>
+        </div>
+        <div class="px-3 py-2">
+          <p>And here's some amazing content. It's very engaging. Right?</p>
+        </div>
+        <div data-popper-arrow></div>
       </div>
     </>
   );

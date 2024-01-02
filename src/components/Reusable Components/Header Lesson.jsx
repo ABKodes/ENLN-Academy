@@ -247,7 +247,7 @@ function HeaderLesson() {
                 </div>
               )}
             </div> */}
-            <div className="fixed right-16 flex lg:hidden">
+            <div className=" right-16 flex lg:hidden">
               <div className="w-">
                 <button
                   className="btn btn-circle btn-ghost text-primary"

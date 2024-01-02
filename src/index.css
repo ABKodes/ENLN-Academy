@@ -147,6 +147,20 @@
   color: #001014; /* Use primary color variable */
   text-align: justify;
 }
+/* Org Hero Text Styles */
+.orgherotext {
+  font-family: 'Nunito-Regular';
+  font-size: 3rem;
+  color: #001014; /* Use primary color variable */
+  text-align: left;
+}
+/* Phone Org Hero Text Styles */
+.orgphoneherotext {
+  font-family: 'Nunito-Regular';
+  font-size: 2rem;
+  color: var(--primary-color); /* Use primary color variable */
+  text-align: left;
+}
 /* Phone Hero Text Styles */
 .phoneherotext {
   font-family: 'Nunito-Regular';

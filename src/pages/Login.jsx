@@ -15,25 +15,25 @@ function togglePasswordVisibility(event) {
 
 return (
   <>
-    <div className=" space-x-25 mx-auto flex w-9/12 items-center">
-      <div className="  hidden w-1/2 lg:block">
+    <div className=" space-x-25 mx-auto w-10/12 items-center lg:flex lg:w-9/12">
+      <div className="w-11/12 lg:w-1/2">
         <img src="/sign in.svg" />
       </div>
-      <div className="relative ml-20 flex w-1/2 flex-col gap-2">
-        <div className="flex w-1/2 items-center justify-center">
+      <div className="relative flex w-full flex-col gap-2 md:w-1/2 lg:ml-32 ">
+        <div className="flex w-full items-center justify-center lg:w-1/2">
           <h1 className="heading py-5 ">Welcome Back</h1>
         </div>
         <form action="" className=" top-5  ">
-          <div className="relative z-0">
+          <div className="relative z-0 mx-auto">
             <input
               type="text"
               id="email"
-              className="peer block w-1/2 pl-6 appearance-none border-2  bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-primary-500"
+              className="dark:focus:border-primary-500 border-1 px-0py-2.5 peer block w-full appearance-none bg-transparent pl-2 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black md:w-1/2"
               placeholder=" "
             />
             <label
               for="email"
-              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
+              className="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
             >
               Email
             </label>
@@ -44,27 +44,19 @@ return (
               type={isPasswordVisible ? "text" : "password"}
               id="password"
               placeholder=""
-              className=" dark:border-primary-600 peer block  w-1/2   appearance-none     rounded bg-transparent px-4 py-2
-        text-base
-        text-gray-900
-        outline
-        outline-2 
-        outline-primary
-        focus:border-b-2
-        focus:border-primary
-         focus:outline-primary dark:text-black"
+              className="dark:focus:border-primary-500 border-1 peer block w-full appearance-none bg-transparent  px-0 py-2.5 pl-2 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black lg:w-1/2"
               onChange={togglePasswordVisibility}
             />
             <label
               for="password"
-              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
+              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
             >
               Password
             </label>
 
             <button
               type="button"
-              className="flex-end absolute ml-64 flex justify-end px-2 py-3 text-gray-600"
+              className="absolute ml-72 px-2 py-3 text-gray-600 lg:ml-[188px]"
               onClick={() => setIsPasswordVisible((prevState) => !prevState)}
             >
               {isPasswordVisible ? (
@@ -106,7 +98,7 @@ return (
             </button>
           </div>
         </form>
-        <Link className="smalltext hover:text-bold relative flex w-1/2 items-center justify-center hover:text-primary hover:underline">
+        <Link className="smalltext hover:text-bold relative flex w-full items-center justify-center hover:text-primary hover:underline lg:w-1/2">
           Forgot Password?{" "}
         </Link>
         <div className="card-actions justify-start">
@@ -114,47 +106,49 @@ return (
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="buttontext  btn btn-primary hidden w-1/2 lg:flex lg:items-center"
+            className="buttontext  btn btn-primary  w-full lg:w-1/2 lg:items-center"
           >
             Log In
           </motion.a>
         </div>
-        <div className="relative flex w-1/2 items-center justify-center ">
+        <div className="relative flex w-full items-center justify-center lg:w-1/2 ">
           <h2 className=" ">OR</h2>
         </div>
-        <div className="card-actions justify-start">
+        <div className="card-actions justify-start ">
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary text btn btn-outline w-1/2 justify-start hover:text-primary"
+            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2"
           >
-            <div className="text-2xl">
-              <FcGoogle />
-            </div>
-            Continue With Google
+            <span>
+              <div className="text-2xl">
+                <FcGoogle />
+              </div>
+              Continue With Google
+            </span>
           </motion.a>
         </div>
-        <div className="card-actions justify-start">
+        <div className="card-actions flex justify-start">
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary text btn btn-outline w-1/2 justify-start hover:text-primary"
+            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2 "
           >
-            <div className="text-2xl text-[#1877F2]">
-              <FaFacebook />
-            </div>
-            Continue With Facebook
+              <div className="text-2xl text-[#1877F2]">
+                <FaFacebook />
+              </div>
+            
           </motion.a>
         </div>
 
-        <div className="card-actions justify-start">
+        <div className="card-actions  justify-start">
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary text btn btn-outline  w-1/2 justify-start hover:text-primary"
+            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2"
           >
             <div className="text-2xl text-[#0A66C2]">
               <FaLinkedin />
@@ -162,7 +156,7 @@ return (
             Continue With LinkedIn
           </motion.a>
         </div>
-        <Link className="smalltext hover:text-bold relative flex w-1/2 items-center justify-center">
+        <Link className="smalltext hover:text-bold relative flex w-full items-center justify-center lg:w-1/2">
           {" "}
           Don't have account?
           <span className="px-2 font-bold text-primary hover:underline">

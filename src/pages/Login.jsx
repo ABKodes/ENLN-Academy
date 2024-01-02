@@ -24,12 +24,16 @@ return (
           <h1 className="heading py-5 ">Welcome Back</h1>
         </div>
         <form action="" className=" top-5  ">
-          <div className="relative z-0  flex">
-            <input type="text" id="email" placeholder="" 
-            className='border-none outline outline-2 outline-primary focus:outline-none focus:border-b-2'/>
+          <div className="relative z-0">
+            <input
+              type="text"
+              id="email"
+              className="peer block w-1/2 pl-6 appearance-none border-2  bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black dark:focus:border-primary-500"
+              placeholder=" "
+            />
             <label
               for="email"
-              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
+              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
             >
               Email
             </label>

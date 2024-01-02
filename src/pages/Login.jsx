@@ -52,7 +52,7 @@ return (
         outline-primary
         focus:border-b-2
         focus:border-primary
-         focus:outline-none dark:text-black"
+         focus:outline-primary dark:text-black"
               onChange={togglePasswordVisibility}
             />
             <label

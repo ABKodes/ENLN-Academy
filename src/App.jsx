@@ -3,10 +3,9 @@ import FooterGov from "./components/Reusable Components/FooterGov";
 import FooterOrg from "./components/Reusable Components/FooterOrg";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import VerticalCard from "./components/Reusable Components/VerticalCard";
-import Login from "./pages/Login";
-
-
-
+import Login from "./pages/Login"
+import ForgetPassword from "./pages/ForgetPassword";
+// import Companies from "./components/Home Ind/Companies";
 function App() {
   return (
     <>
@@ -17,7 +16,8 @@ function App() {
       <Login/>
       <br />
       <br />
-      {/* <HeaderAfter /> */}
+      <Login />
+      <ForgetPassword/>
       {/* <Hero /> */}
       <br />
       <Footer />

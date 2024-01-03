@@ -192,3 +192,25 @@
   color: var(--primary-color);
   text-align: justify;
 }
+/* THE Following three css class are made fro organization page enhancing experiance part */
+.orgtext {
+  font-family: 'Amiko-Regular';
+  font-size: 1rem;
+  color: #025464;
+  text-align: justify;
+  font:bold;
+}
+/* Org Subheading Styles for Large Screens */
+.orgsubheading {
+  font-family: 'Merriweather-Bold';
+  font-size: 1.3125rem;
+  color: #025464;
+  text-align: justify;
+}
+/* org Small Text Styles */
+.orgsmalltext {
+  font-family: 'Amiko-Regular';
+  font-size: 0.875rem;
+  color: #025464;
+  text-align: left;
+}

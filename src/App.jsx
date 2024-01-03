@@ -9,33 +9,33 @@ import ForgetPassword from "./pages/ForgetPassword";
 import OrgHero from "./components/Home Org/Hero";
 import Partners from "./components/Home Org/Partners";
 import HeaderOrg from "./components/Reusable Components/Header Org";
+import Enhanceexperiance from "./components/Home Org/Enhance experiance";
 
 function App() {
   return (
     <>
+      <HeaderOrg />
+      <br />
+      <OrgHero />
+      <br />
+     < Enhanceexperiance/>
       <div className="overflow-x-hidden">
-        {/* <HeaderOrg /> */}
-        <br />
-        <OrgHero />
-        <br />
-        <div className="overflow-x-hidden">
-          <Partners />
-        </div>
-        <br />
-        <div className="overflow-x-hidden">
-          <VerticalCard />
-        </div>
-        <br />
-        <Login />
-        <ForgetPassword />
-        {/* <Hero /> */}
-        <br />
-        <Footer />
-        <br />
-        <FooterGov />
-        <br />
-        <FooterOrg />
+        <Partners />
       </div>
+      <br />
+      <div className="overflow-x-hidden">
+        <VerticalCard />
+      </div>
+      <br />
+      <Login />
+      <ForgetPassword />
+      {/* <Hero /> */}
+      <br />
+      <Footer />
+      <br />
+      <FooterGov />
+      <br />
+      <FooterOrg />
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}
     </>

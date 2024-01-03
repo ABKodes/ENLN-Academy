@@ -1,171 +1,124 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
-import { motion } from "framer-motion";
 function Login() {
-
-const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-function togglePasswordVisibility(event) {
-  const newPassword = event.target.value;
-  setIsPasswordVisible((prevState) => !prevState);
-
-}
-
-return (
-  <>
-    <div className=" space-x-25 mx-auto w-10/12 items-center lg:flex lg:w-9/12">
-      <div className="w-11/12 lg:w-1/2">
-        <img src="/sign in.svg" />
-      </div>
-      <div className="relative flex w-full flex-col gap-2 md:w-1/2 lg:ml-32 ">
-        <div className="flex w-full items-center justify-center lg:w-1/2">
-          <h1 className="heading py-5 ">Welcome Back</h1>
-        </div>
-        <form action="" className=" top-5  ">
-          <div className="relative z-0 mx-auto">
-            <input
-              type="text"
-              id="email"
-              className="dark:focus:border-primary-500 border-1 px-0py-2.5 peer block w-full appearance-none bg-transparent pl-2 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black md:w-1/2"
-              placeholder=" "
-            />
-            <label
-              for="email"
-              className="absolute top-3 -z-10 origin-[0] -translate-y-8 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
-            >
-              Email
-            </label>
-          </div>
-
-          <div className="container relative mx-auto  mt-5 flex  justify-between">
-            <input
-              type={isPasswordVisible ? "text" : "password"}
-              id="password"
-              placeholder=""
-              className="dark:focus:border-primary-500 border-1 peer block w-full appearance-none bg-transparent  px-0 py-2.5 pl-2 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-black lg:w-1/2"
-              onChange={togglePasswordVisibility}
-            />
-            <label
-              for="password"
-              className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-8 peer-focus:scale-75 peer-focus:text-gray-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:text-gray-400 peer-focus:dark:text-gray-500"
-            >
-              Password
-            </label>
-
-            <button
-              type="button"
-              className="absolute ml-72 px-2 py-3 text-gray-600 lg:ml-[188px]"
-              onClick={() => setIsPasswordVisible((prevState) => !prevState)}
-            >
-              {isPasswordVisible ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="flex-end place-item-end flex h-5 w-5 justify-self-end"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
-        </form>
-        <Link className="smalltext hover:text-bold relative flex w-full items-center justify-center hover:text-primary hover:underline lg:w-1/2">
-          Forgot Password?{" "}
-        </Link>
-        <div className="card-actions justify-start">
-          <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="buttontext  btn btn-primary  w-full lg:w-1/2 lg:items-center"
-          >
-            Log In
-          </motion.a>
-        </div>
-        <div className="relative flex w-full items-center justify-center lg:w-1/2 ">
-          <h2 className=" ">OR</h2>
-        </div>
-        <div className="card-actions justify-start ">
-          <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2"
-          >
-              <div className="text-2xl">
-                <FcGoogle />
-              </div>
-              Continue With Google
-            
-          </motion.a>
-        </div>
-        <div className="card-actions flex justify-start">
-          <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2 "
-          >
-              <div className="text-2xl text-[#1877F2]">
-                <FaFacebook />
-              </div>
-            Continue With Facebook
-          </motion.a>
-        </div>
-
-        <div className="card-actions  justify-start">
-          <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="hover-border-primary smalltext btn btn-outline w-full justify-start hover:text-primary lg:w-1/2"
-          >
-            <div className="text-2xl text-[#0A66C2]">
-              <FaLinkedin />
+  return (
+    <>
+      {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
+      <section className="mx-auto h-screen w-9/12">
+        <div className="container h-full px-6 py-24">
+          <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+            {/* Left column container with background*/}
+            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
+              <img
+                src="/public/sign in.svg"
+                className="w-full"
+                alt="Phone image"
+              />
             </div>
-            Continue With LinkedIn
-          </motion.a>
+            {/* Right column container with form */}
+            <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
+              <form>
+                <h1 className="heading justify-center">Welcome Back</h1>
+                {/* Email input */}
+                <div className="relative mb-6" data-te-input-wrapper-init="">
+                  <input
+                    type="text"
+                    className="input input-secondary w-full focus:border-primary focus:outline-none"
+                    id="exampleFormControlInput3"
+                    placeholder="Email address"
+                  />
+                  {/* <label
+                    htmlFor="exampleFormControlInput3"
+                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  >
+                    Email address
+                  </label> */}
+                </div>
+
+                {/* Password input */}
+                <div className="relative mb-6" data-te-input-wrapper-init="">
+                  <input
+                    type="password"
+                    className="peer block min-h-[auto] w-full rounded border-secondary bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border focus:outline-none focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput33"
+                    placeholder="Password"
+                  />
+                  <label
+                    htmlFor="exampleFormControlInput33"
+                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  >
+                    Password
+                  </label>
+                </div>
+                {/* Remember me checkbox */}
+                <div className="mb-6 flex items-center justify-between">
+                  {/* Forgot password link */}
+                  <a
+                    href="#!"
+                    className="hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 text-primary transition duration-150 ease-in-out"
+                  >
+                    Forgot password?
+                  </a>
+                </div>
+                {/* Submit button */}
+                <button
+                  type="submit"
+                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  data-te-ripple-init=""
+                  data-te-ripple-color="light"
+                >
+                  Sign in
+                </button>
+                {/* Divider */}
+                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+                  <p className="mx-4 mb-0 text-center font-semibold dark:text-neutral-200">
+                    OR
+                  </p>
+                </div>
+                {/* Social login buttons */}
+                <a
+                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  style={{ backgroundColor: "#3b5998" }}
+                  href="#!"
+                  role="button"
+                  data-te-ripple-init=""
+                  data-te-ripple-color="light"
+                >
+                  {/* Facebook */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mr-2 h-3.5 w-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                  Continue with Facebook
+                </a>
+                <a
+                  className="hover:bg-info-600 focus:bg-info-600 active:bg-info-700 mb-3 flex w-full items-center justify-center rounded bg-info px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]"
+                  style={{ backgroundColor: "#55acee" }}
+                  href="#!"
+                  role="button"
+                  data-te-ripple-init=""
+                  data-te-ripple-color="light"
+                >
+                  {/* Twitter */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mr-2 h-3.5 w-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                  </svg>
+                  Continue with Twitter
+                </a>
+              </form>
+            </div>
+          </div>
         </div>
-        <Link className="smalltext hover:text-bold relative flex w-full items-center justify-center lg:w-1/2">
-          {" "}
-          Don't have account?
-          <span className="px-2 font-bold text-primary hover:underline">
-            Sign Up
-          </span>
-        </Link>
-      </div>
-    </div>
-  </>
-);
+      </section>
+    </>
+  );
 }
 
-export default Login
+export default Login;

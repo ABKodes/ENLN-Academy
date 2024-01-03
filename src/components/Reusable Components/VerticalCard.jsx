@@ -69,7 +69,7 @@ function VerticalCard() {
         className="invisible absolute z-10 inline-block w-64 rounded-lg border border-gray-200 bg-white text-sm text-gray-500 opacity-0 shadow-sm transition-opacity duration-300 dark:border-white dark:bg-white dark:text-gray-400"
       >
         {/* Card description component */}
-        <div className="w-screen">
+        <div className="w-full">
           <CardDescription />
         </div>
         {/* Popover arrow */}

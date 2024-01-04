@@ -130,7 +130,6 @@ import { motion } from "framer-motion";
            </motion.a>
          </div>
        </div>
-       ;
      </>
    );
  };

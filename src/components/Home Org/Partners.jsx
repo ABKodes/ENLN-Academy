@@ -9,11 +9,11 @@ function Partners() {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 10,
     };
   return (
     <>
-      <div className="m-5 flex w-10/12 flex-col lg:w-full lg:flex-row">
+      <div className="m-5 flex w-11/12 flex-col lg:w-full lg:flex-row ">
         <div className="flex w-full items-center justify-center   border-black p-5 lg:w-1/2 lg:border-r-2 ">
           <p className=" text-justify">
             Connect with organizations worldwide through ENLN Academy. Our

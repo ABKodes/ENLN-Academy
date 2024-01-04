@@ -1,13 +1,11 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import HeaderOrg from "./components/Reusable Components/Header Org";
 
 function WhyUs() {
   return (
     <>
       <div className="mx-auto  flex h-screen w-11/12 flex-row rounded-lg">
-        <HeaderOrg />
         <div className="flex h-full w-1/2 justify-center overflow-hidden">
           <div
             className="h-full w-full skew-x-3 bg-cover"

@@ -27,15 +27,15 @@ function App() {
         <VerticalCard />
       </div>
       <br />
-      <Login />
-      <ForgetPassword />
+      {/* <Login /> */}
+      {/* <ForgetPassword /> */}
       {/* <Hero /> */}
       <br />
-      <Footer />
+      {/* <Footer /> */}
       <br />
-      <FooterGov />
+      {/* <FooterGov /> */}
       <br />
-      <FooterOrg />
+      {/* <FooterOrg /> */}
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}
     </>

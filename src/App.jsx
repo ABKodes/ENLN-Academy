@@ -1,7 +1,4 @@
-import Footer from "./components/Reusable Components/Footer";
-import FooterGov from "./components/Reusable Components/FooterGov";
-import FooterOrg from "./components/Reusable Components/FooterOrg";
-import HeaderLesson from "./components/Reusable Components/Header Lesson";
+import Hero from "./components/Home Ind/Hero"
 import VerticalCard from "./components/Reusable Components/VerticalCard";
 import Login from "./pages/Login"
 import ForgetPassword from "./pages/ForgetPassword";
@@ -9,12 +6,13 @@ import ForgetPassword from "./pages/ForgetPassword";
 import OrgHero from "./components/Home Org/Hero";
 import Partners from "./components/Home Org/Partners";
 import HeaderOrg from "./components/Reusable Components/Header Org";
-
+import Companies from "./components/Home Ind/Companies";
+import WhatWeOffer from "./components/Home Ind/WhatWeOffer";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        {/* <HeaderOrg /> */}
+        <HeaderOrg />
         <br />
         <OrgHero />
         <br />
@@ -28,13 +26,9 @@ function App() {
         <br />
         <Login />
         <ForgetPassword />
-        {/* <Hero /> */}
-        <br />
-        <Footer />
-        <br />
-        <FooterGov />
-        <br />
-        <FooterOrg />
+        <Hero />
+        <Companies />
+        <WhatWeOffer />
       </div>
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}

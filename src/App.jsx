@@ -10,6 +10,7 @@ import OrgHero from "./components/Home Org/Hero";
 import Partners from "./components/Home Org/Partners";
 import HeaderOrg from "./components/Reusable Components/Header Org";
 import Enhanceexperiance from "./components/Home Org/Enhance experiance";
+import WhyUs from "./components/Home Org/Why Us";
 
 function App() {
   return (
@@ -18,10 +19,12 @@ function App() {
       <br />
       <OrgHero />
       <br />
-     < Enhanceexperiance/>
+      <Enhanceexperiance />
       <div className="overflow-x-hidden">
         <Partners />
       </div>
+      <br />
+      <WhyUs />
       <br />
       <div className="overflow-x-hidden">
         <VerticalCard />

@@ -6,39 +6,38 @@ import ForgetPassword from "./pages/ForgetPassword";
 import OrgHero from "./components/Home Org/Hero";
 import Partners from "./components/Home Org/Partners";
 import HeaderOrg from "./components/Reusable Components/Header Org";
-import Enhanceexperiance from "./components/Home Org/Enhance experiance";
-import WhyUs from "./components/Home Org/Why Us";
+// import Enhanceexperiance from "./components/Home Org/Enhance experiance";
+import Companies from "./components/Home Ind/Companies";
+import WhatWeOffer from "./components/Home Ind/WhatWeOffer";
+import BroadSelection from "./components/Home Ind/BroadSelection";
 import AllCourseList from "./components/Categories/AllCoursesList"
-
+import FAQ from "./components/Home Ind/FAQ";
 function App() {
   return (
     <>
-      <HeaderOrg />
-      <br />
-      <OrgHero />
-      <br />
-      <Enhanceexperiance />
       <div className="overflow-x-hidden">
-        <Partners />
-      </div>
-      <br />
-      <WhyUs />
+        <HeaderOrg />
+        <br />
+        <OrgHero />
+        <br />
+        <div className="overflow-x-hidden">
+          <Partners />
+        </div>
       <br />
        <AllCourseList />
-      <br />
-      <div className="overflow-x-hidden">
-        <VerticalCard />
+        <br />
+        <div className="overflow-x-hidden">
+          <VerticalCard />
+        </div>
+        <br />
+        <Login />
+        <ForgetPassword />
+        <Hero />
+        <Companies />
+        <WhatWeOffer />
+        <BroadSelection/>
+        <FAQ/>
       </div>
-      <br />
-      {/* <Login /> */}
-      {/* <ForgetPassword /> */}
-      {/* <Hero /> */}
-      <br />
-      {/* <Footer /> */}
-      <br />
-      {/* <FooterGov /> */}
-      <br />
-      {/* <FooterOrg /> */}
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}
     </>

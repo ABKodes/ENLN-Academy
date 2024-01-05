@@ -3,7 +3,7 @@ function WhatWeOffer() {
     <>
       <div className="mx-auto w-11/12 ">
         <h1 className="heading py-5">What We Offer</h1>
-        <div className="flex space-x-4">
+        <div className="flex  space-x-4">
           <div className="max-w-sm rounded-lg p-6 ">
             <img
               src="/public/blended.svg"

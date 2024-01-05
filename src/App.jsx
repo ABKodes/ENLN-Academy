@@ -10,8 +10,9 @@ import HeaderOrg from "./components/Reusable Components/Header Org";
 import Companies from "./components/Home Ind/Companies";
 import WhatWeOffer from "./components/Home Ind/WhatWeOffer";
 import BroadSelection from "./components/Home Ind/BroadSelection";
-import AllCourseList from "./components/Categories/AllCoursesList"
+//import AllCourseList from "./components/Categories/AllCoursesList"
 import FAQ from "./components/Home Ind/FAQ";
+import AllRating from "./components/Reusable Components/All Rating";
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
           <Partners />
         </div>
       <br />
-       <AllCourseList />
+       <AllRating />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />

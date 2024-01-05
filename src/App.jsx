@@ -8,6 +8,7 @@ import Partners from "./components/Home Org/Partners";
 import HeaderOrg from "./components/Reusable Components/Header Org";
 import Enhanceexperiance from "./components/Home Org/Enhance experiance";
 import WhyUs from "./components/Home Org/Why Us";
+import AllCourseList from "./components/Categories/AllCoursesList"
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       </div>
       <br />
       <WhyUs />
+      <br />
+       <AllCourseList />
       <br />
       <div className="overflow-x-hidden">
         <VerticalCard />

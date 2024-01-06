@@ -103,12 +103,12 @@ function WhyUs() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto w-11/12">
+      <div className="container  ">
         <h1 className="heading">Flower Gallery</h1>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
-          centeredSlides={true}
+          // centeredSlides={true}
           loop={true}
           slidesPerView={"auto"}
           coverflowEffect={{
@@ -124,10 +124,23 @@ function WhyUs() {
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="swiper_container justify-centers "
         >
           <SwiperSlide>
-            <img src="hr.jpg" alt="slide_image" />
+            <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
+              <div className="card-body">
+                <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+                <h2 className="card-title font-bold">
+                  Customized Course Content
+                </h2>
+                <p className="text">
+                  Tailored curriculum designed to meet the specific needs of
+                  professionals in the nutrition field. Courses crafted with
+                  industry insights and the latest trends to ensure relevance
+                  and practicality.
+                </p>
+              </div>
+            </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
@@ -146,9 +159,21 @@ function WhyUs() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src="ss.jpg" alt="slide_image" />
+            <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
+              <div className="card-body">
+                <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+                <h2 className="card-title font-bold">
+                  Customized Course Content
+                </h2>
+                <p className="text">
+                  Tailored curriculum designed to meet the specific needs of
+                  professionals in the nutrition field. Courses crafted with
+                  industry insights and the latest trends to ensure relevance
+                  and practicality.
+                </p>
+              </div>
+            </div>
           </SwiperSlide>
-
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>

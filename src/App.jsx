@@ -10,6 +10,7 @@ import HeaderOrg from "./components/Reusable Components/Header Org";
 import Companies from "./components/Home Ind/Companies";
 import WhatWeOffer from "./components/Home Ind/WhatWeOffer";
 import BroadSelection from "./components/Home Ind/BroadSelection";
+//import AllCourseList from "./components/Categories/AllCoursesList"
 import FAQ from "./components/Home Ind/FAQ";
 import RegisterToday from "./components/Home Ind/RegisterToday";
 import Footer from "./components/Reusable Components/Footer"
@@ -26,6 +27,8 @@ function App() {
         <div className="overflow-x-hidden">
           <Partners />
         </div>
+      <br />
+       <AllRating />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />

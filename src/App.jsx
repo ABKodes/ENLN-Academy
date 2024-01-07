@@ -12,7 +12,10 @@ import WhatWeOffer from "./components/Home Ind/WhatWeOffer";
 import BroadSelection from "./components/Home Ind/BroadSelection";
 //import AllCourseList from "./components/Categories/AllCoursesList"
 import FAQ from "./components/Home Ind/FAQ";
-import AllRating from "./components/Reusable Components/All Rating";
+import RegisterToday from "./components/Home Ind/RegisterToday";
+import Footer from "./components/Reusable Components/Footer"
+import HeaderBefore from "./components/Reusable Components/HeaderBefore"
+import Testimonial from "./components/Home Ind/Testimonial";
 function App() {
   return (
     <>
@@ -25,7 +28,6 @@ function App() {
           <Partners />
         </div>
       <br />
-       <AllRating />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />
@@ -33,11 +35,15 @@ function App() {
         <br />
         <Login />
         <ForgetPassword />
+        <HeaderBefore/>
         <Hero />
         <Companies />
         <WhatWeOffer />
         <BroadSelection/>
         <FAQ/>
+        <Testimonial />
+        <RegisterToday/>
+        <Footer/>
       </div>
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}

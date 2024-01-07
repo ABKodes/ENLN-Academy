@@ -28,7 +28,6 @@ function App() {
           <Partners />
         </div>
       <br />
-       <AllRating />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />

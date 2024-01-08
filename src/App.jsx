@@ -16,6 +16,7 @@ import RegisterToday from "./components/Home Ind/RegisterToday";
 import Footer from "./components/Reusable Components/Footer"
 import HeaderBefore from "./components/Reusable Components/HeaderBefore"
 import Testimonial from "./components/Home Ind/Testimonial";
+import AllRating from "./components/Reusable Components/All Rating";
 function App() {
   return (
     <>
@@ -34,6 +35,8 @@ function App() {
         </div>
         <br />
         <Login />
+        <br />
+        <AllRating />
         <ForgetPassword />
         <HeaderBefore/>
         <Hero />

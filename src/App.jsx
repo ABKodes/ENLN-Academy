@@ -35,6 +35,8 @@ function App() {
         </div>
         <br />
         <Login />
+        <br />
+        <AllRating />
         <ForgetPassword />
         <HeaderBefore/>
         <Hero />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const BroadSelection = () => {
@@ -20,11 +20,20 @@ const BroadSelection = () => {
 
   const moveUnderline = (tabId) => {
     const tabElement = document.getElementById(tabId);
+    const UNDERLINE_WIDTH = 150; // Set this to your desired fixed width
     if (tabElement) {
       const { offsetLeft, offsetWidth } = tabElement;
-      underlineControls.start({ left: offsetLeft, width: offsetWidth });
+      underlineControls.start({
+        left: offsetLeft + (offsetWidth - UNDERLINE_WIDTH) / 2, // Center the underline
+        width: UNDERLINE_WIDTH, // Fixed width
+      });
     }
   };
+
+  // Set the initial position of the underline when the component mounts
+  useEffect(() => {
+    moveUnderline(activeTab);
+  }, [activeTab]); // dependency on activeTab to reposition underline if the activeTab changes
 
   return (
     <div className="mx-auto mt-8 w-11/12">
@@ -53,7 +62,7 @@ const BroadSelection = () => {
         />
       </ul>
 
-      <div className="mt-4 border border-secondary p-4 h-96">
+      <div className="mt-4 h-96 border border-secondary p-4">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (

@@ -16,7 +16,7 @@ import RegisterToday from "./components/Home Ind/RegisterToday";
 import Footer from "./components/Reusable Components/Footer"
 import HeaderBefore from "./components/Reusable Components/HeaderBefore"
 import Testimonial from "./components/Home Ind/Testimonial";
-import AllRating from "./components/Reusable Components/All Rating";
+import Benefits from "./components/Home Ind/Benefits";
 function App() {
   return (
     <>
@@ -36,13 +36,13 @@ function App() {
         <br />
         <Login />
         <br />
-        <AllRating />
         <ForgetPassword />
         <HeaderBefore/>
         <Hero />
         <Companies />
         <WhatWeOffer />
         <BroadSelection/>
+        <Benefits/>
         <FAQ/>
         <Testimonial />
         <RegisterToday/>

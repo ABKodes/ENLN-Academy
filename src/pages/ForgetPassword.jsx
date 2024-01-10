@@ -22,6 +22,23 @@ function ForgetPassword() {
                 required
               />
             </div>
+            <div className="rounded-lg bg-white p-4 w-full">
+              <div className="relative bg-inherit">
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  className="peer h-10 w-72 rounded-lg bg-transparent px-2 text-gray-900 placeholder-transparent ring-1 border-none ring-secondary focus:outline-none focus:ring-primary focus:ring-1"
+                  placeholder="Enter your email"
+                />
+                <label
+                  htmlFor="username"
+                  className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-1 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
+                >
+                  Enter your email
+                </label>
+              </div>
+            </div>
 
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -31,7 +48,7 @@ function ForgetPassword() {
             >
               Reset Password
             </motion.a>
-            <p className="text-neutral-700 text-center">
+            <p className="text-center text-neutral-700">
               or
               <Link className="smalltext group relative mx-4 transform leading-5 text-secondary duration-300 dark:text-primary md:my-0">
                 Log in

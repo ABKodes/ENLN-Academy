@@ -9,7 +9,7 @@ function Benefits() {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 1000
   };
   return (
       <div className="m-5 flex w-11/12 flex-col lg:w-full lg:flex-row ">
@@ -49,7 +49,7 @@ function Benefits() {
               </div>
             </div>
             <div>
-              <div className="max-w-lg rounded-lg p-6 ">
+              <div className="max-w-lg rounded-lg p-6">
                 <img
                   src="/public/blended.svg"
                   className="mx-auto w-full items-center justify-center"

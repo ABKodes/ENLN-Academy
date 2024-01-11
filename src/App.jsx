@@ -1,6 +1,7 @@
-import Hero from "./components/Home Ind/Hero"
+import Hero from "./components/Home Ind/Hero";
 import VerticalCard from "./components/Reusable Components/VerticalCard";
-import Login from "./pages/Login"
+import Login from "./pages/Login";
+import CourseHero from "./components/Course Description/CourseHero";
 import ForgetPassword from "./pages/ForgetPassword";
 // import Companies from "./components/Home Ind/Companies";
 import OrgHero from "./components/Home Org/Hero";
@@ -13,10 +14,11 @@ import BroadSelection from "./components/Home Ind/BroadSelection";
 //import AllCourseList from "./components/Categories/AllCoursesList"
 import FAQ from "./components/Home Ind/FAQ";
 import RegisterToday from "./components/Home Ind/RegisterToday";
-import Footer from "./components/Reusable Components/Footer"
-import HeaderBefore from "./components/Reusable Components/HeaderBefore"
+import Footer from "./components/Reusable Components/Footer";
+import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 import Testimonial from "./components/Home Ind/Testimonial";
 import Benefits from "./components/Home Ind/Benefits";
+import HorizontalCard from "./components/Reusable Components/HorizontalCard";
 function App() {
   return (
     <>
@@ -28,25 +30,29 @@ function App() {
         <div className="overflow-x-hidden">
           <Partners />
         </div>
-      <br />
+        <br />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />
         </div>
         <br />
+        <HeaderBefore />
+        <CourseHero />
+        <br />
         <Login />
+        <HorizontalCard />
         <br />
         <ForgetPassword />
-        <HeaderBefore/>
+        <HeaderBefore />
         <Hero />
         <Companies />
         <WhatWeOffer />
-        <BroadSelection/>
-        <Benefits/>
-        <FAQ/>
+        <BroadSelection />
+        <Benefits />
+        <FAQ />
         <Testimonial />
-        <RegisterToday/>
-        <Footer/>
+        <RegisterToday />
+        <Footer />
       </div>
       {/* <HorizontalCard /> */}
       {/* <Companies /> */}

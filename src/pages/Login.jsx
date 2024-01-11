@@ -119,8 +119,6 @@ function Login() {
           </div>
         </div>
       </section>
-      <div className="overflow-visible">...</div>
-      <div className="overflow-hidden">...</div>
     </>
   );
 }

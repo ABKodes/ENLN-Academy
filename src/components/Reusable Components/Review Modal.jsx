@@ -47,7 +47,7 @@ function ReviewModal() {
           <div>
             <textarea
               placeholder="Write your review(optional) "
-              className="mt-2  block h-32  w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-700 placeholder-gray-400/70 dark:border-gray-600 dark:text-gray-300 dark:placeholder-gray-500 "
+              className="mt-2  block h-32  w-full rounded-lg border border-gray-200 bg-white px-4 py-2.5 text-gray-700 placeholder-gray-400/70 dark:border-gray-600 dark:text-gray-800 dark:placeholder-gray-500 "
               defaultValue={""}
             />
           </div>

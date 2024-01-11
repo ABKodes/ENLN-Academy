@@ -17,6 +17,7 @@ import Footer from "./components/Reusable Components/Footer"
 import HeaderBefore from "./components/Reusable Components/HeaderBefore"
 import Testimonial from "./components/Home Ind/Testimonial";
 import Benefits from "./components/Home Ind/Benefits";
+import ReviewModal from "./components/Reusable Components/Review Modal";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
         <div className="overflow-x-hidden">
           <VerticalCard />
         </div>
+        <ReviewModal/>
         <br />
         <Login />
         <br />

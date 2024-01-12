@@ -18,6 +18,7 @@ import Footer from "./components/Reusable Components/Footer";
 import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 import Testimonial from "./components/Home Ind/Testimonial";
 import Benefits from "./components/Home Ind/Benefits";
+import ReviewModal from "./components/Reusable Components/Review Modal";
 import HorizontalCard from "./components/Reusable Components/HorizontalCard";
 import CourseSidebar from "./components/Course Description/CourseSidebar";
 import CourseDetail from "./components/Course Description/CourseDetail";
@@ -40,6 +41,7 @@ function App() {
         <div className="overflow-x-hidden">
           <VerticalCard />
         </div>
+        <ReviewModal/>
         <br />
         <HeaderBefore />
         <CourseHero />

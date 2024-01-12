@@ -34,6 +34,6 @@ export default {
     ],
   },
   plugins: [
-    require("daisyui", "prettier-plugin-tailwindcss", "flowbite/plugin"),
+    require("daisyui", "prettier-plugin-tailwindcss", "flowbite/plugin", "@tailwindcss/line-clamp"),
   ],
 };

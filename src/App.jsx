@@ -20,6 +20,9 @@ import Testimonial from "./components/Home Ind/Testimonial";
 import Benefits from "./components/Home Ind/Benefits";
 import ReviewModal from "./components/Reusable Components/Review Modal";
 import HorizontalCard from "./components/Reusable Components/HorizontalCard";
+import AllRating from "./components/Reusable Components/All Rating";
+import AllCoursesList from "./components/Categories/AllCoursesList";
+import FilterSidebar from "./components/Categories/FilterSidebar";
 function App() {
   return (
     <>
@@ -32,11 +35,22 @@ function App() {
           <Partners />
         </div>
         <br />
+        <AllRating />
+        <br />
+        <AllCoursesList />
+        <br />
+        <FilterSidebar />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <div className="overflow-x-hidden">
           <VerticalCard />
         </div>
-        <ReviewModal/>
+        <ReviewModal />
         <br />
         <HeaderBefore />
         <CourseHero />

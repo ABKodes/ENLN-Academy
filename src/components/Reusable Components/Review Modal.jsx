@@ -7,14 +7,14 @@ function ReviewModal() {
      const [hover, setHover] = useState(0);
   return (
     <>
-      <div className=" items-center space-y-3 rounded-lg border border-gray-200 bg-white     px-5 py-8 shadow md:max-w-xl md:flex-row">
-        <div className="flex items-center space-x-3">
+      <div className=" items-center  space-y-3 rounded-lg border border-gray-200 bg-white px-5 py-8 md:max-w-xl md:flex-row lg:w-5/12 ">
+        <div className="lg:flex items-center space-x-3">
           <img
-            className="h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            className="h-72 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="/RatingImage.jpg"
             alt=""
           />
-          <div className="flex flex-col justify-between p-4 leading-normal">
+          <div className="flex flex-col lg:flex-col items-center justify-between p-4 leading-normal">
             <h5 className="heading  mb-2 tracking-tight ">
               Public Health
             </h5>
@@ -43,7 +43,7 @@ function ReviewModal() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col px-5 py-2">
+        <div className="flex flex-col  py-2">
           <div>
             <textarea
               placeholder="Write your review(optional) "

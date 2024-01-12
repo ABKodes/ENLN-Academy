@@ -13,10 +13,10 @@ function AllRating() {
   return (
     <>
       <div className="flex w-9/12 pr-5">
-        <h1 className="lg:heading phoneheading flex items-center pl-10">
+        <h1 className="heading  flex items-center pl-10">
           4.6 Course Rating .200k Ratings
         </h1>
-        <div className="ml-auto my-auto">
+        <div className="my-auto ml-auto">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6 text-primary"
@@ -33,7 +33,7 @@ function AllRating() {
           </svg>
         </div>
       </div>
-      <div className=" flex flex-col lg:flex-row w-9/12 space-x-24  p-10">
+      <div className=" flex lg:w-9/12 w-full flex-col  lg:space-x-24 p-10  lg:flex-row">
         <div className="">
           <div className="mt-4 flex items-center">
             <div className="ml-5 w-1/2 bg-secondary">
@@ -41,14 +41,16 @@ function AllRating() {
                 className="h-full bg-primary  p-0.5 text-center text-xs font-medium leading-none text-secondary"
                 style={{ width: "70%" }}
               >
-                70%
+                50%
               </div>
             </div>
             <div className="ml-5 flex items-center space-x-2">
               {[...Array(5)].map((_, index) => (
                 <svg
                   key={index}
-                  className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
+                  className={`me-1 h-3 w-3 lg:h-4 lg:w-4 ${
+                    index <= 4 ? "text-primary" : "text-gray-300"
+                  }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -64,16 +66,18 @@ function AllRating() {
             <div className="ml-5 w-1/2 bg-secondary">
               <div
                 className="h-full bg-primary  p-0.5 text-center text-xs font-medium leading-none text-secondary"
-                style={{ width: "17%" }}
+                style={{ width: "20%" }}
               >
-                17%
+                20%
               </div>
             </div>
             <div className="ml-5 flex items-center space-x-2">
               {[...Array(5)].map((_, index) => (
                 <svg
                   key={index}
-                  className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
+                  className={`me-1 h-3 w-3 lg:h-4 lg:w-4 ${
+                    index <= 3 ? "text-primary" : "text-gray-300"
+                  }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -89,16 +93,18 @@ function AllRating() {
             <div className="ml-5 w-1/2 bg-secondary">
               <div
                 className="h-full bg-primary  p-0.5 text-center text-xs font-medium leading-none text-secondary"
-                style={{ width: "8%" }}
+                style={{ width: "18%" }}
               >
-                8%
+                18%
               </div>
             </div>
             <div className="ml-5 flex items-center space-x-2">
               {[...Array(5)].map((_, index) => (
                 <svg
                   key={index}
-                  className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
+                  className={`me-1 h-3 w-3 lg:h-4 lg:w-4 ${
+                    index <= 2 ? "text-primary" : "text-gray-300"
+                  }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -114,16 +120,45 @@ function AllRating() {
             <div className="ml-5 w-1/2 bg-secondary">
               <div
                 className="h-full bg-primary  p-0.5 text-center text-xs font-medium leading-none text-secondary"
-                style={{ width: "5%" }}
+                style={{ width: "12%" }}
               >
-                5%
+                12%
               </div>
             </div>
             <div className="ml-5 flex items-center space-x-2">
               {[...Array(5)].map((_, index) => (
                 <svg
                   key={index}
-                  className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
+                  className={`me-1 h-3 w-3 lg:h-4 lg:w-4 ${
+                    index <= 1 ? "text-primary" : "text-gray-300"
+                  }`}
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 22 20"
+                  style={{ strokeWidth: 1 }}
+                >
+                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
+                </svg>
+              ))}
+            </div>
+          </div>
+          <div className="mt-4 flex items-center">
+            <div className="ml-5 w-1/2 bg-secondary">
+              <div
+                className="h-full bg-primary  p-0.5 text-center text-xs font-medium leading-none text-secondary"
+                style={{ width: "10%" }}
+              >
+                10%
+              </div>
+            </div>
+            <div className="ml-5 flex items-center space-x-2">
+              {[...Array(5)].map((_, index) => (
+                <svg
+                  key={index}
+                  className={`me-1 h-3 w-3 lg:h-4 lg:w-4 ${
+                    index === 0 ? "text-primary" : "text-gray-300"
+                  }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -162,8 +197,8 @@ function AllRating() {
             </div>
           </div>
         </div>
-        <div className="space-y-0">
-          <div className="">
+        <div className="space-y-0 w-full ">
+          <div className="mt-5 ">
             <article className=" border-t-2 py-5 ">
               <div className="mb-4 flex items-center ">
                 <img

@@ -24,8 +24,8 @@ import AllRating from "./components/Reusable Components/All Rating";
 import AllCoursesList from "./components/Categories/AllCoursesList";
 import FilterSidebar from "./components/Categories/FilterSidebar";
 import CourseSidebar from "./components/Course Description/CourseSidebar";
-import CourseDetail from "./components/Course Description/CourseDetail";
 import WhatYouLearn from "./components/Course Description/WhatYouLearn";
+import CourseContent from "./components/Course Description/CourseContent";
 function App() {
   return (
     <>
@@ -59,6 +59,7 @@ function App() {
         <CourseHero />
         <CourseSidebar />
         <WhatYouLearn />
+        <CourseContent />
         <br />
         <Login />
         <HorizontalCard />

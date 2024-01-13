@@ -1,5 +1,6 @@
 import CardDescription from "./Card Description";
 import { motion } from "framer-motion";
+
 function VerticalCard() {
   const buttonVariants = {
     tap: { scale: 0.9 },
@@ -14,7 +15,7 @@ function VerticalCard() {
         data-popover-target="popover-right"
         data-popover-placement="right"
         type="button"
-        className="group card card-compact relative m-10 mb-3 me-4 w-3/4 rounded-lg bg-base-100 p-3 text-center text-sm font-medium text-white shadow-xl focus:outline-none lg:w-1/4"
+        className="group card card-compact relative m-3 mb-3 me-4 w-3/4 rounded-lg bg-base-100 p-3 text-center text-sm font-medium text-white shadow-xl border border-primary focus:outline-none lg:w-1/4"
       >
         {/* Course image */}
         <figure>

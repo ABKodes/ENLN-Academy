@@ -16,9 +16,26 @@ function Login() {
             {/* Right column container with form */}
             <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
               <form>
-                <h1 className="heading justify-center">Welcome Back</h1>
+                <h1 className="heading flex justify-center">Welcome Back</h1>
                 {/* Email input */}
-                <div className=" rounded-lg bg-white p-4 px-3">
+                <div className=" rounded-lg bg-white p-4 px-3 w-full">
+                  <div className="relative w-full bg-inherit">
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
+                      placeholder="Enter your email"
+                    />
+                    <label
+                      htmlFor="username"
+                      className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
+                    >
+                      Enter your email
+                    </label>
+                  </div>
+                </div>
+                <div className=" rounded-lg bg-white p-4 px-3 w-full">
                   <div className="relative w-full bg-inherit">
                     <input
                       type="text"
@@ -36,7 +53,7 @@ function Login() {
                   </div>
                 </div>
                 {/* Password input */}
-                <div className="relative mb-6 " data-te-input-wrapper-init="">
+                {/* <div className="relative mb-6 " data-te-input-wrapper-init="">
                   <input
                     type="password"
                     className="peer block min-h-[auto] w-full rounded border-secondary bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border focus:outline-none focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
@@ -49,7 +66,7 @@ function Login() {
                   >
                     Password
                   </label>
-                </div>
+                </div> */}
                 {/* Remember me checkbox */}
                 <div className="mb-6 flex items-center justify-between">
                   {/* Forgot password link */}
@@ -70,8 +87,8 @@ function Login() {
                   Sign in
                 </button>
                 {/* Divider */}
-                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-                  <p className="mx-4 mb-0 text-center font-semibold dark:text-neutral-200">
+                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-primary after:mt-0.5 after:flex-1 after:border-t after:border-primary">
+                  <p className="mx-4 mb-0 text text-center font-semibold dark:text-primary">
                     OR
                   </p>
                 </div>

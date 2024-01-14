@@ -90,8 +90,88 @@ const CourseContent = () => {
                   className="overflow-hidden"
                 >
                   <div className="w-7/12 border border-secondary bg-white p-4">
-                    <ul className="list-disc p-4">
-                      <li>{item.answer}</li>
+                    <ul className=" list-disc p-4">
+                      <li>
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          focusable="false"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          width="16"
+                          className="css-f2w3r7 inline space-x-2"
+                          id="cds-react-aria-58"
+                        >
+                          <g
+                            clip-path="url(#cds-react-aria-58_0)"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            fill="currentColor"
+                          >
+                            <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM.5 8a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z"></path>
+                            <path d="M5.5 3.59L12.431 8 5.5 12.41V3.59zm1 1.82v5.18L10.569 8 6.5 5.41z"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="cds-react-aria-58_0">
+                              <path fill="#fff" d="M0 0h16v16H0z"></path>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          focusable="false"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          width="16"
+                          class="css-f2w3r7"
+                          id="cds-react-aria-59"
+                        >
+                          <g
+                            clip-path="url(#cds-react-aria-59_0)"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            fill="currentColor"
+                          >
+                            <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM.5 8a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z"></path>
+                            <path d="M3.5 5h3.518l.018.001a1.58 1.58 0 011.463 1.463l.001.018V12l-1 .03A1.1 1.1 0 006.484 11H3.5V5zm1 1v4H6.53a2.1 2.1 0 01.97.306V6.521A.58.58 0 006.98 6H4.5z"></path>
+                            <path d="M8.982 5H12.5v6H9.517a1.1 1.1 0 00-1.018 1.03L7.5 12V6.5H8l-.499-.036a1.58 1.58 0 011.463-1.463L8.982 5zM8.5 6.52v3.786a2.1 2.1 0 01.97-.305L9.485 10H11.5V6H9.02a.58.58 0 00-.52.52z"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="cds-react-aria-59_0">
+                              <path fill="#fff" d="M0 0h16v16H0z"></path>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <svg
+                          aria-hidden="true"
+                          fill="none"
+                          focusable="false"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          width="16"
+                          data-testid="quiz-icon"
+                          id="cds-react-aria-60"
+                          class="css-0"
+                        >
+                          <g
+                            clip-path="url(#cds-react-aria-60_0)"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            fill="currentColor"
+                          >
+                            <path d="M4.39 3.61h7.22v8.78H4.39V3.61zm1 1v6.78h5.22V4.61H5.39z"></path>
+                            <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM.5 8a7.5 7.5 0 1115 0 7.5 7.5 0 01-15 0z"></path>
+                            <path d="M6.5 6.29h3v1h-3v-1zM6.5 8.71h3v1h-3v-1z"></path>
+                          </g>
+                          <defs>
+                            <clipPath id="cds-react-aria-60_0">
+                              <path fill="#fff" d="M0 0h16v16H0z"></path>
+                            </clipPath>
+                          </defs>
+                        </svg> 
+                        {item.answer}
+                      </li>
                       <li>{item.answer}</li>
                       <li>{item.answer}</li>
                       <li>{item.answer}</li>

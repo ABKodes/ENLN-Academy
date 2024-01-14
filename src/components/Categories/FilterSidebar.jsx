@@ -3,30 +3,40 @@ import { motion, useAnimation } from "framer-motion";
 import { AiOutlineFilter } from "react-icons/ai";
 
 function FilterSidebar() {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isPriceDropdownOpen, setPriceDropdownOpen] = useState(false);
+    const [isSortDropdownOpen, setSortDropdownOpen] = useState(false);
+    const [isLevelsDropdownOpen, setLevelsDropdownOpen] = useState(false);
 
-    const toggleDropdown = () => {
-      setDropdownOpen((prev) => !prev);
+    const togglePriceDropdown = () => {
+      setPriceDropdownOpen((prev) => !prev);
     };
+    const toggleSortDropdown = () => {
+      setSortDropdownOpen((prev) => !prev);
+    };
+    const toggleLevelsDropdown = () => {
+      setLevelsDropdownOpen((prev) => !prev);
+    };
+
   return (
     <>
-      <div className="mx-5">
+      <div className="mx-5 space-y-5">
         <h1 className="heading">All Leadership Courses</h1>
-        <div className="navbar-end space-x-2 lg:mr-7">
+        <div className=" ml-5 flex space-x-2 lg:mr-7">
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="btn  btn-md lg:btn-md"
+            className="btn smalltext btn-sm lg:btn-md"
           >
-            <AiOutlineFilter /> Filter
+            <AiOutlineFilter className='w-5 h-5'/> Filter
           </motion.a>
 
-          <div className="relative inline-block text-left">
+          <div className="relative inline-block text-left ">
             <button
-              onClick={toggleDropdown}
+              onClick={toggleSortDropdown}
               type="button"
-              className="btn-md inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50  focus:outline-none"
+              className="items-cenetr smalltext lg:btn-md btn-sm inline-flex w-full justify-center rounded-md border border-gray-700 bg-white px-4 py-2 shadow-sm hover:bg-gray-50  focus:outline-none"
+              style={{ display: "flex", alignItems: "center" }}
             >
               Sort By
               <svg
@@ -46,8 +56,8 @@ function FilterSidebar() {
               </svg>
             </button>
 
-            {isDropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            {isSortDropdownOpen && (
+              <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                 <div
                   className="py-1"
                   role="menu"
@@ -82,6 +92,132 @@ function FilterSidebar() {
                   >
                     Descending
                   </a>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className='flex flex-col'>
+          <div className="relative ml-5  inline-block w-1/4  border-t-2 text-left">
+            <div
+              onClick={togglePriceDropdown}
+              className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
+            >
+              <span> Pricing</span>
+
+              <svg
+                className=" h-2.5 w-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </div>
+
+            {isPriceDropdownOpen && (
+              <div className="relative mt-2  w-full origin-top-right rounded-md  bg-white pl-5  ring-0">
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary focus:ring-1 focus:ring-primary dark:border-gray-500 dark:bg-gray-100 dark:ring-offset-gray-500 dark:focus:ring-primary"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    Paid (1,000)
+                  </label>
+                </div>
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary  focus:ring-0 dark:border-gray-500 dark:bg-gray-100"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    Free (100)
+                  </label>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="relative ml-5 mt-2  inline-block w-1/4 border-b-2 border-t-2 text-left">
+            <div
+              onClick={toggleLevelsDropdown}
+              className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
+            >
+              <span> Levels</span>
+
+              <svg
+                className=" h-2.5 w-2.5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </div>
+
+            {isLevelsDropdownOpen && (
+              <div className="relative mt-2  w-full origin-top-right rounded-md  bg-white pl-5  ring-0">
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary focus:ring-1 focus:ring-primary dark:border-gray-500 dark:bg-gray-100 dark:ring-offset-gray-500 dark:focus:ring-primary"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    All (1,000)
+                  </label>
+                </div>
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary  focus:ring-0 dark:border-gray-500 dark:bg-gray-100"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    Beginners (100)
+                  </label>
+                </div>
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary  focus:ring-0 dark:border-gray-500 dark:bg-gray-100"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    Intermediate (100)
+                  </label>
+                </div>
+                <div className="mb-4 ml-3 flex items-center">
+                  <input
+                    id="default-checkbox"
+                    type="checkbox"
+                    defaultValue=""
+                    className="h-4 w-4  rounded-sm border-gray-700 bg-white text-primary  focus:ring-0 dark:border-gray-500 dark:bg-gray-100"
+                  />
+                  <label htmlFor="default-checkbox" className="smalltext ms-2 ">
+                    Expert (100)
+                  </label>
                 </div>
               </div>
             )}

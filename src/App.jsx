@@ -26,6 +26,7 @@ import FilterSidebar from "./components/Categories/FilterSidebar";
 import CourseSidebar from "./components/Course Description/CourseSidebar";
 import WhatYouLearn from "./components/Course Description/WhatYouLearn";
 import CourseContent from "./components/Course Description/CourseContent";
+import Categories from "./pages/Categories";
 function App() {
   return (
     <>
@@ -46,6 +47,7 @@ function App() {
         <br />
         <br />
         <br />
+        <Categories/>
         <br />
         <br />
         <br />

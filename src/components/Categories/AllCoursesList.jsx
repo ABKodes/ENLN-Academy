@@ -14,7 +14,7 @@ function AllCoursesList() {
       <div className="mt-10 flex justify-center">
         <a
           href="#"
-          className="mx-1 flex cursor-not-allowed items-center justify-center rounded-full bg-white px-4 py-2 capitalize text-white rtl:-scale-x-100 dark:bg-primary dark:text-white"
+          className="mx-1 flex cursor-not-allowed items-center justify-center rounded-full bg-primary px-4 py-2 capitalize text-white rtl:-scale-x-100 dark:bg-primary dark:text-white"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,37 +31,44 @@ function AllCoursesList() {
         </a>
         <a
           href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
+          className="mx-1 hidden transform rounded-full bg-primary px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
         >
           1
         </a>
         <a
           href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
+          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-black transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary dark:hover:text-white sm:inline"
         >
           2
         </a>
         <a
           href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
+          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-black transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary dark:hover:text-white sm:inline"
+        >
+          3
+        </a>
+        <a
+          href="#"
+          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-black transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary dark:hover:text-white sm:inline"
+        >
+          4
+        </a>
+        <a
+          href="#"
+          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-black transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary dark:hover:text-white sm:inline"
         >
           ...
         </a>
+
         <a
           href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
-        >
-          9
-        </a>
-        <a
-          href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
+          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-black transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-white dark:text-black dark:hover:bg-primary dark:hover:text-white sm:inline"
         >
           10
         </a>
         <a
           href="#"
-          className="mx-1 hidden transform rounded-full bg-white px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
+          className="mx-1 hidden transform rounded-full bg-primary px-4 py-2 text-white transition-colors duration-300 hover:bg-primary hover:text-white dark:bg-primary dark:text-white dark:hover:bg-primary dark:hover:text-white sm:inline"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

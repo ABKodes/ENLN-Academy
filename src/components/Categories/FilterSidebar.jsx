@@ -98,7 +98,7 @@ function FilterSidebar() {
           </div>
         </div>
         <div className='flex flex-col'>
-          <div className="relative ml-5  inline-block w-1/4  border-t-2 text-left">
+          <div className="relative ml-5  inline-block w-3/4  border-t-2 text-left">
             <div
               onClick={togglePriceDropdown}
               className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
@@ -149,7 +149,7 @@ function FilterSidebar() {
               </div>
             )}
           </div>
-          <div className="relative ml-5 mt-2  inline-block w-1/4 border-b-2 border-t-2 text-left">
+          <div className="relative ml-5 mt-2  inline-block w-3/4 border-b-2 border-t-2 text-left">
             <div
               onClick={toggleLevelsDropdown}
               className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"

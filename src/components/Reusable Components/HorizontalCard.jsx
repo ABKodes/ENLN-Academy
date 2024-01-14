@@ -3,7 +3,7 @@ import React from "react";
 const HorizontalCard = () => {
   return (
     <>
-      <div className="mx-auto grid w-11/12 grid-cols-1 gap-6 border border-black lg:w-8/12">
+      <div className="grid w-11/12 grid-cols-1 gap-6 border border-black lg:w-8/12">
         <div className="flex w-full cursor-pointer overflow-hidden  rounded-lg bg-white shadow hover:shadow-md xl:flex-row">
           <img
             className="h-full w-11/12 object-cover lg:w-3/12"

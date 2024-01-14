@@ -40,10 +40,7 @@ function App() {
         </div>
         <br />
         <AllRating />
-        <br />
-        <AllCoursesList />
-        <br />
-        <FilterSidebar />
+       
         <br />
         <br />
         <br />

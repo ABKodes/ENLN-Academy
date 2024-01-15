@@ -1,4 +1,12 @@
+import { useState } from "react";
+import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 function Login() {
+  const [open, setOpen] = useState(false);
+  const [password, setPassword] = useState("");
+  // handle toggle
+  const toggle = () => {
+    setOpen(!open);
+  };
   return (
     <>
       {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
@@ -18,40 +26,58 @@ function Login() {
               <form>
                 <h1 className="heading flex justify-center">Welcome Back</h1>
                 {/* Email input */}
-                <div className=" rounded-lg bg-white p-4 px-3 w-full">
+                <div className=" w-full rounded-lg bg-white p-4 px-3">
                   <div className="relative w-full bg-inherit">
                     <input
                       type="text"
                       id="username"
                       name="username"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Enter your email"
+                      placeholder="Email"
                     />
                     <label
                       htmlFor="username"
                       className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
                     >
-                      Enter your email
+                      Email
                     </label>
                   </div>
                 </div>
-                <div className=" rounded-lg bg-white p-4 px-3 w-full">
-                  <div className="relative w-full bg-inherit">
+                {/* Password input */}
+                <div
+                  className={`relative w-full rounded-lg bg-white p-4 px-3 ${
+                    password ? "ring-primary" : ""
+                  }`}
+                >
+                  <div className="relative flex w-full items-center bg-inherit">
                     <input
-                      type="text"
-                      id="username"
-                      name="username"
-                      className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Enter your email"
+                      type={open ? "text" : "password"}
+                      id="password"
+                      name="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      onBlur={() => setPassword(password)}
+                      className="peer h-10 flex-1 rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
+                      placeholder="Password"
                     />
                     <label
-                      htmlFor="username"
+                      htmlFor="password"
                       className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
                     >
-                      Enter your email
+                      Password
                     </label>
+                    {password && (
+                      <div className="absolute right-5 top-1/2 -translate-y-1/2 transform text-2xl">
+                        {open ? (
+                          <PiEyeThin onClick={toggle} />
+                        ) : (
+                          <PiEyeClosedThin onClick={toggle} />
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
+
                 {/* Password input */}
                 {/* <div className="relative mb-6 " data-te-input-wrapper-init="">
                   <input
@@ -88,7 +114,7 @@ function Login() {
                 </button>
                 {/* Divider */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-primary after:mt-0.5 after:flex-1 after:border-t after:border-primary">
-                  <p className="mx-4 mb-0 text text-center font-semibold dark:text-primary">
+                  <p className="text mx-4 mb-0 text-center font-semibold dark:text-primary">
                     OR
                   </p>
                 </div>

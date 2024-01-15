@@ -5,6 +5,22 @@ import VerticalCard from "../Reusable Components/VerticalCard";
 function GetYouStarted() {
   const [activeTab, setActiveTab] = useState("tab1");
   const underlineControls = useAnimation();
+  const [isMostPDropdownOpen, setMostPDropdownOpen] = useState(false);
+  const [isNewDropdownOpen, setNewDropdownOpen] = useState(false);
+  const [isTrendingDropdownOpen, setTrendingDropdownOpen] = useState(false);
+ 
+const toggleMostPDropdown = () => {
+  setMostPDropdownOpen((prev) => !prev);
+};
+
+const toggleNewDropdown = () => {
+  setNewDropdownOpen((prev) => !prev);
+};
+
+const toggleTrendingDropdown = () => {
+  setTrendingDropdownOpen((prev) => !prev);
+};
+
 
   const tabs = [
     { id: "tab1", label: "Most Popular", content: "Tab 1 Content" },
@@ -36,12 +52,13 @@ function GetYouStarted() {
 
   return (
     <>
-      <div className="my-auto ml-20">
+      <div className="my-auto ml-5 lg:ml-20">
         <div className=" space-y-5">
           <h1 className="heading">Nutrition Leadership Courses</h1>
           <h2 className="subheading">Courses to get your Started</h2>
         </div>
-        <ul className="relative flex justify-start">
+        {/* Large screen view */}
+        <ul className="relative hidden justify-start lg:flex">
           {tabs.map((tab) => (
             <motion.li
               key={tab.id}
@@ -63,7 +80,7 @@ function GetYouStarted() {
           />
         </ul>
 
-        <div className="mt-4 h-96 w-11/12 border-t-2 border-secondary p-4">
+        <div className="mt-4 hidden h-96 w-11/12 border-t-2 border-secondary p-4 lg:block">
           {tabs.map(
             (tab) =>
               activeTab === tab.id && (
@@ -81,6 +98,136 @@ function GetYouStarted() {
                   </div>
                 </motion.div>
               ),
+          )}
+        </div>
+        {/* Mobile view */}
+        <div className="relative  mt-5 inline-block w-full border-t-2 text-left lg:hidden">
+          <div
+            onClick={toggleMostPDropdown}
+            className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
+          >
+            <span> Most Popular</span>
+
+            <svg
+              className=" h-2.5 w-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </div>
+
+          {isMostPDropdownOpen && (
+            <div className="relative mt-2  w-full origin-top-right  rounded-md  bg-white pl-5  ring-0">
+              <div className="carousel carousel-center max-w-md space-x-4 rounded-box bg-neutral p-4">
+                <div className="carousel-item ">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="relative  mt-5 inline-block w-full border-t-2 text-left lg:hidden">
+          <div
+            onClick={toggleTrendingDropdown}
+            className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
+          >
+            <span> Trending </span>
+
+            <svg
+              className=" h-2.5 w-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </div>
+
+          {isTrendingDropdownOpen && (
+            <div className="relative mt-2  w-full origin-top-right  rounded-md  bg-white pl-5  ring-0">
+              <div className="carousel carousel-center max-w-md space-x-4 rounded-box bg-neutral p-4">
+                <div className="carousel-item ">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="relative  mt-5 inline-block w-full border-t-2 text-left lg:hidden">
+          <div
+            onClick={toggleNewDropdown}
+            className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
+          >
+            <span> New </span>
+
+            <svg
+              className=" h-2.5 w-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </div>
+
+          {isNewDropdownOpen && (
+            <div className="relative mt-2  w-full origin-top-right  rounded-md  bg-white pl-5  ring-0">
+              <div className="carousel carousel-center max-w-md space-x-4 rounded-box bg-neutral p-4">
+                <div className="carousel-item ">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+                <div className="carousel-item">
+                  <VerticalCard />
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </div>

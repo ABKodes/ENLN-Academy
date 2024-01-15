@@ -20,13 +20,13 @@ function FilterSidebar() {
   return (
     <>
       <div className="mx-5 space-y-5">
-        <h1 className="heading">All Leadership Courses</h1>
-        <div className=" ml-5 flex space-x-2 lg:mr-7">
+        <h1 className=" phoneheading">All Leadership Courses</h1>
+        <div className=" ml-5 flex space-x-2 lg:mr-7  justify-center">
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="btn smalltext btn-sm lg:btn-md"
+            className="btn smalltext btn-md"
           >
             <AiOutlineFilter className='w-5 h-5'/> Filter
           </motion.a>
@@ -35,7 +35,7 @@ function FilterSidebar() {
             <button
               onClick={toggleSortDropdown}
               type="button"
-              className="items-cenetr smalltext lg:btn-md btn-sm inline-flex w-full justify-center rounded-md border border-gray-700 bg-white px-4 py-2 shadow-sm hover:bg-gray-50  focus:outline-none"
+              className="items-cenetr smalltext btn-md  inline-flex w-full justify-center rounded-md border border-gray-700 bg-white px-4 py-2 shadow-sm hover:bg-gray-50  focus:outline-none"
               style={{ display: "flex", alignItems: "center" }}
             >
               Sort By
@@ -98,7 +98,7 @@ function FilterSidebar() {
           </div>
         </div>
         <div className='flex flex-col'>
-          <div className="relative ml-5  inline-block w-3/4  border-t-2 text-left">
+          <div className="relative lg:ml-5  inline-block lg:w-3/4 w-11/12 border-t-2 text-left">
             <div
               onClick={togglePriceDropdown}
               className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"
@@ -149,7 +149,7 @@ function FilterSidebar() {
               </div>
             )}
           </div>
-          <div className="relative ml-5 mt-2  inline-block w-3/4 border-b-2 border-t-2 text-left">
+          <div className="relative lg:ml-5 mt-2  inline-block lg:w-3/4 w-11/12 border-b-2 border-t-2 text-left">
             <div
               onClick={toggleLevelsDropdown}
               className=" text inline-flex w-full justify-between bg-white px-4 py-2 font-bold   focus:outline-none"

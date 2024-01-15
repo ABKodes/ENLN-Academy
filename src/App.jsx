@@ -27,6 +27,7 @@ import CourseSidebar from "./components/Course Description/CourseSidebar";
 import WhatYouLearn from "./components/Course Description/WhatYouLearn";
 import CourseContent from "./components/Course Description/CourseContent";
 import Categories from "./pages/Categories";
+import LeftSideBar from "./components/Lesson/Left Side Bar";
 function App() {
   return (
     <>
@@ -42,6 +43,7 @@ function App() {
         <AllRating />
        
         <br />
+        <LeftSideBar/>
         <br />
         <br />
         <Categories/>

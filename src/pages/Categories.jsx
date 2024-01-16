@@ -6,13 +6,13 @@ import AllCoursesList from '../components/Categories/AllCoursesList'
 function Categories() {
   return (
     <>
-      <div className='w-11/12'>
+      <div className="w-11/12">
         <GetYouStarted />
-        <div className="grid w-full grid-cols-[30%,70%] mt-20 ">
-          <div className='ml-2'>
+        <div className="mt-20 grid w-full grid-rows lg:grid-cols-[30%,70%] ">
+          <div className="lg:ml-2">
             <FilterSidebar />
           </div>
-          <div className='ml-5'>
+          <div className="lg:ml-5 ml-5">
             <AllCoursesList />
           </div>
         </div>

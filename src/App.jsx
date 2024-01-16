@@ -44,6 +44,7 @@ function App() {
         <AllRating />
        
         <br />
+        <LeftSideBar/>
         <br />
         <br />
         <Categories/>

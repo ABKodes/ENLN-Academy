@@ -41,11 +41,49 @@ function LeftSideBar({ userData }) {
 
   return (
     <div className="flex flex-col items-center border-r-2 bg-white p-4 lg:w-[22%]">
-        <h2 className="text font-bold">The complete Nutrition Course</h2>
+      <div className="relative h-40 w-40">
+        <svg
+          className="h-full w-full"
+          width={36}
+          height={36}
+          viewBox="0 0 36 36"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Background Circle */}
+          <circle
+            cx={18}
+            cy={18}
+            r={16}
+            fill="none"
+            className="stroke-current  dark:text-secondary"
+            strokeWidth={4}
+          />
+          {/* Progress Circle inside a group with rotation */}
+          <g className="origin-center -rotate-90 transform">
+            <circle
+              cx={18}
+              cy={18}
+              r={16}
+              fill="none"
+              className="stroke-current dark:text-primary"
+              strokeWidth={4}
+              strokeDasharray={100}
+              strokeDashoffset={25}
+            />
+          </g>
+        </svg>
+        {/* Percentage Text */}
+        <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+          <span className="text text-center font-bold dark:text-2xl dark:text-primary">
+            72%
+          </span>
+        </div>
+      </div>
+      <h2 className="text font-bold mt-5">The complete Nutrition Course</h2>
       <div className="relative">
         <button
           onClick={() => setDropdownOpen(!isDropdownOpen)}
-          className="text relative flex w-full items-center space-x-3 justify-between px-4 py-2 focus:outline-none"
+          className="text relative flex w-full items-center justify-between space-x-3 px-4 py-2 focus:outline-none"
         >
           <span>Course Material</span>
           <svg

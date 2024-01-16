@@ -96,12 +96,12 @@ function Login() {
                 {/* Remember me checkbox */}
                 <div className="mb-6 flex items-center justify-between">
                   {/* Forgot password link */}
-                  <a
-                    href="#!"
-                    className="hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 text-primary transition duration-150 ease-in-out"
+                  <button
+                    className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0"
                   >
-                    Forgot password?
-                  </a>
+                    Forgot Password?
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
+                  </button>
                 </div>
                 {/* Submit button */}
                 <button

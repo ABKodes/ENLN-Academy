@@ -21,12 +21,14 @@ import Benefits from "./components/Home Ind/Benefits";
 import ReviewModal from "./components/Reusable Components/Review Modal";
 import HorizontalCard from "./components/Reusable Components/HorizontalCard";
 import AllRating from "./components/Reusable Components/All Rating";
-import AllCoursesList from "./components/Categories/AllCoursesList";
-import FilterSidebar from "./components/Categories/FilterSidebar";
+// import AllCoursesList from "./components/Categories/AllCoursesList";
+// import FilterSidebar from "./components/Categories/FilterSidebar";
 import CourseSidebar from "./components/Course Description/CourseSidebar";
 import WhatYouLearn from "./components/Course Description/WhatYouLearn";
 import CourseContent from "./components/Course Description/CourseContent";
 import Categories from "./pages/Categories";
+import CourseDetail from "./components/Course Description/CourseDetail";
+import Instructor from "./components/Course Description/Instructor";
 function App() {
   return (
     <>
@@ -59,6 +61,8 @@ function App() {
         <CourseSidebar />
         <WhatYouLearn />
         <CourseContent />
+        <CourseDetail/>
+        <Instructor />
         <br />
         <Login />
         <HorizontalCard />

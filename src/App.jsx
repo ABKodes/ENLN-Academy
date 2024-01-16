@@ -30,6 +30,8 @@ import Categories from "./pages/Categories";
 import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
 import Lessonsoftheweek from "./components/Lesson/Lessons of the week";
+import LeftSideBar from "./components/Lesson/Left Side Bar";
+import RightSideBar from "./components/Lesson/Right Side Bar"
 function App() {
   return (
     <>
@@ -43,7 +45,6 @@ function App() {
         </div>
         <br />
         <AllRating />
-
         <br />
         <Lessonsoftheweek />
         <br />
@@ -52,7 +53,7 @@ function App() {
         <br />
         <Categories />
         <br />
-
+<RightSideBar/>
         <br />
         <br />
         <br />

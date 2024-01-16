@@ -5,7 +5,6 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
-import { FaInstagram } from "react-icons/fa";
 const testimonials = [
   {
     quote:

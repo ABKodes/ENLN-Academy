@@ -1,75 +1,52 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
-import "tailwindcss/tailwind.css";
-import { MdKeyboardArrowUp } from "react-icons/md";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
+function CourseDetail() {
+  const longText =
+    "Before embarking on this learning journey, ensure that you have the prerequisites to maximize engagement and success in the course. You should be comfortable using a computer, navigating software, and browsing the internet. A reliable internet connection is essential for accessing course materials and online resources. Whether using a computer, laptop, tablet, or smartphone, ensure your device has modern browsers for compatibility. Familiarity with common productivity tools like word processors and PDF readers is necessary. Proficiency in the language of instruction is vital for comprehending lectures and written materials. Dedicate sufficient time for reading, watching videos, and completing assignments according to the course schedule. Have note-taking tools, either digital or traditional, ready to capture key concepts. Approach the course with an open mindset, engaging with diverse perspectives and actively participating in discussions and collaborative projects. Intrinsic motivation and a positive learning attitude are key. Check for any hardware requirements specified in the course description and ensure familiarity with prerequisite subjects, if applicable. Enroll or have access to the designated learning platform for course materials and communication. For any questions or concerns about the requirements, feel free to reach out to the course instructor or support team for assistance.";
 
-const CourseDetail = ({ text, truncateLength }) => {
-  const [isTruncated, setIsTruncated] = useState(true);
+  const [showFullText, setShowFullText] = useState(false);
 
-  const toggleTruncation = () => {
-    setIsTruncated(!isTruncated);
-  };
-
-  const fadeVariants = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 },
+  const toggleShowFullText = () => {
+    setShowFullText(!showFullText);
   };
 
   return (
-    <div className="flex flex-col items-center">
-      <div className="relative">
-        <p className="text-gray-700">
-          {isTruncated ? text.slice(0, truncateLength) + "..." : text}
+    <div className="mx-auto w-11/12">
+      <div className="w-7/12">
+        <p className="heading">Requirements</p>
+        <p className={`text py-5 ${showFullText ? "block" : "truncate"}`}>
+          {longText}
         </p>
-        {isTruncated && (
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={fadeVariants}
-            transition={{ duration: 0.5 }}
-            className="absolute bottom-0 left-0 h-12 w-full bg-gradient-to-t from-transparent to-white"
-          />
-        )}
+        <p className={`heading ${showFullText ? "block" : "hidden"}`}>
+          Description
+        </p>
+        <p className={`text py-5 ${showFullText ? "block" : "hidden"}`}>
+          {longText}
+        </p>
+        <p className={`heading ${showFullText ? "block" : "hidden"}`}>
+          Who is this Course for
+        </p>
+        <p className={`text py-5 ${showFullText ? "block" : "hidden"}`}>
+          {longText}
+        </p>
       </div>
-      <AnimatePresence>
-        {!isTruncated && (
-          <motion.span
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={fadeVariants}
-            transition={{ duration: 0.5 }}
-            className="text-gray-700"
-          >
-            {text.slice(truncateLength)}
-          </motion.span>
+      <button
+        className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0"
+        onClick={toggleShowFullText}
+      >
+        {showFullText ? (
+          <div className="flex items-center text-justify">
+            Show More <MdKeyboardArrowDown />
+          </div>
+        ) : (
+          <div className="flex items-center text-justify">
+            Show Less <MdKeyboardArrowUp />
+          </div>
         )}
-      </AnimatePresence>
-      <Link className="smalltext group relative mx-4 transform leading-5 text-primary duration-300 dark:text-primary md:my-0">
-        <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
-        <motion.a
-          className="mt-2 cursor-pointer rounded text-primary focus:outline-none focus:ring-2 focus:ring-blue-300"
-          onClick={toggleTruncation}
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          {isTruncated ? (
-            <div className="flex">
-              Show More <MdKeyboardArrowDown />
-            </div>
-          ) : (
-            <div className="flex">
-              Show Less <MdKeyboardArrowUp />
-            </div>
-          )}
-        </motion.a>
-      </Link>
+        <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
+      </button>
     </div>
   );
-};
+}
 
 export default CourseDetail;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 function CourseSidebar() {
   return (
-    <div className="w-full max-w-sm rounded-lg border-gray-200 bg-white p-4 shadow  sm:p-8">
+    <div className=" max-w-sm rounded-lg bg-white p-4 shadow border border-primary  sm:p-8">
       <div className="flex items-center space-x-2">
         <img src="/public/money svg.svg" className="h-20 w-20" />
         <div>

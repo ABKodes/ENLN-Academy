@@ -28,6 +28,7 @@ import WhatYouLearn from "./components/Course Description/WhatYouLearn";
 import CourseContent from "./components/Course Description/CourseContent";
 import Categories from "./pages/Categories";
 import LeftSideBar from "./components/Lesson/Left Side Bar";
+import Lessonsoftheweek from "./components/Lesson/Lessons of the week";
 function App() {
   return (
     <>
@@ -41,13 +42,16 @@ function App() {
         </div>
         <br />
         <AllRating />
-       
+
         <br />
-        <LeftSideBar/>
+        <Lessonsoftheweek />
+        <br />
+        <LeftSideBar />
         <br />
         <br />
-        <Categories/>
+        <Categories />
         <br />
+
         <br />
         <br />
         <br />

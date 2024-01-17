@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
+import { InputText } from "primereact/inputtext";
 function Login() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
+  const [value, setValue] = useState('');
   // handle toggle
   const toggle = () => {
     setOpen(!open);
@@ -167,3 +169,5 @@ function Login() {
 }
 
 export default Login;
+
+        

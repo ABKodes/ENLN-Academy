@@ -1,60 +1,84 @@
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
+import React from 'react'
 import { motion } from "framer-motion";
 
-
-function OrgHero() {
+function Hero() {
   return (
-    <>
-      <div className="mx-auto my-auto  -mt-6 w-11/12">
-        {/* Mobile image */}
-        <div className="mx-auto my-auto flex justify-center lg:hidden">
-          <img src="/ss.jpg" alt="" className="w-full " />
-        </div>
-        <div className="mx-auto  my-auto flex w-full  flex-col rounded-lg border lg:h-[500px] lg:flex-row">
-          <div className="  hidden w-1/2 justify-center overflow-hidden lg:flex">
-            <div
-              className=" w-full skew-x-3 bg-cover"
-              style={{ backgroundImage: 'url("/ss.jpg")' }}
-            ></div>
-          </div>
-          <div className="flex w-full justify-center bg-transparent bg-gradient-to-r from-transparent to-secondary p-8 lg:w-1/2">
-            <div className="flex flex-col items-center justify-center lg:left-0">
-              {/* Large view heading */}
-              <h1 className="orgherotext mb-5 hidden font-bold text-white lg:block">
-                Empower individuals for enhanced opportunities <br />
-              </h1>
-              {/* mobile heading */}
-              <h1 className="orgphoneherotext font-bold text-white lg:hidden">
-                Empower individuals for enhanced opportunities
-                <br />
-              </h1>
+    <div>
+      <div
+        className="justify-left relative hidden min-h-[80vh] items-center lg:flex"
+        style={{ backgroundImage: 'url("/orgH.jpg")', backgroundSize: "cover" }}
+      >
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-100 "
+          style={{ mixBlendMode: "multiply" }}
+        ></div>
+        <div className="z-10 ml-16 w-1/2 text-white">
+          <h1 className=" mb-5 hidden text-5xl font-bold text-white lg:block">
+            Empower individuals for enhanced opportunities <br />
+          </h1>
+          <p className="mb-3 mt-3 text-justify text-xl text-white">
+            Our organization provides cutting-edge skills, ensuring readiness
+            for diverse and thriving careers. Elevate your potential with our
+            targeted programs for today's job market demands.
+          </p>
 
-              {/* Hero description */}
-              <p className="heroinnertext mb-3 mt-3 text-justify text-white">
-                Our organization provides cutting-edge skills, ensuring
-                readiness for diverse and thriving careers. Elevate your
-                potential with our targeted programs for today's job market
-                demands.
-              </p>
-
-              {/* Call to action button */}
-              <div className=" w-full  space-x-2 ">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
-                >
-                  Contact Sales
-                </motion.a>
-              </div>
-            </div>
+          {/* Call to action button */}
+          <div className=" w-1/2 space-x-2 ">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="btn btn-outline btn-primary hidden bg-white lg:flex lg:items-center"
+            >
+              Contact Sales
+            </motion.a>
           </div>
         </div>
       </div>
-    </>
+      <div className="mx-auto   w-11/12  lg:hidden ">
+        {/* Mobile image */}
+        <div
+          className=" relative flex min-h-[50vh]  w-full items-center bg-cover "
+          style={{
+            backgroundImage: 'url("/orgH.jpg")',
+            //backgroundSize: "cover",
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-100"
+            style={{ mixBlendMode: "multiply" }}
+          ></div>
+        </div>
+        <div className=' w-full'>
+          <h1 className="orgphoneherotext font-bold text-white ">
+            Empower individuals for enhanced opportunities
+            <br />
+          </h1>
+
+          {/* Hero description */}
+          <p className="heroinnertext mb-3 mt-3 text-justify text-white ">
+            Our organization provides cutting-edge skills, ensuring readiness
+            for diverse and thriving careers. Elevate your potential with our
+            targeted programs for today's job market demands.
+          </p>
+
+          {/* Call to action button */}
+          <div className=" w-full  space-x-2 ">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
+            >
+              Contact Sales
+            </motion.a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   );
 }
 
-export default OrgHero;
+export default Hero

@@ -22,9 +22,7 @@ import CourseContent from "./components/Course Description/CourseContent";
 import Categories from "./pages/Categories";
 import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
-import Lessonsoftheweek from "./components/Lesson/Lessons of the week";
-import LeftSideBar from "./components/Lesson/Left Side Bar";
-import RightSideBar from "./components/Lesson/Right Side Bar"
+import RatingCard from "./components/Reusable Components/Rating Card";
 import OrganizationHome from "./pages/OrganizationHome";
 function App() {
   return (
@@ -38,7 +36,6 @@ function App() {
         <br />
         <Lessonsoftheweek />
         <br />
-        <LeftSideBar />
         <br />
         <br />
         <Categories />
@@ -59,6 +56,7 @@ function App() {
         <CourseContent />
         <CourseDetail />
         <Instructor />
+        <RatingCard/>
         <br />
         <Login />
         <HorizontalCard />

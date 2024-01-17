@@ -3,15 +3,15 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 
-function WhyUs() {
+function OrgHero() {
   return (
     <>
       <div className="mx-auto my-auto  -mt-6 w-11/12">
         {/* Mobile image */}
-        <div className="flex lg:hidden mx-auto my-auto justify-center">
-          <img src="/ss.jpg" alt="" className="w-full "/>
+        <div className="mx-auto my-auto flex justify-center lg:hidden">
+          <img src="/ss.jpg" alt="" className="w-full " />
         </div>
-        <div className="mx-auto  my-auto flex w-full  flex-col lg:h-[500px] lg:flex-row border rounded-lg">
+        <div className="mx-auto  my-auto flex w-full  flex-col rounded-lg border lg:h-[500px] lg:flex-row">
           <div className="  hidden w-1/2 justify-center overflow-hidden lg:flex">
             <div
               className=" w-full skew-x-3 bg-cover"
@@ -19,7 +19,7 @@ function WhyUs() {
             ></div>
           </div>
           <div className="flex w-full justify-center bg-transparent bg-gradient-to-r from-transparent to-secondary p-8 lg:w-1/2">
-            <div className="lg:left-0 flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center lg:left-0">
               {/* Large view heading */}
               <h1 className="orgherotext mb-5 hidden font-bold text-white lg:block">
                 Empower individuals for enhanced opportunities <br />
@@ -57,4 +57,4 @@ function WhyUs() {
   );
 }
 
-export default WhyUs;
+export default OrgHero;

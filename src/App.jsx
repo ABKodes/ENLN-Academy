@@ -43,12 +43,14 @@ function App() {
         </div>
         <br />
         <AllRating />
-       
+        <br />
+        <Lessonsoftheweek />
         <br />
         <br />
         <br />
-        <Categories/>
+        <Categories />
         <br />
+<RightSideBar/>
         <br />
         <br />
         <br />

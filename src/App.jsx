@@ -29,6 +29,7 @@ import CourseContent from "./components/Course Description/CourseContent";
 import Categories from "./pages/Categories";
 import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
+import RatingCard from "./components/Reusable Components/Rating Card";
 function App() {
   return (
     <>
@@ -44,7 +45,6 @@ function App() {
         <AllRating />
        
         <br />
-        <LeftSideBar/>
         <br />
         <br />
         <Categories/>
@@ -64,6 +64,7 @@ function App() {
         <CourseContent />
         <CourseDetail/>
         <Instructor />
+        <RatingCard/>
         <br />
         <Login />
         <HorizontalCard />

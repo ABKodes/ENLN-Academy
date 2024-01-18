@@ -26,19 +26,21 @@ import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
 import Lessonsoftheweek from "./components/Lesson/Lessons of the week"
 import RightSideBar from "./components/Lesson/Right Side Bar";
+import Lessons from "./pages/Lessons";
+
 
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
         <br />
-
         <RightSideBar />
         <br />
-
         <AllRating />
         <br />
+        <Lessons/>
         <br />
+        <Lessonsoftheweek/>
         <br />
         <br />
         <Categories />

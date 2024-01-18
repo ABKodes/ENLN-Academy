@@ -24,11 +24,15 @@ import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
 import OrganizationHome from "./pages/OrganizationHome";
+import Lessonsoftheweek from "./components/Lesson/Lessons of the week"
+import RightSideBar from "./components/Lesson/Right Side Bar";
+
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
         <br />
+
         <RightSideBar />
         <br />
 
@@ -56,7 +60,7 @@ function App() {
         <CourseContent />
         <CourseDetail />
         <Instructor />
-        <RatingCard/>
+        <RatingCard />
         <br />
         <Login />
         <HorizontalCard />

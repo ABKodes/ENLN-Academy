@@ -78,6 +78,69 @@ const BroadSelection = () => {
             ),
         )}
       </div>
+      <div className="flex justify-center">
+        <nav className="rounded-full bg-gray-200 px-4 py-2">
+          <ul className="flex justify-between gap-4 py-2 px-10 font-medium text-gray-600">
+            <li>
+              <a
+                href="#"
+                className="rounded-full bg-white px-4 py-2 text-gray-600"
+              >
+                &lt; 
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full px-10 transition duration-300 ease-in-out bg-primary "
+              >
+                
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
+              >
+                
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
+              >
+                
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
+              >
+                
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
+              >
+                
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="rounded-full bg-white px-4 py-2 text-gray-600"
+              >
+                &gt;
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    
     </div>
   );
 };

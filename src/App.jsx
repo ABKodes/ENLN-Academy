@@ -23,7 +23,7 @@ import Categories from "./pages/Categories";
 import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
-import OrganizationHome from "./pages/OrganizationHome";
+import Rating from "./components/Course Description/Rating";
 import Lessonsoftheweek from "./components/Lesson/Lessons of the week"
 import RightSideBar from "./components/Lesson/Right Side Bar";
 
@@ -38,14 +38,13 @@ function App() {
 
         <AllRating />
         <br />
-        <Lessonsoftheweek />
         <br />
         <br />
         <br />
         <Categories />
 
         <br />
-        <OrganizationHome />
+        <br />
         <br />
         <br />
         <div className="overflow-x-hidden">
@@ -61,6 +60,7 @@ function App() {
         <CourseDetail />
         <Instructor />
         <RatingCard />
+        <Rating/>
         <br />
         <Login />
         <HorizontalCard />

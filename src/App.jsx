@@ -34,7 +34,9 @@ function App() {
         <br />
         <AllRating />
         <br />
+        <Lessons />
         <br />
+        <Lessonsoftheweek />
         <br />
         <br />
         <Categories />

@@ -24,21 +24,20 @@ import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
+import MoreCourses from "./components/Course Description/MoreCourses";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <MoreCourses />
         <br />
-        <RightSideBar />
         <br />
-
         <AllRating />
         <br />
         <br />
         <br />
         <br />
         <Categories />
-
         <br />
         <br />
         <br />
@@ -55,8 +54,8 @@ function App() {
         <CourseContent />
         <CourseDetail />
         <Instructor />
-        <RatingCard/>
-        <Rating/>
+        <RatingCard />
+        <Rating />
         <br />
         <Login />
         <HorizontalCard />

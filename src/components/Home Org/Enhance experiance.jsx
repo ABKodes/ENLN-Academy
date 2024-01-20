@@ -6,10 +6,10 @@ import { GiBullseye } from "react-icons/gi";
 function Enhanceexperiance() {
   return (
     <>
-      <div className="mx-auto my-auto w-full bg-secondary lg:grid lg:grid-cols-[40%,30%,30%] ">
+      <div className="mx-auto my-auto w-full bg-secondary lg:grid lg:grid-cols-[40%,30%,30%] space-y-5  lg:space-y-0">
         {/* first div */}
         <div className="mx-auto my-auto">
-          <div className=" items-start  space-y-3 p-20">
+          <div className=" items-start  space-y-3 lg:p-20 p-6">
             <h1 className="orgsubheading">
               Enhance Your Campus Learning Experience
             </h1>
@@ -21,7 +21,7 @@ function Enhanceexperiance() {
           </div>
         </div>
         {/* Second column */}
-        <div className="mx-auto my-auto space-y-5 py-10 px-5">
+        <div className="mx-auto my-auto space-y-5 lg:py-10  px-5">
           <div className="flex flex-col items-start space-y-3 ">
             <div className="text-5xl text-primary  ">
               <FaNutritionix />
@@ -44,7 +44,7 @@ function Enhanceexperiance() {
           </div>
         </div>
         {/* Third div */}
-        <div className="mx-auto my-auto space-y-5 py-10 px-5">
+        <div className="mx-auto my-auto space-y-5 lg:py-10 py-4  px-5">
           <div className="flex flex-col items-start space-y-3 ">
             <div className="text-5xl text-primary  ">
               <GiBullseye />

@@ -2,6 +2,30 @@ import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 const BroadSelection = () => {
+    const [position, setPosition] = useState(0);
+
+    const handlePreviousClick = () => {
+      if (position > 0) {
+        setPosition(position - 1);
+      }
+    };
+
+    const handleNextClick = () => {
+      if (position < 6) {
+        setPosition(position + 1);
+      }
+    };
+
+    useEffect(() => {
+      const navItems = document.querySelectorAll(".nav-item");
+      navItems.forEach((item, index) => {
+        if (index === position) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    }, [position]);
   
   const [activeTab, setActiveTab] = useState("tab1");
   const underlineControls = useAnimation();
@@ -80,59 +104,22 @@ const BroadSelection = () => {
       </div>
       <div className="flex justify-center">
         <nav className="rounded-full bg-gray-200 px-4 py-2">
-          <ul className="flex justify-between gap-4 py-2 px-10 font-medium text-gray-600">
+          <ul className="flex justify-between gap-4 px-10 py-2 font-medium text-gray-600">
             <li>
               <a
                 href="#"
                 className="rounded-full bg-white px-4 py-2 text-gray-600"
+                onClick={handlePreviousClick}
               >
-                &lt; 
+                &lt;
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="rounded-full px-10 transition duration-300 ease-in-out bg-primary "
-              >
-                
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
-              >
-                
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
-              >
-                
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
-              >
-                
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="rounded-full px-4 py-2 transition duration-300 ease-in-out"
-              >
-                
-              </a>
-            </li>
+            {/* Add the remaining list items here */}
             <li>
               <a
                 href="#"
                 className="rounded-full bg-white px-4 py-2 text-gray-600"
+                onClick={handleNextClick}
               >
                 &gt;
               </a>
@@ -140,7 +127,6 @@ const BroadSelection = () => {
           </ul>
         </nav>
       </div>
-    
     </div>
   );
 };

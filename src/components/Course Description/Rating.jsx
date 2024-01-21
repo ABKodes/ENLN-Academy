@@ -150,7 +150,7 @@ const Rating = () => {
         <div className="flex gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="grid grid-rows-3 gap-4">
             <div className="group container relative mx-auto flex h-[250px] w-[250px] cursor-pointer items-center justify-center gap-3 shadow-lg sm:h-[317px] sm:w-[317px]">
-              <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+              <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700">
                 <a href="#">
                   <img
                     className="rounded-t-lg"
@@ -195,7 +195,7 @@ const Rating = () => {
                 </div>
               </div>
 
-              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 ">
+              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 rounded-lg">
                 <div className="mb-auto">
                   <h5 className="text mb-2 font-bold dark:text-left">
                     The Complete Nutrition Course
@@ -208,8 +208,8 @@ const Rating = () => {
                     <span className="cardtext text-gray-500 dark:text-gray-400">
                       All levels
                     </span>
-                    <span className="ratingcardtext badge badge-primary badge-outline">
-                      VIRTUAL
+                    <span className="ratingcardtext badge badge-primary badge-outline badge-xs uppercase">
+                      virtual
                     </span>
                   </div>
                 </div>

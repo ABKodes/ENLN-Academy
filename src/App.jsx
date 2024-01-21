@@ -25,8 +25,6 @@ import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
 import MoreCourses from "./components/Course Description/MoreCourses";
-import Lessonsoftheweek from "./components/Lesson/Lessons of the week";
-import Lessons from "./pages/Lessons";
 import OrganizationHome from "./pages/OrganizationHome";
 
 function App() {
@@ -39,9 +37,7 @@ function App() {
         <br />
         <AllRating />
         <br />
-        <Lessons />
         <br />
-        <Lessonsoftheweek />
         <br />
         <br />
         <Categories />

@@ -31,7 +31,7 @@ function Lessonsoftheweek() {
 
   return (
     <div>
-      <div className="relative inline-block  w-11/12 border border-black text-left lg:ml-5 lg:w-[50]%">
+      <div className="relative inline-block  w-11/12 border border-black text-left lg:ml-5 lg:w-[50%]">
         <div
           onClick={togglePriceDropdown}
           className=" text inline-flex w-full justify-between bg-white px-4  py-2 font-bold  focus:outline-none"

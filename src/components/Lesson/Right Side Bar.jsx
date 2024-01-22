@@ -20,7 +20,7 @@ function RightSideBar() {
 
   return (
     <>
-      <div className="border bg-white lg:w-[23%]">
+      <div className="bg-white lg:w-full">
         <div className="flex w-full flex-col items-center space-y-3">
           <img src="/Schedule.svg" alt="Schedule Pic" className="w-full" />
           <h2 className="subheading">Schedule</h2>
@@ -36,7 +36,7 @@ function RightSideBar() {
         <div className="my-3 flex w-full flex-col items-center space-y-5">
           <h2 className="subheading">Upcoming Events</h2>
           <div className="group relative h-[60] w-9/12 cursor-pointer items-center justify-center overflow-hidden rounded shadow-md transition-shadow hover:shadow-xl hover:shadow-black/30">
-            <div className="h-60 w-72">
+            <div className="h-66 w-72">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src="/public/upcoming event.svg"

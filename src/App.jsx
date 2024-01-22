@@ -24,14 +24,13 @@ import CourseDetail from "./components/Course Description/CourseDetail";
 import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
-import MoreCourses from "./components/Course Description/MoreCourses";
 import OrganizationHome from "./pages/OrganizationHome";
-
+import Lessons from "./pages/Lessons"
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <MoreCourses />
+        <Lessons/>
         <br />
         <OrganizationHome/>
         <br />

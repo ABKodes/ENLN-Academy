@@ -27,10 +27,13 @@ import Rating from "./components/Course Description/Rating";
 import OrganizationHome from "./pages/OrganizationHome";
 import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 import Lessons from "./pages/Lessons"
+import NoCourseFound from "./components/Reusable Components/No Course Found";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <NoCourseFound/>
+        <br />
         <Lessons/>
         <br />
         <OrganizationHome/>

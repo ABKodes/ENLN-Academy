@@ -31,15 +31,14 @@ function Lessonsoftheweek() {
 
   return (
     <div>
-      <div className="relative inline-block  w-11/12 border border-black text-left lg:ml-5 lg:w-[50%]">
+      <div className="relative inline-block  w-11/12 items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
         <div
           onClick={togglePriceDropdown}
-          className=" text inline-flex w-full justify-between bg-white px-4  py-2 font-bold  focus:outline-none"
+          className=" text inline-flex w-full  bg-white px-4  py-2 font-bold  focus:outline-none "
         >
-          <span> Fundamentals of Nutrition</span>
           <svg
-            className={`h-2.5 w-2.5 transform ${
-              isPriceDropdownOpen ? "rotate-180" : ""
+            className={`h-3 w-3 mt-1 transform ${
+              isPriceDropdownOpen ? "rotate-180" : "rotate-90"
             }`}
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
@@ -54,6 +53,8 @@ function Lessonsoftheweek() {
               d="m1 1 4 4 4-4"
             />
           </svg>
+
+          <span className="mx-3"> Fundamentals of Nutrition</span>
         </div>
 
         {isPriceDropdownOpen && (

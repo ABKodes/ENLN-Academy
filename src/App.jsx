@@ -26,6 +26,7 @@ import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
 import MoreCourses from "./components/Course Description/MoreCourses";
 import OrganizationHome from "./pages/OrganizationHome";
+import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <br />
         <AllRating />
         <br />
+        <Sampleforwhyus/>
         <br />
         <br />
         <br />

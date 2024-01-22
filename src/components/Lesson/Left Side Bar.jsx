@@ -40,7 +40,7 @@ function LeftSideBar({ userData }) {
   };
 
   return (
-    <div className="flex flex-col items-center border-r-2 bg-white p-4 lg:w-[22%]">
+    <div className="flex flex-col items-center border-r-2 bg-white p-4 lg:w-full h-full">
       <div className="relative h-40 w-40">
         <svg
           className="h-full w-full"
@@ -80,7 +80,7 @@ function LeftSideBar({ userData }) {
         </div>
       </div>
       <h2 className="text font-bold mt-5">The complete Nutrition Course</h2>
-      <div className="relative">
+      <div className="relative mt-4">
         <button
           onClick={() => setDropdownOpen(!isDropdownOpen)}
           className="text relative flex w-full items-center justify-between space-x-3 px-4 py-2 focus:outline-none"
@@ -105,7 +105,7 @@ function LeftSideBar({ userData }) {
           </svg>
         </button>
         {isDropdownOpen && (
-          <div className="absolute bg-white p-4">{renderCheckboxes()}</div>
+          <div className="absolute bg-white p-4 space-y-3 ml-5">{renderCheckboxes()}</div>
         )}
       </div>
     </div>

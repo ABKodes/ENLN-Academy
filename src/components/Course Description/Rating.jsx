@@ -152,11 +152,12 @@ const Rating = () => {
             <div className="group container relative mx-auto flex h-[250px] w-[250px] cursor-pointer items-center justify-center gap-3 shadow-lg sm:h-[317px] sm:w-[317px]">
               <div className="max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700">
                 <a href="#">
-                  <img
-                    className="rounded-t-lg"
-                    src="/public/course image.svg"
-                    alt=""
-                  />
+                  <figure>
+                    <img
+                      src="/public/course image.svg"
+                      className="w-full object-cover"
+                    />
+                  </figure>
                 </a>
                 <div className="px-5">
                   <a href="#">
@@ -195,7 +196,7 @@ const Rating = () => {
                 </div>
               </div>
 
-              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 rounded-lg">
+              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform rounded-lg bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 border-primary border">
                 <div className="mb-auto">
                   <h5 className="text mb-2 font-bold dark:text-left">
                     The Complete Nutrition Course
@@ -219,24 +220,75 @@ const Rating = () => {
                     Nutrition Course, designed for individuals seeking a
                     holistic understanding of nutrition.
                   </p>
-                  <ul className="cardtext list-disc p-3">
-                    <li>
-                      Gain practical knowledge to make informed dietary choices
-                      and achieve your health goals.
+                  <ul className="cardtext space-y-4 text-left ">
+                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                      <svg
+                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 16 12"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M1 5.917 5.724 10.5 15 1.5"
+                        />
+                      </svg>
+                      <span>
+                        Gain practical knowledge to make informed dietary
+                        choices and achieve your health goals.
+                      </span>
                     </li>
-                    <li>
-                      Explore the science of nutrition, covering essential
-                      nutrients, dietary patterns, and personalized meal
-                      planning.
+                    <li className="flex space-x-3 text-justify rtl:space-x-reverse">
+                      <svg
+                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 16 12"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M1 5.917 5.724 10.5 15 1.5"
+                        />
+                      </svg>
+                      <span className="text-justify">
+                        Explore the science of nutrition, covering essential
+                        nutrients, dietary patterns, and personalized meal
+                        planning.
+                      </span>
                     </li>
-                    <li>
-                      Acquire the skills to decipher food labels, assess
-                      nutritional needs, and implement sustainable lifestyle
-                      changes for lifelong well-being.
+                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                      <svg
+                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 16 12"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M1 5.917 5.724 10.5 15 1.5"
+                        />
+                      </svg>
+                      <span>
+                        Acquire the skills to decipher food labels, assess
+                        nutritional needs, and implement sustainable lifestyle
+                        changes for lifelong well-being.
+                      </span>
                     </li>
                   </ul>
                 </div>
-                <div className="card-actions  justify-end">
+                <div className="card-actions justify-end">
                   <button className="buttontext btn btn-primary w-full">
                     Add to Cart
                   </button>

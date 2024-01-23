@@ -19,17 +19,17 @@ function FilterSidebar() {
 
   return (
     <>
-      <div className="mx-5 space-y-5">
-        <h1 className=" phoneheading">All Leadership Courses</h1>
-        <div className=" ml-5 flex space-x-2 lg:mr-7  justify-center">
-          <motion.a
+      <div className="mx-5 space-y-2">
+        <h1 className="heading">All Leadership Courses</h1>
+        <div className=" ml-5 flex space-x-2 lg:mr-7  justify-end">
+          {/* <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="btn smalltext btn-md"
           >
             <AiOutlineFilter className='w-5 h-5'/> Filter
-          </motion.a>
+          </motion.a> */}
 
           <div className="relative inline-block text-left ">
             <button
@@ -97,6 +97,7 @@ function FilterSidebar() {
             )}
           </div>
         </div>
+        <h1 className='subheading mx-3'>Filter By</h1>
         <div className='flex flex-col'>
           <div className="relative lg:ml-5  inline-block lg:w-3/4 w-11/12 border-t-2 text-left">
             <div

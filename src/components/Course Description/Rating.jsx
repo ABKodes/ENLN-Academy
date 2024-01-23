@@ -155,7 +155,7 @@ const Rating = () => {
                   <figure>
                     <img
                       src="/public/course image.svg"
-                      className="w-full object-cover"
+                      className="h-52 w-full object-cover"
                     />
                   </figure>
                 </a>
@@ -168,10 +168,12 @@ const Rating = () => {
                   <p className="ratingcardtext mb-3 font-normal text-gray-700 dark:text-gray-400">
                     Bekele Sewasew
                   </p>
-                  <div className="flex items-center space-x-1 text-justify ">
-                    <p className="ratingcardtext mb-3  font-normal text-gray-700 dark:text-gray-400">
-                      4.95
-                    </p>
+                  <div className="flex items-center space-x-1">
+                    <div className="flex items-center">
+                      <p className="ratingcardtext pt-1 font-semibold">
+                        4.95
+                      </p>
+                    </div>
                     <div className="flex items-center">
                       {[...Array(5)].map((_, index) => (
                         <svg
@@ -186,17 +188,17 @@ const Rating = () => {
                         </svg>
                       ))}
                     </div>
-                    <p className="ratingcardtext mb-3  font-normal text-gray-700 dark:text-gray-400">
-                      (105,623)
-                    </p>
+                    <div className="flex items-center">
+                      <p className="ratingcardtext pt-1 font-medium">
+                        (110,568)
+                      </p>
+                    </div>
                   </div>
-                  <p className="phonetext mb-3 font-normal text-gray-700 dark:font-bold dark:text-gray-400">
-                    Birr 1,500
-                  </p>
+                  <p className="phonetext my-3  dark:font-bold">Birr 1,500</p>
                 </div>
               </div>
 
-              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform rounded-lg bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 border-primary border">
+              <div className="hover-card invisible absolute right-0 z-10 -mx-2 h-auto w-full translate-x-full transform rounded-lg border border-primary bg-white p-4 text-gray-900 opacity-0 transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100">
                 <div className="mb-auto">
                   <h5 className="text mb-2 font-bold dark:text-left">
                     The Complete Nutrition Course
@@ -220,7 +222,7 @@ const Rating = () => {
                     Nutrition Course, designed for individuals seeking a
                     holistic understanding of nutrition.
                   </p>
-                  <ul className="cardtext space-y-4 text-left ">
+                  <ul className="cardtext text-left ">
                     <li className="flex items-center space-x-3 rtl:space-x-reverse">
                       <svg
                         className="h-3.5 w-3.5 flex-shrink-0 text-primary"
@@ -297,6 +299,7 @@ const Rating = () => {
             </div>
           </div>
         </div>
+        <br/>
       </div>
     </div>
   );

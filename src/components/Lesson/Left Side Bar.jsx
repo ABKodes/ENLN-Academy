@@ -40,7 +40,7 @@ function LeftSideBar({ userData }) {
   };
 
   return (
-    <div className="flex flex-col items-center border-r-2 bg-white p-4 lg:w-full h-full">
+    <div className="lg:flex flex-col items-center border-r-2 bg-white p-4 hidden lg:w-full h-full">
       <div className="relative h-40 w-40">
         <svg
           className="h-full w-full"

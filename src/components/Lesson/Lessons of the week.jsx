@@ -31,13 +31,13 @@ function Lessonsoftheweek() {
 
   return (
     <div>
-      <div className="relative inline-block  w-11/12 items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
+      <div className="relative inline-block  w-full items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
         <div
           onClick={togglePriceDropdown}
-          className=" text inline-flex w-full  bg-white px-4  py-2 font-bold  focus:outline-none "
+          className="lg:text phonetext inline-flex w-full  bg-white px-4  py-2 font-bold  focus:outline-none "
         >
           <svg
-            className={`h-3 w-3 mt-1 transform ${
+            className={`mt-1 h-3 w-3 transform ${
               isPriceDropdownOpen ? "rotate-180" : "rotate-90"
             }`}
             aria-hidden="true"
@@ -59,7 +59,7 @@ function Lessonsoftheweek() {
 
         {isPriceDropdownOpen && (
           <div className="relative mt-2  w-full origin-top-right rounded-md  bg-white   ring-0">
-            <div className="my-5 flex w-full justify-center space-x-3 border-b border-black py-3">
+            <div className="my-5 flex w-full lg:justify-center space-x-3 border-b border-black py-3">
               {" "}
               {/* Video svg */}
               <svg
@@ -87,7 +87,7 @@ function Lessonsoftheweek() {
                   </clipPath>
                 </defs>
               </svg>
-              <span className="smalltext flex space-x-1">
+              <span className="lg:smalltext phonesmalltext flex space-x-1">
                 <p className="font-bold hover:underline">12h 35m</p>
                 <p> of videos left </p>
               </span>
@@ -118,7 +118,7 @@ function Lessonsoftheweek() {
                   </clipPath>
                 </defs>
               </svg>
-              <span className="smalltext flex space-x-1">
+              <span className="lg:smalltext phonesmalltext flex space-x-1">
                 <p className="font-bold hover:underline">12h 35m</p>
                 <p>reading left </p>
               </span>
@@ -150,14 +150,14 @@ function Lessonsoftheweek() {
                   </clipPath>
                 </defs>
               </svg>
-              <span className="smalltext flex space-x-1">
+              <span className="lg:smalltext phonesmalltext flex space-x-1">
                 <p className="font-bold hover:underline">10</p>
                 <p>assessments </p>
               </span>
             </div>
             <div className="mx-auto w-11/12">
               <div className="w-full">
-                <p className="text">
+                <p className="lg:text phonetext">
                   This week, you will delve into the fundamentals of nutrition,
                   exploring the essential components that contribute to a
                   healthy diet. Topics will include macronutrients,

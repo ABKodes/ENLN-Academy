@@ -155,7 +155,7 @@ const Rating = () => {
                   <figure>
                     <img
                       src="/public/course image.svg"
-                      className="h-52 w-full object-cover"
+                      className="h-52 p-3 w-full object-cover"
                     />
                   </figure>
                 </a>
@@ -211,7 +211,7 @@ const Rating = () => {
                     <span className="cardtext text-gray-500 dark:text-gray-400">
                       All levels
                     </span>
-                    <span className="ratingcardtext badge badge-primary badge-outline badge-xs uppercase">
+                    <span className="ratingcardtext badge badge-primary badge-outline badge-sm uppercase">
                       virtual
                     </span>
                   </div>
@@ -222,10 +222,10 @@ const Rating = () => {
                     Nutrition Course, designed for individuals seeking a
                     holistic understanding of nutrition.
                   </p>
-                  <ul className="cardtext text-left ">
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                  <ul className="cardtext text-left space-y-1">
+                    <li className="flex space-x-3 rtl:space-x-reverse">
                       <svg
-                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        className="h-3.5 w-3.5 mt-1 flex-shrink-0 text-primary"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -246,7 +246,7 @@ const Rating = () => {
                     </li>
                     <li className="flex space-x-3 text-justify rtl:space-x-reverse">
                       <svg
-                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        className="h-3.5 w-3.5 mt-1 flex-shrink-0 text-primary"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -266,9 +266,9 @@ const Rating = () => {
                         planning.
                       </span>
                     </li>
-                    <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                    <li className="flex space-x-3 rtl:space-x-reverse">
                       <svg
-                        className="h-3.5 w-3.5 flex-shrink-0 text-primary"
+                        className="h-3.5 w-3.5 mt-1 flex-shrink-0 text-primary"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

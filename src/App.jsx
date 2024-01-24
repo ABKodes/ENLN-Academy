@@ -28,12 +28,15 @@ import OrganizationHome from "./pages/OrganizationHome";
 import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 import Lessons from "./pages/Lessons"
 import NoCourseFound from "./components/Reusable Components/No Course Found";
+import Four0four from "./components/Reusable Components/Four0four";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
         <NoCourseFound/>
         <br />
+        <Four0four />
+        <br/>
         <Lessons/>
         <br />
         <OrganizationHome/>

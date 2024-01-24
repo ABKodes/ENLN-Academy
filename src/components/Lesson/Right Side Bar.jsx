@@ -20,7 +20,7 @@ function RightSideBar() {
 
   return (
     <>
-      <div className="bg-white lg:w-full">
+      <div className="bg-white lg:w-full hidden lg:block">
         <div className="flex w-full flex-col items-center space-y-3">
           <img src="/Schedule.svg" alt="Schedule Pic" className="w-full" />
           <h2 className="subheading">Schedule</h2>

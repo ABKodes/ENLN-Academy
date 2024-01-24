@@ -8,14 +8,14 @@ function Lessons() {
   return (
     <div>
       <HeaderLesson />
-      <div className="flex w-full m-3">
-        <div className="w-1/4">
+      <div className="flex w-full  lg:m-3">
+        <div className="lg:w-1/4 ">
           <LeftSideBar />
         </div>
-        <div className="w-3/4">
+        <div className="lg:w-3/4">
           <Lessonsoftheweek />
         </div>
-        <div className="w-1/4">
+        <div className="lg:w-1/4">
           <RightSideBar />
         </div>
       </div>

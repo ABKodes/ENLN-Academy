@@ -29,21 +29,29 @@ import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 import Lessons from "./pages/Lessons"
 import NoCourseFound from "./components/Reusable Components/No Course Found";
 import Four0four from "./components/Reusable Components/Four0four";
+import Profile from "./components/Instructor/Profile";
+import About from "./components/Instructor/About";
+import MyCourses from "./components/Instructor/My Courses"
+import Instructors from "./pages/Instructor";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <NoCourseFound/>
+        <Instructors/>
+        <br />
+        
+        <br />
+        <NoCourseFound />
         <br />
         <Four0four />
-        <br/>
-        <Lessons/>
         <br />
-        <OrganizationHome/>
+        <Lessons />
+        <br />
+        <OrganizationHome />
         <br />
         <AllRating />
         <br />
-        <Sampleforwhyus/>
+        <Sampleforwhyus />
         <br />
         <br />
         <br />

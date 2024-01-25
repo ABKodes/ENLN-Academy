@@ -1,53 +1,98 @@
-function Card({ imageSrc, name, content, timestamp }) {
-  return (
-    <div className="w-3/12 rounded-2xl bg-white px-10 py-8 shadow-lg transition duration-500 hover:shadow-2xl">
-      <div className="flex items-center justify-between">
-        <div className="mt-4 flex items-center space-x-4 py-3">
-          <div>
-            <img className="h-24 w-24 rounded-full" src={imageSrc} alt="" />
-          </div>
-          <div className="text-sm font-semibold">
-            <p className="text dark:font-bold">{name}</p>
-            <div className="flex items-center">
-              {[1, 2, 3, 4, 5].map((index) => (
-                <svg
-                  key={index}
-                  className="ml-1 h-3 w-3 text-yellow-300"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 22 20"
-                >
-                  <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z" />
-                </svg>
-              ))}
-              <span className="text flex items-center justify-center font-normal dark:text-left dark:text-gray-600">
-                {" "}
-                {timestamp}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-4">
-        <p className="text mt-4 ">{content}</p>
-      </div>
-    </div>
-  );
-}
-
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 function RatingCard() {
   return (
-    <div className="flex space-x-2 space-y-2">
-      {[1].map((index) => (
-        <Card
-          key={index}
-          imageSrc="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-          name="John Lucas"
-          content="But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."
-          timestamp="5 min ago"
-        />
-      ))}
+    <div className="w-7/12">
+      {/* Title */}
+      <div className="">
+        <h2 className="heading md:leading-tight">Rating</h2>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="flex flex-col rounded-xl border border-gray-200 bg-white p-4  md:p-6">
+          <div className="flex items-center gap-x-4">
+            <img
+              className="h-20 w-20 rounded-full"
+              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
+              alt="Image Description"
+            />
+            <div className="grow">
+              <h3 className="font-medium text-gray-800">Bekele Sewasew</h3>
+              <p className="text-xs uppercase text-gray-500">Founder / CEO</p>
+              <div className="mt-3 space-x-1">
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaXTwitter />
+                </a>
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaFacebookF />
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-gray-500">
+            John is a software engineer with over 10 years of experience in
+            developing web and mobile applications. He is skilled in JavaScript,
+            React, and Node.js. John is a software engineer with over 10 years
+            of experience in developing web and mobile applications. He is
+            skilled in JavaScript, React, and Node.js.
+          </p>
+          {/* End Social Brands */}
+        </div>
+        <div className="flex flex-col rounded-xl border border-gray-200 bg-white p-4  md:p-6">
+          <div className="flex items-center gap-x-4">
+            <img
+              className="h-20 w-20 rounded-full"
+              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
+              alt="Image Description"
+            />
+            <div className="grow">
+              <h3 className="font-medium text-gray-800">Bekele Sewasew</h3>
+              <p className="text-xs uppercase text-gray-500">Founder / CEO</p>
+              <div className="mt-3 space-x-1">
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaXTwitter />
+                </a>
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 text-sm font-semibold text-gray-500 hover:bg-gray-100 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                  href="#"
+                >
+                  <FaFacebookF />
+                </a>
+              </div>
+            </div>
+          </div>
+          <p className="mt-3 text-gray-500">
+            John is a software engineer with over 10 years of experience in
+            developing web and mobile applications. He is skilled in JavaScript,
+            React, and Node.js. John is a software engineer with over 10 years
+            of experience in developing web and mobile applications. He is
+            skilled in JavaScript, React, and Node.js.
+          </p>
+          {/* End Social Brands */}
+        </div>
+      </div>
+      {/* End Grid */}
     </div>
   );
 }

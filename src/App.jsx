@@ -73,7 +73,7 @@ function App() {
         <WhatYouLearn />
         <CourseContent />
         <CourseDetail />
-        <Instructor />
+        <Instructor/>
         <RatingCard />
         <Rating />
         <br />

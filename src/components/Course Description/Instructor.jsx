@@ -1,47 +1,49 @@
-import React, { useState } from "react";
-import { InputTextarea } from "primereact/inputtextarea";
-import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa6";
 function Instructor() {
-    const [value, setValue] = useState('');
   return (
-    <div className="">
-    <div className="my-10 w-7/12 rounded-lg border border-primary bg-white p-5 shadow-md">
-      <div className="flex">
+    <div className=" w-7/12 flex flex-col rounded-xl  bg-white p-4  md:p-6">
+      <div className="flex items-center gap-x-4">
         <img
-          className="h-32 w-32 rounded-full"
-          src="https://picsum.photos/200"
-          alt="Profile picture"
+          className="h-20 w-20 rounded-full"
+          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
+          alt="Image Description"
         />
-        <div className="mx-5 text-left">
-          <h2 className="mt-3 text-center text-2xl font-semibold">John Doe</h2>
-          <p className="mt-1 text-center text-gray-600">Software Engineer</p>
-          <div className="flex justify-evenly">
-            <a href="#" className="mx-3 text-2xl text-primary hover:text-accent">
-              <CiFacebook/>
+        <div className="grow">
+          <h3 className="text">Bekele Sewasew</h3>
+          <p className="cardtext uppercase dark:text-gray-500">Founder / CEO</p>
+          <div className="mt-3 space-x-1">
+            <a
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-secondary text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary disabled:pointer-events-none disabled:opacity-50 "
+              href="#"
+            >
+              <FaXTwitter />
             </a>
-            <a href="#" className="mx-3 text-2xl text-primary hover:text-accent">
-              <FaXTwitter/>
+            <a
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-secondary text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary disabled:pointer-events-none disabled:opacity-50"
+              href="#"
+            >
+              <FaLinkedinIn />
             </a>
-            <a href="#" className="mx-3 text-2xl text-primary hover:text-accent">
-              <AiOutlineLinkedin/>
+
+            <a
+              className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-secondary text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary disabled:pointer-events-none disabled:opacity-50"
+              href="#"
+            >
+              <FaFacebookF  />
             </a>
           </div>
         </div>
       </div>
-      <div className="mt-5">
-        <h3 className="text-xl font-semibold">Bio</h3>
-        <p className="mt-2 text-gray-600 text-justify">
-          John is a software engineer with over 10 years of experience in
-          developing web and mobile applications. He is skilled in JavaScript,
-          React, and Node.js.
-          John is a software engineer with over 10 years of experience in
-          developing web and mobile applications. He is skilled in JavaScript,
-          React, and Node.js.
-        </p>
-      </div>
-    </div>  
+      <p className="mt-3 text">
+        John is a software engineer with over 10 years of experience in
+        developing web and mobile applications. He is skilled in JavaScript,
+        React, and Node.js. John is a software engineer with over 10 years of
+        experience in developing web and mobile applications. He is skilled in
+        JavaScript, React, and Node.js.
+      </p>
+      {/* End Social Brands */}
     </div>
   );
 }

@@ -34,11 +34,14 @@ import About from "./components/Instructor/About";
 import MyCourses from "./components/Instructor/My Courses"
 import Instructors from "./pages/Instructor";
 import SignUp from "./pages/SignUp"
+import HeroI from "./components/Home Gov/Hero";
 
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <HeroI />
+        <br />
         <Instructors />
         <br />
         <SignUp />

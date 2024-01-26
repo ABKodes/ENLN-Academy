@@ -83,7 +83,7 @@ function HeaderLesson() {
                 )}
               </div>
               <div
-                className={`absolute inset-x-0  z-20 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
+                className={`absolute inset-x-0  z-50 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
                   isOpen
                     ? "translate-x-0 opacity-100"
                     : "-translate-x-full opacity-0"
@@ -91,7 +91,7 @@ function HeaderLesson() {
               >
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                  className="menu dropdown-content menu-sm z-[50] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                 >
                   <li>
                     <Link className="group relative  text-primary hover:font-bold">
@@ -335,10 +335,10 @@ function HeaderLesson() {
                 </div>
               </div>
               {/* Dropdown menu items */}
-              <div className="">
+              <div className="z-50">
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow "
+                  className="menu dropdown-content menu-sm z-[50] mt-3 w-52 rounded-box bg-base-100 p-2 shadow "
                 >
                   <li className="hover:bg-secondary hover:text-primary">
                     <a>Profile</a>

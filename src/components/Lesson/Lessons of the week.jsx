@@ -31,7 +31,7 @@ function Lessonsoftheweek() {
 
   return (
     <div>
-      <div className="relative inline-block  w-full items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
+      <div className="relative inline-block z-10  w-full items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
         <div
           onClick={togglePriceDropdown}
           className="lg:text phonetext inline-flex w-full  bg-white px-4  py-2 font-bold  focus:outline-none "
@@ -58,7 +58,7 @@ function Lessonsoftheweek() {
         </div>
 
         {isPriceDropdownOpen && (
-          <div className="relative mt-2  w-full origin-top-right rounded-md  bg-white   ring-0">
+          <div className="lg:relative mt-2  w-full lg:origin-top-right rounded-md  bg-white   ring-0">
             <div className="my-5 flex w-full lg:justify-center space-x-3 border-b border-black py-3">
               {" "}
               {/* Video svg */}
@@ -222,7 +222,7 @@ function Lessonsoftheweek() {
               </div>
 
               {islessonDropdownOpen && (
-                <div className="relative mt-2 w-full origin-top-right  rounded-md border-t border-[#e8e8e8]  bg-white ring-0">
+                <div className="relative mt-2 w-full origin-top-right  rounded-md border-t border-[#e8e8e8]  bg-white ring-0 z-10">
                   <div className="ml-7  flex  space-x-5 py-3 ">
                     <div className="relative  h-5 w-5">
                       <svg

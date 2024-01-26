@@ -8,13 +8,13 @@ function Profile() {
   return (
     <div className="">
       <div className="my-10 w-9/12 rounded-lg mx-auto bg-white lg:p-5 ">
-        <div className="flex">
+        <div className="lg:flex">
           <img
             className="h-36 w-36 rounded-full"
             src="https://picsum.photos/200"
             alt="Profile picture"
           />
-          <div className="mx-5 text-left">
+          <div className="lg:mx-5 text-left">
             <h2 className="mt-3 text-xl font-semibold">John Doe</h2>
             <p className="mt-1  text-gray-600">
               Nutiritionist, Public Health Worker

@@ -33,13 +33,15 @@ import Profile from "./components/Instructor/Profile";
 import About from "./components/Instructor/About";
 import MyCourses from "./components/Instructor/My Courses"
 import Instructors from "./pages/Instructor";
+import SignUp from "./pages/SignUp"
+
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <Instructors/>
+        <Instructors />
         <br />
-        
+        <SignUp />
         <br />
         <NoCourseFound />
         <br />

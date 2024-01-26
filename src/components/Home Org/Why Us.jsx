@@ -82,11 +82,6 @@ function WhyUs() {
             </div>
             <div className="">
               <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
                   <div className="card-body">
                     <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
                     <h2 className="card-title">Customized Course Content</h2>
@@ -97,13 +92,12 @@ function WhyUs() {
                       relevance and practicality.
                     </p>
                   </div>
-                </motion.a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container  ">
+      {/* <div className="container  ">
         <h1 className="heading">Flower Gallery</h1>
         <Swiper
           effect={"coverflow"}
@@ -184,7 +178,107 @@ function WhyUs() {
             <div className="swiper-pagination"></div>
           </div>
         </Swiper>
-      </div>
+      </div> */}
+      {/* <div className="carousel rounded-box">
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="carousel-item">
+          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+            <div className="card-body">
+              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+              <h2 className="card-title">Customized Course Content</h2>
+              <p className="smalltext">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </>
   );
 }

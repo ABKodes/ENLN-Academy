@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 
@@ -41,9 +41,9 @@ function WhatYouLearn() {
   const shownItems = isTruncated ? listItems.slice(0, 5) : listItems;
 
   return (
-    <div className="mx-auto w-11/12 overflow-hidden">
-      <h1 className="heading">What You'll Learn</h1>
+    <>
       <div className={`relative w-7/12 border border-secondary p-5`}>
+      <h1 className="heading">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
             <motion.div
@@ -92,7 +92,7 @@ function WhatYouLearn() {
           )}
         </button>
       </div>
-    </div>
+    </>
   );
 }
 

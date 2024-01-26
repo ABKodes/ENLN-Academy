@@ -72,8 +72,8 @@ function App() {
         <br />
         <HeaderBefore />
         <CourseHero />
-        <CourseSidebar />
         <WhatYouLearn />
+        <CourseSidebar />
         <CourseContent />
         <CourseDetail />
         <Instructor/>

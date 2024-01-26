@@ -1,17 +1,18 @@
+import { motion } from "framer-motion";
 function CourseHero() {
   return (
     <section className="bg-secondary">
-      <div className="mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:gap-8  xl:gap-0">
+      <div className="mx-auto grid max-w-screen-xl px-4 h-[70vh] lg:grid-cols-12 lg:gap-8  xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="herotext mb-4 max-w-2xl font-extrabold leading-none tracking-tight dark:text-primary">
             The Complete Nutrition Course
           </h1>
-          <p className="smalltext mb-6 max-w-2xl font-light text-gray-500 dark:text-primary md:text-lg lg:mb-8 lg:text-xl">
+          <p className="smalltext max-w-2xl font-light text-gray-500 dark:text-primary md:text-lg lg:text-xl">
             Unlock the secrets to optimal health with our Complete Nutrition
             Course, designed for individuals seeking a holistic understanding of
             nutrition.
           </p>
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-1 py-2">
             <div className="flex items-center">
               <p className="text ms-1 pt-1 font-semibold dark:text-primary">
                 4.95
@@ -31,36 +32,42 @@ function CourseHero() {
                 </svg>
               ))}
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center space-x-1">
               <p className="text pt-1 font-medium dark:text-primary">
                 (110,568)
               </p>
+              <span className="text pt-1  text-gray-500 dark:text-slate-700">
+                25 total hours
+              </span>
+              <span className="text h-1  w-1 items-center justify-center rounded-full bg-slate-700 pt-1 text-gray-500 dark:text-slate-700"></span>
+              <span className="text pt-1  text-gray-500 dark:text-slate-700">
+                All levels
+              </span>
+              <span className="text pt-1  text-gray-500 dark:text-primary">
+                1,304,722 students
+              </span>
             </div>
           </div>
-          <a
-            href="#"
-            className="bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4"
+          <div>
+            <span className="text mr-1 font-medium dark:text-primary">
+              Created by
+            </span>
+            <span className="text group relative transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary md:my-0">
+              Bekele Sewasew
+              <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
+            </span>
+          </div>
+          <span href="#" className="heading mr-2">
+            Birr 1,500
+          </span>
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="buttontext btn btn-primary mx-2 mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-auto "
           >
-            Get started
-            <svg
-              className="-mr-1 ml-2 h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 text-center text-base font-medium text-gray-900 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          >
-            Speak to Sales
-          </a>
+            Add to Cart
+          </motion.a>
         </div>
         <div className="image-full hidden lg:col-span-5 lg:mt-0 lg:flex">
           <img src="/public/course image.svg" alt="mockup" />
@@ -69,4 +76,4 @@ function CourseHero() {
     </section>
   );
 }
-export default CourseHero
+export default CourseHero;

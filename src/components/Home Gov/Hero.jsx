@@ -15,47 +15,26 @@ const Hero = () => {
   return (
     <header className="">
       {/* Hero section */}
-      <div className="container mx-auto w-11/12 px-6 py-8 lg:py-0">
-        <div className="items-center lg:flex">
-          <div className="w-full lg:w-1/2">
+      <div className="container mx-auto w-full bg-gradient-to-r from-primary to-transparent px-6 py-8 opacity-100 lg:py-0">
+        <div className="items-center lg:flex ">
+          <div className="w-full lg:w-1/2 ">
             <div className="lg:max-w-lg">
               {/* Hero Image for mobile*/}
               <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
                 <img
-                  className="h-11/12 w-11/12 lg:max-w-3xl"
+                  className="h-11/12 w-full lg:max-w-3xl"
                   src="/public/hero section image 1.png"
                   alt="hero image"
                 />
               </div>
               {/* Hero title */}
-              <h1 className="herotext hidden text-left font-bold lg:block ">
+              <h1 className="heading hidden font-bold lg:block ">
                 Empowering Leaders, Transforming Communities <br />
               </h1>
               <h1 className="phoneherotext text-left font-bold lg:hidden ">
                 Empowering Leaders, Transforming Communities
                 <br />
               </h1>
-              <span className="text-left text-4xl font-bold text-primary lg:text-5xl">
-                <TypeAnimation
-                  sequence={[
-                    "Empowering",
-                    2000,
-                    "Leaders",
-                    2000,
-                    "Transforming Communities",
-                    2000,
-                  ]}
-                  wrapper="div"
-                  speed={50}
-                  style={{
-                    fontSize: "1em",
-                    display: "inline-block",
-                    paddingLeft: "5px",
-                  }}
-                  className="py-5 text-left text-primary"
-                  repeat={Infinity}
-                />
-              </span>
 
               {/* Hero description */}
               <p className="heroinnertext mt-3 text-justify">

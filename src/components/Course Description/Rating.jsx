@@ -1,56 +1,6 @@
-import { useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-
 const Rating = () => {
-  const eventData = [
-    { date: "01", month: "Jan", event: "New Year's Day" },
-    // Add more events as needed
-  ];
-
-  const [isFlipped, setIsFlipped] = useState(false);
-  const controls = useAnimation();
-
-  const handleHover = () => {
-    setIsFlipped(!isFlipped);
-    controls.start({ rotateY: isFlipped ? 0 : 360 });
-  };
-
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4">
-      {eventData.map((data, index) => (
-        <div
-          key={index}
-          className="relative h-40 w-64 overflow-hidden rounded-md bg-blue-300 shadow-md"
-          onMouseEnter={handleHover}
-          onMouseLeave={handleHover}
-        >
-          {/* Front of the card */}
-          <motion.div
-            className={`absolute left-0 top-0 flex h-full w-full items-center justify-center bg-blue-300 ${
-              isFlipped ? "hidden" : "block"
-            }`}
-            initial={{ rotateY: 0 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-lg font-bold text-white">
-              {data.date} {data.month}
-            </p>
-          </motion.div>
-
-          {/* Back of the card */}
-          <motion.div
-            className={`absolute left-0 top-0 flex h-full w-full items-center justify-center bg-green-300 ${
-              isFlipped ? "block" : "hidden"
-            }`}
-            initial={{ rotateY: 360 }}
-            animate={controls}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-lg font-bold text-white">{data.event}</p>
-          </motion.div>
-        </div>
-      ))}
 
       <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
         <div className="h-96 w-72">

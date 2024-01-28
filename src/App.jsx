@@ -35,7 +35,8 @@ import MyCourses from "./components/Instructor/My Courses"
 import Instructors from "./pages/Instructor";
 import SignUp from "./pages/SignUp"
 import HeroI from "./components/Home Gov/Hero";
-
+import AddedCourses from "./components/Add to Cart/AddedCourses";
+import OrderDetail from "./components/Check Out/Order Detail";
 function App() {
   return (
     <>
@@ -82,6 +83,8 @@ function App() {
         <br />
         <Login />
         <HorizontalCard />
+        <AddedCourses/>
+        <OrderDetail/>
         <br />
         <ForgetPassword />
         <HeaderBefore />

@@ -4,7 +4,6 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "node_modules/flowbite-react/lib/esm/**/*.js",
     "node_modules/preline/dist/*.js",
   ],
   theme: {
@@ -36,6 +35,6 @@ export default {
     ],
   },
   plugins: [
-    require("daisyui", "prettier-plugin-tailwindcss", "flowbite/plugin", "@tailwindcss/line-clamp", "preline/plugin"),
+    require("daisyui", "prettier-plugin-tailwindcss", "@tailwindcss/line-clamp", "preline/plugin"),
   ],
 };

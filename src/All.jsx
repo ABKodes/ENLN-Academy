@@ -37,6 +37,7 @@ import SignUp from "./pages/SignUp"
 import HeroI from "./components/Home Gov/Hero";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import OrderDetail from "./components/Check Out/Order Detail";
+import WhyUs from "./components/Home Gov/Why Us";
 
 
 function All() {
@@ -45,6 +46,8 @@ function All() {
       <div className="overflow-x-hidden">
         <HeroI />
         <br />
+        <WhyUs/>
+        <br/>
         <Instructors />
         <br />
         <SignUp />

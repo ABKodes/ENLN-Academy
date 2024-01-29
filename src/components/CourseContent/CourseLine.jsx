@@ -3,7 +3,9 @@
 
 const CourseLine = () => {
   return (
-    <div>CourseLine</div>
+    <div>
+        <div></div>
+    </div>
   )
 }
 

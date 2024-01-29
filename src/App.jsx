@@ -37,11 +37,17 @@ import SignUp from "./pages/SignUp"
 import HeroI from "./components/Home Gov/Hero";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import OrderDetail from "./components/Check Out/Order Detail";
+import PartnersG from "./components/Home Gov/Partners"
+import WhyUsG from "./components/Home Gov/Why Us"
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
         <HeroI />
+        <br />
+        <WhyUsG />
+        <br />
+        <PartnersG />
         <br />
         <Instructors />
         <br />
@@ -77,14 +83,14 @@ function App() {
         <CourseSidebar />
         <CourseContent />
         <CourseDetail />
-        <Instructor/>
+        <Instructor />
         <RatingCard />
         <Rating />
         <br />
         <Login />
         <HorizontalCard />
-        <AddedCourses/>
-        <OrderDetail/>
+        <AddedCourses />
+        <OrderDetail />
         <br />
         <ForgetPassword />
         <HeaderBefore />

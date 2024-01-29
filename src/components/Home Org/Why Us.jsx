@@ -37,248 +37,88 @@ function WhyUs() {
           </div>
           {/* features */}
           <div className=" grid  grid-cols-2 items-start gap-8 lg:grid-cols-3">
-            <div className="">
+            <div className=" space-y-5">
               <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
-                  <div className="card-body">
-                    <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                    <h2 className="card-title">Customized Course Content</h2>
-                    <p className="smalltext">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </motion.a>
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary" />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
+              </div>
+              <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="">
-              <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                >
-                  <div className="card-body">
-                    <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                    <h2 className="card-title font-bold">
-                      Customized Course Content
-                    </h2>
-                    <p className="text">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </motion.a>
+            <div className=" space-y-5">
+              <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary" />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
+              </div>
+              <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="">
+            <div className=" space-y-5 mb-10">
               <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-                  <div className="card-body">
-                    <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                    <h2 className="card-title">Customized Course Content</h2>
-                    <p className="smalltext">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary" />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
+              </div>
+              <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
+                <div className="card-body">
+                  <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
+                  <h2 className="card-title">Customized Course Content</h2>
+                  <p className="smalltext">
+                    Tailored curriculum designed to meet the specific needs of
+                    professionals in the nutrition field. Courses crafted with
+                    industry insights and the latest trends to ensure relevance
+                    and practicality.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="container  ">
-        <h1 className="heading">Flower Gallery</h1>
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          // centeredSlides={true}
-          loop={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            clickable: true,
-          }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container justify-centers "
-        >
-          <SwiperSlide>
-            <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
-              <div className="card-body">
-                <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                <h2 className="card-title font-bold">
-                  Customized Course Content
-                </h2>
-                <p className="text">
-                  Tailored curriculum designed to meet the specific needs of
-                  professionals in the nutrition field. Courses crafted with
-                  industry insights and the latest trends to ensure relevance
-                  and practicality.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
-              <div className="card-body">
-                <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                <h2 className="card-title font-bold">
-                  Customized Course Content
-                </h2>
-                <p className="text">
-                  Tailored curriculum designed to meet the specific needs of
-                  professionals in the nutrition field. Courses crafted with
-                  industry insights and the latest trends to ensure relevance
-                  and practicality.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="card w-[360px] space-y-5 bg-base-100 shadow-sm shadow-primary">
-              <div className="card-body">
-                <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-                <h2 className="card-title font-bold">
-                  Customized Course Content
-                </h2>
-                <p className="text">
-                  Tailored curriculum designed to meet the specific needs of
-                  professionals in the nutrition field. Courses crafted with
-                  industry insights and the latest trends to ensure relevance
-                  and practicality.
-                </p>
-              </div>
-            </div>
-          </SwiperSlide>
-          <div className="slider-controler">
-            <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
-            </div>
-            <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
-            </div>
-            <div className="swiper-pagination"></div>
-          </div>
-        </Swiper>
-      </div> */}
-      {/* <div className="carousel rounded-box">
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="carousel-item">
-          <div className="card w-80 bg-base-100 shadow-sm shadow-primary">
-            <div className="card-body">
-              <PiCertificateThin className="card-actions justify-end text-5xl text-secondary " />
-              <h2 className="card-title">Customized Course Content</h2>
-              <p className="smalltext">
-                Tailored curriculum designed to meet the specific needs of
-                professionals in the nutrition field. Courses crafted with
-                industry insights and the latest trends to ensure relevance and
-                practicality.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }

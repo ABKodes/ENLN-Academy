@@ -1,26 +1,33 @@
 import { useState } from "react";
+
 function AddedCourses() {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 400,
+      numberofstars: 1,
+      rating: 4.95,
+      numberofstudents: 102332,
     },
     {
       id: 2,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 40,
+      numberofstars: 2,
+      rating: 3.95,
+      numberofstudents: 101332,
     },
     {
       id: 3,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 150,
+      numberofstars: 3,
+      rating: 1.95,
+      numberofstudents: 100332,
     },
   ]);
 
@@ -62,10 +69,12 @@ function AddedCourses() {
                   <span className="text-xs">{item.teacher}</span>
                   <div className="flex items-center space-x-1">
                     <div className="flex items-center">
-                      <p className="ratingcardtext pt-1 font-semibold">4.95</p>
+                      <p className="ratingcardtext pt-1 font-semibold">
+                        {item.rating}
+                      </p>
                     </div>
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, index) => (
+                      {[...Array(item.numberofstars)].map((_, index) => (
                         <svg
                           key={index}
                           className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
@@ -80,7 +89,7 @@ function AddedCourses() {
                     </div>
                     <div className="flex items-center">
                       <p className="ratingcardtext pt-1 font-medium">
-                        (110,568)
+                        ({item.numberofstudents})
                       </p>
                     </div>
                   </div>

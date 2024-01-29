@@ -3,6 +3,7 @@
 import { Route, Routes } from "react-router-dom";
 import All from "./All";
 import Profile from "./components/Instructor/Profile";
+import GovForm from "./components/Home Gov/GovForm";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<All />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="govform" element={<GovForm />} />
         </Routes>
       </div>
     </>

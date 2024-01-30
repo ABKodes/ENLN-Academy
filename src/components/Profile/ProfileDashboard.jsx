@@ -27,7 +27,7 @@ const ProfileDashboard = ({children}) => {
             icon:<FaUserAlt/>
         },
         {
-            path:"/Certificate",
+            path:"/certificate",
             name:"Certificate",
             icon:<FaRegChartBar/>
         },

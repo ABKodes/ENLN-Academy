@@ -38,7 +38,7 @@ import HeroI from "./components/Home Gov/Hero";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import OrderDetail from "./components/Check Out/Order Detail";
 import WhyUs from "./components/Home Gov/Why Us";
-
+import GovHub from "./components/Home Gov/Gov Hub"
 
 function All() {
   return (
@@ -46,8 +46,9 @@ function All() {
       <div className="overflow-x-hidden">
         <HeroI />
         <br />
-        <WhyUs/>
-        <br/>
+        <WhyUs />
+        <GovHub />
+        <br />
         <Instructors />
         <br />
         <SignUp />
@@ -82,14 +83,14 @@ function All() {
         <CourseSidebar />
         <CourseContent />
         <CourseDetail />
-        <Instructor/>
+        <Instructor />
         <RatingCard />
         <Rating />
         <br />
         <Login />
         <HorizontalCard />
-        <AddedCourses/>
-        <OrderDetail/>
+        <AddedCourses />
+        <OrderDetail />
         <br />
         <ForgetPassword />
         <HeaderBefore />

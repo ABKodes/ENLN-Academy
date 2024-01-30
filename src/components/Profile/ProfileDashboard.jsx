@@ -22,7 +22,7 @@ const ProfileDashboard = ({children}) => {
             icon:<FaTh/>
         },
         {
-            path:"/My Courses",
+            path:"/my-courses",
             name:"My Courses",
             icon:<FaUserAlt/>
         },
@@ -32,18 +32,18 @@ const ProfileDashboard = ({children}) => {
             icon:<FaRegChartBar/>
         },
         {
-            path:"/Support",
+            path:"/support",
             name:"Support",
             icon:<FaCommentAlt/>
         },
         {
-            path:"/Settings",
+            path:"/settings",
             name:"Settings",
             icon:<FaCog/>
         },
         {
-            path:"/Logout",
-            name:"Logout List",
+            path:"/logout",
+            name:"Logout",
             icon:<FaThList/>
         }
     ]

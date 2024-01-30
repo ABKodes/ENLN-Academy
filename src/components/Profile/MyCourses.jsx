@@ -1,11 +1,16 @@
 import tom from "../../assets/tom.png";
 
-const Certificate = () => {
+const MyCourses = () => {
   return (
     <div className="rounded-xl border-2 border-gray-200 pl-6 pt-6">
-      <p className="merb p-2 text-start  text-[20px] font-semibold text-[#025464] sm:p-4 md:p-12 md:text-[24px] lg:text-[28px]">
-        Certificates
-      </p>
+      <div className="flex items-start justify-start gap-4 p-2 sm:p-4 md:p-12">
+        <p className="merb cursor-pointer  text-start text-[20px] font-semibold text-[#025464]">
+          Active Courses
+        </p>
+        <p className="merb  cursor-pointer  text-start text-[20px] font-semibold text-[#025464]">
+          Completed Courses
+        </p>
+      </div>
       <div className="-mt-10 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center  ">
           <div className="grid grid-cols-1 gap-4 p-2 text-center sm:p-4 md:grid-cols-2 md:p-12 lg:grid-cols-3">
@@ -49,11 +54,10 @@ const Certificate = () => {
               </p>
             </div>
           </div>
-          <div className="mb-4 flex flex-col  gap-6 md:flex-row lg:-mt-12"></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Certificate;
+export default MyCourses;

@@ -10,6 +10,12 @@
   font-weight: bold;
   font-style: normal;
 }
+.amir{
+  font-family: 'Amiko-Regular';
+}
+.amib{
+  font-family: 'Amiko-Bold';
+}
 /* Amiko Regular */
 @font-face {
   font-family: 'Amiko-Regular';
@@ -167,6 +173,9 @@
   color: var(--primary-color); /* Use primary color variable */
   text-align: justify;
 }
+.nun{
+  font-family: 'Nunito-Regular';
+}
 .phonetext {
   font-family: 'Amiko-Regular';
   font-size: 1 rem;
@@ -205,6 +214,9 @@
   font-size: 1.3125rem;
   color: #025464;
   text-align: justify;
+}
+.merb{
+  font-family: 'Merriweather-Bold';
 }
 /* org Small Text Styles */
 .orgsmalltext {

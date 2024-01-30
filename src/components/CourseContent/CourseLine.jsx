@@ -136,8 +136,8 @@ const CourseLine = () => {
           <div className="flex items-center justify-between py-5">
             <p className="mer text-[24px] text-[#02203C]">1- Introduction</p>
             <div className="flex flex-nowrap items-start justify-center gap-2 text-[#445D6E]">
-              <BsStopwatch className="" />
-              <p>5 min</p>
+              <BsStopwatch className="mt-1 font-bold" />
+              <p className="font-semibold">5 min</p>
             </div>
           </div>
           <p className="pop text-[16px] font-medium text-[#445D6E]">
@@ -157,7 +157,7 @@ const CourseLine = () => {
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
-              className="mt-10 h-[458.44px] w-screen lg:min-w-[815px]"
+              className="mt-10 h-[458.44px] w-screen lg:max-w-[815px]"
             ></iframe>
           </div>
         </div>

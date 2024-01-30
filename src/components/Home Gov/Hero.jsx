@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <header className="">
       {/* Hero section */}
-      <div className="container mx-auto w-full bg-gradient-to-l h-[80vh] from-secondary to-transparent px-6 py-8 opacity-100 lg:py-0">
+      <div className="container mx-auto h-[80vh] w-full bg-gradient-to-l from-secondary to-transparent px-6 py-8 opacity-100 lg:py-0">
         <div className="items-center lg:flex ">
           <div className="w-full lg:w-1/2 ">
             <div className="lg:max-w-lg">
@@ -23,7 +23,7 @@ const Hero = () => {
               <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
                 <img
                   className="h-11/12 w-full lg:max-w-3xl"
-                  src="/public/hero section image 1.png"
+                  src="/public/hero for gov.png"
                   alt="hero image"
                 />
               </div>
@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Hero image */}
-          <div className="mt-6 flex  w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
+          <div className="mt-6 hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
             <img
               className="h-full w-full lg:max-w-3xl"
               src="/public/hero for gov.png"
@@ -65,7 +65,6 @@ const Hero = () => {
         </div>
       </div>
     </header>
-    
   );
 };
 

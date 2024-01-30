@@ -1,32 +1,43 @@
 import { useState } from "react";
+
 function AddedCourses() {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 400,
+      numberofstars: 1,
+      rating: 4.95,
+      numberofstudents: 102332,
     },
     {
       id: 2,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 40,
+      numberofstars: 2,
+      rating: 3.95,
+      numberofstudents: 101332,
     },
     {
       id: 3,
       name: "Complete Nutrition Course",
       teacher: "Bekele Sewasew",
-      quantity: 1,
       price: 150,
+      numberofstars: 3,
+      rating: 1.95,
+      numberofstudents: 100332,
     },
   ]);
 
   // Function to handle removing an item from the cart
   const removeFromCart = (itemId) => {
     setCartItems(cartItems.filter((item) => item.id !== itemId));
+  };
+  // Function to calculate the total cost of items in the cart
+  const calculateTotalCost = () => {
+    return cartItems.reduce((acc, item) => acc + item.price, 0);
   };
 
   return (
@@ -62,10 +73,12 @@ function AddedCourses() {
                   <span className="text-xs">{item.teacher}</span>
                   <div className="flex items-center space-x-1">
                     <div className="flex items-center">
-                      <p className="ratingcardtext pt-1 font-semibold">4.95</p>
+                      <p className="ratingcardtext pt-1 font-semibold">
+                        {item.rating}
+                      </p>
                     </div>
                     <div className="flex items-center">
-                      {[...Array(5)].map((_, index) => (
+                      {[...Array(item.numberofstars)].map((_, index) => (
                         <svg
                           key={index}
                           className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
@@ -80,7 +93,7 @@ function AddedCourses() {
                     </div>
                     <div className="flex items-center">
                       <p className="ratingcardtext pt-1 font-medium">
-                        (110,568)
+                        ({item.numberofstudents})
                       </p>
                     </div>
                   </div>
@@ -88,7 +101,7 @@ function AddedCourses() {
               </div>
 
               <span className="w-1/5 text-center text-sm font-semibold">
-                ${item.price}.00
+                Birr {item.price}.00
               </span>
               <div className="flex w-1/5 justify-end">
                 <button
@@ -113,31 +126,23 @@ function AddedCourses() {
           </button>
         </div>
         <div id="summary" className="w-1/4 px-8 py-10">
-          <h1 className="border-b pb-8 text-2xl font-semibold">
+          {/* <h1 className="pb-8 text-2xl font-semibold">
             Order Summary
-          </h1>
-          <div className="mb-5 mt-10 flex justify-between">
+          </h1> */}
+          {/* <div className="mb-5 mt-10 flex justify-between">
             <span className="text-sm font-semibold uppercase">
               Items {cartItems.length}
             </span>
             <span className="text-sm font-semibold">
-              $
-              {cartItems.reduce(
-                (acc, item) => acc + item.price * item.quantity,
-                0,
-              )}
+              ${calculateTotalCost()}
             </span>
-          </div>
-          <div className="mt-8 border-t">
-            <div className="flex justify-between py-6 text-sm font-semibold uppercase">
-              <span>Total cost</span>
-              <span>
-                $
-                {cartItems.reduce(
-                  (acc, item) => acc + item.price * item.quantity,
-                  0,
-                ) + 10}
-              </span>
+          </div> */}
+          <div className="mt-8">
+            <div className="py-10 text-sm font-semibold">
+              <span className="uppercase">Total cost</span>
+              <p className="subheading mt-6 dark:text-4xl">
+                Birr {calculateTotalCost()}
+              </p>
             </div>
             <div className="mt-6 text-center">
               <button

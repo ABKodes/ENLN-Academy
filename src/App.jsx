@@ -9,6 +9,7 @@ import Certificate from "./components/Profile/Certificate";
 import { Setting } from "./components/Profile/Setting";
 import Support from "./components/Profile/Support";
 import MyCourse from "./components/Profile/MyCourses";
+import Dashboard from "./components/Profile/Dashboard";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/setting"  element={<ProfileDashboard><Setting /></ProfileDashboard>} />
           <Route path="/support"  element={<ProfileDashboard><Support /></ProfileDashboard>} />
           <Route path="/my-cousese"  element={<ProfileDashboard><MyCourse /></ProfileDashboard>} />
+          <Route path="/dashboard"  element={<ProfileDashboard><Dashboard /></ProfileDashboard>} />
         </Routes>
       </div>
     </>

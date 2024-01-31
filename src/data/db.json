@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Post 1"
+    },
+    {
+      "id": "2",
+      "title": "Post 2"
+    },
+    {
+      "id": "3",
+      "title": "Post 3"
+    }
+  ],
+  "users": [
+    {
+      "id": "5f96",
+      "name": "Haila",
+      "email": "admin@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "6dc6",
+      "name": "Lebamlak",
+      "email": "lebamlak@gmail.com",
+      "password": "123567"
+    },
+    {
+      "id": "598b",
+      "name": "Abiy",
+      "email": "abiy@gmail.com",
+      "password": "1234789"
+    },
+    {
+      "id": "41b7",
+      "name": "betty",
+      "email": "bett@gmail.com",
+      "password": "aster"
+    },
+    {
+      "id": "2895",
+      "name": "Hailawale",
+      "email": "king@gmail.com",
+      "password": "pass"
+    }
+  ]
+}

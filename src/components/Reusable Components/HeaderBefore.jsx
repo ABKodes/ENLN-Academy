@@ -4,11 +4,10 @@ import { useState } from "react";
 const HeaderBefore = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-
+    const [activeLink, setActiveLink] = useState("individuals");
       const toggleMenu = () => {
         setIsOpen(!isOpen);
       };
-
       const closeMenu = () => {
         setIsOpen(false);
       };
@@ -23,19 +22,56 @@ const HeaderBefore = () => {
   return (
     <>
       <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/individualhomepage"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("individuals")}
+        >
           For individuals
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "individuals" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/government"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("government")}
+        >
           For government
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "government" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/organization"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("organization")}
+        >
           For organization
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "organization" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
       </div>
+
       <div className="sticky top-0 z-50 bg-slate-300">
         <div className="navbar mx-auto w-11/12 ">
           <div className="navbar-start">
@@ -166,11 +202,9 @@ const HeaderBefore = () => {
           {/* Cart Icon, sign in and sign up button */}
           <div className="navbar-end space-x-3">
             <div className="dropdown dropdown-end dropdown-hover">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-circle btn-ghost"
-              >
+              <Link to="/cart" className="btn btn-circle btn-ghost">
+                {" "}
+                {/* Modify this line */}
                 <div className="indicator">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +224,8 @@ const HeaderBefore = () => {
                     8
                   </span>
                 </div>
-              </div>
+              </Link>{" "}
+              {/* Modify this line */}
               <div
                 tabIndex={0}
                 className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
@@ -199,13 +234,17 @@ const HeaderBefore = () => {
                   <span className="text-lg font-bold">8 Items</span>
                   <span className="text-info">Subtotal: $999</span>
                   <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
+                    <a href="/cart" className="btn btn-primary btn-block">
+                      {" "}
+                      {/* Modify this line */}
                       View cart
-                    </button>
+                    </a>{" "}
+                    {/* Modify this line */}
                   </div>
                 </div>
               </div>
             </div>
+
             <Link to="/login">
               <motion.a
                 whileHover={{ scale: 1.1 }}

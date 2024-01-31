@@ -1,42 +1,40 @@
-import React from 'react'
-
 function OrderDetail() {
   return (
     <>
       <div className="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32"></div>
       <div className="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
         <div className="px-4 pt-8">
-          <p className="text-xl font-medium">Order Summary</p>
+          <p className="text-xl font-medium">Order Detail</p>
           <p className="text-gray-400">
-            Check your items. And select a suitable shipping method.
+            Check your items and select a suitable payment option.
           </p>
           <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                className="m-2 h-28 w-28 rounded-md  object-cover object-center"
                 src="/public/course image.svg"
                 alt=""
               />
               <div className="flex w-full flex-col px-4 py-4">
                 <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
+                  The Complete Nutrition Course
                 </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="text-lg font-bold">$138.99</p>
+                <span className="float-right text-gray-400">Bekele Sewasew</span>
+                <p className="text-lg font-bold">Birr 138.99</p>
               </div>
             </div>
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
-                className="m-2 h-24 w-28 rounded-md border object-cover object-center"
+                className="m-2 h-28 w-28 rounded-md object-cover object-center"
                 src="/public/course image.svg"
                 alt=""
               />
               <div className="flex w-full flex-col px-4 py-4">
                 <span className="font-semibold">
-                  Nike Air Max Pro 8888 - Super Light
+                  The Complete Nutrition Course
                 </span>
-                <span className="float-right text-gray-400">42EU - 8.5US</span>
-                <p className="mt-auto text-lg font-bold">$238.99</p>
+                <span className="float-right text-gray-400">Bekele Sewasew</span>
+                <p className=" text-lg font-bold">Birr 238.99</p>
               </div>
             </div>
           </div>
@@ -210,45 +208,6 @@ function OrderDetail() {
         </div>
       </div>
 
-      <div className="relative">
-        <ul className="space-y-5">
-          <li className="flex justify-between">
-            <div className="inline-flex">
-              <img
-                src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhhaXIlMjBkcnllcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-                alt=""
-                className="max-h-16"
-              />
-              <div className="ml-3">
-                <p className="text-base font-semibold ">
-                  Nano Titanium Hair Dryer
-                </p>
-                <p className="text-sm font-medium  text-opacity-80">
-                  Pdf, doc Kindle
-                </p>
-              </div>
-            </div>
-            <p className="text-sm font-semibold ">$260.00</p>
-          </li>
-          <li className="flex justify-between">
-            <div className="inline-flex">
-              <img
-                src="/public/course image.svg"
-                alt=""
-                className="w-64"
-              />
-              <div className="ml-3">
-                <p className="text-base font-semibold ">The Complete Nutrition Course</p>
-                <p className="text-sm font-medium  text-opacity-80">
-                  Bekele Sewasew
-                </p>
-              </div>
-            </div>
-            <p className="text-sm font-semibold ">$350.00</p>
-          </li>
-        </ul>
-        <div className="my-5 h-0.5 w-full bg-white bg-opacity-30" />
-      </div>
     </>
   );
 }

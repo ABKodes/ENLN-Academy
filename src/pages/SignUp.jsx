@@ -21,28 +21,28 @@ function SignUp() {
     let regobj = { name, email, password };
     // console.log(regobj);
 
-  fetch("http://localhost:3001/users", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(regobj),
-  })
-    .then((res) => {
-      if (!res.ok) {
-        throw new Error(`Failed: ${res.status} ${res.statusText}`);
-      }
-      return res.json();
+    fetch("http://localhost:3001/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(regobj),
     })
-    .then((data) => {
-      toast.success("Sign Up Successfully.");
-      // Process the response data if needed
-      console.log("data", data);
-    })
-    .catch((error) => {
-      toast.error("Failed: ", error.message);
-    });
-  
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        toast.success("Sign Up Successfully.");
+        // window.location.href = "/login";
+        console.log("data", data);
+      })
+      .catch((error) => {
+        toast.error("Failed: ", error.message);
+      });
+
     // Clear the form data
     setName("");
     setEmail("");

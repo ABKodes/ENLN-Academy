@@ -16,8 +16,25 @@ function SignUp() {
   const toggle = () => {
     setOpen(!open);
   };
+ 
+  
+  const validateForm = () => {
+    if (!name || !email || !password) {
+      toast.error("Please fill in all fields.");
+      return false;
+    }
+
+    // You can add more specific validation logic for email and password if needed
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+    
     let regobj = { name, email, password };
     // console.log(regobj);
 

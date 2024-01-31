@@ -4,6 +4,7 @@ import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 // import { Password } from 'primereact/password';
 import HeaderBefore from "../components/Reusable Components/HeaderBefore";
 import Footer from "../components/Reusable Components/Footer";
+import { toast } from "react-toastify";
 
 function SignUp() {
   const [open, setOpen] = useState(false);
@@ -17,6 +18,35 @@ function SignUp() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    let regobj = { name, email, password };
+    // console.log(regobj);
+
+  fetch("http://localhost:3001/users", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(regobj),
+  })
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Failed: ${res.status} ${res.statusText}`);
+      }
+      return res.json();
+    })
+    .then((data) => {
+      toast.success("Sign Up Successfully.");
+      // Process the response data if needed
+      console.log("data", data);
+    })
+    .catch((error) => {
+      toast.error("Failed: ", error.message);
+    });
+  
+    // Clear the form data
+    setName("");
+    setEmail("");
+    setPassword("");
   };
   return (
     <>
@@ -46,7 +76,8 @@ function SignUp() {
                       name="fullname"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
                       placeholder="Full Name"
-                      value={name} onChange={(e)=>setName(e.target.value)}
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <label
                       htmlFor="fullname"
@@ -65,7 +96,8 @@ function SignUp() {
                       name="email"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
                       placeholder="Email"
-                      value={email} onChange={(e)=>setEmail(e.target.value)}
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <label
                       htmlFor="email"

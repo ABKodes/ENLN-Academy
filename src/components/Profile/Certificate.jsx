@@ -2,12 +2,12 @@ import tom from "../../assets/tom.png";
 
 const Certificate = () => {
   return (
-    <div>
-      <p className="merb text-start text-[20px] font-semibold text-[#025464] md:text-[24px] lg:text-[28px]">
+    <div className="rounded-xl border-2 border-gray-200 pl-6 pt-6">
+      <p className="merb p-2 text-start  text-[20px] font-semibold text-[#025464] sm:p-4 md:p-12 md:text-[24px] lg:text-[28px]">
         Certificates
       </p>
-      <div className="flex flex-col items-center justify-center">
-        <div className="mt-10 flex flex-col items-center justify-center rounded-xl border-2 border-gray-200">
+      <div className="-mt-10 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center  ">
           <div className="grid grid-cols-1 gap-4 p-2 text-center sm:p-4 md:grid-cols-2 md:p-12 lg:grid-cols-3">
             <div className="flex h-full min-h-[300px] min-w-[250px] flex-col rounded-xl border-[1px] border-gray-400 px-2 pb-3 text-black">
               <img src={tom} alt="" className="h-[186px] w-[250px]" />

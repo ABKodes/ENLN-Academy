@@ -11,6 +11,7 @@ import MyCourse from "./components/Profile/MyCourses";
 import Dashboard from "./components/Profile/Dashboard";
 import IndHomePage from "./pages/Ind Home Page";
 import HeaderBefore from "./components/Reusable Components/HeaderBefore";
+import Login from "./pages/Login";
 function App() {
   return (
     <>
@@ -22,6 +23,7 @@ function App() {
           <Route path="individualhomepage" element={<IndHomePage />} />
           <Route path="govform" element={<GovForm />} />
           <Route path="course-line" element={<CourseLine />} />
+          <Route path="login" element={<Login/>} />
           <Route
             path="/certificate"
             element={

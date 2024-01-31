@@ -1,77 +1,87 @@
-import { useState } from "react";
-import { TypeAnimation } from "react-type-animation";
+import React from "react";
 import { motion } from "framer-motion";
 
-// Header component containing navigation and hero section
-const Hero = () => {
-  // State to manage mobile menu open/close
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Function to toggle mobile menu
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+function Hero() {
   return (
-    <header className="">
-      {/* Hero section */}
+    <div>
       <div
-        className=" container mx-auto h-[80vh] w-full bg-cover opacity-100 "
-        style={{
-          backgroundImage: "url('/hr.jpg')",
-          backgroundGradient: "linear-gradient(to right, secondary, #000000)", // your gradient colors
-        }}
+        className="justify-left relative hidden min-h-[80vh] items-center justify-center lg:flex"
+        style={{ backgroundImage: 'url("/new3.jpg")', backgroundSize: "cover" }}
       >
-        <div className="mx-auto max-w-screen-xl items-center lg:flex">
-          <div className="w-full lg:w-full  ">
-            <div className="lg:max-w-lg">
-              {/* Hero Image for mobile*/}
-              {/* <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
-                <img
-                  className="h-11/12 w-full lg:max-w-3xl"
-                  src="/public/hero for gov.png"
-                  alt="hero image"
-                />
-              </div> */}
-              {/* Hero title */}
-              <h1 className="heading hidden font-bold lg:block ">
-                Empowering Leaders, Transforming Communities <br />
-              </h1>
-              <h1 className="phoneherotext text-left font-bold lg:hidden ">
-                Empowering Leaders, Transforming Communities
-                <br />
-              </h1>
+        <div
+          className="absolute inset-0 bg-gradient-to-tl from-primary to-transparent opacity-100 "
+          style={{ mixBlendMode: "multiply" }}
+        ></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-100 "
+          style={{ mixBlendMode: "multiply" }}
+        ></div>
+        <div className="z-10 ml-16 w-2/3  text-white">
+          <h1 className=" mb-10 hidden border-l-8 border-primary pl-5 text-5xl font-bold text-white lg:block">
+            Empowering Leaders, Transforming Communities <br />
+          </h1>
+          <p className="mb-3 mt-3 text-justify text-xl text-white">
+            Harness the strength of collaboration and align yourself with a
+            network deeply committed to the cultivation of healthier
+            communities.
+          </p>
 
-              {/* Hero description */}
-              <p className="heroinnertext mt-3 text-justify">
-                Harness the strength of collaboration and align yourself with a
-                network deeply committed to the cultivation of healthier
-                communities.
-              </p>
-
-              {/* Call to action button */}
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto "
-              >
-                Enroll Now
-              </motion.a>
-            </div>
+          {/* Call to action button */}
+          <div className=" mx-auto mt-16  w-1/4 space-x-2">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="btn btn-outline btn-primary hidden bg-white lg:flex lg:items-center"
+            >
+              Contact Sales
+            </motion.a>
           </div>
-          {/* Hero image */}
-          {/* <div className="mt-6 hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
-            <img
-              className="h-full w-full lg:max-w-3xl"
-              src="/public/hero for gov.png"
-              alt="hero image"
-            />
-          </div> */}
         </div>
       </div>
-    </header>
+      <div className="mx-auto   w-11/12  lg:hidden ">
+        {/* Mobile image */}
+        <div
+          className=" relative flex min-h-[50vh]  w-full items-center bg-cover "
+          style={{
+            backgroundImage: 'url("/orgH.jpg")',
+            //backgroundSize: "cover",
+            backgroundSize: "100% 100%",
+          }}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-100"
+            style={{ mixBlendMode: "multiply" }}
+          ></div>
+        </div>
+        <div className=" w-full">
+          <h1 className="orgphoneherotext font-bold text-white ">
+            Empowering Leaders, Transforming Communities
+            <br />
+          </h1>
+
+          {/* Hero description */}
+          <p className="heroinnertext mb-3 mt-3 text-justify text-white ">
+            Harness the strength of collaboration and align yourself with a
+            network deeply committed to the cultivation of healthier
+            communities.
+          </p>
+
+          {/* Call to action button */}
+          <div className=" w-full  space-x-2 ">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
+            >
+              Contact Sales
+            </motion.a>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Hero;

@@ -1,10 +1,11 @@
 // import React from 'react'
 import { PiClockClockwiseBold } from "react-icons/pi";
+import { IoIosNotifications } from "react-icons/io";
 
 const Dashboard = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
-        <div className='flex flex-col justify-center items-center border-2 border-gray-200 rounded-xl mt-10'>
+    <div className='flex flex-col justify-center items-center '>
+        <div className='flex flex-col justify-center items-center border-2 border-gray-200 mt-11 rounded-xl - '>
             <div className='grid grid-cosl-1 md:grid-cols-2 lg:grid-cols-3 text-center p-2 sm:p-4 md:p-12 lg:p-20 gap-4'>
                 <div className='bg-[#187498] text-white min-h-[179px] min-w-[250px]'>
                     <p className='text-[150px]'>2</p>
@@ -49,28 +50,28 @@ const Dashboard = () => {
                 
             </div>
             <div className='border-gray-200 border-2 rounded  px-2 sm:px-4 md:px-6 lg:px-14 pb-16 mx-2 sm:mx-4 lg:mx-0 '> 
-                <p className='font-bold py-6'> Recent Activities</p>
+                <p className='font-bold py-6'> Notifications</p>
                 <div className='flex gap-4 pb-2'>
 
-                <PiClockClockwiseBold className='mt-1 text-[#025464]'/> 
+                <IoIosNotifications className='mt-1 text-[#025464]'/> 
                 <p>Deadline is approaching</p>
 
                 </div>
                 <div className='flex gap-4 py-2'>
 
-                <PiClockClockwiseBold className='mt-1 text-[#025464]'/> 
+                <IoIosNotifications className='mt-1 text-[#025464]'/> 
                 <p>You gave this course 4 stars</p>
 
                 </div>
                 <div className='flex gap-4 py-2'>
 
-                <PiClockClockwiseBold className='mt-1 text-[#025464]'/> 
+                <IoIosNotifications className='mt-1 text-[#025464]'/> 
                 <p>You completed 3% of the course</p>
                 
                 </div>
                 <div className='flex gap-4 py-2'>
 
-                <PiClockClockwiseBold className='mt-1 text-[#025464]'/> 
+                <IoIosNotifications className='mt-1 text-[#025464]'/> 
                 <p>Recent Activities</p>
 
                 </div>
@@ -83,4 +84,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Dashboard;

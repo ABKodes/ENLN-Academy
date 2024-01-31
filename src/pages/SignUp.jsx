@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 import { InputText } from "primereact/inputtext";
 import { Password } from 'primereact/password';
+import HeaderBefore from "../components/Reusable Components/HeaderBefore";
+import Footer from "../components/Reusable Components/Footer";
 
 function SignUp() {
   const [open, setOpen] = useState(false);
@@ -14,9 +16,10 @@ function SignUp() {
   };
   return (
     <>
+    <HeaderBefore/>
       {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
-      <section className="mx-auto h-screen w-9/12">
-        <div className="container h-full px-6 py-24">
+      <section className="mx-auto h-screen w-9/12 ">
+        <div className="container h-full px-6 py-24 ">
           <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
             {/* Left column container with background*/}
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
@@ -184,6 +187,7 @@ function SignUp() {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 }

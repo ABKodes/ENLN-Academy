@@ -1,5 +1,3 @@
-// import React from 'react'
-
 import { Route, Routes } from "react-router-dom";
 import All from "./All";
 import Profile from "./components/Instructor/Profile";
@@ -10,20 +8,24 @@ import { Setting } from "./components/Profile/Setting";
 import Support from "./components/Profile/Support";
 import MyCourse from "./components/Profile/MyCourses";
 import Dashboard from "./components/Profile/Dashboard";
-
+import IndHomePage from "./pages/Ind Home Page";
+import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <HeaderBefore/>
         <Routes>
           <Route path="/" element={<All />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="individualhomepage" element={<IndHomePage />} />
           <Route path="govform" element={<GovForm />} />
           <Route path="/certificate" element={<ProfileDashboard><Certificate /></ProfileDashboard>} />
           <Route path="/setting"  element={<ProfileDashboard><Setting /></ProfileDashboard>} />
           <Route path="/support"  element={<ProfileDashboard><Support /></ProfileDashboard>} />
           <Route path="/my-cousese"  element={<ProfileDashboard><MyCourse /></ProfileDashboard>} />
           <Route path="/dashboard"  element={<ProfileDashboard><Dashboard /></ProfileDashboard>} />
+
         </Routes>
       </div>
     </>

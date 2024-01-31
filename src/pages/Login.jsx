@@ -1,17 +1,47 @@
 import { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
+import { toast } from "react-toastify";
 // import { InputText } from "primereact/inputtext";
 function Login() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
-  const [name, SetName] = useState("");
+  const [email, setEmail] = useState("");
   // handle toggle
   const toggle = () => {
     setOpen(!open);
   };
+
+  const proceedLogin = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      fetch("http://localhost:3001/users" + email)
+        .then((res) => {
+          return res.json();
+        })
+        .then((resp) => {
+          console.log(resp);
+        })
+        .catch((err) => {
+          toast.error("Login Failed : " + err.message);
+        });
+    }
+    // Clear the form data
+    setEmail("");
+    setPassword("");
+  };
+  const validate = () => {
+    // let result = true;
+    if (email === "" || email === null) {
+      // result = false;
+      toast.warning("Please Enter Email");
+    }
+    if (password === "" || password === null) {
+      // result = false;
+      toast.warning("Please Enter Password");
+    }
+  };
   return (
     <>
-      {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
       <section className="mx-auto h-screen w-9/12">
         <div className="container h-full px-6 py-24">
           <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
@@ -25,20 +55,22 @@ function Login() {
             </div>
             {/* Right column container with form */}
             <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-              <form>
+              <form onSubmit={proceedLogin}>
                 <h1 className="heading flex justify-center">Welcome Back</h1>
                 {/* Email input */}
                 <div className=" w-full rounded-lg bg-white p-4 px-3">
                   <div className="relative w-full bg-inherit">
                     <input
-                      type="text"
-                      id="username"
-                      name="username"
+                      type="email"
+                      id="email"
+                      name="email"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
                       placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <label
-                      htmlFor="username"
+                      htmlFor="email"
                       className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
                     >
                       Email
@@ -80,22 +112,6 @@ function Login() {
                   </div>
                 </div>
 
-                {/* Password input */}
-                {/* <div className="relative mb-6 " data-te-input-wrapper-init="">
-                  <input
-                    type="password"
-                    className="peer block min-h-[auto] w-full rounded border-secondary bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border focus:outline-none focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                    id="exampleFormControlInput33"
-                    placeholder="Password"
-                  />
-                  <label
-                    htmlFor="exampleFormControlInput33"
-                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  >
-                    Password
-                  </label>
-                </div> */}
-                {/* Remember me checkbox */}
                 <div className="mb-6 flex items-center justify-between">
                   {/* Forgot password link */}
                   <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
@@ -110,7 +126,7 @@ function Login() {
                   data-te-ripple-init=""
                   data-te-ripple-color="light"
                 >
-                  Sign in
+                  Login
                 </button>
                 {/* Divider */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-primary after:mt-0.5 after:flex-1 after:border-t after:border-primary">

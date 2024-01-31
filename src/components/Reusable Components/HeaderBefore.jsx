@@ -206,23 +206,28 @@ const HeaderBefore = () => {
                 </div>
               </div>
             </div>
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-outline btn-primary hidden lg:flex lg:items-center"
-            >
-              Log In
-            </motion.a>
+            <Link to="/login">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="btn btn-outline btn-primary hidden lg:flex lg:items-center"
+              >
+                Log In
+              </motion.a>
+            </Link>
 
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-primary hidden lg:flex lg:items-center"
-            >
-              Sign Up
-            </motion.a>
+            {/* Sign Up */}
+            <Link to="/signup">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="btn btn-primary hidden lg:flex lg:items-center"
+              >
+                Sign Up
+              </motion.a>
+            </Link>
           </div>
         </div>
       </div>

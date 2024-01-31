@@ -1,5 +1,3 @@
-// import React from 'react'
-
 import { Route, Routes } from "react-router-dom";
 import All from "./All";
 import Profile from "./components/Instructor/Profile";
@@ -11,16 +9,23 @@ import { Setting } from "./components/Profile/Setting";
 import Support from "./components/Profile/Support";
 import MyCourse from "./components/Profile/MyCourses";
 import Dashboard from "./components/Profile/Dashboard";
-
+import IndHomePage from "./pages/Ind Home Page";
+import HeaderBefore from "./components/Reusable Components/HeaderBefore";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <HeaderBefore/>
         <Routes>
           <Route path="/" element={<All />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="individualhomepage" element={<IndHomePage />} />
           <Route path="govform" element={<GovForm />} />
           <Route path="course-line" element={<CourseLine />} />
+          <Route path="login" element={<Login/>} />
+          <Route path="signup" element={<SignUp/>} />
           <Route
             path="/certificate"
             element={
@@ -61,6 +66,7 @@ function App() {
               </ProfileDashboard>
             }
           />
+
         </Routes>
       </div>
     </>

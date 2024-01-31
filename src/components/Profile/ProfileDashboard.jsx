@@ -1,109 +1,117 @@
 import { useState } from "react";
 import "./dash.css";
-import PropTypes from "prop-types";
-import {
-  FaTh,
-  FaBars,
-  FaUserAlt,
-  FaRegChartBar,
-  FaCommentAlt,
-  FaCog,
-  FaThList,
-} from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import tomprofile from "../../assets/tom.png";
+import { MdLogout } from "react-icons/md";
+import { PiCertificate } from "react-icons/pi";
+import { LuBookMarked } from "react-icons/lu";
+import { RxDashboard } from "react-icons/rx";
+import { MdContactSupport } from "react-icons/md";
+import { IoSettingsOutline } from "react-icons/io5";
+import PropTypes from "prop-types";
 
 const ProfileDashboard = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-
   const menuItem = [
     {
       path: "/dashboard",
       name: "Dashboard",
-      icon: <FaTh />,
+      icon: <RxDashboard />,
     },
     {
       path: "/my-courses",
       name: "My Courses",
-      icon: <FaUserAlt />,
+      icon: <LuBookMarked />,
     },
     {
       path: "/certificate",
       name: "Certificate",
-      icon: <FaRegChartBar />,
+      icon: <PiCertificate />,
     },
     {
       path: "/support",
       name: "Support",
-      icon: <FaCommentAlt />,
+      icon: <MdContactSupport />,
     },
     {
       path: "/settings",
       name: "Settings",
-      icon: <FaCog />,
+      icon: <IoSettingsOutline />,
     },
     {
       path: "/logout",
       name: "Logout",
-      icon: <FaThList />,
+      icon: <MdLogout />,
     },
   ];
 
   return (
-    <div className="container">
-      <div
-        style={{ width: isOpen ? "350px" : "50px" }}
-        className="sidebar max-w-[200px] md:max-w-full"
-      >
-        <div className="top_section">
-          {/* <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1> */}
-          <div
-            style={{ marginLeft: isOpen ? "50px" : "0px" }}
-            className="bars flex-end items-center justify-end lg:hidden"
-          >
-            <FaBars onClick={toggle} />
+    <>
+      <div className="container">
+        <div
+          style={{ width: isOpen ? "350px" : "50px" }}
+          className="sidebar ml-16 mt-16 max-w-[200px] md:max-w-full"
+        >
+          <div className="top_section">
+            <div
+              style={{ marginLeft: isOpen ? "50px" : "0px" }}
+              className="bars flex-end items-center justify-end "
+            >
+              <FaBars onClick={toggle} />
+            </div>
           </div>
-        </div>
-        <div>
-          <img
-            src={tomprofile}
-            alt="profile picture"
-            className={`${
-              isOpen ? "rounded-full p-2 sm:p-4 md:p-6 lg:p-8" : "rounded-full"
-            }`}
-          />
-        </div>
-        {menuItem.map((item, index) => (
-          <NavLink
-            to={item.path}
-            key={index}
+          <div>
+            <img
+              src={tomprofile}
+              alt="profile picture"
+              className={`${
+                isOpen
+                  ? "rounded-full p-2 sm:p-4 md:p-6 lg:p-8"
+                  : "rounded-full"
+              }`}
+            />
+          </div>
+          <div
             className={`${
               isOpen
-                ? "link flex-col items-start justify-center md:mx-10"
-                : "link flex-col items-start justify-center"
+                ? "flex flex-col items-start justify-center"
+                : "flex flex-col items-center justify-center"
             }`}
-            activeClassName="active"
           >
-            <div className="flex gap-5 list-none no-underline ">
-              <div className="icon mt-2">{item.icon}</div>
-              <div
-                style={{ display: isOpen ? "block" : "none" }}
-                className="no-underline"
+            {menuItem.map((item, index) => (
+              <NavLink
+                to={item.path}
+                key={index}
+                className={` first-letter:${
+                  isOpen
+                    ? "link flex-col items-center  justify-center md:mx-10 lg:items-center"
+                    : "link flex-col items-center justify-center"
+                }`}
+                activeclassName="active"
               >
-                <p className="no-underline decoration-transparent list-none">{item.name}</p>
-              </div>
-            </div>
-          </NavLink>
-        ))}
+                <div className="flex gap-5 ">
+                  <div className="icon mt-2">{item.icon}</div>
+                  <div
+                    style={{ display: isOpen ? "block" : "none" }}
+                    className="link_text"
+                  >
+                    {item.name}
+                  </div>
+                </div>
+              </NavLink>
+            ))}
+          </div>
+        </div>
+        <main>{children}</main>
       </div>
-      <main>{children}</main>
-    </div>
+    </>
   );
 };
 
 export default ProfileDashboard;
 
 ProfileDashboard.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string,
 };

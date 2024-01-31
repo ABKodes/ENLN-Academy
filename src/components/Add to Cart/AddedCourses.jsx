@@ -42,7 +42,7 @@ function AddedCourses() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="my-10 flex shadow-md">
+      <div className="w-11/12 mx-auto my-10 flex">
         <div className="w-3/4 bg-white px-10 py-10">
           <div className="flex justify-between border-b pb-8">
             <h1 className="heading font-semibold">Add to Cart</h1>
@@ -138,11 +138,9 @@ function AddedCourses() {
             </span>
           </div> */}
           <div className="mt-8">
-            <div className="py-10 text-sm font-semibold">
+            <div className="py- text-sm font-semibold">
               <span className="uppercase">Total cost</span>
-              <p className="subheading mt-6 dark:text-4xl">
-                Birr {calculateTotalCost()}
-              </p>
+              <p className="mt-6 subheading dark:text-4xl">Birr {calculateTotalCost()}</p>
             </div>
             <div className="mt-6 text-center">
               <button

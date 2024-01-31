@@ -15,18 +15,24 @@ const Hero = () => {
   return (
     <header className="">
       {/* Hero section */}
-      <div className="container mx-auto h-[80vh] w-full bg-gradient-to-l from-secondary to-transparent px-6 py-8 opacity-100 lg:py-0">
-        <div className="items-center lg:flex ">
-          <div className="w-full lg:w-1/2 ">
+      <div
+        className=" container mx-auto h-[80vh] w-full bg-cover opacity-100 "
+        style={{
+          backgroundImage: "url('/hr.jpg')",
+          backgroundGradient: "linear-gradient(to right, secondary, #000000)", // your gradient colors
+        }}
+      >
+        <div className="mx-auto max-w-screen-xl items-center lg:flex">
+          <div className="w-full lg:w-full  ">
             <div className="lg:max-w-lg">
               {/* Hero Image for mobile*/}
-              <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
+              {/* <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
                 <img
                   className="h-11/12 w-full lg:max-w-3xl"
                   src="/public/hero for gov.png"
                   alt="hero image"
                 />
-              </div>
+              </div> */}
               {/* Hero title */}
               <h1 className="heading hidden font-bold lg:block ">
                 Empowering Leaders, Transforming Communities <br />
@@ -55,13 +61,13 @@ const Hero = () => {
             </div>
           </div>
           {/* Hero image */}
-          <div className="mt-6 hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
+          {/* <div className="mt-6 hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
             <img
               className="h-full w-full lg:max-w-3xl"
               src="/public/hero for gov.png"
               alt="hero image"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

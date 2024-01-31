@@ -29,25 +29,18 @@ import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 import Lessons from "./pages/Lessons"
 import NoCourseFound from "./components/Reusable Components/No Course Found";
 import Four0four from "./components/Reusable Components/Four0four";
-// import Profile from "./components/Instructor/Profile";
-// import About from "./components/Instructor/About";
-// import MyCourses from "./components/Instructor/My Courses"
 import Instructors from "./pages/Instructor";
 import SignUp from "./pages/SignUp"
-import HeroI from "./components/Home Gov/Hero";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import OrderDetail from "./components/Check Out/Order Detail";
-import WhyUs from "./components/Home Gov/Why Us";
-import GovHub from "./components/Home Gov/Gov Hub"
+import GovernmentHome from "./pages/Government Home"
+
 
 function All() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <HeroI />
-        <br />
-        <WhyUs />
-        <GovHub />
+        <GovernmentHome />
         <br />
         <Instructors />
         <br />

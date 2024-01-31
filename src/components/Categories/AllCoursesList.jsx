@@ -3,7 +3,7 @@ import HorizontalCard from '../Reusable Components/HorizontalCard'
 function AllCoursesList() {
   return (
     <div >
-      <div className="mt-12 flex flex-col">
+      <div className="mt-12 flex flex-col ">
         <p className="text flex lg:w-full w-10/12 justify-end">1000 results</p>
         <HorizontalCard />
         <HorizontalCard />
@@ -11,7 +11,7 @@ function AllCoursesList() {
         <HorizontalCard />
         <HorizontalCard />
       </div>
-      <div className="mt-10 flex justify-center w-6/12 lg:w-full">
+      <div className="my-12 flex justify-center w-6/12 lg:w-full">
         <a
           href="#"
           className="mx-1 flex cursor-not-allowed items-center justify-center rounded-full bg-primary px-4 py-2 capitalize text-white rtl:-scale-x-100 dark:bg-primary dark:text-white"

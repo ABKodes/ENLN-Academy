@@ -88,9 +88,9 @@ function All() {
         <br />
         <Login />
         <HorizontalCard />
-        <AddedCourses/>
         <OrderDetail/>
         <br />
+        <AddedCourses/>
         <ForgetPassword />
         <HeaderBefore />
         <Hero />

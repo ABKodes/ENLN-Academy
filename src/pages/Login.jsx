@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 import { InputText } from "primereact/inputtext";
+function Login() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
   const [value, setValue] = useState('');

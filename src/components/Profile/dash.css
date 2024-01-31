@@ -47,7 +47,6 @@ main {
   background: lightskyblue;
   color: #025464;
 }
-.icon,
-.link_text {
+.icon{
   font-size: 20px;
 }

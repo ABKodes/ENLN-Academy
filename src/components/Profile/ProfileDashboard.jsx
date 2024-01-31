@@ -85,13 +85,13 @@ const ProfileDashboard = ({ children }) => {
             }`}
             activeClassName="active"
           >
-            <div className="flex gap-5 ">
+            <div className="flex gap-5 list-none no-underline ">
               <div className="icon mt-2">{item.icon}</div>
               <div
                 style={{ display: isOpen ? "block" : "none" }}
-                className="link_text"
+                className="no-underline"
               >
-                {item.name}
+                <p className="no-underline decoration-transparent list-none">{item.name}</p>
               </div>
             </div>
           </NavLink>

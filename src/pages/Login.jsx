@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
-import { InputText } from "primereact/inputtext";
+// import { InputText } from "primereact/inputtext";
 function Login() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
-  const [value, setValue] = useState('');
+  const [name, SetName] = useState("");
   // handle toggle
   const toggle = () => {
     setOpen(!open);
@@ -98,9 +98,7 @@ function Login() {
                 {/* Remember me checkbox */}
                 <div className="mb-6 flex items-center justify-between">
                   {/* Forgot password link */}
-                  <button
-                    className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0"
-                  >
+                  <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
                     Forgot Password?
                     <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
                   </button>
@@ -169,5 +167,3 @@ function Login() {
 }
 
 export default Login;
-
-        

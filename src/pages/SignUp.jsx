@@ -1,22 +1,56 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
-import { InputText } from "primereact/inputtext";
-import { Password } from 'primereact/password';
+// import { InputText } from "primereact/inputtext";
+// import { Password } from 'primereact/password';
 import HeaderBefore from "../components/Reusable Components/HeaderBefore";
 import Footer from "../components/Reusable Components/Footer";
+import { toast } from "react-toastify";
 
 function SignUp() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
-  const [value, setValue] = useState("");
-  
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   // handle toggle
   const toggle = () => {
     setOpen(!open);
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let regobj = { name, email, password };
+    // console.log(regobj);
+
+    fetch("http://localhost:3001/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(regobj),
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        toast.success("Sign Up Successfully.");
+        // window.location.href = "/login";
+        console.log("data", data);
+      })
+      .catch((error) => {
+        toast.error("Failed: ", error.message);
+      });
+
+    // Clear the form data
+    setName("");
+    setEmail("");
+    setPassword("");
+  };
   return (
     <>
-    <HeaderBefore/>
+      <HeaderBefore />
       {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
       <section className="mx-auto h-screen w-9/12 ">
         <div className="container h-full px-6 py-24 ">
@@ -31,7 +65,7 @@ function SignUp() {
             </div>
             {/* Right column container with form */}
             <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <h1 className="heading flex justify-center">Sign Up</h1>
                 {/* Input first name */}
                 <div className=" w-full rounded-lg bg-white p-4 px-3">
@@ -41,7 +75,9 @@ function SignUp() {
                       id="fullname"
                       name="fullname"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Email"
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <label
                       htmlFor="fullname"
@@ -56,13 +92,15 @@ function SignUp() {
                   <div className="relative w-full bg-inherit">
                     <input
                       type="text"
-                      id="username"
-                      name="username"
+                      id="email"
+                      name="email"
                       className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
                       placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <label
-                      htmlFor="username"
+                      htmlFor="email"
                       className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
                     >
                       Email
@@ -119,11 +157,11 @@ function SignUp() {
                     Password
                   </label>
                 </div> */}
-               
+
                 {/* Submit button */}
                 <button
                   type="submit"
-                  className="mt-8 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 mt-8 inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
                   data-te-ripple-init=""
                   data-te-ripple-color="light"
                 >
@@ -187,13 +225,9 @@ function SignUp() {
           </div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
 export default SignUp;
-
-
-
-    

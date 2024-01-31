@@ -30,7 +30,7 @@ function App() {
             }
           />
           <Route
-            path="/setting"
+            path="/settings"
             element={
               <ProfileDashboard>
                 <Setting />

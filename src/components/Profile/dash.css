@@ -11,40 +11,41 @@ main {
   padding: 20px;
 }
 .sidebar {
-  background: #000;
-  color: #fff;
+  background: #fff;
+  color: #B3CBD0;
   height: 100vh;
-  width: 200px;
+  /* width: 200px; */
   transition: all 0.5s;
+  @apply w-[200px] md:w-[300px] lg:w-[400px] border-2 border-gray-300 my-2 rounded-xl ;
 }
 .top_section {
   display: flex;
   align-items: center;
+  @apply justify-end;
   padding: 20px 15px;
 }
 .logo {
   font-size: 30px;
 }
 .bars {
-  display: flex;
   font-size: 25px;
   margin-left: 50px;
 }
 .link {
   display: flex;
-  color: #fff;
+  color: #025464;
   padding: 10px 15px;
   gap: 15px;
   transition: all 0.5s;
 }
 .link:hover {
   background: lightskyblue;
-  color: #000;
+  color: #025464;
   transition: all 0.5s;
 }
 .active {
   background: lightskyblue;
-  color: #000;
+  color: #025464;
 }
 .icon,
 .link_text {

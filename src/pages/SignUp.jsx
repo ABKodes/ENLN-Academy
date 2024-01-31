@@ -5,6 +5,7 @@ import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 import HeaderBefore from "../components/Reusable Components/HeaderBefore";
 import Footer from "../components/Reusable Components/Footer";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [open, setOpen] = useState(false);
@@ -12,6 +13,7 @@ function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const navigate = useNavigate();
   // handle toggle
   const toggle = () => {
     setOpen(!open);
@@ -54,6 +56,7 @@ function SignUp() {
       .then((data) => {
         toast.success("Sign Up Successfully.");
         // window.location.href = "/login";
+        navigate('/login');
         console.log("data", data);
       })
       .catch((error) => {

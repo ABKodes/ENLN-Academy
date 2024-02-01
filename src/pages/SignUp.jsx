@@ -2,8 +2,6 @@ import { useState } from "react";
 import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 // import { InputText } from "primereact/inputtext";
 // import { Password } from 'primereact/password';
-import HeaderBefore from "../components/Reusable Components/HeaderBefore";
-import Footer from "../components/Reusable Components/Footer";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
@@ -70,7 +68,6 @@ function SignUp() {
   };
   return (
     <>
-      <HeaderBefore />
       {/* TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com */}
       <section className="mx-auto h-screen w-9/12 ">
         <div className="container h-full px-6 py-24 ">
@@ -232,7 +229,6 @@ function SignUp() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

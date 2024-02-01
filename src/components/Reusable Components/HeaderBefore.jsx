@@ -39,7 +39,7 @@ const HeaderBefore = () => {
           )}
         </Link>
         <Link
-          to="/government"
+          to="/governmenthome"
           className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
           onClick={() => setActiveLink("government")}
         >
@@ -55,7 +55,7 @@ const HeaderBefore = () => {
           )}
         </Link>
         <Link
-          to="/organization"
+          to="/organizationhome"
           className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
           onClick={() => setActiveLink("organization")}
         >

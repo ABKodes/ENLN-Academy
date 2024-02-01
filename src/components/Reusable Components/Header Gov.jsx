@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const HeaderGov = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [activeLink, setActiveLink] = useState("individuals");
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -11,17 +11,53 @@ const HeaderGov = () => {
   return (
     <>
       <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/individualhomepage"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("individuals")}
+        >
           For individuals
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "individuals" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/governmenthome"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("government")}
+        >
           For government
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "government" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
-        <Link className="smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0">
+        <Link
+          to="/organizationhome"
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          onClick={() => setActiveLink("organization")}
+        >
           For organization
-          <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-secondary transition-transform group-hover:scale-x-100"></span>
+          {activeLink === "organization" && (
+            <motion.div
+              className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              exit={{ scaleX: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            ></motion.div>
+          )}
         </Link>
       </div>
       <div className="navbar bg-slate-300">

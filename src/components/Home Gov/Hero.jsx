@@ -39,22 +39,21 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="mx-auto   w-11/12  lg:hidden ">
-        {/* Mobile image */}
+      <div className="mx-auto   lg:hidden ">
         <div
-          className=" relative flex min-h-[50vh]  w-full items-center bg-cover "
-          style={{
-            backgroundImage: 'url("/orgH.jpg")',
-            //backgroundSize: "cover",
-            backgroundSize: "100% 100%",
-          }}
-        >
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-primary to-transparent opacity-100"
-            style={{ mixBlendMode: "multiply" }}
-          ></div>
-        </div>
-        <div className=" w-full">
+        className="w-full relative  min-h-[50vh] items-center justify-center  bg-cover"
+        style={{ backgroundImage: 'url("/new3.jpg")', backgroundSize: "cover" }}
+      >
+        <div
+          className="absolute inset-0 bg-gradient-to-tl from-primary to-transparent opacity-100 "
+          style={{ mixBlendMode: "multiply" }}
+        ></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-100 "
+          style={{ mixBlendMode: "multiply" }}
+        ></div> </div>
+        
+        <div className=" w-11/12 mx-auto">
           <h1 className="orgphoneherotext font-bold text-white ">
             Empowering Leaders, Transforming Communities
             <br />

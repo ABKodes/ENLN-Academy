@@ -13,6 +13,8 @@ import IndHomePage from "./pages/Ind Home Page";
 import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import GovernmentHome from "./pages/Government Home";
+import OrganizationHome from "./pages/OrganizationHome";
 function App() {
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
           <Route path="course-line" element={<CourseLine />} />
           <Route path="login" element={<Login/>} />
           <Route path="signup" element={<SignUp/>} />
+          <Route path="governmenthome" element={<GovernmentHome/>} />
+          <Route path="organizationhome" element={<OrganizationHome/>} />
           <Route
             path="/certificate"
             element={

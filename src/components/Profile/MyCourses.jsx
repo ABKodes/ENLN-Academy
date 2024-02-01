@@ -1,13 +1,17 @@
+import { useState } from "react";
 import tom from "../../assets/tom.png";
 
 const MyCourses = () => {
+  const [active, setActive]=useState(true);
+  // cosnt [completed, setCompleted]=useState(false);
+
   return (
     <div className="rounded-xl border-2 border-gray-200 pl-6 pt-6">
-      <div className="flex items-start justify-start gap-4 p-2 sm:p-4 md:p-12">
-        <p className="merb cursor-pointer  text-start text-[20px] font-semibold text-[#025464]">
+      <div  className="flex items-start justify-start gap-4 p-2 sm:p-4 md:p-12">
+        <p onClick={()=>setActive(true)} className={active ? "merb cursor-pointer border-b-4 duration-500 ease-in-out border-[#025464]  text-start text-[20px] font-semibold text-[#025464]":"merb cursor-pointer  text-start text-[20px] font-semibold text-[#025464]"}>
           Active Courses
         </p>
-        <p className="merb  cursor-pointer  text-start text-[20px] font-semibold text-[#025464]">
+        <p onClick={()=>setActive(false)} className={active ? "merb  cursor-pointer  text-start text-[20px] font-semibold text-[#025464]":"merb cursor-pointer border-b-4 duration-500 border-[#025464]  text-start text-[20px] font-semibold text-[#025464] ease-out"}>
           Completed Courses
         </p>
       </div>

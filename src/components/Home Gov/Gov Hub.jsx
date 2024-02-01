@@ -12,18 +12,16 @@ function GovHub() {
             <img src="/government training hub.jpg" alt="" />
           </div>
           <div className="w-full space-y-3 p-2 lg:w-1/2 lg:p-3 lg:pl-10">
-            <span className="flex space-x-2">
+            <span className="flex space-x-2 border-l-4 border-primary pl-3">
               <LiaUniversitySolid className="h-10 w-10 text-primary" />
-              <h1 className="heading">ENLN INSTITUTE</h1>
+              <h1 className="heading ">ENLN INSTITUTE</h1>
             </span>
             <p className="text text-2xl">
               Equip officials with vital skills for high-demand roles through
               Career Academy.
             </p>
-            <h2 className="subheading">
-              With our Acadamy, Your team can earn
-            </h2>
-            <ul className="list-disc px-5">
+            <h2 className="subheading">With our Acadamy, Your team can earn</h2>
+            {/* <ul className="list-disc px-5 ">
               <li>Job-ready Professional Certificates, </li>
               <li>Acquire essential skills valued by employers</li>
               <li>Join a vibrant community of learners and professionals</li>
@@ -31,11 +29,56 @@ function GovHub() {
                 Receive personalized feedback and guidance from expert
                 instructors
               </li>
-              <li>
+            </ul> */}
+            <ul className="mb-10">
+              <li className="text mb-2 flex items-center">
+                <span className="mr-3 text-primary dark:text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-patch-check-fill h-5 w-5"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                  </svg>
+                </span>
+                Job-ready Professional Certificates,
+              </li>
+              <li className="text mb-2 flex items-center">
+                <span className="mr-3 text-primary dark:text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-patch-check-fill h-5 w-5"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                  </svg>
+                </span>
+                Acquire essential skills valued by employers,
+              </li>
+              <li className="text mb-4 flex items-center">
+                <span className="mr-3 text-primary dark:text-primary ">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={16}
+                    height={16}
+                    fill="currentColor"
+                    className="bi bi-patch-check-fill h-5 w-5 -mt-4"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                  </svg>
+                </span>
                 Build a portfolio showcasing mastery in various in-demand roles
                 across industries.
               </li>
             </ul>
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

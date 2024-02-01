@@ -13,21 +13,22 @@ import IndHomePage from "./pages/Ind Home Page";
 import HeaderBefore from "./components/Reusable Components/HeaderBefore";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Four0four from "./components/Reusable Components/Four0four";
 import GovernmentHome from "./pages/Government Home";
 import OrganizationHome from "./pages/OrganizationHome";
 function App() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <HeaderBefore/>
+        <HeaderBefore />
         <Routes>
           <Route path="/" element={<All />} />
           <Route path="profile" element={<Profile />} />
           <Route path="individualhomepage" element={<IndHomePage />} />
           <Route path="govform" element={<GovForm />} />
           <Route path="course-line" element={<CourseLine />} />
-          <Route path="login" element={<Login/>} />
-          <Route path="signup" element={<SignUp/>} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
           <Route path="governmenthome" element={<GovernmentHome/>} />
           <Route path="organizationhome" element={<OrganizationHome/>} />
           <Route
@@ -70,7 +71,8 @@ function App() {
               </ProfileDashboard>
             }
           />
-
+          <Route path="*" element={<Four0four />} />
+          <Route path="govhome" element={<GovernmentHome />} />
         </Routes>
       </div>
     </>

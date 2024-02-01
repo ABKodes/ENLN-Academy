@@ -1,18 +1,4 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "Post 1"
-    },
-    {
-      "id": "2",
-      "title": "Post 2"
-    },
-    {
-      "id": "3",
-      "title": "Post 3"
-    }
-  ],
   "users": [
     {
       "id": "5f96",
@@ -43,6 +29,18 @@
       "name": "Hailawale",
       "email": "king@gmail.com",
       "password": "pass"
+    },
+    {
+      "id": "c875",
+      "name": "Taye",
+      "email": "Taye@gmail.com",
+      "password": "Tayes"
+    },
+    {
+      "id": "705b",
+      "name": "Abiy Shiferaw",
+      "email": "abiyshiferaw12@gmail.com",
+      "password": "The v@l2#in Pr0"
     }
   ]
 }

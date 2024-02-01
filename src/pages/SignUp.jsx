@@ -5,6 +5,7 @@ import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 import HeaderBefore from "../components/Reusable Components/HeaderBefore";
 import Footer from "../components/Reusable Components/Footer";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [open, setOpen] = useState(false);
@@ -12,12 +13,30 @@ function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const navigate = useNavigate();
   // handle toggle
   const toggle = () => {
     setOpen(!open);
   };
+ 
+  
+  const validateForm = () => {
+    if (!name || !email || !password) {
+      toast.error("Please fill in all fields.");
+      return false;
+    }
+
+    // You can add more specific validation logic for email and password if needed
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     let regobj = { name, email, password };
     // console.log(regobj);
 
@@ -37,6 +56,7 @@ function SignUp() {
       .then((data) => {
         toast.success("Sign Up Successfully.");
         // window.location.href = "/login";
+        navigate('/login');
         console.log("data", data);
       })
       .catch((error) => {
@@ -143,20 +163,7 @@ function SignUp() {
                 </div>
 
                 {/* Password input */}
-                {/* <div className="relative mb-6 " data-te-input-wrapper-init="">
-                  <input
-                    type="password"
-                    className="peer block min-h-[auto] w-full rounded border-secondary bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:border focus:outline-none focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                    id="exampleFormControlInput33"
-                    placeholder="Password"
-                  />
-                  <label
-                    htmlFor="exampleFormControlInput33"
-                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  >
-                    Password
-                  </label>
-                </div> */}
+
 
                 {/* Submit button */}
                 <button

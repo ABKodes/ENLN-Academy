@@ -167,6 +167,96 @@ const CourseLine = () => {
               className="mt-10 h-[458.44px] w-screen lg:max-w-[815px]"
             ></iframe>
           </div>
+          <div className="flex flex-col md:flex-row gap-2 px-2 sm:px-4 md:px-8 lg:px-20 justify-between pt-8 items-center border-t-2 border-b-2 border-[#445D6E] mt-10 py-3">
+            <p className="font-bold text-xl text-[#445D6E]">Descrition</p>
+            <p className="font-bold text-xl text-[#445D6E]">Q$A</p>
+            <p className="font-bold text-xl text-[#445D6E]">Comments</p>
+            <p className="font-bold text-xl text-[#445D6E]">Resource</p>
+          </div>
+          <div className="flex flex-col justify-center items-center ">
+          <p className="font-bold text-center py-2 text-2xl pt-10">Elevate Your Impact: Unleash Your Inner Nutrition Leader</p>
+<br/>
+Empower yourself, your organization, and your community with ENLN Academy's comprehensive Nutrition Leadership Training.
+<br/>
+This transformative program, designed for individuals, organizations, and even governments, equips you with the essential skills and knowledge to:
+<br/>
+ Champion impactful nutrition strategies: Learn to develop, implement, and evaluate effective nutrition initiatives that create lasting positive change.<br/>
+ Inspire and motivate others: Cultivate effective communication and leadership skills to engage stakeholders, build coalitions, and drive action.<br/>
+ Navigate complex systems: Gain the knowledge and confidence to navigate policy landscapes, secure funding, and overcome challenges.<br/>
+ Become a trusted influencer: Sharpen your advocacy skills to influence policy, shape public opinion, and promote optimal health for all.
+<br/>
+Whether you're a:
+<br/>
+<br/>Nutrition professional: Seeking to advance your career and make a broader impact.
+<br/>Public health official: Working to develop and implement effective nutrition programs.
+<br/>Community leader: Passionate about improving the health and well-being of your community.
+<br/>Government representative: Looking to shape policy and legislation that promotes healthy eating.
+<br/>
+This training is for you!
+<br/>
+In this comprehensive program, you'll gain:
+<br/> Evidence-based knowledge: Master the latest science and best practices in nutrition to inform your leadership decisions. <br/> Leadership development:Hone your communication, collaboration, and conflict resolution skills to effectively lead teams and inspire action. Policy and advocacy expertise:** Understand the policy landscape and learn how to advocate for positive change.<br/>
+Networking opportunities: Connect with fellow nutrition leaders and build a strong support network.
+<br/>
+Invest in yourself and empower others!
+<br/>
+Join ENLN Academy's Nutrition Leadership Training and become a driving force for positive change in the world of nutrition.
+<br/>
+Call to action:
+<br/>
+Visit our website to learn more and register for the training.
+Download our brochure for a detailed program overview.
+Contact us to discuss your specific needs and how this training can benefit you.
+<br/>
+**Together, let's create a healthier future for all!**
+<br/>
+I hope this is a good starting point for your text about the nutrition leadership training course. Feel free to adapt it further to include specific details about the program, such as its duration, format, cost, and instructors. You can also add testimonials from past participants or highlight the unique features of the training program offered by ENLN Academy.
+          </div>
+          <div className="flex flex-col md:flex-row gap-2 px-2 sm:px-4 md:px-8 lg:px-20 justify-between pt-8 items-center border-t-2 border-b-2 border-[#445D6E] mt-10 py-3">
+            <p className="font-bold text-xl text-[#445D6E]">Descrition</p>
+            <p className="font-bold text-xl text-[#445D6E]">Q$A</p>
+            <p className="font-bold text-xl text-[#445D6E]">Comments</p>
+            <p className="font-bold text-xl text-[#445D6E]">Resource</p>
+          </div>
+          <div className="flex flex-col justify-center items-center ">
+          <p className="font-bold text-center py-2 text-2xl pt-10">Elevate Your Impact: Unleash Your Inner Nutrition Leader</p>
+<br/>
+Empower yourself, your organization, and your community with ENLN Academy's comprehensive Nutrition Leadership Training.
+<br/>
+This transformative program, designed for individuals, organizations, and even governments, equips you with the essential skills and knowledge to:
+<br/>
+ Champion impactful nutrition strategies: Learn to develop, implement, and evaluate effective nutrition initiatives that create lasting positive change.<br/>
+ Inspire and motivate others: Cultivate effective communication and leadership skills to engage stakeholders, build coalitions, and drive action.<br/>
+ Navigate complex systems: Gain the knowledge and confidence to navigate policy landscapes, secure funding, and overcome challenges.<br/>
+ Become a trusted influencer: Sharpen your advocacy skills to influence policy, shape public opinion, and promote optimal health for all.
+<br/>
+Whether you're a:
+<br/>
+<br/>Nutrition professional: Seeking to advance your career and make a broader impact.
+<br/>Public health official: Working to develop and implement effective nutrition programs.
+<br/>Community leader: Passionate about improving the health and well-being of your community.
+<br/>Government representative: Looking to shape policy and legislation that promotes healthy eating.
+<br/>
+This training is for you!
+<br/>
+In this comprehensive program, you'll gain:
+<br/> Evidence-based knowledge: Master the latest science and best practices in nutrition to inform your leadership decisions. <br/> Leadership development:Hone your communication, collaboration, and conflict resolution skills to effectively lead teams and inspire action. Policy and advocacy expertise:** Understand the policy landscape and learn how to advocate for positive change.<br/>
+Networking opportunities: Connect with fellow nutrition leaders and build a strong support network.
+<br/>
+Invest in yourself and empower others!
+<br/>
+Join ENLN Academy's Nutrition Leadership Training and become a driving force for positive change in the world of nutrition.
+<br/>
+Call to action:
+<br/>
+Visit our website to learn more and register for the training.
+Download our brochure for a detailed program overview.
+Contact us to discuss your specific needs and how this training can benefit you.
+<br/>
+**Together, let's create a healthier future for all!**
+<br/>
+I hope this is a good starting point for your text about the nutrition leadership training course. Feel free to adapt it further to include specific details about the program, such as its duration, format, cost, and instructors. You can also add testimonials from past participants or highlight the unique features of the training program offered by ENLN Academy.
+          </div>
           <div className="mt-10  flex items-center justify-between gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:px-10 lg:px-20">
             <p
               onClick={() => handleElement(1)}

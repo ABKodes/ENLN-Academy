@@ -103,12 +103,16 @@ const ProfileDashboard = ({ children }) => {
                   isOpen
                     ? "link flex-col items-start  justify-center py-2 md:mx-10 md:pl-6 lg:items-center"
                     : "link flex-col items-center justify-center py-1"
+                    ? "link flex-col items-start  justify-center py-2 md:mx-10 md:pl-6 lg:items-center"
+                    : "link flex-col items-center justify-center py-1"
                 }`}
                 activeClassName="active"
               >
                 <div className="flex gap-2 md:gap-5 " onClick={close}>
                   <div className="icon mt-2">{item.icon}</div>
                   <div
+                    style={{ display: isOpen ? "block " : "none" }}
+                    className="link_text mt-1"
                     style={{ display: isOpen ? "block " : "none" }}
                     className="link_text mt-1"
                   >

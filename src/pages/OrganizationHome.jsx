@@ -1,4 +1,3 @@
-import HeaderOrg from "../components/Reusable Components/Header Org"
 import Hero from '../components/Home Org/Hero'
 import Partners from "../components/Home Org/Partners";
 import Enhanceexperiance from "../components/Home Org/Enhance experiance";
@@ -9,7 +8,6 @@ function OrganizationHome() {
   return (
     <>
       <div className="h-screen">
-        <HeaderOrg />
         <Hero />
       </div>
       <Partners />

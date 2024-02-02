@@ -142,9 +142,9 @@ const HeaderBefore = () => {
               </div>
             </div>
             {/* Logo */}
-            <div className="mx-4 hidden lg:block">
+            <Link to="/individualhomepage" className="mx-4 hidden lg:block">
               <img src="/public/header individual.png" className="h-8" />
-            </div>
+            </Link>
             {/* Categories */}
             <div className="dropdown-start dropdown dropdown-hover hidden lg:block">
               <div tabIndex={0} role="button" className="button">
@@ -202,7 +202,7 @@ const HeaderBefore = () => {
           {/* Cart Icon, sign in and sign up button */}
           <div className="navbar-end space-x-3">
             <div className="dropdown dropdown-end dropdown-hover">
-              <Link to="/cart" className="btn btn-circle btn-ghost">
+              <Link to="/addtocart" className="btn btn-circle btn-ghost">
                 {" "}
                 {/* Modify this line */}
                 <div className="indicator">

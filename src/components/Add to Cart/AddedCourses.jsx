@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function AddedCourses() {
   const [cartItems, setCartItems] = useState([
@@ -42,7 +43,7 @@ function AddedCourses() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="w-11/12 mx-auto my-10 flex">
+      <div className="mx-auto my-10 flex w-11/12">
         <div className="w-3/4 bg-white px-10 py-10">
           <div className="flex justify-between border-b pb-8">
             <h1 className="heading font-semibold">Add to Cart</h1>
@@ -114,55 +115,51 @@ function AddedCourses() {
               </div>
             </div>
           ))}
-          <button className="group relative flex transform cursor-pointer leading-5 text-primary duration-300 hover:text-primary dark:text-primary md:my-0">
-            <svg
-              className="mr-2 w-4 fill-current text-primary"
-              viewBox="0 0 448 512"
-            >
-              <path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
-            </svg>
-            Continue Shopping
-            <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
-          </button>
+          <Link to="/individualhomepage">
+            <button className="group relative flex transform cursor-pointer leading-5 text-primary duration-300 hover:text-primary dark:text-primary md:my-0">
+              <svg
+                className="mr-2 w-4 fill-current text-primary"
+                viewBox="0 0 448 512"
+              >
+                <path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+              </svg>
+              Continue Shopping
+              <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
+            </button>
+          </Link>
         </div>
         <div id="summary" className="w-1/4 px-8 py-10">
-          {/* <h1 className="pb-8 text-2xl font-semibold">
-            Order Summary
-          </h1> */}
-          {/* <div className="mb-5 mt-10 flex justify-between">
-            <span className="text-sm font-semibold uppercase">
-              Items {cartItems.length}
-            </span>
-            <span className="text-sm font-semibold">
-              ${calculateTotalCost()}
-            </span>
-          </div> */}
           <div className="mt-8">
             <div className="py- text-sm font-semibold">
               <span className="uppercase">Total cost</span>
-              <p className="mt-6 subheading dark:text-4xl">Birr {calculateTotalCost()}</p>
+              <p className="subheading mt-6 dark:text-4xl">
+                Birr {calculateTotalCost()}
+              </p>
             </div>
             <div className="mt-6 text-center">
-              <button
-                type="button"
-                className="group inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out hover:bg-accent focus:shadow"
-              >
-                Checkout
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="ml-4 h-6 w-6 transition-all group-hover:ml-8"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+              <Link to="/checkout">
+                {" "}
+                <button
+                  type="button"
+                  className="group inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out hover:bg-accent focus:shadow"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
+                  Checkout
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="ml-4 h-6 w-6 transition-all group-hover:ml-8"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13 7l5 5m0 0l-5 5m5-5H6"
+                    />
+                  </svg>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

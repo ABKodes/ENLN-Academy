@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import All from "./All";
 import Profile from "./components/Instructor/Profile";
-import GovForm from "./components/Home Gov/GovForm";
 import CourseLine from "./components/CourseContent/CourseLine";
 import ProfileDashboard from "./components/Profile/ProfileDashboard";
 import Certificate from "./components/Profile/Certificate";
@@ -16,6 +15,12 @@ import SignUp from "./pages/SignUp";
 import Four0four from "./components/Reusable Components/Four0four";
 import GovernmentHome from "./pages/Government Home";
 import OrganizationHome from "./pages/OrganizationHome";
+import CourseDescription from "./pages/Course Description"
+import AddToCart from "./pages/Add To Cart";
+import CheckOut from "./pages/Check Out";
+import Categories from "./pages/Categories";
+import OrgForm from "./pages/OrgForm";
+import GovForm from "./pages/Gov Form";
 function App() {
   return (
     <>
@@ -29,8 +34,8 @@ function App() {
           <Route path="course-line" element={<CourseLine />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-          <Route path="governmenthome" element={<GovernmentHome/>} />
-          <Route path="organizationhome" element={<OrganizationHome/>} />
+          <Route path="governmenthome" element={<GovernmentHome />} />
+          <Route path="organizationhome" element={<OrganizationHome />} />
           <Route
             path="/certificate"
             element={
@@ -73,6 +78,12 @@ function App() {
           />
           <Route path="*" element={<Four0four />} />
           <Route path="govhome" element={<GovernmentHome />} />
+          <Route path="coursedescription" element={<CourseDescription />} />
+          <Route path="addtocart" element={<AddToCart />} />
+          <Route path="checkout" element={<CheckOut />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="organizationform" element={<OrgForm />} />
+          <Route path="governmentform" element={<GovForm />} />
         </Routes>
       </div>
     </>

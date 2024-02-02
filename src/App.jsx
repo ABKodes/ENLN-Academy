@@ -18,6 +18,7 @@ import GovernmentHome from "./pages/Government Home";
 import OrganizationHome from "./pages/OrganizationHome";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import Categories from "./pages/Categories";
+import OrderDetail from "./components/Check Out/Order Detail";
 function App() {
   return (
     <>
@@ -35,6 +36,7 @@ function App() {
           <Route path="organizationhome" element={<OrganizationHome/>} />
           <Route path="addtocart" element={<AddedCourses/>} />
           <Route path="categories" element={<Categories />} />
+          <Route path="checkout" element={<OrderDetail/>} />
 
           <Route
             path="/certificate"

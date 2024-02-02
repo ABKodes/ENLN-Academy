@@ -166,10 +166,10 @@ function RatingCard() {
         {/* End Grid */}
       </div>
       <>
-        <main className="relative min-h-screen flex flex-col justify-center bg-slate-900 overflow-hidden">
-  <div className="w-full max-w-5xl mx-auto px-4 md:px-6 py-24">
+        {/* <main className="relative min-h-screen flex flex-col justify-center bg-slate-900 overflow-hidden">
+  <div className="w-full max-w-5xl mx-auto px-4 md:px-6 py-24"> */}
     {/* Card slider */}
-    <section className="px-12">
+    {/* <section className="px-12">
       <div className="max-w-lg mx-auto relative">
         <input
           id="article-01"
@@ -499,10 +499,10 @@ function RatingCard() {
           </article>
         </div>
       </div>
-    </section>
+    </section> */}
     {/* End: Card slider */}
-  </div>
-</main>
+  {/* </div>
+</main> */}
 
       </>
     </>

@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 function CourseSidebar() {
   return (
-    <div className=" w-3/12 rounded-lg bg-white p-4 shadow border border-primary sm:p-8">
+    <div className=" w-3/12 rounded-lg border border-primary bg-white p-4 shadow sm:p-8">
       <div className="flex items-center space-x-2">
         <img src="/public/money svg.svg" className="h-20 w-20" />
         <div>
           <div className="flex items-center space-x-2 text-justify">
-            <h5 className="text dark:text-gray-400">
-              One time
-            </h5>
+            <h5 className="text dark:text-gray-400">One time</h5>
             <p className=" text badge badge-primary badge-outline uppercase">
               virtual
             </p>
@@ -46,7 +45,7 @@ function CourseSidebar() {
               </clipPath>
             </defs>
           </svg>
-          <span className="ms-3 text font-normal leading-tight">
+          <span className="text ms-3 font-normal leading-tight">
             2 team members
           </span>
         </li>
@@ -75,7 +74,7 @@ function CourseSidebar() {
               </clipPath>
             </defs>
           </svg>
-          <span className="ms-3 text font-normal leading-tight "> 
+          <span className="text ms-3 font-normal leading-tight ">
             20GB Cloud storage
           </span>
         </li>
@@ -105,7 +104,7 @@ function CourseSidebar() {
               </clipPath>
             </defs>
           </svg>
-          <span className="ms-3 text font-normal leading-tight ">
+          <span className="text ms-3 font-normal leading-tight ">
             Integration help
           </span>
         </li>
@@ -137,28 +136,33 @@ function CourseSidebar() {
               fill="currentColor"
             />
           </svg>
-          <span className="ms-3 text text-justify font-normal leading-tight text-gray-500">
+          <span className="text ms-3 text-justify font-normal leading-tight text-gray-500">
             Sketch Files
           </span>
         </li>
       </ul>
       <div className="space-y-5">
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-full "
-        >
-          Add to Cart
-        </motion.a>
-        <motion.a
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          className="buttontext btn btn-outline btn-primary flex lg:items-center"
-        >
-          Buy Now
-        </motion.a>
+        <Link to="/addtocart">
+          {" "}
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-full "
+          >
+            Add to Cart
+          </motion.a>
+        </Link>
+        <Link to="/checkout">
+          <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            className="buttontext btn btn-outline btn-primary flex lg:items-center"
+          >
+            Buy Now
+          </motion.a>
+        </Link>
       </div>
     </div>
   );

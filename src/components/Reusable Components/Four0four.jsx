@@ -6,7 +6,7 @@ function Four0four() {
   return (
     <>
       <div className="my-5 flex flex-col items-center">
-        <img src="./404.svg" alt="" className="h-[80vh]" />
+        <img src="./404.svg" alt="" className="h-[75vh]" />
         <Link to="/individualhomepage">
           {" "}
           <motion.a

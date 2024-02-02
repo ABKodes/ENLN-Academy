@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 function Hero() {
   return (
@@ -24,6 +25,7 @@ function Hero() {
 
           {/* Call to action button */}
           <div className=" w-1/2 space-x-2 ">
+            <Link to="/organizationform">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -31,7 +33,7 @@ function Hero() {
               className="btn btn-outline btn-primary hidden bg-white lg:flex lg:items-center"
             >
               Contact Sales
-            </motion.a>
+            </motion.a></Link>
           </div>
         </div>
       </div>
@@ -50,7 +52,7 @@ function Hero() {
             style={{ mixBlendMode: "multiply" }}
           ></div>
         </div>
-        <div className=' w-full'>
+        <div className=" w-full">
           <h1 className="orgphoneherotext font-bold text-white ">
             Empower individuals for enhanced opportunities
             <br />
@@ -65,18 +67,20 @@ function Hero() {
 
           {/* Call to action button */}
           <div className=" w-full  space-x-2 ">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
-            >
-              Contact Sales
-            </motion.a>
+            <Link to="/organizationform">
+              {" "}
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
+              >
+                Contact Sales
+              </motion.a>
+            </Link>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

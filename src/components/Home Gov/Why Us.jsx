@@ -2,7 +2,7 @@ import React from "react";
 import { PiCertificateThin } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { FaPeopleGroup } from "react-icons/fa6";
-
+import { Link } from "react-router-dom";
 function WhyUs() {
   return (
     <>
@@ -27,7 +27,7 @@ function WhyUs() {
         {/* second row */}
         <div className="flex flex-col items-center justify-center">
           {/* features */}
-          <div className=" grid  grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3 mx-8">
+          <div className=" mx-8  grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div className=" space-y-5">
               <div className="card mx-auto  h-60 w-96 border border-black bg-base-100">
                 <div className="card-body flex ">
@@ -165,15 +165,16 @@ function WhyUs() {
               </div>
             </div>
           </div>
-
-          <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="btn btn-md btn-outline btn-primary w-full lg:ml-5 lg:flex lg:w-2/12 lg:items-center mb-8"
-          >
-            See Courses
-          </motion.a>
+          <Link to="/categories" className="w-1/2 lg:items-center lg:flexp">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="btn btn-outline btn-primary btn-md mb-8 w-full lg:ml-5 lg:flex lg:w-4/12 lg:items-center"
+            >
+              See Courses
+            </motion.a>
+          </Link>
         </div>
       </div>
     </>

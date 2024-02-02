@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 // Header component containing navigation and hero section
 const Header = () => {
   // State to manage mobile menu open/close
@@ -63,6 +63,7 @@ const Header = () => {
               </p>
 
               {/* Call to action button */}
+              <Link to="/signup">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -71,6 +72,7 @@ const Header = () => {
               >
                 Enroll Now
               </motion.a>
+              </Link>
             </div>
           </div>
           {/* Hero image */}

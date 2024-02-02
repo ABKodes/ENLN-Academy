@@ -21,6 +21,8 @@ import CheckOut from "./pages/Check Out";
 import Categories from "./pages/Categories";
 import OrgForm from "./pages/OrgForm";
 import GovForm from "./pages/Gov Form";
+import AddedCourses from "./components/Add to Cart/AddedCourses";
+import Categories from "./pages/Categories";
 function App() {
   return (
     <>
@@ -36,6 +38,9 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="governmenthome" element={<GovernmentHome />} />
           <Route path="organizationhome" element={<OrganizationHome />} />
+          <Route path="addtocart" element={<AddedCourses/>} />
+          <Route path="categories" element={<Categories />} />
+
           <Route
             path="/certificate"
             element={

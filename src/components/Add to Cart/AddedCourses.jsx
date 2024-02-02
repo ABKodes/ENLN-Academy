@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function AddedCourses() {
   const [cartItems, setCartItems] = useState([
     {
@@ -126,23 +126,13 @@ function AddedCourses() {
           </button>
         </div>
         <div id="summary" className="w-1/4 px-8 py-10">
-          {/* <h1 className="pb-8 text-2xl font-semibold">
-            Order Summary
-          </h1> */}
-          {/* <div className="mb-5 mt-10 flex justify-between">
-            <span className="text-sm font-semibold uppercase">
-              Items {cartItems.length}
-            </span>
-            <span className="text-sm font-semibold">
-              ${calculateTotalCost()}
-            </span>
-          </div> */}
           <div className="mt-8">
             <div className="py- text-sm font-semibold">
               <span className="uppercase">Total cost</span>
               <p className="mt-6 subheading dark:text-4xl">Birr {calculateTotalCost()}</p>
             </div>
             <div className="mt-6 text-center">
+              <Link to= "/checkout">
               <button
                 type="button"
                 className="group inline-flex w-full items-center justify-center rounded-md bg-primary px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out hover:bg-accent focus:shadow"
@@ -163,6 +153,7 @@ function AddedCourses() {
                   />
                 </svg>
               </button>
+              </Link>
             </div>
           </div>
         </div>

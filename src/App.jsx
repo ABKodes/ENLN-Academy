@@ -18,7 +18,6 @@ import OrganizationHome from "./pages/OrganizationHome";
 import CourseDescription from "./pages/Course Description"
 import AddToCart from "./pages/Add To Cart";
 import CheckOut from "./pages/Check Out";
-import Categories from "./pages/Categories";
 import OrgForm from "./pages/OrgForm";
 import GovForm from "./pages/Gov Form";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
@@ -85,7 +84,6 @@ function App() {
           <Route path="coursedescription" element={<CourseDescription />} />
           <Route path="addtocart" element={<AddToCart />} />
           <Route path="checkout" element={<CheckOut />} />
-          <Route path="categories" element={<Categories />} />
           <Route path="organizationform" element={<OrgForm />} />
           <Route path="governmentform" element={<GovForm />} />
         </Routes>

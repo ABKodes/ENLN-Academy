@@ -25,7 +25,6 @@ import Instructor from "./components/Course Description/Instructor";
 import RatingCard from "./components/Reusable Components/Rating Card";
 import Rating from "./components/Course Description/Rating";
 import OrganizationHome from "./pages/OrganizationHome";
-import Sampleforwhyus from "./components/Home Org/sampleforwhyus";
 import Lessons from "./pages/Lessons"
 import NoCourseFound from "./components/Reusable Components/No Course Found";
 import Four0four from "./components/Reusable Components/Four0four";
@@ -55,9 +54,6 @@ function All() {
         <OrganizationHome />
         <br />
         <AllRating />
-        <br />
-        <Sampleforwhyus />
-        <br />
         <br />
         <br />
         <Categories />

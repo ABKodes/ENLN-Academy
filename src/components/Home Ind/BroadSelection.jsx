@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import VerticalCard from "../Reusable Components/VerticalCard";
@@ -119,7 +119,7 @@ const BroadSelection = () => {
         />
       </ul>
 
-      <div className="mt-4 h-[77vh] border border-secondary p-4">
+      <div className="mt-4 h-[77vh] lg:min-h-[77vh] lg:max-h-screen border border-secondary p-4">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (

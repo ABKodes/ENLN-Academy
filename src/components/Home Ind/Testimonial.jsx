@@ -54,7 +54,7 @@ const Testimonial = () => {
 
   return (
     <div className="mx-auto w-11/12">
-      <h1 className="heading">Don't just take our words</h1>
+      <h1 className="heading">Don&apos;t just take our words</h1>
       <section className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
           <div className="mx-auto max-w-screen-md">

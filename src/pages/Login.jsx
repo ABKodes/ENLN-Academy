@@ -13,7 +13,7 @@ const Login = () => {
   const [email, emailupdate] = useState("");
   const [password, passwordupdate] = useState("");
 
-  const usenavigate = useNavigate();
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   sessionStorage.clear();
@@ -39,7 +39,7 @@ const Login = () => {
             if (user && user.password === password) {
               toast.success("Success");
               sessionStorage.setItem("email", email);
-              usenavigate("/dashboard");
+              navigate("/dashboard");
             } else {
               toast.error("Please enter valid credentials");
             }
@@ -67,10 +67,10 @@ const Login = () => {
   return (
     <div className="row">
       <div
-        className="grid grid-cols-1 lg:grid-cols-2"
+        className="grid grid-cols-1 md:grid-cols-2 pb-10"
         style={{ marginTop: "100px" }}
       >
-        <div className="flex flex-col items-center justify-center gap-2 p-2 sm:gap-4 sm:p-4 md:flex-row md:gap-10 md:p-20 lg:gap-20  ">
+        <div className="hidden md:flex flex-col items-center justify-center gap-2 p-2 sm:gap-4 sm:p-4 md:flex-row md:gap-10 md:p-20 lg:gap-20  ">
           <div>
             <img
               src={login}
@@ -83,7 +83,7 @@ const Login = () => {
           onSubmit={ProceedLogin}
           className="flex flex-col items-center justify-center"
         >
-          <p className="merb py-6 text-center text-[20px] font-semibold  text-[#025464] md:text-[25px] lg:text-[28px]">
+          <p className="merb py-6 -ml-3 text-center text-[20px] font-semibold  text-[#025464] md:text-[25px] lg:text-[28px]">
             Welcome Back
           </p>
           <div className="card">
@@ -123,7 +123,7 @@ const Login = () => {
                 </div>
               </div>
             </div>
-            <Link to="/forget" className="amir flex pb-2 pl-10">
+            <Link to="/forget" className="amir flex pb-2 pl-4 lg:pl-10">
               <p>Forget Password?</p>
             </Link>
             <div className="flex flex-col items-center justify-center">
@@ -166,7 +166,7 @@ const Login = () => {
                   </p>
                 </div>
               </div>
-              <div className="amir mt-3 flex w-full justify-start gap-1 pl-10 text-base">
+              <div className="amir mt-3 flex w-full justify-start gap-1 pl-4  lg:pl-10 text-base">
                 <p>Don&apos; have an account? </p>
                 <Link to="/signup" className="font-semibold text-[#025464] ">
                   Sign Up

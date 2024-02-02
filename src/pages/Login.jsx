@@ -1,185 +1,65 @@
-import { useState } from "react";
-import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
-import { toast } from "react-toastify";
-// import { InputText } from "primereact/inputtext";
-function Login() {
-  const [open, setOpen] = useState(false);
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  // handle toggle
-  const toggle = () => {
-    setOpen(!open);
-  };
+// import React from 'react'
+import login from "../assets/login.png";
 
-  const proceedLogin = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      fetch("http://localhost:3001/users" + email)
-        .then((res) => {
-          return res.json();
-        })
-        .then((resp) => {
-          console.log(resp);
-        })
-        .catch((err) => {
-          toast.error("Login Failed : " + err.message);
-        });
-    }
-    // Clear the form data
-    setEmail("");
-    setPassword("");
-  };
-  const validate = () => {
-    // let result = true;
-    if (email === "" || email === null) {
-      // result = false;
-      toast.warning("Please Enter Email");
-    }
-    if (password === "" || password === null) {
-      // result = false;
-      toast.warning("Please Enter Password");
-    }
-  };
+const Login = () => {
   return (
-    <>
-      <section className="mx-auto h-screen w-9/12">
-        <div className="container h-full px-6 py-24">
-          <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
-            {/* Left column container with background*/}
-            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
-              <img
-                src="/public/sign in.svg"
-                className="w-full"
-                alt="Phone image"
-              />
-            </div>
-            {/* Right column container with form */}
-            <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
-              <form onSubmit={proceedLogin}>
-                <h1 className="heading flex justify-center">Welcome Back</h1>
-                {/* Email input */}
-                <div className=" w-full rounded-lg bg-white p-4 px-3">
-                  <div className="relative w-full bg-inherit">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="peer h-10 w-full rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <label
-                      htmlFor="email"
-                      className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
-                    >
-                      Email
-                    </label>
-                  </div>
-                </div>
-                {/* Password input */}
-                <div
-                  className={`relative w-full rounded-lg bg-white p-4 px-3 ${
-                    password ? "ring-primary" : ""
-                  }`}
-                >
-                  <div className="relative flex w-full items-center bg-inherit">
-                    <input
-                      type={open ? "text" : "password"}
-                      id="password"
-                      name="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      onBlur={() => setPassword(password)}
-                      className="peer h-10 flex-1 rounded-md border-none bg-transparent px-2 py-[0.32rem] text-gray-900 placeholder-transparent ring-1 ring-secondary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Password"
-                    />
-                    <label
-                      htmlFor="password"
-                      className="absolute -top-3 left-0 mx-1 cursor-text bg-inherit px-3 text-sm text-secondary transition-all peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-secondary peer-focus:-top-3 peer-focus:text-sm peer-focus:text-primary"
-                    >
-                      Password
-                    </label>
-                    {password && (
-                      <div className="absolute right-5 top-1/2 -translate-y-1/2 transform text-2xl">
-                        {open ? (
-                          <PiEyeThin onClick={toggle} />
-                        ) : (
-                          <PiEyeClosedThin onClick={toggle} />
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="mb-6 flex items-center justify-between">
-                  {/* Forgot password link */}
-                  <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
-                    Forgot Password?
-                    <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
-                  </button>
-                </div>
-                {/* Submit button */}
-                <button
-                  type="submit"
-                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 inline-block w-full rounded bg-primary px-7 pb-2.5 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                  data-te-ripple-init=""
-                  data-te-ripple-color="light"
-                >
-                  Login
-                </button>
-                {/* Divider */}
-                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-primary after:mt-0.5 after:flex-1 after:border-t after:border-primary">
-                  <p className="text mx-4 mb-0 text-center font-semibold dark:text-primary">
-                    OR
-                  </p>
-                </div>
-                {/* Social login buttons */}
-                <a
-                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                  style={{ backgroundColor: "#3b5998" }}
-                  href="#!"
-                  role="button"
-                  data-te-ripple-init=""
-                  data-te-ripple-color="light"
-                >
-                  {/* Facebook */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2 h-3.5 w-3.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-                  </svg>
-                  Continue with Facebook
-                </a>
-                <a
-                  className="hover:bg-info-600 focus:bg-info-600 active:bg-info-700 mb-3 flex w-full items-center justify-center rounded bg-info px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]"
-                  style={{ backgroundColor: "#55acee" }}
-                  href="#!"
-                  role="button"
-                  data-te-ripple-init=""
-                  data-te-ripple-color="light"
-                >
-                  {/* Twitter */}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="mr-2 h-3.5 w-3.5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                  </svg>
-                  Continue with Twitter
-                </a>
-              </form>
-            </div>
-          </div>
+    <div>
+      <div className="flex flex-col items-center justify-center gap-2 p-2 sm:gap-4 sm:p-4 md:flex-row md:gap-10 md:p-20 lg:gap-20  ">
+        <div>
+          <img
+            src={login}
+            alt="login page image"
+            className="min-h-[255px] w-full md:w-[425px] "
+          />
         </div>
-      </section>
-    </>
+        <div>
+          <form>
+            <p className="merb py-6 text-center text-[20px] font-semibold  text-[#025464] md:text-[25px] lg:text-[28px]">
+              Welcome Back
+            </p>
+            <div>
+              <div className="relative">
+                <input
+                  type="email"
+                  id="email"
+                  className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500 lg:min-w-[300px]"
+                  placeholder=" "
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:bg-gray-900 dark:text-gray-400 peer-focus:dark:text-blue-500"
+                >
+                  Email
+                </label>
+              </div>
+            </div>
+            <div className="pt-5">
+              <div className="relative">
+                <input
+                  type="password"
+                  id="password"
+                  className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500 lg:min-w-[300px]"
+                  placeholder=" "
+                />
+                <label
+                  htmlFor="password"
+                  className="absolute start-1 top-2 z-10 origin-[0] -translate-y-4 scale-75 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:px-2 peer-focus:text-blue-600 rtl:peer-focus:left-auto rtl:peer-focus:translate-x-1/4 dark:bg-gray-900 dark:text-gray-400 peer-focus:dark:text-blue-500"
+                >
+                  Password
+                </label>
+              </div>
+            </div>
+            <div>
+              <p className="pt-2 text-[14px] font-semibold text-black">
+                Forget Password?
+              </p>
+            </div>
+          </form>
+          <div>or</div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
 export default Login;

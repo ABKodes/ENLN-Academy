@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const BroadSelection = () => {
     const [position, setPosition] = useState(0);
 
@@ -29,13 +29,44 @@ const BroadSelection = () => {
   
   const [activeTab, setActiveTab] = useState("tab1");
   const underlineControls = useAnimation();
+  
 
   const tabs = [
-    { id: "tab1", label: "Nutrition Leadership", content: "Tab 1 Content" },
-    { id: "tab2", label: "Evidence to Policy", content: "Tab 2 Content" },
-    { id: "tab3", label: "Communication", content: "Tab 3 Content" },
-    { id: "tab4", label: "Advocacy", content: "Tab 4 Content" },
-    { id: "tab5", label: "Nutrition Courses", content: "Tab 5 Content" },
+    {
+      id: "tab1",
+      label: "Nutrition Leadership",
+      heading: "Expand your carreer opportunities with Nutrition Leadership",
+      content:
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
+    },
+    {
+      id: "tab2",
+      label: "Evidence to Policy",
+      heading: "Expand your carreer opportunities with Evidence to Policy",
+      content:
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
+    },
+    {
+      id: "tab3",
+      label: "Communication",
+      heading: "Expand your carreer opportunities with Communication",
+      content:
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
+    },
+    {
+      id: "tab4",
+      label: "Advocacy",
+      heading: "Expand your carreer opportunities with Advocacy",
+      content:
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your carreer opportunities with Nutrition Leadership",
+    },
+    {
+      id: "tab5",
+      label: "Nutrition Courses",
+      heading: "Expand your carreer opportunities with Nutrition Courses",
+      content:
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your carreer opportunities with Nutrition Leadership",
+    },
   ];
 
   const handleTabClick = (tabId) => {
@@ -97,7 +128,18 @@ const BroadSelection = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                {tab.content}
+                <h1 className="subheading">{tab.heading}</h1>
+                <h1 className="text w-1/2 py-2">{tab.content}</h1>
+                <Link to = "/categories">
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="buttontext btn btn-outline btn-primary px-10"
+                >
+                  Explore
+                </motion.a>
+                </Link>
               </motion.div>
             ),
         )}

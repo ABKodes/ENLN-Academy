@@ -48,6 +48,8 @@ const ProfileDashboard = ({ children }) => {
     },
   ];
 
+  const email = sessionStorage.getItem("email");
+
   return (
     <>
       <div className="container">
@@ -79,6 +81,12 @@ const ProfileDashboard = ({ children }) => {
                   : "rounded-full"
               }`}
             />
+            <p
+              style={{ display: isOpen ? "block " : "none" }}
+              className="merb font-semibold text-[xl] text-center text-[#025464]"
+            >
+              {email}
+            </p>
           </div>
           <div
             className={`${

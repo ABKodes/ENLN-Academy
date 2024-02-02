@@ -82,7 +82,6 @@ function App() {
             }
           />
           <Route path="*" element={<Four0four />} />
-          <Route path="govhome" element={<GovernmentHome />} />
           <Route path="coursedescription" element={<CourseDescription />} />
           <Route path="addtocart" element={<AddToCart />} />
           <Route path="checkout" element={<CheckOut />} />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
+import VerticalCard from "../Reusable Components/VerticalCard";
 const BroadSelection = () => {
     const [position, setPosition] = useState(0);
 
@@ -118,7 +119,7 @@ const BroadSelection = () => {
         />
       </ul>
 
-      <div className="mt-4 h-96 border border-secondary p-4">
+      <div className="mt-4 h-[77vh] border border-secondary p-4">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (
@@ -130,44 +131,25 @@ const BroadSelection = () => {
               >
                 <h1 className="subheading">{tab.heading}</h1>
                 <h1 className="text w-1/2 py-2">{tab.content}</h1>
-                <Link to = "/categories">
-                <motion.a
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  className="buttontext btn btn-outline btn-primary px-10"
-                >
-                  Explore
-                </motion.a>
+                <Link to="/categories">
+                  <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className="buttontext btn btn-outline btn-primary px-10 my-5"
+                  >
+                    Explore
+                  </motion.a>
                 </Link>
+                <div className="flex space-x-2">
+                <VerticalCard />
+                <VerticalCard />
+                <VerticalCard />
+                <VerticalCard />
+                </div>
               </motion.div>
             ),
         )}
-      </div>
-      <div className="flex justify-center">
-        <nav className="rounded-full bg-gray-200 px-4 py-2">
-          <ul className="flex justify-between gap-4 px-10 py-2 font-medium text-gray-600">
-            <li>
-              <a
-                href="#"
-                className="rounded-full bg-white px-4 py-2 text-gray-600"
-                onClick={handlePreviousClick}
-              >
-                &lt;
-              </a>
-            </li>
-            {/* Add the remaining list items here */}
-            <li>
-              <a
-                href="#"
-                className="rounded-full bg-white px-4 py-2 text-gray-600"
-                onClick={handleNextClick}
-              >
-                &gt;
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   );

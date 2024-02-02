@@ -17,6 +17,7 @@
     "@tailwindcss/line-clamp": "^0.4.4",
     "alpinejs": "^3.13.5",
     "classnames": "^2.5.0",
+    "cors": "^2.8.5",
     "framer-motion": "^10.16.16",
     "json-server": "^1.0.0-alpha.23",
     "lottie-react": "^2.4.0",

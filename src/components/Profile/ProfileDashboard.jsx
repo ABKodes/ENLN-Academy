@@ -14,7 +14,7 @@ import PropTypes from "prop-types";
 const ProfileDashboard = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  const close=()=>setIsOpen(false);
+  const close = () => setIsOpen(false);
   const menuItem = [
     {
       path: "/dashboard",
@@ -48,19 +48,27 @@ const ProfileDashboard = ({ children }) => {
     },
   ];
 
+  const email = sessionStorage.getItem("email");
+
   return (
     <>
       <div className="container">
         <div
           style={{ width: isOpen ? "350px" : "50px" }}
-          className="sidebar max-w-[220px] px-2 duration-500 md:ml-16 mt-16 md:max-w-full"
+          className="sidebar mt-16 max-w-[220px] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full"
         >
-          <div className={isOpen ? "top_section" : "top_section justify-center"}>
+          <div
+            className={isOpen ? "top_section" : "top_section justify-center"}
+          >
             <div
               style={{ marginLeft: isOpen ? "50px" : "0px" }}
-              className={isOpen ? " flex-end items-center justify-end ml-4" : " flex-end items-center justify-center ml-10"}
+              className={
+                isOpen
+                  ? " flex-end ml-4 items-center justify-end"
+                  : " flex-end ml-10 items-center justify-center"
+              }
             >
-              <FaBars onClick={toggle} size={20}/>
+              <FaBars onClick={toggle} size={20} />
             </div>
           </div>
           <div>
@@ -73,6 +81,12 @@ const ProfileDashboard = ({ children }) => {
                   : "rounded-full"
               }`}
             />
+            <p
+              style={{ display: isOpen ? "block " : "none" }}
+              className="merb font-semibold text-[xl] text-center text-[#025464]"
+            >
+              {email}
+            </p>
           </div>
           <div
             className={`${
@@ -90,7 +104,7 @@ const ProfileDashboard = ({ children }) => {
                     ? "link flex-col items-start  justify-center py-2 md:mx-10 md:pl-6 lg:items-center"
                     : "link flex-col items-center justify-center py-1"
                 }`}
-                activeclassName="active"
+                activeClassName="active"
               >
                 <div className="flex gap-2 md:gap-5 " onClick={close}>
                   <div className="icon mt-2">{item.icon}</div>
@@ -105,7 +119,7 @@ const ProfileDashboard = ({ children }) => {
             ))}
           </div>
         </div>
-        <main className={isOpen ? "hidden sm:block":"block"}>{children}</main>
+        <main className={isOpen ? "hidden sm:block" : "block"}>{children}</main>
       </div>
     </>
   );

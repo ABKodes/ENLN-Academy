@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -28,32 +29,38 @@ function Hero() {
 
           {/* Call to action button */}
           <div className=" mx-auto mt-16  w-1/4 space-x-2">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-outline btn-primary hidden bg-white lg:flex lg:items-center"
-            >
-              Contact Sales
-            </motion.a>
+            <Link to="/governmentform">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="btn btn-outline btn-primary hidden bg-white lg:flex lg:items-center"
+              >
+                Contact Sales
+              </motion.a>
+            </Link>
           </div>
         </div>
       </div>
       <div className="mx-auto   lg:hidden ">
         <div
-        className="w-full relative  min-h-[50vh] items-center justify-center  bg-cover"
-        style={{ backgroundImage: 'url("/new3.jpg")', backgroundSize: "cover" }}
-      >
-        <div
-          className="absolute inset-0 bg-gradient-to-tl from-primary to-transparent opacity-100 "
-          style={{ mixBlendMode: "multiply" }}
-        ></div>
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-100 "
-          style={{ mixBlendMode: "multiply" }}
-        ></div> </div>
-        
-        <div className=" w-11/12 mx-auto">
+          className="relative min-h-[50vh]  w-full items-center justify-center  bg-cover"
+          style={{
+            backgroundImage: 'url("/new3.jpg")',
+            backgroundSize: "cover",
+          }}
+        >
+          <div
+            className="absolute inset-0 bg-gradient-to-tl from-primary to-transparent opacity-100 "
+            style={{ mixBlendMode: "multiply" }}
+          ></div>
+          <div
+            className="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-100 "
+            style={{ mixBlendMode: "multiply" }}
+          ></div>{" "}
+        </div>
+
+        <div className=" mx-auto w-11/12">
           <h1 className="orgphoneherotext font-bold text-white ">
             Empowering Leaders, Transforming Communities
             <br />
@@ -68,7 +75,7 @@ function Hero() {
 
           {/* Call to action button */}
           <div className=" w-full  space-x-2 ">
-            <motion.a
+            <Link to="/governmentform"><motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -76,6 +83,7 @@ function Hero() {
             >
               Contact Sales
             </motion.a>
+            </Link>
           </div>
         </div>
       </div>

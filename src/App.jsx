@@ -15,7 +15,7 @@ import SignUp from "./pages/SignUp";
 import Four0four from "./components/Reusable Components/Four0four";
 import GovernmentHome from "./pages/Government Home";
 import OrganizationHome from "./pages/OrganizationHome";
-import CourseDescription from "./pages/Course Description"
+import CourseDescription from "./pages/Course Description";
 import AddToCart from "./pages/Add To Cart";
 import CheckOut from "./pages/Check Out";
 import OrgForm from "./pages/OrgForm";
@@ -38,10 +38,9 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="governmenthome" element={<GovernmentHome />} />
           <Route path="organizationhome" element={<OrganizationHome />} />
-          <Route path="addtocart" element={<AddedCourses/>} />
+          <Route path="addtocart" element={<AddedCourses />} />
           <Route path="categories" element={<Categories />} />
-          <Route path="checkout" element={<OrderDetail/>} />
-
+          <Route path="checkout" element={<OrderDetail />} />
           <Route
             path="/certificate"
             element={

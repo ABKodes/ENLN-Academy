@@ -14,6 +14,7 @@ import PropTypes from "prop-types";
 const ProfileDashboard = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+  const close=()=>setIsOpen(false);
   const menuItem = [
     {
       path: "/dashboard",
@@ -52,7 +53,7 @@ const ProfileDashboard = ({ children }) => {
       <div className="container">
         <div
           style={{ width: isOpen ? "350px" : "50px" }}
-          className="sidebar max-w-[220px] px-2 duration-500 md:ml-16 md:mt-16 md:max-w-full"
+          className="sidebar max-w-[220px] px-2 duration-500 md:ml-16 mt-16 md:max-w-full"
         >
           <div className={isOpen ? "top_section" : "top_section justify-center"}>
             <div
@@ -91,7 +92,7 @@ const ProfileDashboard = ({ children }) => {
                 }`}
                 activeclassName="active"
               >
-                <div className="flex gap-2 md:gap-5 ">
+                <div className="flex gap-2 md:gap-5 " onClick={close}>
                   <div className="icon mt-2">{item.icon}</div>
                   <div
                     style={{ display: isOpen ? "block " : "none" }}
@@ -104,7 +105,7 @@ const ProfileDashboard = ({ children }) => {
             ))}
           </div>
         </div>
-        <main>{children}</main>
+        <main className={isOpen ? "hidden sm:block":"block"}>{children}</main>
       </div>
     </>
   );

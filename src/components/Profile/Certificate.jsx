@@ -2,7 +2,7 @@ import tom from "../../assets/tom.png";
 
 const Certificate = () => {
   return (
-    <div className="rounded-xl border-2 border-gray-200 pl-6 pt-6">
+    <div className="mt-10 rounded-xl border-2 border-gray-200 pl-6 pt-6">
       <p className="merb p-2 text-start  text-[20px] font-semibold text-[#025464] sm:p-4 md:p-12 md:text-[24px] lg:text-[28px]">
         Certificates
       </p>

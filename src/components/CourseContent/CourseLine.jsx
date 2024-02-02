@@ -3,8 +3,15 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 import { BsStopwatch } from "react-icons/bs";
 import { PiBookOpenTextBold } from "react-icons/pi";
 import { MdQuiz } from "react-icons/md";
+import { useState } from "react";
 
 const CourseLine = () => {
+  const [element, setElement] = useState(1);
+
+  const handleElement = (element) => {
+    setElement(element);
+  };
+
   return (
     <div>
       <div className="flex min-h-[80vh] flex-col-reverse gap-2 bg-[#B3CBD0] px-2 py-3 lg:flex-row lg:gap-8">
@@ -159,6 +166,46 @@ const CourseLine = () => {
               allowFullScreen
               className="mt-10 h-[458.44px] w-screen lg:max-w-[815px]"
             ></iframe>
+          </div>
+          <div className="mt-10  flex items-center justify-between gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:px-10 lg:px-20">
+            <p
+              onClick={() => handleElement(1)}
+              className={element === 1 ? "merb cursor-pointer  text-2xl px-3 font-bold border-b-2 border-gray-500 sm:block":"amir cursor-pointer  text-xl font-semibold sm:block"}
+            >
+              Description
+            </p>
+            <p
+              onClick={() => handleElement(2)}
+              className={element === 2 ? "merb cursor-pointer  text-2xl px-3 font-bold border-b-2 border-gray-500 sm:block":"amir cursor-pointer  text-xl font-semibold sm:block"}
+            >
+              Q&A
+            </p>
+            <p
+              onClick={() => handleElement(3)}
+              className={element === 3 ? "merb cursor-pointer  text-2xl px-3 font-bold border-b-2 border-gray-500 sm:block":"amir cursor-pointer  text-xl font-semibold sm:block"}
+            >
+              Comments
+            </p>
+            <p
+              onClick={() => handleElement(4)}
+              className={element === 4 ? "merb cursor-pointer  text-2xl px-3 font-bold border-b-2 border-gray-500 sm:block":"amir cursor-pointer  text-xl font-semibold sm:block"}
+            >
+              Resource
+            </p>
+          </div>
+          <div>
+            <div style={{ display: element === 1 ? "block" : "none" }}>
+              <p>Description Detail</p>
+            </div>
+            <div style={{ display: element === 2 ? "block" : "none" }}>
+              <p>Q&A Detail</p>
+            </div>
+            <div style={{ display: element === 3 ? "block" : "none" }}>
+              <p>Comments Detail</p>
+            </div>
+            <div style={{ display: element === 4 ? "block" : "none" }}>
+              <p>Resource Detail</p>
+            </div>
           </div>
         </div>
       </div>

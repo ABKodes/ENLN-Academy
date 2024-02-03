@@ -14,14 +14,6 @@ function ForgetPassword() {
 
           {/* Form for password recovery */}
           <form className="mb-6 w-full px-5">
-            <div className="form-control  mb-6">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="input input-bordered w-full "
-                required
-              />
-            </div>
             <div className="rounded-lg bg-white p-4 w-full">
               <div className="relative bg-inherit">
                 <input
@@ -50,7 +42,7 @@ function ForgetPassword() {
             </motion.a>
             <p className="text-center text-neutral-700">
               or
-              <Link className="smalltext group relative mx-4 transform leading-5 text-secondary duration-300 dark:text-primary md:my-0">
+              <Link to="/login" className="smalltext group relative mx-4 transform leading-5 text-secondary duration-300 dark:text-primary md:my-0">
                 Log in
                 <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
               </Link>

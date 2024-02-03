@@ -3,9 +3,9 @@ import React from "react";
 function PrivacyAndPolicy() {
   return (
     <div>
-      <div className="mx-auto w-11/12 lg:w-9/12">
-        <div className="flex flex-col items-center w-full mb-5">
-          <h1 className="heading">Privacy And Policy</h1>
+      <div className="mx-auto w-11/12 border border-gray-400 p-10 shadow-sm lg:w-10/12">
+        <div className="mb-5 flex w-full flex-col items-center space-y-2 border-b-2 py-2">
+          <h1 className="heading  ">Privacy And Policy</h1>
           <h2 className="font-bold">Last Updated on March 8,2024</h2>
         </div>
         <p className="text">
@@ -14,29 +14,32 @@ function PrivacyAndPolicy() {
           safeguard your personal information. By using our website, you consent
           to the practices described in this Privacy Policy.
         </p>
-        <h1 className="text-2xl text-black">Information We Collect</h1>
-        <h3 className="subheading">Personal Information</h3>
-        <p>
-          We may collect personal information, such as: Name Email address
-          Contact information Payment details for premium services
-        </p>
-        <h3 className="subheading">Usage Data</h3>
-        <p>
-          We collect information on how you interact with our website,
-          including:
-          <ul>
-            <li>Log files </li>
-            <li>IP address</li>
-            <li>Browser type</li>
-            <li></li>
+        <div className="w-full space-y-2">
+          <h1 className="subheading">Information We Collect</h1>
+          <ul className="list-decimal px-5">
+            <li className="text">Personal Information</li>
+            <p>
+              We may collect personal information, such as: Name Email address
+              Contact information Payment details for premium services
+            </p>
+            <li className="text">Usage Data</li>
+            <p>
+              We collect information on how you interact with our website,
+              including:
+              <ul className="mb-2 list-disc px-5">
+                <li>Log files </li>
+                <li>IP address</li>
+                <li>Browser type</li>
+                <li>Pages visited Date and time of access</li>
+              </ul>
+            </p>
+            <li className="text">Cookies and Similar Technologies</li>
+            <p>
+              We use cookies and similar technologies to enhance your user
+              experience and collect data for analytics.
+            </p>
           </ul>
-          Pages visited Date and time of access
-        </p>
-        <h3 className="subheading">Cookies and Similar Technologies</h3>
-        <p>
-          We use cookies and similar technologies to enhance your user
-          experience and collect data for analytics.
-        </p>
+        </div>
         <h3 className="subheading">How We Use Your Information</h3>
         <p>
           We use the collected information for various purposes, including:

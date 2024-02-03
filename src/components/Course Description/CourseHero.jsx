@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 function CourseHero() {
   return (
     <section className="bg-secondary">
@@ -60,14 +61,14 @@ function CourseHero() {
           <span href="#" className="heading mr-2">
             Birr 1,500
           </span>
-          <motion.a
+         <Link to="addtocart"> <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
             className="buttontext btn btn-primary mx-2 mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-auto "
           >
             Add to Cart
-          </motion.a>
+          </motion.a></Link>
         </div>
         <div className="image-full hidden lg:col-span-5 lg:mt-0 lg:flex">
           <img src="/public/course image.svg" alt="mockup" />

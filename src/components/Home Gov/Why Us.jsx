@@ -165,7 +165,7 @@ function WhyUs() {
               </div>
             </div>
           </div>
-          <Link to="/categories" className="lg:flexp w-1/2 lg:items-center">
+          <Link to="/categories" className="lg:flex w-1/2 lg:items-center mt-10">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

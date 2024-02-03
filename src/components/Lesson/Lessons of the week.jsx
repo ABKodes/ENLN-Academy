@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Lessonsoftheweek() {
   const objectives = [
@@ -31,7 +32,7 @@ function Lessonsoftheweek() {
 
   return (
     <div>
-      <div className="relative inline-block z-10  w-full items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
+      <div className="relative z-10 inline-block  w-full items-center justify-center border border-black text-left lg:ml-5 lg:w-11/12">
         <div
           onClick={togglePriceDropdown}
           className="lg:text phonetext inline-flex w-full  bg-white px-4  py-2 font-bold  focus:outline-none "
@@ -58,8 +59,8 @@ function Lessonsoftheweek() {
         </div>
 
         {isPriceDropdownOpen && (
-          <div className="lg:relative mt-2  w-full lg:origin-top-right rounded-md  bg-white   ring-0">
-            <div className="my-5 flex w-full lg:justify-center space-x-3 border-b border-black py-3">
+          <div className="mt-2 w-full  rounded-md bg-white ring-0  lg:relative   lg:origin-top-right">
+            <div className="my-5 flex w-full space-x-3 border-b border-black py-3 lg:justify-center">
               {" "}
               {/* Video svg */}
               <svg
@@ -222,7 +223,7 @@ function Lessonsoftheweek() {
               </div>
 
               {islessonDropdownOpen && (
-                <div className="relative mt-2 w-full origin-top-right  rounded-md border-t border-[#e8e8e8]  bg-white ring-0 z-10">
+                <div className="relative z-10 mt-2 w-full  origin-top-right rounded-md border-t  border-[#e8e8e8] bg-white ring-0">
                   <div className="ml-7  flex  space-x-5 py-3 ">
                     <div className="relative  h-5 w-5">
                       <svg
@@ -311,18 +312,21 @@ function Lessonsoftheweek() {
                         <h3>What is Nutrition ? </h3>
                       </div>
                       <div className="ml-auto">
-                        <motion.a
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 400,
-                            damping: 17,
-                          }}
-                          className="btn btn-primary btn-sm rounded-lg border-none px-5 py-2 uppercase tracking-wider text-white duration-300"
-                        >
-                          Get Started
-                        </motion.a>
+                        <Link to="/coursecontent">
+                          {" "}
+                          <motion.a
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 400,
+                              damping: 17,
+                            }}
+                            className="btn btn-primary btn-sm rounded-lg border-none px-5 py-2 uppercase tracking-wider text-white duration-300"
+                          >
+                            Get Started
+                          </motion.a>
+                        </Link>
                       </div>
                     </div>
                   </div>

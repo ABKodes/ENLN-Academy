@@ -52,10 +52,10 @@ const ProfileDashboard = ({ children }) => {
 
   return (
     <>
-      <div className="container">
+      <div className="container ">
         <div
           style={{ width: isOpen ? "350px" : "50px" }}
-          className="sidebar mt-16 max-w-[220px] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full"
+          className="sidebar mt-16 max-w-[220px] max-h-[80vh] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full"
         >
           <div
             className={isOpen ? "top_section" : "top_section justify-center"}
@@ -83,7 +83,7 @@ const ProfileDashboard = ({ children }) => {
             />
             <p
               style={{ display: isOpen ? "block " : "none" }}
-              className="merb font-semibold text-[xl] text-center text-[#025464]"
+              className="merb font-semibold text-xl text-center text-[#025464]"
             >
               {email}
             </p>

@@ -53,7 +53,7 @@ const Testimonial = () => {
   }, [currentTestimonial]);
 
   return (
-    <div className="mx-auto w-11/12">
+    <div className="mx-auto w-11/12 mt-10">
       <h1 className="heading">Don&apos;t just take our words</h1>
       <section className="bg-white">
         <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
@@ -79,7 +79,7 @@ const Testimonial = () => {
                   />
                 </svg>
                 <blockquote>
-                  <p className="text-4xl font-medium text-gray-900  ">
+                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium text-gray-900  ">
                     {testimonials[currentTestimonial].quote}
                   </p>
                 </blockquote>

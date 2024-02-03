@@ -55,7 +55,7 @@ const ProfileDashboard = ({ children }) => {
       <div className="container ">
         <div
           style={{ width: isOpen ? "350px" : "50px" }}
-          className="sidebar mt-16 max-w-[220px] max-h-[80vh] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full"
+          className={isOpen ? "sidebar mt-16 max-w-[220px] max-h-[80vh] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full": "sidebar mt-16 max-w-[220px] max-h-[60vh] px-2 duration-500 md:ml-16 md:max-w-full lg:max-w-full"}
         >
           <div
             className={isOpen ? "top_section" : "top_section justify-center"}

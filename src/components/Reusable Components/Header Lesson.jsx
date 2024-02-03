@@ -83,7 +83,7 @@ function HeaderLesson() {
                 )}
               </div>
               <div
-                className={`absolute inset-x-0  z-50 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
+                className={`absolute inset-x-0  w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
                   isOpen
                     ? "translate-x-0 opacity-100"
                     : "-translate-x-full opacity-0"
@@ -91,7 +91,7 @@ function HeaderLesson() {
               >
                 <ul
                   tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[50] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+                  className="menu dropdown-content menu-sm z-[] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
                 >
                   <li>
                     <Link className="group relative  text-primary hover:font-bold">
@@ -148,9 +148,11 @@ function HeaderLesson() {
 
           {/*  menu items */}
           <div className="navbar-end flex items-center ">
-            <div className="mt-3 hidden h-8 w-8 scale-x-110 transform text-2xl text-primary lg:flex">
-              <GoQuestion />
-            </div>
+            <Link to="/support">
+              <div className="mt-3 hidden h-8 w-8 scale-x-110 transform text-2xl text-primary lg:flex">
+                <GoQuestion />
+              </div>
+            </Link>
             <div className=" hidden lg:flex">
               <button class="btn btn-circle btn-ghost mr-2 mt-1 text-2xl text-primary">
                 <div class="indicator">
@@ -319,50 +321,46 @@ function HeaderLesson() {
                 </div>
               )}
             </div>
-
-            {/*  Mobile profile */}
-            <div className="dropdown dropdown-end scale-x-110 transform">
+            {/* Profile drop down */}
+            <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
-                className="avatar btn btn-circle btn-ghost visible"
+                className="avatar btn btn-circle btn-ghost"
               >
-                <div className="w-10 rounded-full ">
+                <div className="w-10 rounded-full">
                   <img
                     alt="Tailwind CSS Navbar component"
                     src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
                   />
                 </div>
               </div>
-              {/* Dropdown menu items */}
-              <div className="z-50">
-                <ul
-                  tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[50] mt-3 w-52 rounded-box bg-base-100 p-2 shadow "
-                >
-                  <li className="hover:bg-secondary hover:text-primary">
-                    <a>Profile</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary">
-                    <a>My Courses</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary lg:hidden">
-                    <a>Notification</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary">
-                    <a>Settings</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary lg:hidden">
-                    <a>Help Center</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary">
-                    <a>Resources</a>
-                  </li>
-                  <li className="hover:bg-secondary hover:text-primary">
-                    <a>Logout</a>
-                  </li>
-                </ul>
-              </div>
+              <ul
+                tabIndex={0}
+                className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
+              >
+                <li className="hover:bg-secondary hover:text-primary">
+                  <Link to="/dashboard">Profile</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary">
+                  <Link to="/my-courses">My Courses</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary">
+                  <Link to="/settings">Settings</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary">
+                  <Link>Resources</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary">
+                  <Link to="/logout">Logout</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary lg:hidden">
+                  <Link to="/support">Help Center</Link>
+                </li>
+                <li className="hover:bg-secondary hover:text-primary lg:hidden">
+                  <Link>Notification</Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

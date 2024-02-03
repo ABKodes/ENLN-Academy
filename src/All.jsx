@@ -33,13 +33,16 @@ import SignUp from "./pages/SignUp"
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import OrderDetail from "./components/Check Out/Order Detail";
 import GovernmentHome from "./pages/Government Home"
-
+import HeaderLesson from "./components/Reusable Components/Header Lesson";
+import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
 
 function All() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <HeaderLesson />
         <GovernmentHome />
+        <PrivacyAndPolicy/>
         <br />
         <Instructors />
         <br />

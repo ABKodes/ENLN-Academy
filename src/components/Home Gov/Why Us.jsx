@@ -1,5 +1,5 @@
-import React from "react";
-import { PiCertificateThin } from "react-icons/pi";
+// import React from "react";
+// import { PiCertificateThin } from "react-icons/pi";
 import { motion } from "framer-motion";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { Link } from "react-router-dom";
@@ -14,9 +14,9 @@ function WhyUs() {
         {/* first row */}
         <div className=" w-full">
           <div className=" mx-auto my-auto w-full space-x-2 space-y-4 py-12 lg:px-52">
-            <h1 className="heading px-20">
+            <h1 className="heading px-2 sm:px-6 md:px-10 lg:px-20">
               {" "}
-              Discover Why We're the Best: Choose Us Today
+              Discover Why We&apos;re the Best: Choose Us Today
             </h1>
             <p className="text-xl text-primary">
               Empower Yourself for Global Well-Being through Our Nutrition and
@@ -27,7 +27,7 @@ function WhyUs() {
         {/* second row */}
         <div className="flex flex-col items-center justify-center">
           {/* features */}
-          <div className=" mx-8  grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className=" lg:mx-8 justify-center grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div className=" space-y-5">
               <div className="card mx-auto  h-60 w-96 border border-black bg-base-100">
                 <div className="card-body flex ">
@@ -165,7 +165,7 @@ function WhyUs() {
               </div>
             </div>
           </div>
-          <Link to="/categories" className="w-1/2 lg:items-center lg:flexp">
+          <Link to="/categories" className="lg:flexp w-1/2 lg:items-center">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

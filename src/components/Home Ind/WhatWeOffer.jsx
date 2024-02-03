@@ -17,7 +17,7 @@ function WhatWeOffer() {
               your weekly benefits:
             </p>
           </div>
-          <div className="max-w-sm rounded-lg p-6 ">
+          <div className="max-w-sm rounded-lg lp-6 ">
             <img
               src="/public/blended.svg"
               className="mx-auto w-full items-center justify-center"

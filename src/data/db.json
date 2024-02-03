@@ -41,6 +41,36 @@
       "name": "Abiy Shiferaw",
       "email": "abiyshiferaw12@gmail.com",
       "password": "The v@l2#in Pr0"
+    },
+    {
+      "id": "4771",
+      "name": "abebe",
+      "email": "abebe@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1aae",
+      "name": "Hello",
+      "email": "hello@gmail.com",
+      "password": "hello"
+    },
+    {
+      "id": "0f2e",
+      "name": "leb",
+      "email": "leb@gmail.com",
+      "password": "leb"
+    },
+    {
+      "id": "2812",
+      "name": "Haila",
+      "email": "hailw@gmail.com",
+      "password": "haila"
+    },
+    {
+      "id": "0913",
+      "name": "lebam",
+      "email": "lebam@gmail.com",
+      "password": "123456"
     }
   ]
 }

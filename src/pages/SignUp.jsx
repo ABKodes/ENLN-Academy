@@ -4,7 +4,7 @@ import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 // import { Password } from 'primereact/password';
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 function SignUp() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
@@ -220,10 +220,12 @@ function SignUp() {
               <div className="mb-6 flex items-center justify-center space-x-2">
                 {/* Forgot password link */}
                 <p>Do you have an account ? </p>
+                <Link to="/login">
                 <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
                   Login
                   <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
                 </button>
+                </Link>
               </div>
             </div>
           </div>

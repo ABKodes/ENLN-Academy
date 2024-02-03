@@ -15,16 +15,16 @@ import SignUp from "./pages/SignUp";
 import Four0four from "./components/Reusable Components/Four0four";
 import GovernmentHome from "./pages/Government Home";
 import OrganizationHome from "./pages/OrganizationHome";
-import CourseDescription from "./pages/Course Description"
+import CourseDescription from "./pages/Course Description";
 import AddToCart from "./pages/Add To Cart";
 import CheckOut from "./pages/Check Out";
 import OrgForm from "./pages/OrgForm";
-import GovForm from "./pages/Gov Form";
 import AddedCourses from "./components/Add to Cart/AddedCourses";
 import Categories from "./pages/Categories";
 import OrderDetail from "./components/Check Out/Order Detail";
 import ForgetPassword from "./pages/ForgetPassword";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
+import GovForm from "./components/Home Gov/GovForm";
 function App() {
   return (
     <>
@@ -40,7 +40,7 @@ function App() {
           <Route path="signup" element={<SignUp />} />
           <Route path="governmenthome" element={<GovernmentHome />} />
           <Route path="organizationhome" element={<OrganizationHome />} />
-          <Route path="addtocart" element={<AddedCourses/>} />
+          <Route path="addtocart" element={<AddedCourses />} />
           <Route path="categories" element={<Categories />} />
           <Route path="checkout" element={<OrderDetail/>} />
           <Route path="forgetpassword" element={<ForgetPassword/>} />

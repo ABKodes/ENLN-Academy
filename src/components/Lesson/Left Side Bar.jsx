@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function LeftSideBar({ userData }) {
   const [completedWeeks, setCompletedWeeks] = useState([]);
@@ -24,15 +25,17 @@ function LeftSideBar({ userData }) {
       const isChecked = completedWeeks.includes(week);
 
       checkboxes.push(
-        <label key={week} className="text flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={() => handleCheckboxChange(week)}
-            className="texty rounded-full focus:ring-0"
-          />
-          <span className="text">{`Week ${week}`}</span>
-        </label>,
+        <Link to="/coursecontent">
+          <label key={week} className="text flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={() => handleCheckboxChange(week)}
+              className="texty rounded-full focus:ring-0"
+            />
+            <span className="text">{`Week ${week}`}</span>
+          </label>
+        </Link>,
       );
     }
 

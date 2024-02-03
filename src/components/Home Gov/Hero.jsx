@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -17,7 +16,7 @@ function Hero() {
           className="absolute inset-0 bg-gradient-to-br from-black to-transparent opacity-100 "
           style={{ mixBlendMode: "multiply" }}
         ></div>
-        <div className="z-10 ml-16 w-2/3  text-white">
+        <div className="absolute z-10 ml-16 w-2/3  text-white">
           <h1 className=" mb-10 hidden border-l-8 border-primary pl-5 text-5xl font-bold text-white lg:block">
             Empowering Leaders, Transforming Communities <br />
           </h1>
@@ -28,7 +27,7 @@ function Hero() {
           </p>
 
           {/* Call to action button */}
-          <div className=" mx-auto mt-16  w-1/4 space-x-2">
+          <div className="absolute mx-auto mt-16  w-1/4 space-x-2">
             <Link to="/governmentform">
               <motion.a
                 whileHover={{ scale: 1.1 }}
@@ -75,14 +74,15 @@ function Hero() {
 
           {/* Call to action button */}
           <div className=" w-full  space-x-2 ">
-            <Link to="/governmentform"><motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
-            >
-              Contact Sales
-            </motion.a>
+            <Link to="/governmentform">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="buttontext  btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto"
+              >
+                Contact Sales
+              </motion.a>
             </Link>
           </div>
         </div>

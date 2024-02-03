@@ -1,5 +1,5 @@
-import React from "react";
-import { LiaUniversitySolid } from "react-icons/lia";
+// import React from "react";
+// import { LiaUniversitySolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import { PiCertificateThin } from "react-icons/pi";
 import { Link } from "react-router-dom";
@@ -8,7 +8,7 @@ function WhyUs() {
   return (
     <>
       <div className="w-full lg:m-3">
-        <div className="mx-auto flex w-11/12 flex-col lg:flex-row lg:p-5">
+        <div className="mx-auto flex py-10 w-11/12 flex-col lg:flex-row lg:p-5">
           <div className="w-full space-y-2 lg:w-1/2">
             <div className="card w-full rounded-sm bg-base-100 shadow-sm shadow-primary">
               <div className="card-body space-y-2">

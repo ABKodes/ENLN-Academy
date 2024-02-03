@@ -2,8 +2,8 @@ function WhatWeOffer() {
   return (
     <>
       <div className="mx-auto w-11/12 ">
-        <h1 className="heading py-5">What We Offer</h1>
-        <div className="flex  space-x-4">
+        <h1 className="heading py-5 text-center lg:text-start">What We Offer</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  space-x-4">
           <div className="max-w-sm rounded-lg p-6 ">
             <img
               src="/public/blended.svg"
@@ -17,7 +17,7 @@ function WhatWeOffer() {
               your weekly benefits:
             </p>
           </div>
-          <div className="max-w-sm rounded-lg p-6 ">
+          <div className="max-w-sm rounded-lg lp-6 ">
             <img
               src="/public/blended.svg"
               className="mx-auto w-full items-center justify-center"

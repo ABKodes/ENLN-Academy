@@ -65,12 +65,12 @@ const Login = () => {
     return result;
   };
   return (
-    <div className="row">
+    <div className="row flex items-center justify-center">
       <div
-        className="grid grid-cols-1 md:grid-cols-2 pb-10"
+        className="flex flex-col items-center justify-center gap-5 pb-10 md:flex-row md:gap-10 lg:gap-20"
         style={{ marginTop: "100px" }}
       >
-        <div className="hidden md:flex flex-col items-center justify-center gap-2 p-2 sm:gap-4 sm:p-4 md:flex-row md:gap-10 md:p-20 lg:gap-20  ">
+        <div className="hidden flex-col items-center justify-center gap-2 p-2 sm:gap-4 sm:p-4 md:flex md:flex-row md:gap-10 md:p-20 lg:gap-20  ">
           <div>
             <img
               src={login}
@@ -83,7 +83,7 @@ const Login = () => {
           onSubmit={ProceedLogin}
           className="flex flex-col items-center justify-center"
         >
-          <p className="merb py-6 -ml-3 text-center text-[20px] font-semibold  text-[#025464] md:text-[25px] lg:text-[28px]">
+          <p className="merb -ml-3 py-6 text-center text-[20px] font-semibold  text-[#025464] md:text-[25px] lg:text-[28px]">
             Welcome Back
           </p>
           <div className="card">
@@ -166,7 +166,7 @@ const Login = () => {
                   </p>
                 </div>
               </div>
-              <div className="amir mt-3 flex w-full justify-start gap-1 pl-4  lg:pl-10 text-base">
+              <div className="amir mt-3 flex w-full justify-start gap-1 pl-4  text-base lg:pl-10">
                 <p>Don&apos; have an account? </p>
                 <Link to="/signup" className="font-semibold text-[#025464] ">
                   Sign Up

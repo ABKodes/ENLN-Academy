@@ -1,18 +1,20 @@
-import React from 'react'
+// import React from 'react'
 import { LiaUniversitySolid } from "react-icons/lia";
 import { motion } from "framer-motion";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function GovHub() {
   return (
     <>
-      <div className="w-full lg:m-3">
-        <h1 className="heading lg:pl-10">Government Training Hub</h1>
+      <div className="w-full justify-center lg:m-3">
+        <h1 className="heading md:pll-5 pl-2 text-center lg:pl-10">
+          Government Training Hub
+        </h1>
         <div className="mx-auto flex w-11/12 flex-col lg:flex-row lg:p-5">
           <div className="w-full lg:w-1/2">
             <img src="/government training hub.jpg" alt="" />
           </div>
-          <div className="w-full space-y-3 p-2 lg:w-1/2 lg:p-3 lg:pl-10">
+          <div className="mt-10 w-full space-y-3 p-2 lg:mt-0 lg:w-1/2 lg:p-3 lg:pl-10">
             <span className="flex space-x-2 border-l-4 border-primary pl-3">
               <LiaUniversitySolid className="h-10 w-10 text-primary" />
               <h1 className="heading ">ENLN INSTITUTE</h1>
@@ -96,4 +98,4 @@ function GovHub() {
   );
 }
 
-export default GovHub
+export default GovHub;

@@ -46,7 +46,7 @@ function PrivacyAndPolicy() {
             We use the collected information for various purposes, including:
             Providing and maintaining our services Personalizing your experience
             Processing payments Analyzing website usage and trends Improving our
-            website and services Responding to inquiries and support requests
+            website and services Responding to inquiries and support requests.
           </p>
           <ul className="list-disc text-start space-y-2 pl-8">
             <li>

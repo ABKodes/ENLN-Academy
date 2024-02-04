@@ -40,13 +40,44 @@ function PrivacyAndPolicy() {
             </p>
           </ul>
         </div>
-        <h3 className="subheading">How We Use Your Information</h3>
-        <p>
-          We use the collected information for various purposes, including:
-          Providing and maintaining our services Personalizing your experience
-          Processing payments Analyzing website usage and trends Improving our
-          website and services Responding to inquiries and support requests
-        </p>
+        <div className="space-y-2">
+          <h3 className="subheading">How We Use Your Information</h3>
+          <p>
+            We use the collected information for various purposes, including:
+            Providing and maintaining our services Personalizing your experience
+            Processing payments Analyzing website usage and trends Improving our
+            website and services Responding to inquiries and support requests
+          </p>
+          <ul className="list-disc text-start space-y-2 pl-8">
+            <li>
+              Providing the Site and our Services. We use Personal Data which
+              you provide to us in order to allow you to access and use the Site
+              and in order to provide any information, products, or Services
+              that you request from us.
+            </li>
+            <li>
+              Technical support and security. We may use Personal Data to
+              provide technical support to you, where required, and to ensure
+              the security of our Services and the Site.
+            </li>
+            <li>
+              Updates. We use Personal Data collected when you sign-up for our
+              various email or update services to send you the messages in
+              connection with the Site or Content Offerings. We may also archive
+              this information and/or use it for future communications with you,
+              where we are legally entitled to do so.
+            </li>
+            <li>
+              Research. We may share general course data (including quiz or
+              assignment submissions, grades, and forum discussions),
+              information about your activity on our Site, and demographic data
+              from surveys operated by us with our Content Providers and other
+              business partners so that our Content Providers and other business
+              partners may use the data for research related to online
+              education.
+            </li>
+          </ul>
+        </div>
         <h3 className="subheading">Information Sharing and Disclosure</h3>
         <p>
           We may share your information with: Third-party service providers

@@ -78,38 +78,48 @@ function PrivacyAndPolicy() {
             </li>
           </ul>
         </div>
-        <h3 className="subheading">Information Sharing and Disclosure</h3>
-        <p>
-          We may share your information with: Third-party service providers
-          Business partners Legal authorities if required by law
-        </p>
-        <h3 className="subheading">Security</h3>
-        <p>
-          We will use industry standard physical, technical, and administrative
-          security measures to keep your Personal Data confidential and secure,
-          and will not share it with third parties, except as otherwise provided
-          in this Privacy Notice, or unless such disclosure is necessary in
-          special cases, such as a physical threat to you or others, as
-          permitted by applicable law. Because the Internet is not a 100% secure
-          environment, we cannot guarantee the security of Personal Data, and
-          there is some risk that an unauthorized third party may find a way to
-          circumvent our security systems or that transmission of your
-          information over the Internet will be intercepted. It is your
-          responsibility to protect the security of your login information.
-          Please note that e-mail communications are typically not encrypted and
-          should not be considered secure.
-        </p>
-        <h3 className="subheading">Your Choices</h3>
-        <p>
-          You have the right to: Access, correct, or delete your personal
-          information Opt-out of receiving promotional communications Disable
-          cookies in your browser settings
-        </p>
-        <h3 className="subheading">Third-Party Links</h3>
-        <p>
-          Our website may contain links to third-party sites. We are not
-          responsible for the privacy practices or content of these sites.
-        </p>
+        <div>
+          <h3 className="subheading">Information Sharing and Disclosure</h3>
+          <p>
+            We may share your information with: Third-party service providers
+            Business partners Legal authorities if required by law
+          </p>
+        </div>
+        <div>
+          <h3 className="subheading">Security</h3>
+          <p>
+            We will use industry standard physical, technical, and
+            administrative security measures to keep your Personal Data
+            confidential and secure, and will not share it with third parties,
+            except as otherwise provided in this Privacy Notice, or unless such
+            disclosure is necessary in special cases, such as a physical threat
+            to you or others, as permitted by applicable law. Because the
+            Internet is not a 100% secure environment, we cannot guarantee the
+            security of Personal Data, and there is some risk that an
+            unauthorized third party may find a way to circumvent our security
+            systems or that transmission of your information over the Internet
+            will be intercepted. It is your responsibility to protect the
+            security of your login information. Please note that e-mail
+            communications are typically not encrypted and should not be
+            considered secure.
+          </p>
+        </div>
+        <div>
+          <h3 className="subheading">Your Choices</h3>
+          <p>
+            You have the right to: Access, correct, or delete your personal
+            information Opt-out of receiving promotional communications Disable
+            cookies in your browser settings
+          </p>
+        </div>
+        <div>
+          <h3 className="subheading">Third-Party Links</h3>
+          <p>
+            Our website may contain links to third-party sites. We are not
+            responsible for the privacy practices or content of these sites.
+          </p>
+        </div>
+        <div></div>
         <h3 className="subheading">Changes to This Privacy Policy</h3>
         <p>
           We may update our Privacy Policy periodically. We will notify you of
@@ -122,8 +132,8 @@ function PrivacyAndPolicy() {
         </p>
         <a href="https://mail.google.com/" className="hover:underline-custom">
           enlninstitute.com
-        </a>{" "}.
-        
+        </a>{" "}
+        .
       </div>
     </div>
   );

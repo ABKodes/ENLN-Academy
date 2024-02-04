@@ -72,12 +72,12 @@ const GetYouStarted = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-row"
+                className="flex flex-row space-x-2"
               >
-                <VerticalCard/>
-                <VerticalCard/>
-                <VerticalCard/>
-                <VerticalCard/>
+                <VerticalCard />
+                <VerticalCard />
+                <VerticalCard />
+                <VerticalCard />
               </motion.div>
             ),
         )}

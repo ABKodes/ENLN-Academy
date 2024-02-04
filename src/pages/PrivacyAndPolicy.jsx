@@ -119,11 +119,11 @@ function PrivacyAndPolicy() {
         <p>
           If you have any questions about this Privacy Policy, please contact us
           at{" "}
-          <a href="https://mail.google.com/" className="hover:text-underline">
-            enlninstitute.com
-          </a>{" "}
-          .
         </p>
+        <a href="https://mail.google.com/" className="hover:underline-custom">
+          enlninstitute.com
+        </a>{" "}.
+        
       </div>
     </div>
   );

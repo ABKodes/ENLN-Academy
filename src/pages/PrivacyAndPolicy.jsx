@@ -48,7 +48,7 @@ function PrivacyAndPolicy() {
             Processing payments Analyzing website usage and trends Improving our
             website and services Responding to inquiries and support requests.
           </p>
-          <ul className="list-disc text-start space-y-2 pl-8">
+          <ul className="list-disc space-y-2 pl-8 text-start">
             <li>
               Providing the Site and our Services. We use Personal Data which
               you provide to us in order to allow you to access and use the Site
@@ -85,9 +85,19 @@ function PrivacyAndPolicy() {
         </p>
         <h3 className="subheading">Security</h3>
         <p>
-          We employ industry-standard security measures to protect your personal
-          information. However, no method of transmission over the internet or
-          electronic storage is entirely secure.
+          We will use industry standard physical, technical, and administrative
+          security measures to keep your Personal Data confidential and secure,
+          and will not share it with third parties, except as otherwise provided
+          in this Privacy Notice, or unless such disclosure is necessary in
+          special cases, such as a physical threat to you or others, as
+          permitted by applicable law. Because the Internet is not a 100% secure
+          environment, we cannot guarantee the security of Personal Data, and
+          there is some risk that an unauthorized third party may find a way to
+          circumvent our security systems or that transmission of your
+          information over the Internet will be intercepted. It is your
+          responsibility to protect the security of your login information.
+          Please note that e-mail communications are typically not encrypted and
+          should not be considered secure.
         </p>
         <h3 className="subheading">Your Choices</h3>
         <p>
@@ -108,7 +118,11 @@ function PrivacyAndPolicy() {
         <h3 className="subheading">Contact Us</h3>
         <p>
           If you have any questions about this Privacy Policy, please contact us
-          at [your contact email].
+          at{" "}
+          <a href="https://mail.google.com/" className="hover:text-underline">
+            enlninstitute.com
+          </a>{" "}
+          .
         </p>
       </div>
     </div>

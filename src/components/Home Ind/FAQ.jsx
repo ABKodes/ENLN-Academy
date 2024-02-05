@@ -1,6 +1,4 @@
-// FAQ.js
-
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqData = [
@@ -35,13 +33,13 @@ const FAQ = () => {
         {faqData.map((item, index) => (
           <div key={index} className="mb-4">
             <div
-              className="flex w-10/12 mx-auto cursor-pointer items-center justify-between border border-secondary p-4"
+              className="mx-auto flex w-10/12 cursor-pointer items-center justify-between border border-secondary p-4"
               onClick={() => handleToggle(index)}
             >
-              <span className="text-lg font-semibold">{item.question}</span>
+              <p className="text-lg font-semibold">{item.question}</p>
               <svg
                 className={`transform transition-transform ${
-                  selectedQuestion === index ?  "":"rotate-180"
+                  selectedQuestion === index ? "" : "rotate-180"
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -69,9 +67,9 @@ const FAQ = () => {
                     collapsed: { opacity: 0, height: 0 },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className="mx-auto w-10/12 overflow-hidden bg-white p-4"
                 >
-                  <div className="bg-white p-4 w-10/12 mx-auto">{item.answer}</div>
+                  {item.answer}
                 </motion.div>
               )}
             </AnimatePresence>

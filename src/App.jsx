@@ -25,6 +25,7 @@ import OrderDetail from "./components/Check Out/Order Detail";
 import ForgetPassword from "./pages/ForgetPassword";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import GovForm from "./components/Home Gov/GovForm";
+import AboutUs from "./pages/About Us";
 function App() {
   return (
     <>
@@ -91,6 +92,7 @@ function App() {
           <Route path="checkout" element={<CheckOut />} />
           <Route path="organizationform" element={<OrgForm />} />
           <Route path="governmentform" element={<GovForm />} />
+          <Route path="aboutus" element={<AboutUs />}/>
         </Routes>
       </div>
     </>

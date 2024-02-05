@@ -1,82 +1,106 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-const faqData = [
-  {
-    question: "What is Lorem Ipsum?",
-    answer:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-  {
-    question: "Why do we use it?",
-    answer:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-  },
-  {
-    question: "Where does it come from?",
-    answer:
-      "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.",
-  },
-];
+const AccordionItem = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const FAQ = () => {
-  const [selectedQuestion, setSelectedQuestion] = useState(null);
-
-  const handleToggle = (index) => {
-    setSelectedQuestion(selectedQuestion === index ? null : index);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="mx-auto my-8 w-11/12">
-      <h1 className="heading py-5">Frequently Asked Questions</h1>
-      <div>
-        {faqData.map((item, index) => (
-          <div key={index} className="mb-4">
-            <div
-              className="mx-auto flex w-10/12 cursor-pointer items-center justify-between border border-secondary p-4"
-              onClick={() => handleToggle(index)}
+    <article className="border-b">
+      <motion.div
+        initial={false}
+        animate={{ borderBottom: isOpen ? "1px solid #e0e0e0" : "none" }}
+        onClick={toggleAccordion}
+        className="border-l-2 border-transparent"
+      >
+        <header className="flex cursor-pointer select-none items-center justify-between p-5 pl-8 pr-8">
+          <span className="text-grey-darkest text-xl font-thin">{title}</span>
+          <div className="border-grey flex h-7 w-7 items-center justify-center rounded-full border">
+            <svg
+              aria-hidden="true"
+              className=""
+              fill="none"
+              height={24}
+              stroke="#606F7B"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              width={24}
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <p className="text-lg font-semibold">{item.question}</p>
-              <svg
-                className={`transform transition-transform ${
-                  selectedQuestion === index ? "" : "rotate-180"
-                }`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="#025464"
-                width="24"
-                height="24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </div>
-            <AnimatePresence>
-              {selectedQuestion === index && (
-                <motion.div
-                  initial="collapsed"
-                  animate="open"
-                  exit="collapsed"
-                  variants={{
-                    open: { opacity: 1, height: "auto" },
-                    collapsed: { opacity: 0, height: 0 },
-                  }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="mx-auto w-10/12 overflow-hidden bg-white p-4"
-                >
-                  {item.answer}
-                </motion.div>
-              )}
-            </AnimatePresence>
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
-        ))}
-      </div>
-    </div>
+        </header>
+      </motion.div>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="text-grey-darkest pb-5 pl-8 pr-8">{children}</div>
+        </motion.div>
+      )}
+    </article>
+  );
+};
+
+const FAQ = () => {
+  return (
+    <main className="mx-auto w-3/5 p-8">
+      <h1 className="mb-4">tailwind collapsible</h1>
+      <section className="shadow">
+        <AccordionItem title="Massa vitae tortor condimentum lacinia quis vel eros donec">
+          <ul className="pl-4">
+            <li className="pb-2">consectetur adipiscing elit</li>
+            <li className="pb-2">
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </li>
+            <li className="pb-2">
+              Viverra orci sagittis eu volutpat odio facilisis mauris
+            </li>
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Lorem ipsum dolor sit amet">
+          <ul className="pl-4">
+            <li className="pb-2">consectetur adipiscing elit</li>
+            <li className="pb-2">
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </li>
+            <li className="pb-2">
+              Viverra orci sagittis eu volutpat odio facilisis mauris
+            </li>
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Lorem dolor sed viverra ipsum">
+          <ul className="pl-4">
+            <li className="pb-2">consectetur adipiscing elit</li>
+            <li className="pb-2">
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </li>
+            <li className="pb-2">
+              Viverra orci sagittis eu volutpat odio facilisis mauris
+            </li>
+          </ul>
+        </AccordionItem>
+        <AccordionItem title="Egestas sed tempus urna">
+          <ul className="pl-4">
+            <li className="pb-2">consectetur adipiscing elit</li>
+            <li className="pb-2">
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            </li>
+            <li className="pb-2">
+              Viverra orci sagittis eu volutpat odio facilisis mauris
+            </li>
+          </ul>
+        </AccordionItem>
+      </section>
+    </main>
   );
 };
 

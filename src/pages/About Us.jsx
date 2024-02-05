@@ -159,7 +159,7 @@ function AboutUs() {
             </div>
           </div>
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
-            <div className="bg-white p-6 dark:bg-secondary">
+            <div className="bg-secondary p-6 dark:bg-secondary">
               <span className="text-primary dark:text-primary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

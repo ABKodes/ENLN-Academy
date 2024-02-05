@@ -3,7 +3,7 @@ import React from "react";
 function AboutUs() {
   return (
     <div>
-      <section className="font-poppins flex items-center bg-gray-100 py-20 dark:bg-transparent xl:h-screen ">
+      <section className="font-poppins flex items-center bg-gray-100 py-20 dark:bg-gray-800 xl:h-screen ">
         <div className="mx-auto max-w-6xl flex-1 justify-center px-4 py-4 md:px-6 lg:py-6">
           <div className="relative mx-auto max-w-xl">
             <img
@@ -75,7 +75,7 @@ function AboutUs() {
         </div>
       </section>
 
-      <section className="font-poppins flex items-center bg-stone-100 dark:bg-transparent xl:h-screen ">
+      <section className="font-poppins flex items-center bg-gray-100 dark:bg-gray-800 xl:h-screen ">
         <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6">
           <div className="flex flex-wrap ">
             <div className="mb-10 w-full px-4 lg:mb-0 lg:w-1/2">
@@ -105,14 +105,14 @@ function AboutUs() {
             </div>
             <div className="mb-10 w-full px-6 lg:mb-0 lg:w-1/2 ">
               <div className="mb-6 border-l-4 border-primary pl-4 ">
-                <span className="text-sm uppercase text-gray-600 dark:text-gray-800">
+                <span className="text-sm uppercase text-gray-600 dark:text-gray-400">
                   Who we are?
                 </span>
-                <h1 className="mt-2 text-3xl font-black text-gray-700 dark:text-gray-800 md:text-5xl">
+                <h1 className="mt-2 text-3xl font-black text-gray-700 dark:text-gray-300 md:text-5xl">
                   About Us
                 </h1>
               </div>
-              <p className="mb-6 text-base leading-7 text-gray-500 dark:text-gray-800">
+              <p className="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,
                 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -125,7 +125,7 @@ function AboutUs() {
               </p>
               <a
                 href="#"
-                className="rounded bg-primary px-4 py-2 text-gray-100 hover:bg-secondary dark:bg-primary dark:hover:bg-secondary"
+                className="rounded bg-secondary px-4 py-2 text-gray-100 hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
               >
                 Learn more
               </a>
@@ -133,8 +133,8 @@ function AboutUs() {
           </div>
         </div>
       </section>
-      <section>
-        <div className="mx-auto flex w-10/12 flex-wrap items-center">
+      <section className="bg-gray-100 dark:bg-gray-800">
+        <div className="mx-auto flex w-10/12 flex-wrap items-center pt-8">
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
             <div className="bg-secondary p-6 dark:bg-secondary">
               <span className="text-primary dark:text-primary">

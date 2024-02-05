@@ -35,12 +35,15 @@ import OrderDetail from "./components/Check Out/Order Detail";
 import GovernmentHome from "./pages/Government Home"
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
+import AboutUs from "./pages/About Us";
+
 
 function All() {
   return (
     <>
       <div className="overflow-x-hidden">
         <HeaderLesson />
+        <AboutUs />
         <GovernmentHome />
         <PrivacyAndPolicy/>
         <br />

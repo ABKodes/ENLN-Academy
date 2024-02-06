@@ -168,8 +168,11 @@ const Login = () => {
               </div>
               <div className="amir mt-3 flex w-full justify-start gap-1 pl-4  text-base lg:pl-10">
                 <p>Don&apos; have an account? </p>
-                <Link to="/signup" className="font-semibold text-[#025464] ">
-                  Sign Up
+                <Link to="/signup">
+                  <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
+                    Sign up
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
+                  </button>
                 </Link>
               </div>
             </div>

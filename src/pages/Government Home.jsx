@@ -11,7 +11,7 @@ function GovernmentHome() {
     <div>
       <Hero />
       <Companies />
-      {/* <Partners /> */}
+      {/* <Partners />  */}
       <WhyUs />
       <GovHub />
       <Testimonials />

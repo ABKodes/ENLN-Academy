@@ -54,7 +54,7 @@ function CourseDescription() {
                   <p className="ratingcardtext pt-1 font-medium">(110,568)</p>
                 </div>
               </div>
-              <p className="phonetext my-3  dark:font-bold">Birr 1,500</p>
+              <p className="phonetext my-3  dark:font-bold"> Birr 1,500</p>
             </div>
           </div>
         </Link>

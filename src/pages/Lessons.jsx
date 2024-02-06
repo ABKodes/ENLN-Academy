@@ -7,7 +7,7 @@ function Lessons() {
   return (
     <div>
       <div className="flex w-full  lg:m-3">
-        <div className="lg:w-1/4 ">
+        <div className="lg:w-1/4">
           <LeftSideBar />
         </div>
         <div className="lg:w-3/4">

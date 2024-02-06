@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const HorizontalCard = () => {
   return (
     <>
@@ -61,12 +62,22 @@ const HorizontalCard = () => {
         </div>
       </Link> */}
       <Link to="/coursedescription">
-        <div className="w-full px-3 border-b border-primary">
-          <div className="flex h-full w-full flex-wrap overflow-hidden rounded bg-white">
+        <motion.div
+          className="w-full border-b border-primary px-3 hover:shadow-md"
+          whileHover={{ scale: 1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div
+            className="flex h-full w-full flex-wrap overflow-hidden rounded bg-white"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="w-2/6">
               <img
                 className="h-full w-full object-cover"
                 src="/public/course image.svg"
+                alt="Course"
               />
             </div>
             <div className="w-4/6 space-y-1 p-5 md:space-y-2">
@@ -114,8 +125,8 @@ const HorizontalCard = () => {
                 </span>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </Link>
     </>
   );

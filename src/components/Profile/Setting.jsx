@@ -16,7 +16,7 @@ export const Setting = () => {
               : "merb cursor-pointer  text-start text-[20px] font-semibold text-[#025464]"
           }
         >
-          Active Courses
+          My Account
         </p>
         <p
           onClick={() => setActive(false)}
@@ -26,7 +26,7 @@ export const Setting = () => {
               : "merb cursor-pointer border-b-4 border-[#025464] text-start  text-[20px] font-semibold text-[#025464] duration-500 ease-out"
           }
         >
-          Completed Courses
+          Social Links
         </p>
       </div>
       <div>

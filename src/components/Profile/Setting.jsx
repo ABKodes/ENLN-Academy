@@ -32,9 +32,25 @@ export const Setting = () => {
       <div>
       {active ? (
         <div className="-mt-10 flex flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center  ">
-            <div className="grid grid-cols-1 gap-4 p-2 text-center sm:p-4 md:grid-cols-2 md:p-12 ">
-              
+          <div className="">
+            <div className="grid grid-cols-1 gap-4 p-2 sm:p-4 md:grid-cols-2 md:p-12 ">
+              <form>
+              <p
+          className="merb cursor-pointer  text-start md:pl-6 py-3 text-[20px] font-semibold text-[#025464]"
+        >
+          My Account
+        </p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-40 justify-between items-center w-full">
+                  <div>
+                    <p className="text-[#6F6D6D] text-[16px] font-semibold amir">Full Name</p>
+                    <input type="text" className="border-[2px] border-[#B3CBD0] min-w-[300px] mt-1 rounded"/>
+                  </div>
+                  <div>
+                    <p className="text-[#6F6D6D] text-[16px] font-semibold amir">Full Name</p>
+                    <input type="text" className="border-[2px] border-[#B3CBD0] min-w-[300px] mt-1 rounded"/>
+                  </div>
+                </div>
+              </form>
              
               
             </div>

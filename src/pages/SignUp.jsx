@@ -148,11 +148,17 @@ function SignUp() {
                       Password
                     </label>
                     {password && (
-                      <div className="absolute right-5 top-1/2 -translate-y-1/2 transform text-2xl">
+                      <div className="absolute right-0 px-auto py-2 px-2 mr-0.5 rounded top-1/2 z-10 -translate-y-1/2 transform bg-white text-2xl">
                         {open ? (
-                          <PiEyeThin onClick={toggle} />
+                          <PiEyeThin
+                            onClick={toggle}
+                            className="text-primary"
+                          />
                         ) : (
-                          <PiEyeClosedThin onClick={toggle} />
+                          <PiEyeClosedThin
+                            onClick={toggle}
+                            className="text-primary"
+                          />
                         )}
                       </div>
                     )}
@@ -160,7 +166,6 @@ function SignUp() {
                 </div>
 
                 {/* Password input */}
-
 
                 {/* Submit button */}
                 <button
@@ -221,10 +226,10 @@ function SignUp() {
                 {/* Forgot password link */}
                 <p>Do you have an account ? </p>
                 <Link to="/login">
-                <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
-                  Login
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
-                </button>
+                  <button className="group relative transform cursor-pointer leading-5 text-primary duration-300 dark:text-primary md:my-0">
+                    Login
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>
+                  </button>
                 </Link>
               </div>
             </div>

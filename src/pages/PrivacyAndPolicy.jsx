@@ -2,8 +2,8 @@ import React from "react";
 
 function PrivacyAndPolicy() {
   return (
-    <div>
-      <div className="mx-auto w-11/12 border border-gray-400 p-10 shadow-sm lg:w-10/12">
+    <div className="w-full dark:bg-gray-800 p-3">
+      <div className="mx-auto w-11/12 border border-gray-400 p-10 shadow-sm dark:bg-gray-800 dark:text-white lg:w-10/12">
         <div className="mb-5 flex w-full flex-col items-center space-y-2 border-b-2 py-2">
           <h1 className="heading  ">Privacy And Policy</h1>
           <h2 className="font-bold">Last Updated on March 8,2024</h2>

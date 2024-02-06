@@ -61,7 +61,6 @@ function All() {
         <br />
         <AllRating />
         <br />
-        <br />
         <Categories />
         <br />
         <br />

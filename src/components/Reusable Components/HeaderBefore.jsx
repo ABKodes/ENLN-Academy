@@ -2,23 +2,23 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 const HeaderBefore = () => {
-    const [isClicked, setIsClicked] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
-    const [activeLink, setActiveLink] = useState("individuals");
-      const toggleMenu = () => {
-        setIsOpen(!isOpen);
-      };
-      const closeMenu = () => {
-        setIsOpen(false);
-      };
+  const [isClicked, setIsClicked] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("individuals");
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
-    const handleSearchBarClick = () => {
-      setIsClicked(true);
-    };
+  const handleSearchBarClick = () => {
+    setIsClicked(true);
+  };
 
-    const handleSearchBarBlur = () => {
-      setIsClicked(false);
-    };
+  const handleSearchBarBlur = () => {
+    setIsClicked(false);
+  };
   return (
     <>
       <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
@@ -38,6 +38,7 @@ const HeaderBefore = () => {
             ></motion.div>
           )}
         </Link>
+
         <Link
           to="/governmenthome"
           className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
@@ -273,6 +274,5 @@ const HeaderBefore = () => {
     </>
   );
 };
-
 
 export default HeaderBefore;

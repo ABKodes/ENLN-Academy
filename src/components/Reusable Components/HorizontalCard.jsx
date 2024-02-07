@@ -75,7 +75,7 @@ const HorizontalCard = () => {
           >
             <div className="w-2/6">
               <img
-                className="h-full w-full object-cover"
+                className="h-64 w-full object-cover"
                 src="/public/course image.svg"
                 alt="Course"
               />

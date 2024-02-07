@@ -19,9 +19,9 @@ function FilterSidebar() {
 
   return (
     <>
-      <div className="mx-5 space-y-2">
+      <div className="mx-5 space-y-3">
         <h1 className="heading">All Leadership Courses</h1>
-        <div className=" ml-5 flex space-x-2 lg:mr-7  justify-end">
+        <div className=" ml-5 flex space-x-2 lg:mr-7   lg:justify-end">
           {/* <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
@@ -57,7 +57,7 @@ function FilterSidebar() {
             </button>
 
             {isSortDropdownOpen && (
-              <div className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+              <div className="absolute lg:right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5">
                 <div
                   className="py-1"
                   role="menu"

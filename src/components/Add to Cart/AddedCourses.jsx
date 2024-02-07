@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import CourseImage from "/public/course image.svg"
 function AddedCourses() {
   const [cartItems, setCartItems] = useState([
     {
@@ -65,7 +65,7 @@ function AddedCourses() {
                 <div className="w-24">
                   <img
                     className="h-24"
-                    src={`/public/course image.svg`}
+                    src={CourseImage}
                     alt=""
                   />
                 </div>

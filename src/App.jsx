@@ -24,7 +24,7 @@ import Categories from "./pages/Categories";
 import OrderDetail from "./components/Check Out/Order Detail";
 import ForgetPassword from "./pages/ForgetPassword";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
-import GovForm from "./components/Home Gov/GovForm";
+import GovForm from "./pages/Gov Form";
 import AboutUs from "./pages/About Us"; 
 import Footer from "./components/Reusable Components/Footer";
 function App() {

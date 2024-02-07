@@ -7,6 +7,7 @@ import { PiLinkedinLogoLight } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import FooterGovLogo from "/public/footer gov.png";
 const FooterGov = () => {
   return (
     <footer className="bg-accent">
@@ -119,7 +120,7 @@ const FooterGov = () => {
             <a href="#">
               <img
                 className="h-10"
-                src="/public/footer gov.png"
+                src={FooterGovLogo}
                 alt=""
               />
             </a>

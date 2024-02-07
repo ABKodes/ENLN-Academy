@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import HeaderLogo from "/public/header individual.png";
 const HeaderBefore = () => {
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -144,7 +145,7 @@ const HeaderBefore = () => {
             </div>
             {/* Logo */}
             <Link to="/individualhomepage" className="mx-4 hidden lg:block">
-              <img src="/public/header individual.png" className="h-8" />
+              <img src={HeaderLogo} className="h-8" />
             </Link>
             {/* Categories */}
             <div className="dropdown-start dropdown dropdown-hover hidden lg:block">
@@ -198,7 +199,7 @@ const HeaderBefore = () => {
           </div>
           {/* Mobile Logo */}
           <div className="navbar-center lg:hidden">
-            <img src="/public/header individual.png" className="h-8" />
+            <img src={HeaderLogo} className="h-8" />
           </div>
           {/* Cart Icon, sign in and sign up button */}
           <div className="navbar-end space-x-3">

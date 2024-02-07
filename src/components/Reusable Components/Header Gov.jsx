@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import HeaderGovLogo from "/public/header gov.png";
 const HeaderGov = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("individuals");
@@ -130,7 +131,7 @@ const HeaderGov = () => {
           {/* Logo */}
           <div className="mx-4 hidden lg:block">
             <Link>
-              <img src="/public/header gov.png" className="h-8" />
+              <img src={HeaderGovLogo} className="h-8" />
             </Link>
           </div>
         </div>
@@ -153,7 +154,7 @@ const HeaderGov = () => {
         </div>
         {/* Mobile Logo */}
         <div className="navbar-center lg:hidden">
-          <img src="/public/header gov.png" className="h-8" />
+          <img src={HeaderGovLogo} className="h-8" />
         </div>
         <div className="navbar-end space-x-2 lg:mr-7">
           <motion.a

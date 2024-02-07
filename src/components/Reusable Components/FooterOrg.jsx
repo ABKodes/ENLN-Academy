@@ -7,6 +7,7 @@ import { PiLinkedinLogoLight } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import FooterOrgLogo from "/public/footer org.png";
 const FooterOrg = () => {
   return (
     <footer className="bg-accent">
@@ -117,7 +118,7 @@ const FooterOrg = () => {
 
           <div className="flex flex-col items-center justify-between sm:flex-row">
             <a href="#">
-              <img className="h-10" src="/public/footer org.png" alt="" />
+              <img className="h-10" src={FooterOrgLogo} alt="" />
             </a>
 
             <p className="mt-4 text-sm text-secondary sm:mt-0">

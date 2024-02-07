@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AAUImage from "/public/AAU.png"
 function Partners() {
     const sliderSettings = {
       dots: false,
@@ -24,46 +25,46 @@ function Partners() {
         <div className=" p-5 flex w-full  lg:w-1/2">
           <Slider {...sliderSettings} className=" h-full w-full">
             <div>
-              <img src="/AAU.png" alt="" className=" object-cover" />
+              <img src={AAUImage} alt="" className=" object-cover" />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />
             </div>
             <div>
               <img
-                src="/AAU.png"
+                src={AAUImage}
                 alt=""
                 className="max-w-24 h-auto w-full object-cover"
               />

@@ -3,7 +3,8 @@ import { MdLocationOn } from "react-icons/md";
 import { PiCertificateLight } from "react-icons/pi";
 import { FiClock } from "react-icons/fi";
 import { motion, useAnimation } from "framer-motion";
-
+import ScheduleImage from "/public/Schedule.svg";
+import UpcomingEventsImage from "/public/upcoming event.svg"
 function RightSideBar() {
   const eventData = [
     { date: "01", month: "Jan", event: "New Year's Day" },
@@ -20,9 +21,9 @@ function RightSideBar() {
 
   return (
     <>
-      <div className="bg-white lg:w-full hidden lg:block">
+      <div className="hidden bg-white lg:block lg:w-full">
         <div className="flex w-full flex-col items-center space-y-3">
-          <img src="/Schedule.svg" alt="Schedule Pic" className="w-full" />
+          <img src={ScheduleImage} alt="Schedule Pic" className="w-full" />
           <h2 className="subheading">Schedule</h2>
           <div className="flex items-center space-x-3">
             <MdLocationOn className="h-5 w-5" />
@@ -39,7 +40,7 @@ function RightSideBar() {
             <div className="h-66 w-72">
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src="/public/upcoming event.svg"
+                src={UpcomingEventsImage}
                 alt=""
               />
             </div>

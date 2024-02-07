@@ -27,7 +27,7 @@ function WhyUs() {
         {/* second row */}
         <div className="flex flex-col items-center justify-center">
           {/* features */}
-          <div className=" lg:mx-8 justify-center grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className=" lg:mx-8 mx-2 md:mx-0 justify-center grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
             <div className=" space-y-5">
               <div className="card mx-auto  h-60 w-96 border border-black bg-base-100">
                 <div className="card-body flex ">
@@ -165,7 +165,7 @@ function WhyUs() {
               </div>
             </div>
           </div>
-          <Link to="/categories" className="lg:flex w-1/2 lg:items-center mt-10">
+          <Link to="/categories" className="lg:flex w-1/2 lg:items-center lg:mt-10 md:mt-5 ">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

@@ -1,12 +1,10 @@
-import React from 'react'
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
-
+import ErrorImage from "/public/404.svg"
 function Four0four() {
   return (
-    <>
       <div className="my-5 flex flex-col items-center">
-        <img src="./404.svg" alt="" className="h-[75vh]" />
+        <img src={ErrorImage} alt="" className="h-[75vh]" />
         <Link to="/individualhomepage">
           {" "}
           <motion.a
@@ -19,7 +17,6 @@ function Four0four() {
           </motion.a>
         </Link>
       </div>
-    </>
   );
 }
 

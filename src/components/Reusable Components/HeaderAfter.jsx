@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { SiGoogleclassroom } from "react-icons/si";
+import HeaderLogo from "/public/header individual.png";
+import AvatarImage from "/public/AllRatingAvater.jpg";
 const HeaderAfter = () => {
     const [isClicked, setIsClicked] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
@@ -92,7 +94,7 @@ const HeaderAfter = () => {
           </div>
           {/* Logo */}
           <div className="mx-4 hidden lg:block">
-            <img src="/public/header individual.png" className="h-8" />
+            <img src={HeaderLogo} className="h-8" />
           </div>
           {/* Categories */}
           <div className="dropdown-start dropdown dropdown-hover hidden lg:block">
@@ -146,7 +148,7 @@ const HeaderAfter = () => {
         </div>
         {/* Mobile Logo */}
         <div className="navbar-center lg:hidden">
-          <img src="/public/header individual.png" className="h-8" />
+          <img src={HeaderLogo} className="h-8" />
         </div>
         {/* Cart Icon, sign in and sign up button */}
         <div className="navbar-end space-x-2">
@@ -226,10 +228,7 @@ const HeaderAfter = () => {
               className="avatar btn btn-circle btn-ghost"
             >
               <div className="visible w-10 rounded-full">
-                <img
-                  alt="Tailwind CSS Navbar component"
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
+                <img alt="Tailwind CSS Navbar component" src={AvatarImage} />
               </div>
             </div>
             <ul

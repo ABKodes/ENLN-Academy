@@ -3,6 +3,7 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { AiOutlineLinkedin } from "react-icons/ai";
+import CourseInstructor from "/public/course instructor.avif"
 function Profile() {
   const [value, setValue] = useState("");
   return (
@@ -11,7 +12,7 @@ function Profile() {
         <div className="lg:flex">
           <img
             className="h-36 w-36 rounded-full"
-            src="https://picsum.photos/200"
+            src={CourseInstructor}
             alt="Profile picture"
           />
           <div className="lg:mx-5 text-left">

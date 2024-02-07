@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { PiCertificateThin } from "react-icons/pi";
 import { Link } from "react-router-dom";
-
+import WhyUsImage from "/public/why us.svg"
 function WhyUs() {
   return (
     <>
@@ -64,7 +64,7 @@ function WhyUs() {
               {" "}
               Why Us
             </h1>
-            <img src="/why us.svg" alt="" className="top-0 h-60 lg:mx-auto" />
+            <img src={WhyUsImage} alt="" className="top-0 h-60 lg:mx-auto" />
             <div className=" mx-auto w-full space-x-2 space-y-3 px-10 ">
               <p className="text ">
                 Discover ENLN Academy as your premier destination for a holistic

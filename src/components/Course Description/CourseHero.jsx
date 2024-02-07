@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import CourseImage from "/public/course image.svg";
 function CourseHero() {
   return (
     <section className="bg-secondary">
@@ -71,7 +72,7 @@ function CourseHero() {
           </motion.a></Link>
         </div>
         <div className="image-full hidden lg:col-span-5 lg:mt-0 lg:flex">
-          <img src="/public/course image.svg" alt="mockup" />
+          <img src={CourseImage} alt="mockup" />
         </div>
       </div>
     </section>

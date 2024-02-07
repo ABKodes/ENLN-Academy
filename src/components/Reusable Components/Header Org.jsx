@@ -1,7 +1,8 @@
 
-import React, {useState} from "react";
+import {useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import HeaderOrgLogo from "/public/header org.png";
  const HeaderOrg = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeLink, setActiveLink] = useState("individuals");
@@ -63,7 +64,7 @@ import { motion } from "framer-motion";
        <div className="navbar bg-slate-300">
          <div className="navbar-start">
            <div className="dropdown">
-             <div
+             <input type = "button"
                tabIndex={0}
                role="button"
                className="btn btn-ghost lg:hidden"
@@ -100,7 +101,7 @@ import { motion } from "framer-motion";
                    />
                  </svg>
                )}
-             </div>
+             </input>
              <div
                className={`absolute inset-x-0  z-20 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
                  isOpen
@@ -130,7 +131,7 @@ import { motion } from "framer-motion";
            {/* Logo */}
            <div className="mx-4 hidden lg:block">
              <Link>
-               <img src="/public/header org.png" className="h-8" />
+               <img src={HeaderOrgLogo} className="h-8" />
              </Link>
            </div>
          </div>
@@ -153,7 +154,7 @@ import { motion } from "framer-motion";
          </div>
          {/* Mobile Logo */}
          <div className="navbar-center lg:hidden">
-           <img src="/public/header org.png" className="h-8" />
+           <img src={HeaderOrgLogo} className="h-8" />
          </div>
          <div className="navbar-end space-x-2 lg:mr-7">
            <motion.a

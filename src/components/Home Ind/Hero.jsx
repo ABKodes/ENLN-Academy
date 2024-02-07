@@ -2,6 +2,7 @@ import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import HeroImage from "/public/hero section image 1.png"
 // Header component containing navigation and hero section
 const Header = () => {
   // State to manage mobile menu open/close
@@ -23,7 +24,7 @@ const Header = () => {
               <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
                 <img
                   className="h-11/12 w-11/12 lg:max-w-3xl"
-                  src="/public/hero section image 1.png"
+                  src= {HeroImage}
                   alt="hero image"
                 />
               </div>
@@ -79,7 +80,7 @@ const Header = () => {
           <div className="mt-6 flex hidden w-full items-center justify-center lg:mt-0 lg:block lg:w-1/2">
             <img
               className="h-full w-full lg:max-w-3xl"
-              src="/public/hero section image 1.png"
+              src={HeroImage}
               alt="hero image"
             />
           </div>

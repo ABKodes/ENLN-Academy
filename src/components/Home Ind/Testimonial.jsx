@@ -12,7 +12,7 @@ const testimonials = [
     author: "Micheal Gough",
     position: "CEO at Google",
     imageSrc:
-      "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+      "/public/course instructor.avif",
   },
   {
     quote:
@@ -20,7 +20,7 @@ const testimonials = [
     author: "Abebe",
     position: "CEO at Google",
     imageSrc:
-      "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png",
+      "/public/course instructor.avif",
   },
   // Add two more testimonials with similar structures
 ];

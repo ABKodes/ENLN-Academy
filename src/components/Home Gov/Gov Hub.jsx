@@ -2,7 +2,7 @@
 import { LiaUniversitySolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import GovHubImage from "/public/government training hub.jpg"
 function GovHub() {
   return (
     <>
@@ -12,7 +12,7 @@ function GovHub() {
         </h1>
         <div className="mx-auto flex w-11/12 flex-col lg:flex-row lg:p-5">
           <div className="w-full lg:w-1/2">
-            <img src="/government training hub.jpg" alt="" />
+            <img src={GovHubImage} alt="" />
           </div>
           <div className="mt-10 w-full space-y-3 p-2 lg:mt-0 lg:w-1/2 lg:p-3 lg:pl-10">
             <span className="flex space-x-2 border-l-4 border-primary pl-3">

@@ -1,13 +1,14 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
+import CourseInstructor from "/public/course instructor.avif"
 function Instructor() {
   return (
     <div className=" flex w-7/12 flex-col rounded-xl  bg-white p-4  md:p-6">
       <div className="flex items-center gap-x-4">
         <img
           className="h-20 w-20 rounded-full"
-          src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=900&h=900&q=80"
+          src={CourseInstructor}
           alt="Image Description"
         />
         <div className="grow">

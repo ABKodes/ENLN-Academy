@@ -1,3 +1,4 @@
+import CourseImage from "/public/course image.svg"
 function OrderDetail() {
   return (
     <>
@@ -12,28 +13,32 @@ function OrderDetail() {
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
                 className="m-2 h-28 w-28 rounded-md  object-cover object-center"
-                src="/public/course image.svg"
+                src={CourseImage}
                 alt=""
               />
               <div className="flex w-full flex-col px-4 py-4">
                 <span className="font-semibold">
                   The Complete Nutrition Course
                 </span>
-                <span className="float-right text-gray-400">Bekele Sewasew</span>
+                <span className="float-right text-gray-400">
+                  Bekele Sewasew
+                </span>
                 <p className="text-lg font-bold">Birr 138.99</p>
               </div>
             </div>
             <div className="flex flex-col rounded-lg bg-white sm:flex-row">
               <img
                 className="m-2 h-28 w-28 rounded-md object-cover object-center"
-                src="/public/course image.svg"
+                src={CourseImage}
                 alt=""
               />
               <div className="flex w-full flex-col px-4 py-4">
                 <span className="font-semibold">
                   The Complete Nutrition Course
                 </span>
-                <span className="float-right text-gray-400">Bekele Sewasew</span>
+                <span className="float-right text-gray-400">
+                  Bekele Sewasew
+                </span>
                 <p className=" text-lg font-bold">Birr 238.99</p>
               </div>
             </div>
@@ -167,7 +172,7 @@ function OrderDetail() {
                 <div className="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                   <img
                     className="h-4 w-4 object-contain"
-                    src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg"
+                    src={CourseImage}
                     alt=""
                   />
                 </div>
@@ -207,7 +212,6 @@ function OrderDetail() {
           </button>
         </div>
       </div>
-
     </>
   );
 }

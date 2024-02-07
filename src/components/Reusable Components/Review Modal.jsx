@@ -1,19 +1,18 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import { FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { InputTextarea } from "primereact/inputtextarea";
-
+import RatingImage from "/public/RatingImage.jpg"
 function ReviewModal() {
      const [rating, setRating] = useState(0);
      const [hover, setHover] = useState(0);
       const [value, setValue] = useState('');
   return (
-    <>
       <div className=" items-center  space-y-3 rounded-lg border border-gray-200 bg-white px-5 py-8 md:max-w-xl md:flex-row lg:w-5/12 ">
         <div className="items-center space-x-3 lg:flex">
           <img
             className="h-72 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="/RatingImage.jpg"
+            src={RatingImage}
             alt=""
           />
           <div className="flex flex-col items-center justify-between p-4 leading-normal lg:flex-col">
@@ -71,7 +70,6 @@ function ReviewModal() {
           </div>
         </div>
       </div>
-    </>
   );
 }
 

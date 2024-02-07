@@ -1,11 +1,12 @@
-import React from 'react'
-import GetYouStarted from '../components/Categories/GetYouStarted'
-import FilterSidebar from '../components/Categories/FilterSidebar'
-import AllCoursesList from '../components/Categories/AllCoursesList'
-import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa6";
+import { useEffect } from 'react';
+import GetYouStarted from '../components/Categories/GetYouStarted';
+import FilterSidebar from '../components/Categories/FilterSidebar';
+import AllCoursesList from '../components/Categories/AllCoursesList';
 function Categories() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when component is mounted
+  }, []);
+
   return (
     <>
       <div className="w-11/12">
@@ -23,4 +24,4 @@ function Categories() {
   );
 }
 
-export default Categories
+export default Categories;

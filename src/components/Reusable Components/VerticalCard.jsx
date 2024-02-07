@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import CourseImage from "/public/course image.svg"
 function VerticalCard() {
   return (
     <>
@@ -11,7 +11,7 @@ function VerticalCard() {
                 <a href="#">
                   <figure>
                     <img
-                      src="/public/course image.svg"
+                      src= {CourseImage}
                       className="h-52 w-full object-cover p-4"
                     />
                   </figure>

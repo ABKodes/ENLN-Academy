@@ -81,7 +81,7 @@ function GovHub() {
                 across industries.
               </li>
             </ul>
-            <Link to="/categories">
+             <Link to="/categories">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

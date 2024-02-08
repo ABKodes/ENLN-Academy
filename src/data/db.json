@@ -11,6 +11,12 @@
       "name": "lebam",
       "email": "lebam@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "6dfb",
+      "name": "Haila",
+      "email": "haila@gmail.com",
+      "password": "haila"
     }
   ]
 }

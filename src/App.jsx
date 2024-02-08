@@ -26,7 +26,6 @@ import ForgetPassword from "./pages/ForgetPassword";
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import GovForm from "./pages/Gov Form";
 import AboutUs from "./pages/About Us"; 
-import Footer from "./components/Reusable Components/Footer";
 function App() {
   return (
     <>
@@ -95,7 +94,6 @@ function App() {
           <Route path="governmentform" element={<GovForm />} />
           <Route path="aboutus" element={<AboutUs />}/>
         </Routes>
-        <Footer/>
       </div>
     </>
   );

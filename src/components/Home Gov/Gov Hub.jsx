@@ -2,7 +2,7 @@
 import { LiaUniversitySolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import GovHubImage from "/public/government training hub.jpg"
+import GovHubImage from "/public/government training hub.jpg";
 function GovHub() {
   return (
     <>
@@ -81,7 +81,7 @@ function GovHub() {
                 across industries.
               </li>
             </ul>
-             <Link to="/categories">
+            <Link to="/categories">
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

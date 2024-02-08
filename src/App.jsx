@@ -28,7 +28,6 @@ import GovForm from "./pages/Gov Form";
 import AboutUs from "./pages/About Us"; 
 function App() {
   return (
-    <>
       <div className="overflow-x-hidden">
         <HeaderBefore />
         <Routes>
@@ -95,7 +94,6 @@ function App() {
           <Route path="aboutus" element={<AboutUs />}/>
         </Routes>
       </div>
-    </>
   );
 }
 

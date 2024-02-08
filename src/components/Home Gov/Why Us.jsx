@@ -175,7 +175,7 @@ function WhyUs() {
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
               className="btn btn-outline btn-primary btn-md mb-8 w-full lg:ml-5 lg:flex lg:w-4/12 lg:items-center"
             >
-              See Courses
+               See Courses
             </motion.a>
           </Link>
         </div>

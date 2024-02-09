@@ -5,12 +5,12 @@ import About from '../components/Instructor/About'
 
 function Instructor() {
   return (
-    <div className='space-y-2'>
-        <Profile/>
-        <About/>
-        <MyCourses/>
+    <div className="space-y-2 dark:bg-gray-800">
+      <Profile />
+      <About />
+      <MyCourses />
     </div>
-  )
+  );
 }
 
 export default Instructor

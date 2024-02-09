@@ -170,4 +170,4 @@ import HeaderOrgLogo from "/public/header org.png";
      </>
    );
  };
-export default HeaderOrg
+export default HeaderOrg;

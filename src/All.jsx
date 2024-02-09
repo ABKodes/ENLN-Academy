@@ -36,6 +36,8 @@ import GovernmentHome from "./pages/Government Home"
 import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
 import AboutUs from "./pages/About Us";
+import HeaderGov from "./components/Reusable Components/Header Gov";
+// import HeaderOrg from "./components/Reusable Components/Header Org";
 
 
 function All() {
@@ -43,6 +45,8 @@ function All() {
     <>
       <div className="overflow-x-hidden">
         <HeaderLesson />
+        <HeaderGov />
+        {/* <HeaderOrg /> */}
         <AboutUs />
         <GovernmentHome />
         <PrivacyAndPolicy/>

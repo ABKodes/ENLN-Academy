@@ -7,9 +7,7 @@ import Testimonial from "../components/Home Ind/Testimonial";
 function OrganizationHome() {
   return (
     <>
-      <div className="h-screen">
         <Hero />
-      </div>
       <Partners />
       <Enhanceexperiance />
       <WhyUs />

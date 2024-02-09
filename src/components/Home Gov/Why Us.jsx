@@ -7,7 +7,7 @@ function WhyUs() {
   return (
     <>
       <div
-        className=" w-full bg-secondary
+        className=" w-full bg-secondary dark:bg-gray-800
       "
         //   style={{ backgroundImage: "url(/heroo.png)" }}
       >

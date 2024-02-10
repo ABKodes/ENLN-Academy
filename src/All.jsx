@@ -69,7 +69,6 @@ function All() {
         <br />
         <br />
         <br />
-        <br />
         <div className="overflow-x-hidden">
           <VerticalCard />
         </div>

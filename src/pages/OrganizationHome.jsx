@@ -7,7 +7,7 @@ import Testimonial from "../components/Home Ind/Testimonial";
 function OrganizationHome() {
   return (
     <>
-        <Hero />
+      <Hero />
       <Partners />
       <Enhanceexperiance />
       <WhyUs />

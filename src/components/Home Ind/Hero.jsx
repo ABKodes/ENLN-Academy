@@ -29,6 +29,9 @@ const Header = () => {
                 />
               </div>
               {/* Hero title */}
+              <h1 className="phoneherotext font-bold text-left hidden lg:block ">
+                Your Success Story Starts Here.
+              </h1>
               <h1 className="herotext font-bold text-left hidden lg:block ">
                 ENLN Academy is the place where you can <br />
               </h1>

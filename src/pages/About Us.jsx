@@ -3,7 +3,7 @@ import React from "react";
 function AboutUs() {
   return (
     <div>
-      <section className="font-poppins flex items-center bg-gray-100 py-20 dark:bg-gray-800 xl:h-screen ">
+      <section className="font-poppins flex items-center bg-gray-100 py-20 dark:bg-gray-800 xl:h-screen">
         <div className="mx-auto max-w-6xl flex-1 justify-center px-4 py-4 md:px-6 lg:py-6">
           <div className="relative mx-auto max-w-xl">
             <img

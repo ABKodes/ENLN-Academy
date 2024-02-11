@@ -11,7 +11,7 @@ function Categories() {
     <>
       <div className="w-11/12">
         <GetYouStarted />
-        <div className="grid-rows mt-20 grid w-full lg:grid-cols-[30%,70%] ">
+        <div className="grid-rows mt-20 grid w-full lg:grid-cols-[30%,70%]">
           <div className="lg:ml-2">
             <FilterSidebar />
           </div>

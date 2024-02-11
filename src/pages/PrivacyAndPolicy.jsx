@@ -132,7 +132,7 @@ function PrivacyAndPolicy() {
         </p>
         <a href="https://mail.google.com/" className="hover:underline-custom">
           enlninstitute.com
-        </a>{" "}
+        </a>
         .
       </div>
     </div>

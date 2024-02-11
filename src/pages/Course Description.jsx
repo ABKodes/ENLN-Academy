@@ -25,7 +25,7 @@ function CourseDescription() {
             </a>
             <div className="px-5">
               <a href="#">
-                <h5 className="text mb-2 font-bold dark:text-left  ">
+                <h5 className="text mb-2 font-bold dark:text-left">
                   The Complete Nutrition Course
                 </h5>
               </a>

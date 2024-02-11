@@ -29,7 +29,7 @@ const Header = () => {
                 />
               </div>
               {/* Hero title */}
-              <h1 className="phoneherotext font-bold text-left hidden lg:block ">
+              <h1 className="phoneherotext font-bold text-left lg:hidden ">
                 Your Success Story Starts Here.
               </h1>
               <h1 className="herotext font-bold text-left hidden lg:block ">

@@ -78,7 +78,10 @@ const Companies = () => {
   return (
     <div className="relative m-auto grid w-full grid-cols-3 overflow-hidden bg-white before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px] before:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0)_100%)] after:content-['']">
       <div className="absolute z-10 mx-auto flex h-full w-full items-center justify-center bg-secondary bg-opacity-20">
-        <p className="herotext text-center dark:font-bold dark:text-primary">
+        <p className="herotext text-center dark:font-bold dark:text-primary hidden lg:block">
+          Companies we&apos;ve taught
+        </p>
+        <p className="phoneherotext text-center dark:font-bold dark:text-primary lg:hidden">
           Companies we&apos;ve taught
         </p>
       </div>

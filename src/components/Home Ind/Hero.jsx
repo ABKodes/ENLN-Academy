@@ -24,21 +24,18 @@ const Header = () => {
               <div className=" flex w-full items-center justify-center lg:mt-0 lg:hidden lg:w-1/2">
                 <img
                   className="h-11/12 w-11/12 lg:max-w-3xl"
-                  src= {HeroImage}
+                  src={HeroImage}
                   alt="hero image"
                 />
               </div>
               {/* Hero title */}
-              <h1 className="phoneherotext font-bold text-left lg:hidden ">
+              <h1 className="phoneherotext text-left font-bold lg:hidden ">
                 Your Success Story Starts Here.
               </h1>
-              <h1 className="herotext font-bold text-left hidden lg:block ">
+              <h1 className="herotext hidden text-left font-bold lg:block ">
                 ENLN Academy is the place where you can <br />
               </h1>
-              <h1 className="phoneherotext font-bold text-left lg:hidden ">
-                ENLN Academy is the place where you can <br />
-              </h1>
-              <span className="text-4xl lg:text-5xl font-bold text-primary text-left">
+              <span className="hidden text-left text-4xl font-bold text-primary lg:block lg:text-5xl ">
                 <TypeAnimation
                   sequence={[
                     "Unlock Your Potential",
@@ -68,14 +65,14 @@ const Header = () => {
 
               {/* Call to action button */}
               <Link to="/signup">
-              <motion.a
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto "
-              >
-                Enroll Now
-              </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  className="buttontext btn btn-primary mt-6 w-full rounded-lg border-none px-8 py-2 uppercase tracking-wider duration-300 lg:w-auto "
+                >
+                  Enroll Now
+                </motion.a>
               </Link>
             </div>
           </div>

@@ -44,12 +44,14 @@ function All() {
   return (
     <>
       <div className="overflow-x-hidden">
+        <VerticalCard />
+        <br />
         <HeaderLesson />
         <HeaderGov />
         {/* <HeaderOrg /> */}
         <AboutUs />
         <GovernmentHome />
-        <PrivacyAndPolicy/>
+        <PrivacyAndPolicy />
         <br />
         <Instructors />
         <br />
@@ -86,9 +88,9 @@ function All() {
         <br />
         <Login />
         <HorizontalCard />
-        <OrderDetail/>
+        <OrderDetail />
         <br />
-        <AddedCourses/>
+        <AddedCourses />
         <ForgetPassword />
         <HeaderBefore />
         <Hero />

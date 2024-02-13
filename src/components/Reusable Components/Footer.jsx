@@ -33,7 +33,7 @@ const Footer = () => {
           <Link className="link-hover link text-secondary">Cookie policy</Link>
         </nav>
       </footer>
-      <footer className="footer border-t border-secondary bg-accent px-10 py-4 text-secondary">
+      <footer className="footer border-t border-secondary bg-accent px-10 py-4 text-secondary flex justify-between">
         <aside className="grid-flow-col items-center">
           <img className="h-10" src={FooterLogo} alt="" />
         </aside>

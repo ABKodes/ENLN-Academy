@@ -1,18 +1,27 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { TfiClose } from "react-icons/tfi";
 import HeaderLogo from "/public/header individual.png";
-const HeaderBefore = () => {
-  const [isClicked, setIsClicked] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("individuals");
+  const [isClicked, setIsClicked] = useState(false);
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isMenuOpen]);
+
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-  const closeMenu = () => {
-    setIsOpen(false);
+    setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   const handleSearchBarClick = () => {
     setIsClicked(true);
   };
@@ -73,81 +82,27 @@ const HeaderBefore = () => {
           )}
         </Link>
       </div>
-
       <div className="sticky top-0 z-50 bg-slate-300">
-        <div className="navbar mx-auto w-11/12 ">
-          <div className="navbar-start">
-            {/* Mobile hamburger */}
-            <div className="dropdown">
-              <div
-                tabIndex={0}
-                role="button"
-                className="btn btn-ghost lg:hidden"
-                onClick={toggleMenu}
-              >
-                {isOpen ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#025464"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="#025464"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                )}
-              </div>
-              <div
-                className={`absolute inset-x-0  z-20 w-full  px-6 py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:mt-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:p-0 md:opacity-100 ${
-                  isOpen
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-full opacity-0"
-                }`}
-              >
-                <ul
-                  tabIndex={0}
-                  className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
-                >
-                  <li>
-                    <Link className="group relative  text-primary hover:font-bold">
-                      About Us
-                      <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="group relative text-primary hover:font-bold">
-                      Why Us
-                      <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* Logo */}
+        <nav className="relative mx-auto flex w-11/12  items-center justify-between px-4 py-2">
+          <div className="flex items-center">
             <Link to="/individualhomepage" className="mx-4 hidden lg:block">
               <img src={HeaderLogo} className="h-8" />
             </Link>
-            {/* Categories */}
+            <div className="lg:hidden">
+              <button
+                className="navbar-burger flex items-center p-3 text-primary"
+                onClick={toggleMenu}
+              >
+                <svg
+                  className="block h-5 w-5 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
             <div className="dropdown-start dropdown dropdown-hover hidden lg:block">
               <div tabIndex={0} role="button" className="button">
                 <div tabIndex={0} role="link" className="link m-1 no-underline">
@@ -197,12 +152,10 @@ const HeaderBefore = () => {
               </div>
             </div>
           </div>
-          {/* Mobile Logo */}
-          <div className="navbar-center lg:hidden">
+          <Link to="/individualhomepage" className="mx-4  lg:hidden">
             <img src={HeaderLogo} className="h-8" />
-          </div>
-          {/* Cart Icon, sign in and sign up button */}
-          <div className="navbar-end space-x-3">
+          </Link>
+          <div className="flex space-x-3">
             <div className="dropdown dropdown-end dropdown-hover">
               <Link to="/addtocart" className="btn btn-circle btn-ghost">
                 {" "}
@@ -246,7 +199,6 @@ const HeaderBefore = () => {
                 </div>
               </div>
             </div>
-
             <Link to="/login">
               <motion.a
                 whileHover={{ scale: 1.1 }}
@@ -257,8 +209,6 @@ const HeaderBefore = () => {
                 Log In
               </motion.a>
             </Link>
-
-            {/* Sign Up */}
             <Link to="/signup">
               <motion.a
                 whileHover={{ scale: 1.1 }}
@@ -270,10 +220,105 @@ const HeaderBefore = () => {
               </motion.a>
             </Link>
           </div>
-        </div>
+        </nav>
       </div>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            className="navbar-menu fixed inset-0 z-50 bg-gray-800 bg-opacity-25"
+            onClick={closeMenu}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.nav
+              className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+            >
+              <div className="mb-8 flex items-center justify-between">
+                <button className="navbar-close" onClick={toggleMenu}>
+                  <TfiClose className="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500 " />
+                </button>
+              </div>
+              <div>
+                <ul>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      Home
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      About Us
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      Pricing
+                    </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="mt-auto">
+                <div className="pt-6">
+                  <Link
+                    to="/login"
+                    className="mb-3 block rounded-xl bg-secondary px-4 py-3 text-center text-xs font-semibold leading-loose text-primary"
+                    href="#"
+                  >
+                    Log in
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className="mb-2 block rounded-xl bg-primary px-4 py-3 text-center text-xs font-semibold leading-loose text-white"
+                    href="#"
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+                <div className="flex items-center justify-between lg:hidden">
+                  <Link to="/individualhomepage" className="">
+                    <img src={HeaderLogo} className="h-4" />
+                  </Link>
+                  <p className="my-4 text-center text-xs text-gray-400">
+                    <span>Copyright © 2021</span>
+                  </p>
+                </div>
+              </div>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
-};
+}
 
-export default HeaderBefore;
+export default Header;

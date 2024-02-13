@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import CourseImage from "/public/course image.svg"
+import courses from "../../data/courses.json"
+
 function VerticalCard() {
   return (
     <>

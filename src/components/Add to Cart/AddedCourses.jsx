@@ -1,44 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CourseImage from "/public/course image.svg"
-function AddedCourses() {
-  const [cartItems, setCartItems] = useState([
-    {
-      id: 1,
-      name: "Complete Nutrition Course",
-      teacher: "Bekele Sewasew",
-      price: 400,
-      numberofstars: 1,
-      rating: 4.95,
-      numberofstudents: 102332,
-    },
-    {
-      id: 2,
-      name: "Complete Nutrition Course",
-      teacher: "Bekele Sewasew",
-      price: 40,
-      numberofstars: 2,
-      rating: 3.95,
-      numberofstudents: 101332,
-    },
-    {
-      id: 3,
-      name: "Complete Nutrition Course",
-      teacher: "Bekele Sewasew",
-      price: 150,
-      numberofstars: 3,
-      rating: 1.95,
-      numberofstudents: 100332,
-    },
-  ]);
+import { useSelector, useDispatch } from "react-redux";
+import { remove } from "../../features/cartSlice";
 
+function AddedCourses() {
+  const courses = useSelector((state) => state.courses);
+
+  const dispatch = useDispatch();
   // Function to handle removing an item from the cart
-  const removeFromCart = (itemId) => {
-    setCartItems(cartItems.filter((item) => item.id !== itemId));
+  const removeFromCart = (id) => {
+    dispatch(remove(id));
   };
+
   // Function to calculate the total cost of items in the cart
   const calculateTotalCost = () => {
-    return cartItems.reduce((acc, item) => acc + item.price, 0);
+    let totalCost = 0;
+    courses.forEach((item) => {
+      totalCost += item.price;
+    });
+    return totalCost;
   };
 
   return (
@@ -48,7 +29,7 @@ function AddedCourses() {
           <div className="flex justify-between border-b pb-8">
             <h1 className="heading font-semibold">Add to Cart</h1>
             <h2 className="text font-semibold dark:text-2xl">
-              {cartItems.length} Items
+              {/* {cartItems.length} Items */}
             </h2>
           </div>
           <div className="justify-items mb-5 mt-10 flex">
@@ -59,19 +40,15 @@ function AddedCourses() {
               Price
             </h3>
           </div>
-          {cartItems.map((item) => (
+          {courses.map((item) => (
             <div key={item.id} className="-mx-8 flex items-center px-6 py-5">
               <div className="flex w-2/5">
                 <div className="w-24">
-                  <img
-                    className="h-24"
-                    src={CourseImage}
-                    alt=""
-                  />
+                  <img className="h-24" src={CourseImage} alt="" />
                 </div>
                 <div className="ml-4 flex flex-grow flex-col space-y-1">
-                  <span className="text-sm font-bold">{item.name}</span>
-                  <span className="text-xs">{item.teacher}</span>
+                  <span className="text-sm font-bold">{item.title}</span>
+                  <span className="text-xs">{item.instructor}</span>
                   <div className="flex items-center space-x-1">
                     <div className="flex items-center">
                       <p className="ratingcardtext pt-1 font-semibold">
@@ -79,7 +56,7 @@ function AddedCourses() {
                       </p>
                     </div>
                     <div className="flex items-center">
-                      {[...Array(item.numberofstars)].map((_, index) => (
+                      {[...Array(Math.floor(item.rating))].map((_, index) => (
                         <svg
                           key={index}
                           className="me-1 h-3 w-3 text-primary lg:h-4 lg:w-4"
@@ -94,7 +71,7 @@ function AddedCourses() {
                     </div>
                     <div className="flex items-center">
                       <p className="ratingcardtext pt-1 font-medium">
-                        ({item.numberofstudents})
+                        ({item.ratingsCount})
                       </p>
                     </div>
                   </div>

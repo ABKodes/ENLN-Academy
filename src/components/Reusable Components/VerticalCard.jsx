@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import CourseImage from "/public/course image.svg"
 import coursesData from "../../data/courses.json"
-
+import {  useDispatch } from "react-redux";
+import { add } from "../../features/cartSlice";
 function VerticalCard() {
+  const dispatch=useDispatch();
+  const addToCart=(course)=>{
+    // dispatch an add action
+    dispatch(add(course))
+  }
   return (
     <>
       <div className="flex gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -112,13 +118,13 @@ function VerticalCard() {
                     ))}
                   </ul>
                 </div>
-                <Link to="/addtocart">
+                {/* <Link to="/addtocart"> */}
                   <div className="card-actions justify-end">
-                    <button className="buttontext btn btn-primary w-full">
+                    <button className="buttontext btn btn-primary w-full" onClick={()=>addToCart(course)}>
                       Add to Cart
                     </button>
                   </div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
           </div>

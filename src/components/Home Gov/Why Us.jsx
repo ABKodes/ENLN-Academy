@@ -7,175 +7,150 @@ function WhyUs() {
   return (
     <>
       <div
-        className=" w-full bg-secondary dark:bg-gray-800
+        className=" w-full bg-secondary 
       "
         //   style={{ backgroundImage: "url(/heroo.png)" }}
       >
         {/* first row */}
         <div className=" w-full">
-          <div className=" mx-auto my-auto w-full space-x-2 space-y-4 py-12 lg:px-52">
-            <h1 className="heading px-2 sm:px-6 md:px-10 lg:px-20">
+          <div className=" mx-auto my-auto w-full space-x-2 space-y-4 py-12 lg:px-52 ">
+            <h1 className="heading flex justify-center px-2 sm:px-6 md:px-10 lg:px-20">
               {" "}
               Discover Why We&apos;re the Best: Choose Us Today
             </h1>
-            <p className="text-xl text-primary">
+            <h1 className="phone-heading flex justify-center px-2 sm:px-6 md:px-10 lg:px-20 lg:hidden">
+              {" "}
+              Discover Why We&apos;re the Best: Choose Us Today
+            </h1>
+            <p className="flex justify-center text-xl text-primary">
               Empower Yourself for Global Well-Being through Our Nutrition and
               Public Health E-Learning Platform.
             </p>
           </div>
         </div>
         {/* second row */}
-        <div className="flex flex-col items-center justify-center">
-          {/* features */}
-          <div className=" mx-2 grid grid-cols-1 items-start justify-center gap-10 md:mx-0 md:grid-cols-2 lg:mx-8 lg:grid-cols-3">
-            <div className=" space-y-5">
-              <div className="card mx-auto  md:h-60 w-full border border-black bg-base-100 md:w-96">
-                <div className="card-body flex ">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
+        <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
+          <div className="grid items-center gap-6 sm:grid-cols-2 md:gap-10 lg:grid-cols-3">
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
                   <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="lg:smalltext phonesmalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
                 </div>
               </div>
-
-              <div className="card md:h-60 w-full border border-black bg-base-100 md:w-96">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
-                  <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="card hidden md:h-60 w-full border border-black bg-base-100 md:block md:w-96 lg:hidden">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
-                  <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
             </div>
-
-            <div className=" space-y-5">
-              <div className="card md:h-60 w-full border border-black bg-base-100 md:w-96">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
+            {/* End Card */}
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
                   <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
                 </div>
               </div>
-              <div className="card md:h-60 w-full border border-black bg-base-100 md:w-96">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
-                  <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="card hidden h-60 w-full border border-black bg-base-100 md:block md:w-96 lg:hidden">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
-                  <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
             </div>
-            <div className=" mb-10 space-y-5 md:hidden lg:block">
-              <div className="card  w-full lg:h-60 border border-black bg-base-100 ">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
+            {/* End Card */}
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
                   <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
                 </div>
               </div>
-              <div className="card  w-full lg:h-60 border border-black bg-base-100">
-                <div className="card-body flex items-center justify-start">
-                  <div className="-mt-5 mr-4 flex items-center justify-center">
-                    <FaPeopleGroup className="text-5xl text-primary" />
-                  </div>
-                  <h2 className="card-title">Customized Course Content</h2>
-                  <div>
-                    <p className="smalltext mt-3">
-                      Tailored curriculum designed to meet the specific needs of
-                      professionals in the nutrition field. Courses crafted with
-                      industry insights and the latest trends to ensure
-                      relevance and practicality.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
             </div>
+            {/* End Card */}
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
+                  <h2 className="card-title">Customized Course Content</h2>
+                </div>
+              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+            {/* End Card */}
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
+                  <h2 className="card-title">Customized Course Content</h2>
+                </div>
+              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+            {/* End Card */}
+            {/* Card */}
+            <div className="h-full w-full rounded-lg bg-white p-5 shadow-lg">
+              <div className="mb-3 flex items-center gap-x-4">
+                <div className="inline-flex h-[62px] w-[62px] items-center justify-center rounded-full border-4 border-blue-50 bg-blue-100 ">
+                  <FaPeopleGroup className="text-4xl text-primary" />
+                </div>
+                <div className="flex-shrink-0">
+                  <h2 className="card-title">Customized Course Content</h2>
+                </div>
+              </div>
+              <p className="lg:smalltext phonesmalltext mt-3">
+                Tailored curriculum designed to meet the specific needs of
+                professionals in the nutrition field. Courses crafted with
+                industry insights and the latest trends to ensure relevance and
+                practicality.
+              </p>
+            </div>
+            {/* End Card */}
           </div>
           <Link
             to="/categories"
-            className="w-1/2 md:mt-5 lg:mt-10 lg:flex lg:items-center "
+            className=" md:mt-5 lg:mt-10 lg:flex lg:items-center lg:justify-center"
           >
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="btn btn-outline btn-primary btn-md mb-8 w-full lg:ml-5 lg:flex lg:w-4/12 lg:items-center"
+              className="btn btn-outline btn-primary btn-md mb-8 mt-2 w-full lg:ml-5 lg:flex lg:w-4/12 lg:items-center"
             >
-               See Courses
+              See Courses
             </motion.a>
           </Link>
         </div>

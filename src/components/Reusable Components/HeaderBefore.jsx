@@ -232,17 +232,20 @@ function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+            <div className=" flex items-end justify-end  p-3 ">
+              <button
+                className="navbar-close flex items-center rounded-full bg-white p-3 "
+                onClick={toggleMenu}
+              >
+                <TfiClose className="z-40 h-6 w-6 cursor-pointer font-bold text-primary hover:text-accent " />
+              </button>
+            </div>
             <motion.nav
               className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
             >
-              <div className="mb-8 flex items-center justify-between">
-                <button className="navbar-close" onClick={toggleMenu}>
-                  <TfiClose className="h-6 w-6 cursor-pointer text-gray-400 hover:text-gray-500 " />
-                </button>
-              </div>
               <div>
                 <ul>
                   <li className="mb-1">
@@ -252,6 +255,32 @@ function Header() {
                     >
                       Home
                     </a>
+                  </li>
+                  <li className="mb-1">
+                    <a
+                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      href="#"
+                    >
+                      Parent
+                    </a>
+                    <ul className="p-2">
+                      <li>
+                        <a
+                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          href="#"
+                        >
+                          Submenu 1
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          href="#"
+                        >
+                          Submenu 2
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                   <li className="mb-1">
                     <a
@@ -320,5 +349,4 @@ function Header() {
     </>
   );
 }
-
 export default Header;

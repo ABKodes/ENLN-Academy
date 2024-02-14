@@ -64,7 +64,7 @@ function VerticalCard() {
                       </div>
                     </div>
                     <p className="phonetext my-3  dark:font-bold">
-                      {course.price}
+                      Birr {course.price}
                     </p>
                   </div>
                 </div>

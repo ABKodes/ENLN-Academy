@@ -38,7 +38,7 @@ import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
 import AboutUs from "./pages/About Us";
 import HeaderGov from "./components/Reusable Components/Header Gov";
 // import HeaderOrg from "./components/Reusable Components/Header Org";
-import LogOut from "./components/Reusable Components/Log Out";
+// import LogOut from "./components/Reusable Components/Log Out";
 
 function All() {
   return (
@@ -46,7 +46,7 @@ function All() {
       <div className="overflow-x-hidden">
         <VerticalCard />
         <br />
-        <LogOut/>
+        {/* <LogOut/> */}
         <HeaderLesson />
         <HeaderGov />
         {/* <HeaderOrg /> */}

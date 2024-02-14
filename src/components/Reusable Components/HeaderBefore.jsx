@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { TfiClose } from "react-icons/tfi";
 import HeaderLogo from "/public/header individual.png";
+import { useSelector} from "react-redux";
+
 function Header() {
+  const courses = useSelector((state) => state.courses);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("individuals");
   const [isClicked, setIsClicked] = useState(false);
@@ -29,6 +32,15 @@ function Header() {
   const handleSearchBarBlur = () => {
     setIsClicked(false);
   };
+  // Function to calculate the total cost of items in the cart
+  const calculateTotalCost = () => {
+    let totalCost = 0;
+    courses.forEach((item) => {
+      totalCost += item.price;
+    });
+    return totalCost;
+  };
+
   return (
     <>
       <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
@@ -114,8 +126,12 @@ function Header() {
                 className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
               >
                 <div className="card-body bg-secondary">
-                  <span className="text-lg font-bold">8 Items</span>
-                  <span className="text-info">Subtotal: $999</span>
+                  <span className="text-lg font-bold">
+                    {courses.length} Items
+                  </span>
+                  <span className="text-info">
+                    Subtotal: {calculateTotalCost()}
+                  </span>
                   <div className="card-actions">
                     <button className="btn btn-primary btn-block">
                       View cart
@@ -176,7 +192,7 @@ function Header() {
                     />
                   </svg>
                   <span className="badge indicator-item badge-primary badge-xs lg:badge-sm ">
-                    8
+                    {courses.length}
                   </span>
                 </div>
               </Link>{" "}
@@ -186,8 +202,12 @@ function Header() {
                 className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
               >
                 <div className="card-body bg-secondary">
-                  <span className="text-lg font-bold">8 Items</span>
-                  <span className="text-info">Subtotal: $999</span>
+                  <span className="text-lg font-bold">
+                    {courses.length} Items
+                  </span>
+                  <span className="text-info">
+                    Subtotal: {calculateTotalCost()}
+                  </span>
                   <div className="card-actions">
                     <a href="/cart" className="btn btn-primary btn-block">
                       {" "}

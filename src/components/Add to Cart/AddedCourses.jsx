@@ -29,7 +29,7 @@ function AddedCourses() {
           <div className="flex justify-between border-b pb-8">
             <h1 className="heading font-semibold">Add to Cart</h1>
             <h2 className="text font-semibold dark:text-2xl">
-              {/* {cartItems.length} Items */}
+              {courses.length} Items
             </h2>
           </div>
           <div className="justify-items mb-5 mt-10 flex">

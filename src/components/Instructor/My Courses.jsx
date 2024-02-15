@@ -41,7 +41,7 @@ function MyCourses() {
           </div>
           <div className="my-4 flex justify-end">
             <button
-              className="group relative ml-7 transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary  md:my-0"
+              className="group relative ml-7 transform cursor-pointer font-bold leading-5 text-primary duration-300  md:my-0"
               onClick={toggleShowFullText}
             >
               {showFullText ? (

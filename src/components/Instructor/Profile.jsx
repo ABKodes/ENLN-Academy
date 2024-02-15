@@ -7,8 +7,8 @@ import CourseInstructor from "/public/course instructor.avif"
 function Profile() {
   const [value, setValue] = useState("");
   return (
-    <div className="dark:bg-gray-800 dark:text-white">
-      <div className="mx-auto my-10 w-9/12 rounded-lg bg-white dark:bg-gray-800 lg:p-5 ">
+    <div >
+      <div className="mx-auto my-10 w-9/12 rounded-lg bg-white  lg:p-5 ">
         <div className="lg:flex">
           <img
             className="h-36 w-36 rounded-full"

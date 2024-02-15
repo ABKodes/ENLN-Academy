@@ -2,10 +2,10 @@ import React from 'react'
 
 function About() {
   return (
-    <div className="dark:bg-gray-800 dark:text-white">
+    <div >
       <div className="mx-auto mt-1 w-9/12 ">
         <h3 className="text-xl font-semibold">About Me</h3>
-        <p className="mt-2 text-justify text-gray-600 dark:text-gray-200">
+        <p className="mt-2 text-justify text-gray-600 ">
           As a nutritionist and public health instructor, my passion is guiding
           individuals toward informed and sustainable well-being. With a
           background in nutrition science and relevant certifications, I blend

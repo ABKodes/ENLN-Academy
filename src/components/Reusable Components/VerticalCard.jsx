@@ -1,20 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import CourseImage from "/public/course image.svg"
-import coursesData from "../../data/courses.json"
-import {  useDispatch } from "react-redux";
+import CourseImage from "/public/course image.svg";
+import coursesData from "../../data/courses.json";
+import { useDispatch } from "react-redux";
 import { add } from "../../features/cartSlice";
+
 function VerticalCard() {
-  const dispatch=useDispatch();
-  const addToCart=(course)=>{
+ 
+  const dispatch = useDispatch();
+  const addToCart = (course) => {
     // dispatch an add action
-    dispatch(add(course))
-  }
+    dispatch(add(course));
+  };
+  const handleClick = (course) => {};
   return (
     <>
       <div className="flex gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {coursesData.courses.map((course) => (
           <div key={course.id} className="grid grid-rows-3 gap-4">
-            <div className="group container relative mx-auto flex h-[250px] w-[250px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-secondary sm:h-[317px] sm:w-[317px]">
+            <div
+              className="group container relative mx-auto flex h-[250px] w-[250px] cursor-pointer items-center justify-center gap-3 rounded-lg border border-secondary sm:h-[317px] sm:w-[317px]"
+              onClick={() => handleClick(course)}
+            >
               <Link to="/coursedescription">
                 <div className="max-w-sm rounded-lg border-gray-200">
                   <a href="#">
@@ -89,9 +96,7 @@ function VerticalCard() {
                   </div>
                 </div>
                 <div className="gap-1 text-xs sm:gap-2 sm:text-base">
-                  <p className="cardtext">
-                    {course.description}
-                  </p>
+                  <p className="cardtext">{course.description}</p>
                   <ul className="cardtext space-y-1 text-left">
                     {course.features.map((feature, index) => (
                       <li
@@ -118,13 +123,14 @@ function VerticalCard() {
                     ))}
                   </ul>
                 </div>
-                {/* <Link to="/addtocart"> */}
-                  <div className="card-actions justify-end">
-                    <button className="buttontext btn btn-primary w-full" onClick={()=>addToCart(course)}>
-                      Add to Cart
-                    </button>
-                  </div>
-                {/* </Link> */}
+                <div className="card-actions justify-end">
+                  <button
+                    className="buttontext btn btn-primary w-full"
+                    onClick={() => addToCart(course)}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -134,4 +140,3 @@ function VerticalCard() {
   );
 }
 export default VerticalCard;
-  

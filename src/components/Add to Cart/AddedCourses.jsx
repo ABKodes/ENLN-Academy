@@ -24,19 +24,19 @@ function AddedCourses() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="mx-auto my-10 flex w-11/12">
-        <div className="w-3/4 bg-white px-10 py-10">
-          <div className="flex justify-between border-b pb-8">
+      <div className="mx-auto my-10 flex lg:flex-row flex-col w-11/12">
+        <div className="lg:w-3/4 w-full bg-white lg:px-10  py-10">
+          <div className="flex justify-between border-b pb-8 w-full">
             <h1 className="heading font-semibold">Add to Cart</h1>
             <h2 className="text font-semibold dark:text-2xl">
               {courses.length} Items
             </h2>
           </div>
           <div className="justify-items mb-5 mt-10 flex">
-            <h3 className="w-2/5 text-lg font-semibold uppercase text-gray-600">
+            <h3 className="lg:w-2/5 w-full text-lg font-semibold uppercase text-gray-600">
               Product Details
             </h3>
-            <h3 className="w-1/5 text-center text-lg font-semibold uppercase text-gray-600">
+            <h3 className="lg:w-1/5 w-full text-center text-lg font-semibold uppercase text-gray-600">
               Price
             </h3>
           </div>
@@ -78,10 +78,10 @@ function AddedCourses() {
                 </div>
               </div>
 
-              <span className="w-1/5 text-center text-sm font-semibold">
-                Birr {item.price}.00
+              <span className="lg:w-1/5 w-3/5 text-center text-sm font-semibold">
+                 {item.price}.00 ETB
               </span>
-              <div className="flex w-1/5 justify-end">
+              <div className="flex lg:w-1/5 justify-end">
                 <button
                   className="group relative transform cursor-pointer leading-5 text-primary duration-300 hover:text-red-500 dark:text-primary md:my-0"
                   onClick={() => removeFromCart(item.id)}
@@ -105,12 +105,12 @@ function AddedCourses() {
             </button>
           </Link>
         </div>
-        <div id="summary" className="w-1/4 px-8 py-10">
+        <div id="summary" className="lg:w-1/4 w-full px-8 py-10">
           <div className="mt-8">
             <div className="py- text-sm font-semibold">
               <span className="uppercase">Total cost</span>
               <p className="subheading mt-6 dark:text-4xl">
-                Birr {calculateTotalCost()}
+                 {calculateTotalCost()} ETB
               </p>
             </div>
             <div className="mt-6 text-center">

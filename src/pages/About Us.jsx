@@ -3,7 +3,65 @@ import React from "react";
 function AboutUs() {
   return (
     <div>
-      <section className="font-poppins flex items-center bg-gray-100 py-20 dark:bg-gray-800 xl:h-screen">
+      <section className="font-poppins flex items-center xl:h-screen m-5">
+        <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6">
+          <div className="flex flex-wrap ">
+            <div className="mb-10 w-full px-4 lg:mb-0 lg:w-1/2">
+              <div className="relative lg:max-w-md">
+                <img
+                  src="https://i.postimg.cc/rF0MKfBV/pexels-andrea-piacquadio-3760263.jpg"
+                  alt="aboutimage"
+                  className="relative z-10 h-96 w-full rounded object-cover"
+                />
+                <div className="absolute bottom-0 right-0 z-10 rounded border-4 border-secondary bg-white p-8 shadow sm:p-8 lg:-mb-8 lg:-mr-11 ">
+                  <p className="flex text-lg font-semibold md:w-72">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      className="absolute left-0 top-0 h-16 w-16 text-primary opacity-10 dark:text-gray-300"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
+                    </svg>
+                    {"    "}
+                    <span className="items-center justify-center">
+                      Successfully Providing business solutions from 25 years
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mb-10 w-full px-6 lg:mb-0 lg:w-1/2 ">
+              <div className="mb-6 border-l-4 border-primary pl-4 ">
+                <span className="text-sm uppercase text-gray-600 ">
+                  Who we are?
+                </span>
+                <h1 className="mt-2 text-3xl font-black text-gray-700  md:text-5xl">
+                  About Us
+                </h1>
+              </div>
+              <p className="mb-6 text-base leading-7 text-gray-500 ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam Lorem
+                ipsum dolor sit amet. labore et dolore magna aliqua. Ut enim ad
+                minim veniam Lorem ipsum dolor sit amet. amet. labore et dolore
+                magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit
+                amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do Lorem ipsum dolor sit amet.
+              </p>
+              <a
+                href="#"
+                className="rounded bg-primary px-4 py-2 text-gray-100 hover:bg-secondary "
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="font-poppins flex items-center bg-gray-100 py-20  xl:h-screen">
         <div className="mx-auto max-w-6xl flex-1 justify-center px-4 py-4 md:px-6 lg:py-6">
           <div className="relative mx-auto max-w-xl">
             <img
@@ -54,18 +112,18 @@ function AboutUs() {
               </svg>
             </div>
             <div className="bottom-0 z-40 -mb-20 mt-10 lg:absolute lg:right-0 lg:-mr-44 lg:mt-0 ">
-              <div className="w-full rounded-2xl border bg-gray-50 p-8 shadow-sm dark:border-gray-200 dark:bg-secondary lg:w-96">
-                <h2 className="dark:text-primary-300 mb-4 text-4xl font-bold text-primary">
+              <div className="w-full rounded-2xl border bg-gray-50 p-8 shadow-sm  lg:w-96">
+                <h2 className=" mb-4 text-4xl font-bold text-primary">
                   About Us
                 </h2>
-                <p className="text-white-600 dark:text-white-800 mb-4 pb-4 ">
+                <p className="text-white-600  mb-4 pb-4 ">
                   Lorem ipsum dolor sit amet, consectetur domino act Lorem ipsum
                   dolor sit amet, consectetur domino act Lorem ipsum dolor sit
                   amet, consectetur domino act
                 </p>
                 <a
                   href="#"
-                  className="transform rounded-2xl bg-primary px-4 py-3 text-sm text-gray-100 transition-all hover:bg-secondary hover:text-gray-100 dark:text-gray-100 dark:hover:bg-secondary dark:hover:text-gray-50"
+                  className="transform rounded-2xl bg-primary px-4 py-3 text-sm text-gray-100 transition-all hover:bg-secondary hover:text-gray-100 "
                 >
                   Learn more
                 </a>
@@ -74,70 +132,11 @@ function AboutUs() {
           </div>
         </div>
       </section>
-
-      <section className="font-poppins flex items-center bg-gray-100 dark:bg-gray-800 xl:h-screen ">
-        <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6">
-          <div className="flex flex-wrap ">
-            <div className="mb-10 w-full px-4 lg:mb-0 lg:w-1/2">
-              <div className="relative lg:max-w-md">
-                <img
-                  src="https://i.postimg.cc/rF0MKfBV/pexels-andrea-piacquadio-3760263.jpg"
-                  alt="aboutimage"
-                  className="relative z-10 h-96 w-full rounded object-cover"
-                />
-                <div className="absolute bottom-0 right-0 z-10 rounded border-4 border-secondary bg-white p-8 shadow dark:border-primary dark:bg-gray-800 dark:text-gray-300 sm:p-8 lg:-mb-8 lg:-mr-11 ">
-                  <p className="flex text-lg font-semibold md:w-72">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      className="absolute left-0 top-0 h-16 w-16 text-primary opacity-10 dark:text-gray-300"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
-                    </svg>
-                    {"    "}
-                    <span className="items-center justify-center">
-                      Successfully Providing business solutions from 25 years
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="mb-10 w-full px-6 lg:mb-0 lg:w-1/2 ">
-              <div className="mb-6 border-l-4 border-primary pl-4 ">
-                <span className="text-sm uppercase text-gray-600 dark:text-gray-400">
-                  Who we are?
-                </span>
-                <h1 className="mt-2 text-3xl font-black text-gray-700 dark:text-gray-300 md:text-5xl">
-                  About Us
-                </h1>
-              </div>
-              <p className="mb-6 text-base leading-7 text-gray-500 dark:text-gray-400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam Lorem
-                ipsum dolor sit amet. labore et dolore magna aliqua. Ut enim ad
-                minim veniam Lorem ipsum dolor sit amet. amet. labore et dolore
-                magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit
-                amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do Lorem ipsum dolor sit amet.
-              </p>
-              <a
-                href="#"
-                className="rounded bg-secondary px-4 py-2 text-gray-100 hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
-              >
-                Learn more
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="bg-gray-100 dark:bg-gray-800">
+      <section className="bg-gray-100 ">
         <div className="mx-auto flex w-10/12 flex-wrap items-center pt-8">
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
-            <div className="bg-secondary p-6 dark:bg-secondary">
-              <span className="text-primary dark:text-primary">
+            <div className="bg-secondary p-6 ">
+              <span className="text-primary ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}
@@ -150,17 +149,17 @@ function AboutUs() {
                   <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
                 </svg>
               </span>
-              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 dark:text-gray-800">
+              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 ">
                 2097
               </p>
-              <h2 className="text-sm text-gray-700 dark:text-gray-800">
+              <h2 className="text-sm text-gray-700 ">
                 Students
               </h2>
             </div>
           </div>
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
-            <div className="bg-secondary p-6 dark:bg-secondary">
-              <span className="text-primary dark:text-primary">
+            <div className="bg-secondary p-6 ">
+              <span className="text-primary ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}
@@ -177,17 +176,17 @@ function AboutUs() {
                   <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
                 </svg>
               </span>
-              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 dark:text-gray-800">
+              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 ">
                 35
               </p>
-              <h2 className="text-sm text-gray-700 dark:text-gray-800">
+              <h2 className="text-sm text-gray-700 ">
                 Instructors
               </h2>
             </div>
           </div>
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
-            <div className="bg-secondary p-6 dark:bg-secondary">
-              <span className="text-primary dark:text-primary">
+            <div className="bg-secondary p-6 ">
+              <span className="text-primary ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}
@@ -199,17 +198,17 @@ function AboutUs() {
                   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg>
               </span>
-              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 dark:text-gray-800">
+              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 ">
                 74
               </p>
-              <h2 className="text-sm text-gray-700 dark:text-gray-800">
+              <h2 className="text-sm text-gray-700 ">
                 Courses
               </h2>
             </div>
           </div>
           <div className="mb-6 w-full px-4 sm:w-1/2 md:w-1/2 lg:mb-6">
-            <div className="bg-secondary p-6 dark:bg-secondary">
-              <span className="text-primary dark:text-primary">
+            <div className="bg-secondary p-6 ">
+              <span className="text-primary ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={16}
@@ -221,23 +220,23 @@ function AboutUs() {
                   <path d="M6 .5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H9v1.07a7.001 7.001 0 0 1 3.274 12.474l.601.602a.5.5 0 0 1-.707.708l-.746-.746A6.97 6.97 0 0 1 8 16a6.97 6.97 0 0 1-3.422-.892l-.746.746a.5.5 0 0 1-.707-.708l.602-.602A7.001 7.001 0 0 1 7 2.07V1h-.5A.5.5 0 0 1 6 .5zm2.5 5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z" />
                 </svg>
               </span>
-              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 dark:text-gray-800">
+              <p className="mb-2 mt-4 text-3xl font-bold text-gray-700 ">
                 100
               </p>
-              <h2 className="text-sm text-gray-700 dark:text-gray-800">
+              <h2 className="text-sm text-gray-700 ">
                 Reviews
               </h2>
             </div>
           </div>
         </div>
       </section>
-      <section className="font-poppins flex items-center bg-stone-100 dark:bg-gray-800 lg:h-screen ">
-        <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6">
+      <section className="font-poppins flex items-center bg-stone-100  lg:h-screen ">
+        <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6 mb-10">
           <div className="mb-10 px-4 md:mb-20 md:text-center">
-            <p className="mb-2 text-lg font-semibold text-primary dark:text-gray-400">
+            <p className="mb-2 text-lg font-semibold text-primary ">
               About Us
             </p>
-            <h2 className="pb-2 text-2xl font-bold text-gray-800 dark:text-gray-300 md:text-4xl">
+            <h2 className="pb-2 text-2xl font-bold text-gray-800 md:text-4xl">
               What we do
             </h2>
             <div className="mb-6 mt-1 flex w-32 overflow-hidden rounded md:mx-auto md:mb-14">
@@ -248,16 +247,16 @@ function AboutUs() {
           </div>
           <div className="flex flex-wrap items-center">
             <div className="mb-10 w-full px-4 md:w-1/2 lg:mb-0 ">
-              <h2 className="mb-4 text-2xl font-bold text-gray-700 dark:text-gray-300">
+              <h2 className="mb-4 text-2xl font-bold text-gray-700 ">
                 We are providing a better facility
               </h2>
-              <p className="mb-4 text-base leading-7 text-gray-500 dark:text-gray-400">
+              <p className="mb-4 text-base leading-7 text-gray-500 ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam
               </p>
               <ul className="mb-10">
-                <li className="mb-4 flex items-center text-base text-gray-600 dark:text-gray-400">
+                <li className="mb-4 flex items-center text-base text-gray-600 ">
                   <span className="mr-3 text-primary dark:text-primary ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +271,7 @@ function AboutUs() {
                   </span>
                   Art and Programs
                 </li>
-                <li className="mb-4 flex items-center text-base text-gray-600 dark:text-gray-400">
+                <li className="mb-4 flex items-center text-base text-gray-600 ">
                   <span className="mr-3 text-primary dark:text-primary">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -287,7 +286,7 @@ function AboutUs() {
                   </span>
                   Value for money
                 </li>
-                <li className="mb-4 flex items-center text-base text-gray-600 dark:text-gray-400">
+                <li className="mb-4 flex items-center text-base text-gray-600 ">
                   <span className="mr-3 text-primary dark:text-primary">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -302,7 +301,7 @@ function AboutUs() {
                   </span>
                   Support Team
                 </li>
-                <li className="mb-4 flex items-center text-base text-gray-600 dark:text-gray-400">
+                <li className="mb-4 flex items-center text-base text-gray-600 ">
                   <span className="mr-3 text-primary dark:text-primary ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +319,7 @@ function AboutUs() {
               </ul>
               <a
                 href="#"
-                className="rounded-md bg-secondary px-4 py-2 text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
+                className="rounded-md bg-primary px-4 py-2 text-white hover:bg-secondary "
               >
                 Learn more
               </a>

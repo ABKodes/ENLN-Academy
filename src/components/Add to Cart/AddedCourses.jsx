@@ -24,8 +24,8 @@ function AddedCourses() {
 
   return (
     <div className="container mx-auto mt-10">
-      <div className="mx-auto my-10 flex w-11/12">
-        <div className="w-3/4 bg-white px-10 py-10">
+      <div className="mx-auto my-10 flex lg:flex-row flex-col w-11/12">
+        <div className="lg:w-3/4 w-full bg-white px-10 py-10">
           <div className="flex justify-between border-b pb-8">
             <h1 className="heading font-semibold">Add to Cart</h1>
             <h2 className="text font-semibold dark:text-2xl">
@@ -105,12 +105,12 @@ function AddedCourses() {
             </button>
           </Link>
         </div>
-        <div id="summary" className="w-1/4 px-8 py-10">
+        <div id="summary" className="lg:w-1/4 w-full px-8 py-10">
           <div className="mt-8">
             <div className="py- text-sm font-semibold">
               <span className="uppercase">Total cost</span>
               <p className="subheading mt-6 dark:text-4xl">
-                Birr {calculateTotalCost()}
+                 {calculateTotalCost()} ETB
               </p>
             </div>
             <div className="mt-6 text-center">

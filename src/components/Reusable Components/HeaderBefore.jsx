@@ -209,7 +209,7 @@ function Header() {
                     Subtotal: {calculateTotalCost()}
                   </span>
                   <div className="card-actions">
-                    <a href="/cart" className="btn btn-primary btn-block">
+                    <a href="/addtocart" className="btn btn-primary btn-block">
                       {" "}
                       {/* Modify this line */}
                       View cart

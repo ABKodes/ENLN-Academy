@@ -5,7 +5,7 @@ import About from '../components/Instructor/About'
 
 function Instructor() {
   return (
-    <div className="space-y-2 dark:bg-gray-800">
+    <div className="space-y-2">
       <Profile />
       <About />
       <MyCourses />

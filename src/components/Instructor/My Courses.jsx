@@ -17,9 +17,9 @@ function MyCourses() {
   };
 
   return (
-    <div className="dark:bg-gray-800 dark:text-white">
+    <div>
       <div>
-        <h2 className="subheading group relative mx-auto  my-5 w-9/12 hover:font-bold lg:text-base dark:text-white">
+        <h2 className="subheading group relative mx-auto  my-5 w-9/12 hover:font-bold lg:text-base ">
           <span className="relative inline-block">
             My Courses
             <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-black transition-transform group-hover:scale-x-100"></span>

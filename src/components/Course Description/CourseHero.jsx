@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import CourseImage from "/public/course image.svg";
-function CourseHero() {
+function CourseHero(){
   return (
     <section className="bg-secondary">
       <div className="mx-auto grid max-w-screen-xl px-4 h-[70vh] lg:grid-cols-12 lg:gap-8  xl:gap-0">

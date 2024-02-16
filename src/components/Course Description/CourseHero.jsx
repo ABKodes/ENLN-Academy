@@ -4,7 +4,7 @@ import CourseImage from "/public/course image.svg";
 function CourseHero() {
   return (
     <section className="bg-secondary">
-      <div className="mx-auto grid max-w-screen-xl px-4 h-[70vh] lg:grid-cols-12 lg:gap-8  xl:gap-0">
+      <div className="mx-auto grid h-[70vh] max-w-screen-xl px-4 lg:grid-cols-12 lg:gap-8  xl:gap-0">
         <div className="mr-auto place-self-center lg:col-span-7">
           <h1 className="herotext mb-4 max-w-2xl font-extrabold leading-none tracking-tight dark:text-primary">
             The Complete Nutrition Course
@@ -54,7 +54,10 @@ function CourseHero() {
             <span className="text mr-1 font-medium dark:text-primary">
               Created by
             </span>
-            <Link className="text group relative transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary md:my-0" to="/instructor">
+            <Link
+              className="text group relative transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary md:my-0"
+              to="/instructor"
+            >
               Bekele Sewasew
               <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
             </Link>
@@ -62,14 +65,17 @@ function CourseHero() {
           <span href="#" className="heading mr-2">
             Birr 1,500
           </span>
-         <Link to="addtocart"> <motion.a
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            className="buttontext btn btn-primary mx-2 mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-auto "
-          >
-            Add to Cart
-          </motion.a></Link>
+          <Link to="addtocart">
+            {" "}
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              className="buttontext btn btn-primary mx-2 mt-6 w-full rounded-lg border-none px-8 py-2 tracking-wider duration-300 lg:w-auto "
+            >
+              Add to Cart
+            </motion.a>
+          </Link>
         </div>
         <div className="image-full hidden lg:col-span-5 lg:mt-0 lg:flex">
           <img src={CourseImage} alt="mockup" />

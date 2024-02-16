@@ -2,17 +2,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
 import CourseInstructor from "/public/course instructor.avif"
+import { Link } from "react-router-dom";
 function Instructor() {
   return (
     <div className=" flex w-7/12 flex-col rounded-xl  bg-white p-4  md:p-6">
       <div className="flex items-center gap-x-4">
-        <img
-          className="h-20 w-20 rounded-full"
-          src={CourseInstructor}
-          alt="Image Description"
-        />
+        <Link to="/instructor">
+          <img
+            className="h-20 w-20 rounded-full"
+            src={CourseInstructor}
+            alt="Image Description"
+          />
+        </Link>
         <div className="grow">
-          <h3 className="text">Bekele Sewasew</h3>
+          <Link to="/instructor">
+            <h3 className="text">Bekele Sewasew</h3>
+          </Link>
           <p className="cardtext uppercase dark:text-gray-500">Founder / CEO</p>
           <div className="mt-3 space-x-1">
             <a

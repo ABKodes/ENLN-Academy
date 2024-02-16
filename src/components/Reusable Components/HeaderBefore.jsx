@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { TfiClose } from "react-icons/tfi";
 import HeaderLogo from "/public/header individual.png";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 function Header() {
   const courses = useSelector((state) => state.courses);
+  const [isOpen, setIsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("individuals");
   const [isClicked, setIsClicked] = useState(false);
@@ -115,29 +116,47 @@ function Header() {
                 </svg>
               </button>
             </div>
-            <div className="dropdown-start dropdown dropdown-hover hidden lg:block">
-              <div tabIndex={0} role="button" className="button">
-                <div tabIndex={0} role="link" className="link m-1 no-underline">
-                  Categories
-                </div>
-              </div>
+            <div className="lg:block">
               <div
-                tabIndex={0}
-                className="card dropdown-content card-compact z-[1] mt-3 w-52 bg-base-100 shadow"
+                className="dropdown relative inline-block"
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => setIsOpen(false)}
               >
-                <div className="card-body bg-secondary">
-                  <span className="text-lg font-bold">
-                    {courses.length} Items
-                  </span>
-                  <span className="text-info">
-                    Subtotal: {calculateTotalCost()}
-                  </span>
-                  <div className="card-actions">
-                    <button className="btn btn-primary btn-block">
-                      View cart
-                    </button>
-                  </div>
-                </div>
+                <button className="inline-flex items-center rounded  px-4 py-2 text-primary">
+                  <span className="mr-1">Categories</span>
+                  <svg
+                    className={`h-4 w-4 transform fill-current ${
+                      isOpen ? "rotate-180" : "rotate-0"
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+                <ul
+                  className={
+                    isOpen
+                      ? "dropdown-menu absolute block pt-1 text-gray-700"
+                      : "dropdown-menu absolute hidden pt-1 text-gray-700"
+                  }
+                >
+                  <li className="whitespace-no-wrap block rounded-t bg-white px-4 py-2 hover:bg-gray-400">
+                    <a href="#">Nutrition Leadership</a>
+                  </li>
+                  <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-gray-400">
+                    <a href="#">Evidence to Policy</a>
+                  </li>
+                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                    <a href="#">Communication</a>
+                  </li>
+                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                    <a href="#">Advocacy</a>
+                  </li>
+                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                    <a href="#">Nutrition Courses</a>
+                  </li>
+                </ul>
               </div>
             </div>
             {/* Search bar input */}

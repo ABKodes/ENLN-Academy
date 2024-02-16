@@ -54,10 +54,10 @@ function CourseHero() {
             <span className="text mr-1 font-medium dark:text-primary">
               Created by
             </span>
-            <span className="text group relative transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary md:my-0">
+            <Link className="text group relative transform cursor-pointer font-bold leading-5 text-primary duration-300 dark:text-primary md:my-0" to="/instructor">
               Bekele Sewasew
               <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
-            </span>
+            </Link>
           </div>
           <span href="#" className="heading mr-2">
             Birr 1,500

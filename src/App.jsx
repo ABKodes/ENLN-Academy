@@ -27,6 +27,7 @@ import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import GovForm from "./pages/Gov Form";
 import AboutUs from "./pages/About Us"; 
 import Footer from "./components/Reusable Components/Footer";
+import Instructor from "./pages/Instructor";
 function App() {
   return (
       <div className="overflow-x-hidden">
@@ -46,6 +47,7 @@ function App() {
           <Route path="checkout" element={<OrderDetail/>} />
           <Route path="forgetpassword" element={<ForgetPassword/>} />
           <Route path="lessonheader" element={< HeaderLesson/>} />
+          <Route path = "instructor" element={<Instructor/>} />
           <Route
             path="/certificate"
             element={

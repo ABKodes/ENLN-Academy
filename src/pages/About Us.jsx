@@ -234,7 +234,7 @@ function AboutUs() {
         <div className="mx-auto max-w-6xl flex-1 justify-center py-4 md:px-6 lg:py-6 mb-10">
           <div className="mb-10 px-4 md:mb-20 md:text-center">
             <p className="mb-2 text-lg font-semibold text-primary ">
-              About Us
+              About Us 
             </p>
             <h2 className="pb-2 text-2xl font-bold text-gray-800 md:text-4xl">
               What we do

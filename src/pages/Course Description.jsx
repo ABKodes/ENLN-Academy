@@ -7,15 +7,17 @@ import Instructor from "../components/Course Description/Instructor";
 import WhatYouLearn from "../components/Course Description/WhatYouLearn";
 import RatingCard from "../components/Reusable Components/Rating Card";
 function CourseDescription() {
-  return (
+  return(
     <div>
       <CourseHero />
-      <WhatYouLearn />
-      <CourseSidebar />
+      <div className="w-11/12 mx-auto ">
+        <WhatYouLearn />
+        <CourseSidebar />
+      </div>
       <CourseDetail />
       <Instructor />
       <CourseContent />
-      <RatingCard/>
+      <RatingCard />
     </div>
   );
 }

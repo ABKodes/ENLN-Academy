@@ -137,23 +137,23 @@ function Header() {
                 <ul
                   className={
                     isOpen
-                      ? "dropdown-menu absolute block pt-1 text-gray-700"
+                      ? "dropdown-menu absolute block w-auto pt-1 text-gray-700"
                       : "dropdown-menu absolute hidden pt-1 text-gray-700"
                   }
                 >
-                  <li className="whitespace-no-wrap block rounded-t bg-white px-4 py-2 hover:bg-gray-400">
+                  <li className="whitespace-no-wrap block rounded-t bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Nutrition Leadership</a>
                   </li>
-                  <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-gray-400">
+                  <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Evidence to Policy</a>
                   </li>
-                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                  <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Communication</a>
                   </li>
-                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                  <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Advocacy</a>
                   </li>
-                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-gray-400">
+                  <li className="whitespace-no-wrap block rounded-b bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Nutrition Courses</a>
                   </li>
                 </ul>

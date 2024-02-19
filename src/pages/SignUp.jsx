@@ -5,6 +5,8 @@ import { PiEyeThin, PiEyeClosedThin } from "react-icons/pi";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 function SignUp() {
   const [open, setOpen] = useState(false);
   const [password, setPassword] = useState("");
@@ -73,6 +75,37 @@ function SignUp() {
         <div className="container h-full px-6 py-24 ">
           <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
             {/* Left column container with background*/}
+            <div className="w-full">
+              <LoginSocialFacebook
+                appId="2067050553674632"
+                onResolve={(response) => {
+                  console.log(response);
+                }}
+                onReject={(error) => {
+                  console.log(error);
+                }}
+              >
+                <a
+                  className="hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700 mb-3 flex w-full items-center justify-center rounded bg-primary px-7 pb-2.5 pt-3 text-center text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                  style={{ backgroundColor: "#3b5998" }}
+                  href="#!"
+                  role="button"
+                  data-te-ripple-init=""
+                  data-te-ripple-color="light"
+                >
+                  {/* Facebook */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="mr-2 h-3.5 w-3.5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                  </svg>
+                  Continue with Facebook
+                </a>
+              </LoginSocialFacebook>
+            </div>
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-6/12">
               <img
                 src="/public/sign up.svg"
@@ -148,7 +181,7 @@ function SignUp() {
                       Password
                     </label>
                     {password && (
-                      <div className="absolute right-0 px-auto py-2 px-2 mr-0.5 rounded top-1/2 z-10 -translate-y-1/2 transform bg-white text-2xl">
+                      <div className="px-auto absolute right-0 top-1/2 z-10 mr-0.5 -translate-y-1/2 transform rounded bg-white px-2 py-2 text-2xl">
                         {open ? (
                           <PiEyeThin
                             onClick={toggle}

@@ -113,8 +113,6 @@ const ProfileDashboard = ({ children }) => {
                   <div
                     style={{ display: isOpen ? "block " : "none" }}
                     className="link_text mt-1"
-                    style={{ display: isOpen ? "block " : "none" }}
-                    className="link_text mt-1"
                   >
                     {item.name}
                   </div>

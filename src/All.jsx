@@ -37,7 +37,7 @@ import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import PrivacyAndPolicy from "./pages/PrivacyAndPolicy";
 import AboutUs from "./pages/About Us";
 import HeaderGov from "./components/Reusable Components/Header Gov";
-// import HeaderOrg from "./components/Reusable Components/Header Org";
+import HeaderOrg from "./components/Reusable Components/Header Org";
 // 
 
 function All() {
@@ -50,7 +50,7 @@ function All() {
         <HeaderLesson />
         <HeaderGov />
         {/* <HeaderOrg /> */}
-        <AboutUs />
+        {/* <AboutUs /> */}
         <GovernmentHome />
         <PrivacyAndPolicy />
         <br />

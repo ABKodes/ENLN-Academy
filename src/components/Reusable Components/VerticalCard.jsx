@@ -12,7 +12,7 @@ function VerticalCard() {
     // dispatch an add action
     dispatch(add(course));
   };
-  const handleClick = (course) => {};
+  
   return (
     <>
       <div className="grid gap-4 gid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

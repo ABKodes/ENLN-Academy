@@ -1,5 +1,5 @@
 
-import {useState} from "react";
+import {React,useState} from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import HeaderOrgLogo from "/public/header org.png";
@@ -64,7 +64,8 @@ import HeaderOrgLogo from "/public/header org.png";
        <div className="navbar bg-slate-300">
          <div className="navbar-start">
            <div className="dropdown">
-             <input type = "button"
+             <input
+               type="button"
                tabIndex={0}
                role="button"
                className="btn btn-ghost lg:hidden"
@@ -138,7 +139,10 @@ import HeaderOrgLogo from "/public/header org.png";
          <div className="navbar-center hidden lg:flex">
            <ul className="menu menu-horizontal px-1">
              <li>
-               <Link className="group relative   text-lg text-primary hover:font-bold lg:text-base ">
+               <Link
+                 to="/aboutus"
+                 className="group relative   text-lg text-primary hover:font-bold lg:text-base "
+               >
                  About Us
                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
                </Link>

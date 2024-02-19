@@ -114,7 +114,9 @@ const HeaderGov = () => {
                 className="menu dropdown-content menu-sm z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow"
               >
                 <li>
-                  <Link className="group relative  text-primary hover:font-bold">
+                 < Link to="/aboutus"
+                    className="group relative  text-primary hover:font-bold"
+                  >
                     About Us
                     <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary transition-transform group-hover:scale-x-100"></span>
                   </Link>

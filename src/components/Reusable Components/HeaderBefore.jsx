@@ -137,7 +137,7 @@ function Header() {
                 <ul
                   className={
                     isOpen
-                      ? "dropdown-menu absolute block w-auto pt-1 text-gray-700"
+                      ? "dropdown-menu absolute block w-auto pt-1 text-gray-7000"
                       : "dropdown-menu absolute hidden pt-1 text-gray-700"
                   }
                 >

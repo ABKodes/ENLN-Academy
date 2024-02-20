@@ -3,8 +3,8 @@ import tom from "../../assets/tom.png";
 
 const MyCourses = () => {
   const [active, setActive] = useState(true);
-  // cosnt [completed, setCompleted]=useState(false);
 
+  
   return (
     <div className="mt-10 rounded-xl border-2 border-gray-200 pl-6 pt-6">
       <div className="flex flex-col items-start justify-start gap-4 p-2 my-10 md:my-0 sm:p-4 md:flex-row md:p-12">

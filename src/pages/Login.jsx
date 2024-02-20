@@ -3,11 +3,11 @@ import login from "../assets/login.png";
 import google from "../assets/google.png";
 import linkedin from "../assets/linkedin.png";
 import facebook from "../assets/facebook.png";
-// import login from "../assets/login.png";
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
+//141767307403-44gbgtuadhp7mcnodvv453mpr6msss4g.apps.googleusercontent.com
 
 const Login = () => {
   const [email, emailupdate] = useState("");

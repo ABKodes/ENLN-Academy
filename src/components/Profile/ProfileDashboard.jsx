@@ -51,7 +51,7 @@ const ProfileDashboard = ({ children }) => {
   const email = sessionStorage.getItem("email");
 
   return (
-    <>
+    <div className="min-h-screen">
       <div className="container ">
         <div
           style={{ width: isOpen ? "350px" : "50px" }}
@@ -108,8 +108,8 @@ const ProfileDashboard = ({ children }) => {
                 }`}
                 activeClassName="active"
               >
-                <div className="flex gap-2 md:gap-5 " onClick={close}>
-                  <div className="icon mt-2">{item.icon}</div>
+                <div className="flex gap-2 md:gap-5 justify-center items-center" onClick={close}>
+                  <div className="icon mt-2 justify-center items-center  md:-ml-5 ">{item.icon}</div>
                   <div
                     style={{ display: isOpen ? "block " : "none" }}
                     className="link_text mt-1"
@@ -123,7 +123,7 @@ const ProfileDashboard = ({ children }) => {
         </div>
         <main className={isOpen ? "hidden sm:block" : "block"}>{children}</main>
       </div>
-    </>
+    </div>
   );
 };
 

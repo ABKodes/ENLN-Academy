@@ -9,9 +9,9 @@ export const Setting = () => {
   const [social, setSocial] = useState(true);
   
   return (
-    <div className="flex flex-col justify-center">
-      <div className="border-gray-20 min-h-[70vh] w-full mt-11  mx-10 flex flex-col rounded-xl border-2">
-      <div className="flex items-start justify-start gap-10 px-2  sm:p-4 md:p-12  ">
+    <div className="flex flex-col justify-center min-h-full">
+      <div className="border-gray-20 min-h-[70vh] w-full mt-11  lg:mx-10 flex flex-col rounded-xl border-2">
+      <div className="flex flex-col md:flex-row items-start justify-start gap-10 px-2  sm:p-4 md:p-12  ">
         <p onClick={()=> setSocial(true)} className={social ? "merb cursor-pointer border-b-2 border-[#025464] text-start text-[18px] font-semibold text-[#025464]": "merb  cursor-pointer  text-start text-[18px] font-semibold text-gray-400"}>
           My Account
         </p>
@@ -23,9 +23,9 @@ export const Setting = () => {
         <p className="m-12 text-[35px] text-[#187498]">
           My Account
         </p>
-        <div className="mt-10 flex flex-col items-center justify-between px-32 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between lg:px-32 md:flex-row">
           <div>
-            <form className="grid w-full gap-x-10 gap-y-4 py-2 pb-5 lg:grid-cols-2">
+            <form className="grid w-full gap-x-10 gap-y-4 py-2 pb-5 grid-cols-1 lg:grid-cols-2">
             <div className="z-5 relative py-1">
                 <input
                   type="text"
@@ -103,12 +103,12 @@ export const Setting = () => {
         <div className="flex flex-col py-2">
                 <label className="py-2 text-sm uppercase">About</label>
                 <textarea
-                  className="flex border-2 border-secondary p-3 px-8 focus:text-gray-400 "
-                  rows={4}
-                  cols={65}
-                  type="text"
-                  name="Subject"
-                ></textarea>
+  className="flex border-2 border-secondary p-3 px-8 focus:text-gray-400 w-full md:w-auto"
+  rows={4}
+  cols={65}
+  type="text"
+  name="Subject"
+></textarea>
               </div>
               <div className='flex justify-between items-center '>
               <button type='submit' className="hover:bg-green mt-4 bg-primary p-2 text-white hover:font-semibold hover:text-white flex justify-start item-end px-10 ">
@@ -127,7 +127,7 @@ export const Setting = () => {
 
         </div>):( 
          
-          <div className="mt-10 flex flex-col items-center justify-between px-32 md:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-between mx-2 sm:mx-6 md:mx-12 lg:px-32 overflow-x-hidden  md:flex-row">
           <div>
             <form>
              <div className='grid grid-cols-1 lg:grid-cols-2 justify-start items-start gap-10'>

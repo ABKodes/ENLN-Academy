@@ -9,7 +9,7 @@ export const Setting = () => {
   const [social, setSocial] = useState(true);
   
   return (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center min-h-full">
       <div className="border-gray-20 min-h-[70vh] w-full mt-11  mx-10 flex flex-col rounded-xl border-2">
       <div className="flex items-start justify-start gap-10 px-2  sm:p-4 md:p-12  ">
         <p onClick={()=> setSocial(true)} className={social ? "merb cursor-pointer border-b-2 border-[#025464] text-start text-[18px] font-semibold text-[#025464]": "merb  cursor-pointer  text-start text-[18px] font-semibold text-gray-400"}>

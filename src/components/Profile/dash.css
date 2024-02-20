@@ -5,7 +5,6 @@
 }
 .container {
   display: flex;
-  @apply max-h-[80vh]
 }
 main {
   width: 100%;

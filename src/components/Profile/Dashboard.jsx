@@ -4,7 +4,7 @@ import { IoIosNotifications } from "react-icons/io";
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
         <div className='flex flex-col justify-center items-center '>
         <div className='flex flex-col justify-center items-center border-2 border-gray-200 mt-11 rounded-xl - '>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center p-2 sm:p-4 md:p-12 lg:p-20 gap-4'>

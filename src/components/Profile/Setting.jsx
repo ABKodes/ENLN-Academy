@@ -23,14 +23,14 @@ export const Setting = () => {
         <p className="m-12 text-[35px] text-[#187498]">
           My Account
         </p>
-        <div className="mt-10 flex flex-col items-center justify-between px-32 md:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between lg:px-32 md:flex-row">
           <div>
-            <form className="grid w-full gap-x-10 gap-y-4 py-2 pb-5 lg:grid-cols-2">
+            <form className="grid w-full gap-x-10 gap-y-4 py-2 pb-5 grid-cols-1 lg:grid-cols-2">
             <div className="z-5 relative py-1">
                 <input
                   type="text"
                   id="Name"
-                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -44,7 +44,7 @@ export const Setting = () => {
                 <input
                   type="text"
                   id="Name"
-                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -58,7 +58,7 @@ export const Setting = () => {
                 <input
                   type="text"
                   id="Email"
-                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -75,7 +75,7 @@ export const Setting = () => {
                 >
                   Password<span className="text-red-500"> *</span>
                 </label>
-                <div className='flex  justify-start items-start peer relative -mt-1 lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none focus:ring-0 dark:text-black dark:focus:border-gray-600'>
+                <div className='flex  justify-start items-start peer relative -mt-1 min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none focus:ring-0 dark:text-black dark:focus:border-gray-600'>
                 <input
                   // type="password"
                   type={open ? "text":"password"}
@@ -103,12 +103,12 @@ export const Setting = () => {
         <div className="flex flex-col py-2">
                 <label className="py-2 text-sm uppercase">About</label>
                 <textarea
-                  className="flex border-2 border-secondary p-3 px-8 focus:text-gray-400 "
-                  rows={4}
-                  cols={65}
-                  type="text"
-                  name="Subject"
-                ></textarea>
+  className="flex border-2 border-secondary p-3 px-8 focus:text-gray-400 w-full md:w-auto"
+  rows={4}
+  cols={65}
+  type="text"
+  name="Subject"
+></textarea>
               </div>
               <div className='flex justify-between items-center '>
               <button type='submit' className="hover:bg-green mt-4 bg-primary p-2 text-white hover:font-semibold hover:text-white flex justify-start item-end px-10 ">

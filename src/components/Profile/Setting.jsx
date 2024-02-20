@@ -10,8 +10,8 @@ export const Setting = () => {
   
   return (
     <div className="flex flex-col justify-center min-h-full">
-      <div className="border-gray-20 min-h-[70vh] w-full mt-11  mx-10 flex flex-col rounded-xl border-2">
-      <div className="flex items-start justify-start gap-10 px-2  sm:p-4 md:p-12  ">
+      <div className="border-gray-20 min-h-[70vh] w-full mt-11  lg:mx-10 flex flex-col rounded-xl border-2">
+      <div className="flex flex-col md:flex-row items-start justify-start gap-10 px-2  sm:p-4 md:p-12  ">
         <p onClick={()=> setSocial(true)} className={social ? "merb cursor-pointer border-b-2 border-[#025464] text-start text-[18px] font-semibold text-[#025464]": "merb  cursor-pointer  text-start text-[18px] font-semibold text-gray-400"}>
           My Account
         </p>
@@ -30,7 +30,7 @@ export const Setting = () => {
                 <input
                   type="text"
                   id="Name"
-                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -44,7 +44,7 @@ export const Setting = () => {
                 <input
                   type="text"
                   id="Name"
-                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -58,7 +58,7 @@ export const Setting = () => {
                 <input
                   type="text"
                   id="Email"
-                  className="appearance-non peer relative block w-full min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
+                  className="appearance-non peer relative block w-full lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none  focus:ring-0 dark:text-black dark:focus:border-gray-600"
                   
                 />
                 <label
@@ -75,7 +75,7 @@ export const Setting = () => {
                 >
                   Password<span className="text-red-500"> *</span>
                 </label>
-                <div className='flex  justify-start items-start peer relative -mt-1 min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none focus:ring-0 dark:text-black dark:focus:border-gray-600'>
+                <div className='flex  justify-start items-start peer relative -mt-1 lg:min-w-[300px] border-2 border-b-2 border-gray-400 bg-transparent px-2 text-sm text-gray-200 focus:border-gray-600 focus:outline-none focus:ring-0 dark:text-black dark:focus:border-gray-600'>
                 <input
                   // type="password"
                   type={open ? "text":"password"}
@@ -127,7 +127,7 @@ export const Setting = () => {
 
         </div>):( 
          
-          <div className="mt-10 flex flex-col items-center justify-between px-32 md:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-between mx-2 sm:mx-6 md:mx-12 lg:px-32 overflow-x-hidden  md:flex-row">
           <div>
             <form>
              <div className='grid grid-cols-1 lg:grid-cols-2 justify-start items-start gap-10'>

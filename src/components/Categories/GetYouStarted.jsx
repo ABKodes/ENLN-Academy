@@ -75,9 +75,6 @@ const GetYouStarted = () => {
                 className="flex flex-row space-x-2"
               >
                 <VerticalCard />
-                <VerticalCard />
-                <VerticalCard />
-                <VerticalCard />
               </motion.div>
             ),
         )}

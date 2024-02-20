@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Money from "/public/money svg.svg"
+import Money from "/public/money svg.svg";
 function CourseSidebar() {
   return (
-    <div className=" w-3/12 rounded-lg border border-primary bg-white p-4 shadow sm:p-8">
+    <div className=" w-3/12 rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block">
       <div className="flex items-center space-x-2">
         <img src={Money} className="h-20 w-20" />
         <div>

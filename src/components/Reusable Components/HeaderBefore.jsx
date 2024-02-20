@@ -137,11 +137,11 @@ function Header() {
                 <ul
                   className={
                     isOpen
-                      ? "dropdown-menu absolute block w-auto pt-1 text-gray-700"
+                      ? "absolute block w-auto pt-1 text-gray-700"
                       : "dropdown-menu absolute hidden pt-1 text-gray-700"
                   }
                 >
-                  <li className="whitespace-no-wrap block rounded-t bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
+                  <li className="whitespace-no-wrap block w-auto rounded-t bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">
                     <a href="#">Nutrition Leadership</a>
                   </li>
                   <li className="whitespace-no-wrap block bg-white px-4 py-2 hover:bg-slate-400 hover:text-primary">

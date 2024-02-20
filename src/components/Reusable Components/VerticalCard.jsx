@@ -15,7 +15,7 @@ function VerticalCard() {
   
   return (
     <>
-      <div className="flex gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 gid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {coursesData.courses.map((course) => (
           <div key={course.id} className="grid grid-rows-3 gap-4">
             <div

@@ -53,42 +53,6 @@
         "Analyze data and research findings to inform policy decisions.",
         "Evaluate the impact of policies and assess their effectiveness."
       ]
-    },
-    {
-      "id": 4,
-      "title": "Advocacy and Public Policy",
-      "description": "Learn effective advocacy strategies and techniques to influence public policy and social change.",
-      "instructor": "Dr. John Adams",
-      "rating": 1.9,
-      "ratingsCount": 28000,
-      "hours": 18,
-      "difficulty": "Advanced",
-      "type": "online",
-      "price": 179,
-      "image": "/public/advocacy-and-public-policy.svg",
-      "features": [
-        "Understand the legislative process and government institutions.",
-        "Develop advocacy campaigns and mobilize stakeholders.",
-        "Lobby for policy change and address social issues."
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Communication Skills",
-      "description": "Enhance your communication skills for better interpersonal relationships and professional success.",
-      "instructor": "Dr. Elizabeth Anderson",
-      "rating": 4.6,
-      "ratingsCount": 21000,
-      "hours": 12,
-      "difficulty": "Intermediate",
-      "type": "online",
-      "price": 129,
-      "image": "/public/communication-skills.svg",
-      "features": [
-        "Develop effective verbal and non-verbal communication techniques.",
-        "Improve active listening and empathy.",
-        "Build rapport and resolve conflicts in diverse settings."
-      ]
     }
   ]
 }

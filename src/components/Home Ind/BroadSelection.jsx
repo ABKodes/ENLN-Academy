@@ -1,36 +1,35 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import VerticalCard from "../Reusable Components/VerticalCard";
 const BroadSelection = () => {
-    const [position, setPosition] = useState(0);
+  const [position, setPosition] = useState(0);
 
-    const handlePreviousClick = () => {
-      if (position > 0) {
-        setPosition(position - 1);
+  const handlePreviousClick = () => {
+    if (position > 0) {
+      setPosition(position - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (position < 6) {
+      setPosition(position + 1);
+    }
+  };
+
+  useEffect(() => {
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach((item, index) => {
+      if (index === position) {
+        item.classList.add("active");
+      } else {
+        item.classList.remove("active");
       }
-    };
+    });
+  }, [position]);
 
-    const handleNextClick = () => {
-      if (position < 6) {
-        setPosition(position + 1);
-      }
-    };
-
-    useEffect(() => {
-      const navItems = document.querySelectorAll(".nav-item");
-      navItems.forEach((item, index) => {
-        if (index === position) {
-          item.classList.add("active");
-        } else {
-          item.classList.remove("active");
-        }
-      });
-    }, [position]);
-  
   const [activeTab, setActiveTab] = useState("tab1");
   const underlineControls = useAnimation();
-  
 
   const tabs = [
     {
@@ -119,7 +118,7 @@ const BroadSelection = () => {
         />
       </ul>
 
-      <div className="mt-4 h-[77vh] lg:min-h-[77vh] lg:max-h-screen border border-secondary p-4">
+      <div className="mt-4 h-[77vh] border border-secondary p-4 lg:max-h-screen lg:min-h-[77vh]">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (
@@ -136,16 +135,13 @@ const BroadSelection = () => {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className="buttontext btn btn-outline btn-primary px-10 my-5"
+                    className="buttontext btn btn-outline btn-primary my-5 px-10"
                   >
                     Explore
                   </motion.a>
                 </Link>
                 <div className="flex space-x-2">
-                <VerticalCard />
-                <VerticalCard />
-                <VerticalCard />
-                <VerticalCard />
+                  <VerticalCard />
                 </div>
               </motion.div>
             ),

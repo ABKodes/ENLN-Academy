@@ -8,17 +8,17 @@ import WhatYouLearn from "../components/Course Description/WhatYouLearn";
 import RatingCard from "../components/Reusable Components/Rating Card";
 function CourseDescription() {
   return (
-    <div >
+    <div>
       <CourseHero />
       <div className="mx-auto flex h-auto w-full">
         <WhatYouLearn />
       </div>
       <div className="px-2 sm:px-4 md:px-6 lg:px-8">
-      <CourseContent />
+        <CourseContent />
         {/* <CourseSidebar /> */}
-      <CourseDetail />
-      <Instructor />
-      <RatingCard />
+        <CourseDetail />
+        <Instructor />
+        <RatingCard />
       </div>
     </div>
   );

@@ -116,7 +116,7 @@ function Header() {
                 </svg>
               </button>
             </div>
-            <div className="lg:block">
+            <div className="hidden lg:block">
               <div
                 className="dropdown relative inline-block"
                 onMouseEnter={() => setIsOpen(true)}
@@ -265,7 +265,7 @@ function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="navbar-menu fixed inset-0 z-50 bg-gray-800 bg-opacity-25"
+            className="navbar-menu cursor-pointer inset-0  fixed z-50 bg-gray-800 bg-opacity-25"
             onClick={closeMenu}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -280,7 +280,7 @@ function Header() {
               </button>
             </div>
             <motion.nav
-              className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6"
+              className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6 cursor-default"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
@@ -288,70 +288,77 @@ function Header() {
               <div>
                 <ul>
                   <li className="mb-1">
-                    <a
+                    <Link
+                      to="/individualhomepage"
                       className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li className="mb-1">
                     <a
                       className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
-                      Parent
+                      Categories
                     </a>
                     <ul className="p-2">
                       <li>
-                        <a
+                        <Link
+                          to="/categories"
                           className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
-                          Submenu 1
-                        </a>
+                          Nutrition Leadership
+                        </Link>
                       </li>
                       <li>
-                        <a
+                        <Link
+                          to="/categories"
                           className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
-                          Submenu 2
-                        </a>
+                          Evidence to Policy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/categories"
+                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          href="#"
+                        >
+                          Communication
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/categories"
+                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          href="#"
+                        >
+                          Advocacy
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/categories"
+                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          href="#"
+                        >
+                          Nutrition Courses
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="mb-1">
-                    <a
+                    <Link
+                      to="/addtocart"
                       className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
-                      About Us
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
-                      href="#"
-                    >
-                      Services
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
-                      href="#"
-                    >
-                      Pricing
-                    </a>
-                  </li>
-                  <li className="mb-1">
-                    <a
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
-                      href="#"
-                    >
-                      Contact
-                    </a>
+                      Add to Cart
+                    </Link>
                   </li>
                 </ul>
               </div>

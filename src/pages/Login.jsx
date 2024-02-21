@@ -8,29 +8,33 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { GoogleLogin } from "@react-oauth/google";
 import { GoogleOAuthProvider } from "@react-oauth/google";
-import { jwtDecode } from "jwt-decode";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import { LoginSocialFacebook } from "reactjs-social-login";
+import { FacebookLoginButton } from "react-social-login-buttons";
 
 const Login = () => {
   const [email, emailupdate] = useState("");
   const [password, passwordupdate] = useState("");
-  const [googleProfile,setgoogleProfile]=useState("");
-const login = useGoogleLogin({
-  onSuccess: async(response) =>{
-    try{
-      const res=await axios.get("https://www.googleapis.com/oauth2/v3/userinfo",
-      {
-        headers:{Authorization:`Bearer ${response.access_token}`,},
-      });
-      console.log(res);
-      setgoogleProfile(res.data);
-    }
-    catch(err){
-      console.log(err);
-    }
-  },
-});
+  const [googleProfile, setgoogleProfile] = useState("");
+  const [result, setResult] = useState({});
+  const [p, setp] = useState("");
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: { Authorization: `Bearer ${response.access_token}` },
+          },
+        );
+        console.log(res);
+        setgoogleProfile(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    },
+  });
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -42,14 +46,17 @@ const login = useGoogleLogin({
     if (validate()) {
       fetch(`http://localhost:3001/users?email=${email}`)
         .then((res) => {
-          console.log(res); // Log the entire response
+          console.log("res : ", res); // Log the entire response
+          
           if (!res.ok) {
             throw new Error(`HTTP error! Status: ${res.status}`);
           }
           return res.json(); // Parse the JSON data
         })
         .then((users) => {
-          console.log(users); // Log the parsed JSON data
+          console.log("users", users);
+          setResult(users);
+          console.log("result", result); // Log the parsed JSON data
           if (users.length === 0) {
             toast.error("User not found");
           } else {
@@ -72,11 +79,11 @@ const login = useGoogleLogin({
 
   const validate = () => {
     let result = true;
-   // if (email === "" || email === null)
-   if (!(googleProfile.email || email)) {
-     result = false;
-     toast.warning("Please Enter email");
-   }
+    // if (email === "" || email === null)
+    if (!(p.email || googleProfile.email || email)) {
+      result = false;
+      toast.warning("Please Enter email");
+    }
     if (password === "" || password === null) {
       result = false;
       toast.warning("Please Enter Password");
@@ -111,12 +118,16 @@ const login = useGoogleLogin({
                 <input
                   type="email"
                   id="email"
-                  value={googleProfile ? googleProfile.email : email}
+                  value={
+                    p ? p.email : googleProfile ? googleProfile.email : email
+                  }
                   onChange={(e) =>
                     emailupdate(
-                      googleProfile
-                        ? googleProfile.email
-                        : e.target.value,
+                      p
+                        ? p.email
+                        : googleProfile
+                          ? googleProfile.email
+                          : e.target.value,
                     )
                   }
                   className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600  lg:min-w-[300px]"
@@ -173,26 +184,27 @@ const login = useGoogleLogin({
                     Continue With Google
                   </p>
                 </div>
-                <div className="flex min-w-[300px] flex-row items-center justify-start rounded border-2 border-gray-100 bg-white px-2 py-2">
-                  <img
-                    src={linkedin}
-                    alt="Google login"
-                    className="h-[25px] w-[25px]"
-                  />
-                  <p className="amib pl-4 text-base font-bold text-black">
-                    Continue With LinkedIn
-                  </p>
-                </div>
-                <div className="flex min-w-[300px] flex-row items-center justify-start rounded border-2 border-gray-100 bg-white px-2 py-2">
-                  <img
-                    src={facebook}
-                    alt="Google login"
-                    className="h-[25px] w-[25px]"
-                  />
-                  <p className="amib pl-4 text-base font-bold text-black">
-                    Continue With Facebook
-                  </p>
-                </div>
+                <LoginSocialFacebook
+                  appId="2067050553674632"
+                  onResolve={(response) => {
+                    console.log(response);
+                    setp(response.data);
+                  }}
+                  onReject={(error) => {
+                    console.log(error);
+                  }}
+                >
+                  <div className="flex min-w-[300px] flex-row items-center justify-start rounded border-2 border-gray-100 bg-white px-2 py-2">
+                    <img
+                      src={facebook}
+                      alt="Google login"
+                      className="h-[25px] w-[25px]"
+                    />
+                    <p className="amib pl-4 text-base font-bold text-black">
+                      Continue With Facebook
+                    </p>
+                  </div>
+                </LoginSocialFacebook>
               </div>
               <div className="amir mt-3 flex w-full justify-start gap-1 pl-4  text-base lg:pl-10">
                 <p>Don&apos; have an account? </p>

@@ -43,7 +43,7 @@ function WhatYouLearn() {
 
   return (
     <div className="flex justify-center items-center lg:gap-20 gap-10 flex-wrap py-10">
-      <div className={`relative w-7/12 border border-secondary p-5 min-h-[500px]`}>
+      <div className={`relative w-7/12 border border-secondary p-5 min-h-[510px]`}>
         <h1 className="heading">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
@@ -73,7 +73,7 @@ function WhatYouLearn() {
             >
               {/* Show all items */}
               {listItems.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="text-gray-700 amir text-start">{item}</li>
               ))}
             </motion.div>
           )}

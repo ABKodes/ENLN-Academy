@@ -12,8 +12,8 @@ function CourseDetail() {
   };
 
   return (
-    <div className="mx-auto w-11/12">
-      <div className="w-7/12">
+    <div className="mx-auto w-full lg:w-11/12">
+      <div className="w-full lg:w-7/12">
         <p className="heading">Requirements</p>
         <p className={`text py-5 ${showFullText ? "block text-gray-700 amir text-start" : "truncate text-gray-700 amir text-start"}`}>
           {longText}

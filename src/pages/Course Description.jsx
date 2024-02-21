@@ -10,7 +10,7 @@ function CourseDescription() {
   return (
     <div>
       <CourseHero />
-      <div className="mx-auto flex h-auto w-11/12">
+      <div className="mx-auto flex h-auto w-full">
         <WhatYouLearn />
       </div>
         <CourseSidebar />

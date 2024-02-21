@@ -5,10 +5,10 @@ import CourseInstructor from "/public/course instructor.avif";
 function RatingCard() {
   return (
     <>
-      <div className="w-7/12">
+      <div className="w-7/12 px-4  md:px-10 lg:px-12">
         {/* Title */}
         <div className="">
-          <h2 className="heading md:leading-tight">Rating</h2>
+          <h2 className="heading py-5 md:leading-tight">Rating</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col rounded-xl border border-gray-200 bg-white p-4  md:p-6">

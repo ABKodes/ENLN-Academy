@@ -42,8 +42,8 @@ function WhatYouLearn() {
   const shownItems = isTruncated ? listItems.slice(0, 5) : listItems;
 
   return (
-    <>
-      <div className={`relative w-7/12 border border-secondary p-5`}>
+    <div className="flex justify-center items-center lg:gap-20 gap-10 flex-wrap py-10">
+      <div className={`relative w-7/12 border border-secondary p-5 min-h-[500px]`}>
         <h1 className="heading">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
@@ -256,7 +256,7 @@ function WhatYouLearn() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -6,13 +6,31 @@ import facebook from "../assets/facebook.png";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-
-//141767307403-44gbgtuadhp7mcnodvv453mpr6msss4g.apps.googleusercontent.com
+import { GoogleLogin } from "@react-oauth/google";
+import { GoogleOAuthProvider } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
 
 const Login = () => {
   const [email, emailupdate] = useState("");
   const [password, passwordupdate] = useState("");
-
+  const [googleProfile,setgoogleProfile]=useState("");
+const login = useGoogleLogin({
+  onSuccess: async(response) =>{
+    try{
+      const res=await axios.get("https://www.googleapis.com/oauth2/v3/userinfo",
+      {
+        headers:{Authorization:`Bearer ${response.access_token}`,},
+      });
+      console.log(res);
+      setgoogleProfile(res.data);
+    }
+    catch(err){
+      console.log(err);
+    }
+  },
+});
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -54,10 +72,11 @@ const Login = () => {
 
   const validate = () => {
     let result = true;
-    if (email === "" || email === null) {
-      result = false;
-      toast.warning("Please Enter email");
-    }
+   // if (email === "" || email === null)
+   if (!(googleProfile.email || email)) {
+     result = false;
+     toast.warning("Please Enter email");
+   }
     if (password === "" || password === null) {
       result = false;
       toast.warning("Please Enter Password");
@@ -92,9 +111,15 @@ const Login = () => {
                 <input
                   type="email"
                   id="email"
-                  value={email}
-                  onChange={(e) => emailupdate(e.target.value)}
-                  className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white  lg:min-w-[300px]"
+                  value={googleProfile ? googleProfile.email : email}
+                  onChange={(e) =>
+                    emailupdate(
+                      googleProfile
+                        ? googleProfile.email
+                        : e.target.value,
+                    )
+                  }
+                  className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600  lg:min-w-[300px]"
                   placeholder=" "
                 />
                 <label
@@ -111,7 +136,7 @@ const Login = () => {
                     id="password"
                     value={password}
                     onChange={(e) => passwordupdate(e.target.value)}
-                    className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white lg:min-w-[300px]"
+                    className="border-1 peer block w-full appearance-none rounded-lg border-gray-300 bg-transparent px-2.5 pb-2.5 pt-4 text-sm text-gray-900 focus:border-primary focus:outline-none focus:ring-0 dark:border-gray-600 lg:min-w-[300px]"
                     placeholder=" "
                   />
                   <label
@@ -135,7 +160,10 @@ const Login = () => {
               </button>{" "}
               <p className="amir py-3 text-center text-2xl font-normal">OR</p>
               <div className="flex flex-col gap-2">
-                <div className="flex min-w-[300px] flex-row items-center justify-start rounded border-2 border-gray-100 bg-white px-2 py-2">
+                <div
+                  className="flex min-w-[300px] flex-row items-center justify-start rounded border-2 border-gray-100 bg-white px-2 py-2"
+                  onClick={() => login()}
+                >
                   <img
                     src={google}
                     alt="Google login"

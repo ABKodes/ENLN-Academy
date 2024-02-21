@@ -99,7 +99,7 @@ function WhatYouLearn() {
           <div>
             <div className="flex items-center space-x-2 text-justify">
               <h5 className="text dark:text-gray-400">One time</h5>
-              <p className=" text badge badge-primary badge-outline uppercase">
+              <p className=" text border-2 border-primary rounded-full uppercase py-1 px-2">
                 virtual
               </p>
             </div>
@@ -232,8 +232,8 @@ function WhatYouLearn() {
             </span>
           </li>
         </ul>
-        <div className="space-y-5">
-          <Link to="/addtocart">
+        <div className="space-y-5 gap-10">
+          <Link to="/addtocart" className="pb-5">
             {" "}
             <motion.a
               whileHover={{ scale: 1.1 }}
@@ -244,7 +244,8 @@ function WhatYouLearn() {
               Add to Cart
             </motion.a>
           </Link>
-          <Link to="/checkout">
+          <div>
+          <Link to="/checkout" className="pt-10">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -254,6 +255,7 @@ function WhatYouLearn() {
               Buy Now
             </motion.a>
           </Link>
+          </div>
         </div>
       </div>
     </div>

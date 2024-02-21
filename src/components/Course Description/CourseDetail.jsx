@@ -15,7 +15,7 @@ function CourseDetail() {
     <div className="mx-auto w-11/12">
       <div className="w-7/12">
         <p className="heading">Requirements</p>
-        <p className={`text py-5 ${showFullText ? "block" : "truncate"}`}>
+        <p className={`text py-5 ${showFullText ? "block text-gray-700 amir text-start" : "truncate text-gray-700 amir text-start"}`}>
           {longText}
         </p>
         {showFullText ? (
@@ -33,11 +33,11 @@ function CourseDetail() {
       >
         {showFullText ? (
           <div className="flex items-center text-justify">
-            Show More <MdKeyboardArrowDown />
+            Show Less <MdKeyboardArrowUp />
           </div>
         ) : (
           <div className="flex items-center text-justify">
-            Show Less <MdKeyboardArrowUp />
+            Show More <MdKeyboardArrowDown />
           </div>
         )}
         <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 transform bg-primary underline transition-transform group-hover:scale-x-100"></span>

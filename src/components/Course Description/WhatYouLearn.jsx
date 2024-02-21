@@ -42,8 +42,10 @@ function WhatYouLearn() {
   const shownItems = isTruncated ? listItems.slice(0, 5) : listItems;
 
   return (
-    <div className="flex justify-center items-center lg:gap-20 gap-10 flex-wrap py-10">
-      <div className={`relative w-7/12 border border-secondary p-5 min-h-[510px]`}>
+    <div className="flex flex-col items-center justify-center gap-10 py-10 md:flex-row md:flex-wrap lg:gap-20">
+      <div
+        className={`relative mx-2 min-h-[510px] w-full border border-secondary p-5 md:w-7/12`}
+      >
         <h1 className="heading">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
@@ -56,7 +58,9 @@ function WhatYouLearn() {
               className="list-disc columns-2 gap-10 text-left"
             >
               {listItems.slice(0, 6).map((item, index) => (
-                <li key={index} className="text-gray-700 amir text-start">{item}</li>
+                <li key={index} className="amir text-start text-gray-700">
+                  {item}
+                </li>
               ))}
             </motion.div>
           )}
@@ -72,7 +76,9 @@ function WhatYouLearn() {
             >
               {/* Show all items */}
               {listItems.map((item, index) => (
-                <li key={index} className="text-gray-700 amir text-start">{item}</li>
+                <li key={index} className="amir text-start text-gray-700">
+                  {item}
+                </li>
               ))}
             </motion.div>
           )}
@@ -92,13 +98,13 @@ function WhatYouLearn() {
           )}
         </button>
       </div>
-      <div className=" w-3/12 rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block">
+      <div className="mx-3 w-full rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block lg:w-3/12">
         <div className="flex items-center space-x-2">
           <img src={Money} className="h-20 w-20" />
           <div>
             <div className="flex items-center space-x-2 text-justify">
               <h5 className="text dark:text-gray-400">One time</h5>
-              <p className=" text border-2 border-primary rounded-full uppercase py-1 px-2">
+              <p className=" text rounded-full border-2 border-primary px-2 py-1 uppercase">
                 virtual
               </p>
             </div>
@@ -231,7 +237,7 @@ function WhatYouLearn() {
             </span>
           </li>
         </ul>
-        <div className="space-y-5 gap-10">
+        <div className="gap-10 space-y-5">
           <Link to="/addtocart" className="pb-5">
             {" "}
             <motion.a
@@ -244,16 +250,16 @@ function WhatYouLearn() {
             </motion.a>
           </Link>
           <div>
-          <Link to="/checkout" className="pt-10">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="buttontext btn btn-outline btn-primary flex lg:items-center"
-            >
-              Buy Now
-            </motion.a>
-          </Link>
+            <Link to="/checkout" className="pt-10">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="buttontext btn btn-outline btn-primary flex lg:items-center"
+              >
+                Buy Now
+              </motion.a>
+            </Link>
           </div>
         </div>
       </div>

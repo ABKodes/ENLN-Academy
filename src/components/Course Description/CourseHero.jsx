@@ -16,13 +16,13 @@ function CourseHero(){
               <p className="smalltext max-w-2xl font-light text-gray-500 dark:text-primary md:text-lg lg:text-xl">
                 {course.description}
               </p>
-              <div className="flex items-center space-x-1 py-2">
-                <div className="flex items-center">
+              <div className="flex flex-wrap items-center space-x-1 py-2">
+                <div className="flex flex-wrap items-center">
                   <p className="text ms-1 pt-1 font-semibold dark:text-primary">
                     {course.rating}
                   </p>
                 </div>
-                <div className="flex items-center">
+                <div className="flex flex-wrap items-center">
                   {[...Array(Math.floor(course.rating))].map((_, index) => (
                     <svg
                       key={index}
@@ -36,7 +36,7 @@ function CourseHero(){
                     </svg>
                   ))}
                 </div>
-                <div className="flex items-center space-x-1">
+                <div className="flex flex-wrap items-center space-x-1">
                   <p className="text pt-1 font-medium dark:text-primary">
                     {course.ratingsCount}
                   </p>
@@ -65,7 +65,7 @@ function CourseHero(){
                 </Link>
               </div>
               <span href="#" className="heading mr-2">
-                 {course.price} ETB
+                {course.price} ETB
               </span>
               <Link to="addtocart">
                 {" "}

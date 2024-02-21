@@ -13,7 +13,7 @@ function CourseDescription() {
       <div className="mx-auto flex h-auto w-full">
         <WhatYouLearn />
       </div>
-        <CourseSidebar />
+        {/* <CourseSidebar /> */}
       <CourseDetail />
       <Instructor />
       <CourseContent />

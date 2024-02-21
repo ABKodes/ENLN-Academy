@@ -45,7 +45,7 @@ const CourseLine = () => {
         ))}
       </div>
       <div className='col-span-1 lg:col-span-3 bg-white border-gray-100 shadow-xl border-2 rounded min-h-screen text-black p-5'>
-        <p className='mt-4 amir font-semibold'>Home &gt; Nutrition Leadership &gt; Introduction</p>
+        <p className='mt-4 amir font-semibold text-gray-700'>Home &gt; Nutrition Leadership &gt; Introduction</p>
         {blog
           .filter(item => item.id === selectedItemId) 
           .map((selectedItem, index) => (

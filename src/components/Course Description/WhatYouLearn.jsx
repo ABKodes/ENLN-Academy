@@ -55,9 +55,8 @@ function WhatYouLearn() {
               transition={{ duration: 0.5 }}
               className="list-disc columns-2 gap-10 text-left"
             >
-              {/* Only show the first 5 items */}
               {listItems.slice(0, 6).map((item, index) => (
-                <li key={index}>{item}</li>
+                <li key={index} className="text-gray-700 amir text-start">{item}</li>
               ))}
             </motion.div>
           )}

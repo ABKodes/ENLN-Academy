@@ -5,7 +5,7 @@ import CourseInstructor from "/public/course instructor.avif"
 import { Link } from "react-router-dom";
 function Instructor() {
   return (
-    <div className=" flex w-7/12 flex-col rounded-xl  bg-white p-4  md:p-6">
+    <div className=" flex w-7/12 flex-col rounded-xl  bg-white p-4  md:p-10 lg:px-12">
       <div className="flex items-center gap-x-4">
         <Link to="/instructor">
           <img

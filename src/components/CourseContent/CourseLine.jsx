@@ -153,14 +153,16 @@ const CourseLine = () => {
               <div>
                 {blog[selectedItemIndex].quiz_questions.map((question, idx) => (
                   <div key={idx} className="text-black">
-                    <h3>{question.question}</h3>
+                    <h3 className="py-3 text-[18px] font-semibold text-gray-700">
+                      {question.question}
+                    </h3>
                     <div className="flex flex-col">
                       {question.choices.map((choice, cIdx) => (
                         <label
                           key={cIdx}
                           className={`mb-2 flex items-center ${renderChoiceStyle(
                             idx,
-                            cIdx
+                            cIdx,
                           )}`}
                         >
                           <input
@@ -188,8 +190,8 @@ const CourseLine = () => {
                   <p
                     className={`mt-4 w-full  rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
                       quizResult >= 50
-                        ? "bg-green-200 max-w-[230px]"
-                        : "bg-red-200 max-w-[200px]"
+                        ? "max-w-[230px] bg-green-200"
+                        : "max-w-[200px] bg-red-200"
                     }`}
                   >
                     Your result: {quizResult}%

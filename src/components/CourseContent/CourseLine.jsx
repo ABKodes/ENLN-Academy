@@ -35,7 +35,7 @@ const CourseLine = () => {
         {blog.map((item, index) => (
           <div key={index} className='text-black cursor-pointer px-2 md:px-6 pt-8 justify-center' onClick={() => setSelectedItemId(item.id)}>
             <div className='flex justify-start items-start gap-3'>
-              <img src={item.icon} alt={item.title} className='w-[20px] h-[20px] rounded-xl'/>
+              <img src={item.icon} alt={item.title} className='w-[25px] h-[25px] rounded-xl'/>
               <div>
                 <h1 className='amir text-[17px] amir'>{item.title}</h1>
                 <p className='amir text-[16px] text-gray-500 mt-1'>{item.min}</p>

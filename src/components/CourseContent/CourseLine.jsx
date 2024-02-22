@@ -152,7 +152,10 @@ const CourseLine = () => {
             {blog[selectedItemIndex].content_type === "quiz" && (
               <div>
                 {blog[selectedItemIndex].quiz_questions.map((question, idx) => (
-                  <div key={idx} className="text-black">
+                  <div
+                    key={idx}
+                    className="flex flex-col px-2 text-black sm:px-4 md:px-8"
+                  >
                     <h3 className="py-3 text-[18px] font-semibold text-gray-700">
                       {question.question}
                     </h3>
@@ -160,7 +163,7 @@ const CourseLine = () => {
                       {question.choices.map((choice, cIdx) => (
                         <label
                           key={cIdx}
-                          className={`mb-2 flex items-center ${renderChoiceStyle(
+                          className={`mb-2 flex items-center px-2 py-1 text-[16px] font-medium text-gray-600 md:px-6 ${renderChoiceStyle(
                             idx,
                             cIdx,
                           )}`}

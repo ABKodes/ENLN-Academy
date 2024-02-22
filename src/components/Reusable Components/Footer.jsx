@@ -20,8 +20,8 @@ const Footer = () => {
 
   return (
     <div className="min-h-[40vh] bg-[#001014]">
-      <div className="grid grid-cols-1 px-2 py-5 pt-10 text-[#B3CBD0] sm:px-4 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-20">
-        <div className="flex flex-col items-start justify-start gap-4">
+      <div className="grid grid-cols-1 items-center justify-center gap-10 px-2 py-10  pt-10 text-[#B3CBD0] sm:px-4 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-20">
+        <div className="flex flex-col items-center justify-center gap-4 lg:items-start lg:justify-start">
           <p className="amib py-3 text-center text-[16px] font-semibold md:text-[18px] lg:text-[20px] xl:text-[24px] xl:font-light">
             CONTACT US
           </p>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 lg:items-start lg:justify-start">
           <p className="amib py-3 text-center text-[16px] font-semibold md:text-[18px] lg:text-[20px] xl:text-[24px] xl:font-light">
             OUR INFORMATION
           </p>
@@ -67,7 +67,7 @@ const Footer = () => {
             TERMS AND CONDITIONS
           </p>
         </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 lg:items-start lg:justify-start">
           <p className="amib py-3 text-center text-[16px] font-semibold md:text-[18px] lg:text-[20px] xl:text-[24px] xl:font-light">
             CATAGORIES
           </p>
@@ -81,7 +81,7 @@ const Footer = () => {
             FOR UNIVERSITY
           </p>
         </div>
-        <div className="flex flex-col items-start justify-start gap-4">
+        <div className="flex flex-col justify-center justify-center gap-4 lg:items-start lg:justify-start">
           <p className="amib ml-3 py-3 text-center text-[16px] font-semibold md:text-[18px] lg:text-[20px] xl:text-[24px] xl:font-light">
             FOLLOW US
           </p>
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mx-2 flex items-center justify-between border-t-4 border-[#B3CBD0] sm:mx-4 md:mx-12 lg:mx-20">
+      <div className="mx-2 flex flex-wrap items-center justify-center border-t-4 border-[#B3CBD0] pb-10 sm:mx-4 md:mx-12 md:justify-between md:pb-3 lg:mx-20">
         <div>
           <img src={logos} alt="logo" className="h-[105px] w-[101px]" />
         </div>

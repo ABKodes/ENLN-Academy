@@ -147,30 +147,20 @@ const CourseLine = () => {
               ></iframe>
             )}
             {blog[selectedItemIndex].content_type === "text" && (
-              <div
-                className="amir text-gray-600"
-                dangerouslySetInnerHTML={{
-                  __html: blog[selectedItemIndex].text_content,
-                }}
-              ></div>
+              <p>{blog[selectedItemIndex].text_content}</p>
             )}
             {blog[selectedItemIndex].content_type === "quiz" && (
               <div>
                 {blog[selectedItemIndex].quiz_questions.map((question, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col px-2 text-black sm:px-4 md:px-8"
-                  >
-                    <h3 className="py-3 text-[18px] font-semibold text-gray-700">
-                      {question.question}
-                    </h3>
+                  <div key={idx} className="text-black">
+                    <h3>{question.question}</h3>
                     <div className="flex flex-col">
                       {question.choices.map((choice, cIdx) => (
                         <label
                           key={cIdx}
-                          className={`mb-2 flex items-center px-2 py-1 text-[16px] font-medium text-gray-600 md:px-6 ${renderChoiceStyle(
+                          className={`mb-2 flex items-center ${renderChoiceStyle(
                             idx,
-                            cIdx,
+                            cIdx
                           )}`}
                         >
                           <input
@@ -196,10 +186,10 @@ const CourseLine = () => {
                 </button>
                 {showResult && (
                   <p
-                    className={`mt-4 w-full  rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
+                    className={`mt-4 w-full rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
                       quizResult >= 50
-                        ? "max-w-[230px] bg-green-200"
-                        : "max-w-[200px] bg-red-200"
+                        ? "bg-green-200 max-w-[230px]"
+                        : "bg-red-200 max-w-[200px]"
                     }`}
                   >
                     Your result: {quizResult}%
@@ -216,13 +206,21 @@ const CourseLine = () => {
                 onClick={handlePrevItem}
                 className="rounded-xl bg-green-500 px-16 py-2 text-white"
               >
-                Prev
+                Lesson {selectedItemIndex}
+                <br />
+                {selectedItemIndex > 0 && (
+                  <span>{blog[selectedItemIndex - 1].title}</span>
+                )}
               </button>
               <button
                 onClick={handleNextItem}
                 className="rounded-xl bg-green-500 px-16 py-2 text-white"
               >
-                Next
+                Lesson {selectedItemIndex + 2}
+                <br />
+                {selectedItemIndex < blog.length - 1 && (
+                  <span>{blog[selectedItemIndex + 1].title}</span>
+                )}
               </button>
             </div>
           </div>

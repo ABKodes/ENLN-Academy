@@ -272,18 +272,30 @@ const CourseLine = () => {
                   </p>
                   <br />
                   <p className="amir px-2 text-[16px] font-medium text-gray-600 md:px-6 ">
-                    {/* Your description content */}
+                    Your description content
                   </p>
                 </div>
               </div>
               <div style={{ display: element === 2 ? "block" : "none" }}>
-                <p>Q&A Detail</p>
+                <div className="flex flex-col items-center justify-center ">
+                  <p className="amir px-2 text-[16px] font-medium text-gray-600 md:px-6 ">
+                    Q&A Detail
+                  </p>
+                </div>
               </div>
               <div style={{ display: element === 3 ? "block" : "none" }}>
-                <p>Comments Detail</p>
+                <div className="flex flex-col items-center justify-center ">
+                  <p className="amir px-2 text-[16px] font-medium text-gray-600 md:px-6 ">
+                    Comments Detail
+                  </p>
+                </div>
               </div>
               <div style={{ display: element === 4 ? "block" : "none" }}>
-                <p>Resource Detail</p>
+                <div className="flex flex-col items-center justify-center ">
+                  <p className="amir px-2 text-[16px] font-medium text-gray-600 md:px-6 ">
+                    Resource Detail
+                  </p>
+                </div>
               </div>
             </div>
           </div>

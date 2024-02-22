@@ -210,12 +210,12 @@ const CourseLine = () => {
           </div>
         )}
         <div>
-          <div className="my-10 w-full bg-[#B3CBD0]">
-            <div className="mx-0 my-5 flex w-full items-center justify-between gap-2 bg-white px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
+          <div className="my-10 w-screen bg-[#B3CBD0] md:w-full">
+            <div className="mx-0 my-5 flex w-full flex-col flex-wrap items-center justify-between gap-3 bg-white px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
               {selectedItemIndex > 0 && (
                 <button
                   onClick={handlePrevItem}
-                  className="flex items-center  justify-end rounded-xl bg-white px-16 py-2 font-semibold text-gray-600"
+                  className="flex items-center  justify-start rounded-xl bg-white px-16 py-2 font-semibold text-gray-600"
                 >
                   <FaArrowLeft className="mr-3 text-slate-800" size={30} />
                   <div className="flex flex-col items-start justify-start">
@@ -223,7 +223,7 @@ const CourseLine = () => {
                       {" "}
                       Lesson {selectedItemIndex}
                     </p>
-                    <p className="amir text-lg">
+                    <p className="amir items-start justify-start text-lg">
                       {blog[selectedItemIndex - 1].title}
                     </p>
                   </div>
@@ -248,7 +248,7 @@ const CourseLine = () => {
             </div>
           </div>
           <div>
-            <div className="mt-10 flex flex-col flex-wrap gap-5 items-center justify-center lg:gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:flex-row md:px-10 lg:justify-between lg:px-20">
+            <div className="mt-10 flex flex-col flex-wrap items-center justify-center gap-5 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:flex-row md:px-10 lg:justify-between lg:gap-2 lg:px-20">
               <p
                 onClick={() => handleElement(1)}
                 className={

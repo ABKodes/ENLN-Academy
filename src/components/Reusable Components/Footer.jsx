@@ -33,7 +33,7 @@ const Footer = () => {
               />
             </div>
             <div>
-              <p className="border-[#B3CBD0] font-normal duration-500 ease-in hover:border-b-[1px]">
+              <p className="border-[#B3CBD0] pt-1 text-[14px] font-normal duration-500 ease-in hover:border-b-[1px]">
                 +2519781684
               </p>
               <p className="border-[#B3CBD0] pt-1 text-[14px] font-normal duration-500 ease-in hover:border-b-[1px]">

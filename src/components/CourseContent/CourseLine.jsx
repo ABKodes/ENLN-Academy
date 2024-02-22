@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import blog from "../../data/data.json";
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const convertToEmbeddedURL = (inputUrl) => {
   const parts = inputUrl.split("/");
@@ -35,7 +37,7 @@ const CourseLine = () => {
     const selectedAnswerIndex = selectedAnswers[questionIndex];
     const question = blog[selectedItemIndex].quiz_questions[questionIndex];
     const correctAnswerIndex = question.choices.indexOf(
-      question.correct_answer
+      question.correct_answer,
     );
     if (
       selectedAnswerIndex !== undefined &&
@@ -54,7 +56,7 @@ const CourseLine = () => {
       const question = questions[i];
       const selectedAnswerIndex = selectedAnswers[i];
       const correctAnswerIndex = question.choices.indexOf(
-        question.correct_answer
+        question.correct_answer,
       );
       if (
         selectedAnswerIndex !== undefined &&
@@ -147,7 +149,12 @@ const CourseLine = () => {
               ></iframe>
             )}
             {blog[selectedItemIndex].content_type === "text" && (
-              <p>{blog[selectedItemIndex].text_content}</p>
+              <div
+                className="amir text-gray-600"
+                dangerouslySetInnerHTML={{
+                  __html: blog[selectedItemIndex].text_content,
+                }}
+              ></div>
             )}
             {blog[selectedItemIndex].content_type === "quiz" && (
               <div>
@@ -160,7 +167,7 @@ const CourseLine = () => {
                           key={cIdx}
                           className={`mb-2 flex items-center ${renderChoiceStyle(
                             idx,
-                            cIdx
+                            cIdx,
                           )}`}
                         >
                           <input
@@ -178,50 +185,48 @@ const CourseLine = () => {
                     </div>
                   </div>
                 ))}
-                <button
-                  onClick={handleSubmitQuiz}
-                  className="amir mt-6 rounded-xl bg-green-500 px-10 py-2 font-semibold text-white"
-                >
-                  Submit Answer
-                </button>
-                {showResult && (
-                  <p
-                    className={`mt-4 w-full rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
-                      quizResult >= 50
-                        ? "bg-green-200 max-w-[230px]"
-                        : "bg-red-200 max-w-[200px]"
-                    }`}
-                  >
-                    Your result: {quizResult}%
-                  </p>
-                )}
+                <button onClick={handleSubmitQuiz}>Submit Answer</button>
+                {showResult && <p>Your result: {quizResult}%</p>}
               </div>
             )}
           </div>
         )}
         <div>
           <div className="my-10 w-full bg-[#B3CBD0]">
-            <div className="mx-0 my-5 flex w-full items-center justify-between gap-2 border-2 border-gray-200 bg-[#ffffdf] px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
-              <button
-                onClick={handlePrevItem}
-                className="rounded-xl bg-green-500 px-16 py-2 text-white"
-              >
-                Lesson {selectedItemIndex}
-                <br />
-                {selectedItemIndex > 0 && (
-                  <span>{blog[selectedItemIndex - 1].title}</span>
-                )}
-              </button>
-              <button
-                onClick={handleNextItem}
-                className="rounded-xl bg-green-500 px-16 py-2 text-white"
-              >
-                Lesson {selectedItemIndex + 2}
-                <br />
-                {selectedItemIndex < blog.length - 1 && (
-                  <span>{blog[selectedItemIndex + 1].title}</span>
-                )}
-              </button>
+            <div className="mx-0 my-5 flex w-full items-center justify-between gap-2 border-2 border-gray-200 bg-[#fff] px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
+              {selectedItemIndex > 0 && (
+                <button
+                  onClick={handlePrevItem}
+                  className="flex items-center  justify-end rounded-xl bg-white px-16 py-2 font-semibold text-gray-600"
+                >
+                  <FaArrowLeft className="mr-3 text-slate-800" size={30} />
+                  <div className="flex flex-col items-start justify-start">
+                    <p className="amir font-normal">
+                      {" "}
+                      Lesson {selectedItemIndex}
+                    </p>
+                    <p className="amir text-lg">
+                      {blog[selectedItemIndex - 1].title}
+                    </p>
+                  </div>
+                </button>
+              )}
+              {selectedItemIndex < blog.length - 1 && (
+                <button
+                  onClick={handleNextItem}
+                  className="flex items-center  justify-end rounded-xl bg-white px-16 py-2 font-semibold text-gray-600"
+                >
+                  <div className="flex flex-col items-end justify-end">
+                    <p className="amir font-normal">
+                      Lesson {selectedItemIndex + 2}
+                    </p>
+                    <p className="amir text-lg">
+                      {blog[selectedItemIndex + 1].title}
+                    </p>
+                  </div>
+                  <FaArrowRight className="ml-3 text-slate-800" size={30} />
+                </button>
+              )}
             </div>
           </div>
           <div>

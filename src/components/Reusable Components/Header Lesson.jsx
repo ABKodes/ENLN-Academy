@@ -1,22 +1,42 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion , AnimatePresence} from "framer-motion";
+import { useState , useEffect} from "react";
 import { GoQuestion } from "react-icons/go";
 import HeaderLogo from "/public/header individual.png";
 import AvatarImage from "/public/AllRatingAvater.jpg";
 function HeaderLesson() {
   const [isClicked, setIsClicked] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for controlling mobile menu
+
+  useEffect(() => {
+    // Effect hook for controlling overflow of body when mobile menu is open
+    if (isMenuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    // Function to toggle mobile menu
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  const closeMenu = () => {
+    // Function to close mobile menu
+    setIsMenuOpen(false);
+  };
+
+  // const toggleMenu = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  // const closeMenu = () => {
+  //   setIsOpen(false);
+  // };
 
   const handleSearchBarClick = () => {
     setIsClicked(true);
@@ -43,7 +63,7 @@ function HeaderLesson() {
       <div className="navbar mx-auto w-11/12 ">
         <div className="navbar-start">
           {/* Mobile hamburger */}
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
@@ -107,8 +127,26 @@ function HeaderLesson() {
                 </li>
               </ul>
             </div>
-          </div>
-          {/* Logo */}
+          </div> */}
+          <nav className="relative mx-auto flex w-11/12  items-center justify-between px-4 py-2">
+            <div className="lg:hidden">
+              <button
+                className="navbar-burger flex items-center p-3 text-primary"
+                onClick={toggleMenu}
+              >
+                <svg
+                  className="block h-5 w-5 fill-current"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Mobile menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
+          </nav>
+
+          {/* Logo  */}
           <div className="mx-4 hidden lg:block">
             <img src={HeaderLogo} className="h-8" />
           </div>
@@ -328,10 +366,7 @@ function HeaderLesson() {
               className="avatar btn btn-circle btn-ghost"
             >
               <div className="w-10 rounded-full">
-                <img
-                  alt="Avatar"
-                  src={AvatarImage}
-                />
+                <img alt="Avatar" src={AvatarImage} />
               </div>
             </div>
             <ul
@@ -364,6 +399,7 @@ function HeaderLesson() {
         </div>
       </div>
     </div>
+    
   );
 }
 

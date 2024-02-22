@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PiPhonePlusThin } from "react-icons/pi";
 import { CiMail } from "react-icons/ci";
 import { FaFacebook } from "react-icons/fa";
@@ -9,6 +9,14 @@ import { FaTwitter } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 
 const Footer = () => {
+
+  const [currentYear, setCurrentYear] = useState('');
+
+  useEffect(() => {
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+  }, []);
+
   return (
     <div className="min-h-[40vh] bg-[#001014]">
       <div className="grid grid-cols-1 px-2 py-5 pt-10 text-[#B3CBD0] sm:px-4 md:grid-cols-2 md:px-12 lg:grid-cols-4 lg:px-20">

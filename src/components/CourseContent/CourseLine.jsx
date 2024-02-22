@@ -248,7 +248,7 @@ const CourseLine = () => {
             </div>
           </div>
           <div>
-            <div className="mt-10 flex items-center justify-between gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:px-10 lg:px-20">
+            <div className="mt-10 flex flex-col flex-wrap gap-5 items-center justify-center lg:gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:flex-row md:px-10 lg:justify-between lg:px-20">
               <p
                 onClick={() => handleElement(1)}
                 className={

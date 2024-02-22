@@ -147,7 +147,12 @@ const CourseLine = () => {
               ></iframe>
             )}
             {blog[selectedItemIndex].content_type === "text" && (
-              <p>{blog[selectedItemIndex].text_content}</p>
+              <div
+                className="amir text-gray-600"
+                dangerouslySetInnerHTML={{
+                  __html: blog[selectedItemIndex].text_content,
+                }}
+              ></div>
             )}
             {blog[selectedItemIndex].content_type === "quiz" && (
               <div>

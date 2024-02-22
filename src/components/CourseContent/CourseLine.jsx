@@ -8,7 +8,7 @@ const convertToEmbeddedURL = (inputUrl) => {
 };
 
 const CourseLine = () => {
-  const [selectedItemId, setSelectedItemId] = useState(1);
+  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [element, setElement] = useState(1);
   const [showResult, setShowResult] = useState(false);
@@ -21,7 +21,7 @@ const CourseLine = () => {
     setShowResult(false);
     setQuizResult(null);
     setSubmitted(false); // Reset submitted flag when item changes
-  }, [selectedItemId]);
+  }, [selectedItemIndex]);
 
   const handleAnswerChange = (questionIndex, choiceIndex) => {
     setSelectedAnswers({
@@ -33,10 +33,9 @@ const CourseLine = () => {
   const renderChoiceStyle = (questionIndex, choiceIndex) => {
     if (!submitted) return ""; // Don't apply styles if quiz is not submitted
     const selectedAnswerIndex = selectedAnswers[questionIndex];
-    const question = blog.filter((item) => item.id === selectedItemId)[0]
-      .quiz_questions[questionIndex];
+    const question = blog[selectedItemIndex].quiz_questions[questionIndex];
     const correctAnswerIndex = question.choices.indexOf(
-      question.correct_answer,
+      question.correct_answer
     );
     if (
       selectedAnswerIndex !== undefined &&
@@ -49,14 +48,13 @@ const CourseLine = () => {
 
   const handleSubmitQuiz = () => {
     // Calculate the quiz result
-    const questions = blog.filter((item) => item.id === selectedItemId)[0]
-      .quiz_questions;
+    const questions = blog[selectedItemIndex].quiz_questions;
     let correctAnswers = 0;
     for (let i = 0; i < questions.length; i++) {
       const question = questions[i];
       const selectedAnswerIndex = selectedAnswers[i];
       const correctAnswerIndex = question.choices.indexOf(
-        question.correct_answer,
+        question.correct_answer
       );
       if (
         selectedAnswerIndex !== undefined &&
@@ -81,6 +79,18 @@ const CourseLine = () => {
     setElement(element);
   };
 
+  const handleNextItem = () => {
+    if (selectedItemIndex < blog.length - 1) {
+      setSelectedItemIndex(selectedItemIndex + 1);
+    }
+  };
+
+  const handlePrevItem = () => {
+    if (selectedItemIndex > 0) {
+      setSelectedItemIndex(selectedItemIndex - 1);
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-4">
       <div className="col-span-1 min-h-screen border-2 border-gray-100 bg-white py-5 shadow-xl">
@@ -94,8 +104,10 @@ const CourseLine = () => {
         {blog.map((item, index) => (
           <div
             key={index}
-            className="cursor-pointer justify-center px-2 pt-8 text-black md:px-6"
-            onClick={() => setSelectedItemId(item.id)}
+            className={`cursor-pointer justify-center px-2 pt-8 text-black md:px-6 ${
+              selectedItemIndex === index ? "bg-gray-200" : ""
+            }`}
+            onClick={() => setSelectedItemIndex(index)}
           >
             <div className="flex items-start justify-start gap-3">
               <img
@@ -117,89 +129,95 @@ const CourseLine = () => {
         <p className="amir mt-4 font-semibold text-gray-700">
           Home &gt; Nutrition Leadership &gt; Introduction
         </p>
-        {blog
-          .filter((item) => item.id === selectedItemId)
-          .map((selectedItem, index) => (
-            <div key={index}>
-              <p className="py-5 text-[20px] font-semibold text-gray-800 md:text-[22px] lg:text-[24px] ">
-                {index + 1}- {selectedItem.title}
-              </p>
-              <p className="pop text-[16px] font-medium text-[#445D6E]">
-                {selectedItem.description}
-              </p>
-              {selectedItem.content_type === "video" && (
-                <iframe
-                  src={convertToEmbeddedURL(selectedItem.video_url)}
-                  title={selectedItem.title}
-                  frameBorder="0"
-                  allowFullScreen
-                  className="mt-10 h-[600.44px] w-full lg:max-w-full"
-                ></iframe>
-              )}
-              {selectedItem.content_type === "text" && (
-                <p>{selectedItem.text_content}</p>
-              )}
-              {selectedItem.content_type === "quiz" && (
-                <div>
-                  {selectedItem.quiz_questions.map((question, idx) => (
-                    <div key={idx} className="text-black">
-                      <h3>{question.question}</h3>
-                      <div className="flex flex-col">
-                        {question.choices.map((choice, cIdx) => (
-                          <label
-                            key={cIdx}
-                            className={`mb-2 flex items-center ${renderChoiceStyle(
-                              idx,
-                              cIdx,
-                            )}`}
-                          >
-                            <input
-                              type="radio"
-                              value={cIdx}
-                              checked={selectedAnswers[idx] === cIdx}
-                              onChange={() => handleAnswerChange(idx, cIdx)}
-                              className="mr-2"
-                            />
-                            <span>
-                              {String.fromCharCode(65 + cIdx)}. {choice}
-                            </span>
-                          </label>
-                        ))}
-                      </div>
+        {blog[selectedItemIndex] && (
+          <div>
+            <p className="py-5 text-[20px] font-semibold text-gray-800 md:text-[22px] lg:text-[24px] ">
+              {selectedItemIndex + 1}- {blog[selectedItemIndex].title}
+            </p>
+            <p className="pop text-[16px] font-medium text-[#445D6E]">
+              {blog[selectedItemIndex].description}
+            </p>
+            {blog[selectedItemIndex].content_type === "video" && (
+              <iframe
+                src={convertToEmbeddedURL(blog[selectedItemIndex].video_url)}
+                title={blog[selectedItemIndex].title}
+                frameBorder="0"
+                allowFullScreen
+                className="mt-10 h-[600.44px] w-full lg:max-w-full"
+              ></iframe>
+            )}
+            {blog[selectedItemIndex].content_type === "text" && (
+              <p>{blog[selectedItemIndex].text_content}</p>
+            )}
+            {blog[selectedItemIndex].content_type === "quiz" && (
+              <div>
+                {blog[selectedItemIndex].quiz_questions.map((question, idx) => (
+                  <div key={idx} className="text-black">
+                    <h3>{question.question}</h3>
+                    <div className="flex flex-col">
+                      {question.choices.map((choice, cIdx) => (
+                        <label
+                          key={cIdx}
+                          className={`mb-2 flex items-center ${renderChoiceStyle(
+                            idx,
+                            cIdx
+                          )}`}
+                        >
+                          <input
+                            type="radio"
+                            value={cIdx}
+                            checked={selectedAnswers[idx] === cIdx}
+                            onChange={() => handleAnswerChange(idx, cIdx)}
+                            className="mr-2"
+                          />
+                          <span>
+                            {String.fromCharCode(65 + cIdx)}. {choice}
+                          </span>
+                        </label>
+                      ))}
                     </div>
-                  ))}
-                  <button
-                    onClick={handleSubmitQuiz}
-                    className="amir mt-6 rounded-xl bg-green-500 px-10 py-2 font-semibold text-white"
+                  </div>
+                ))}
+                <button
+                  onClick={handleSubmitQuiz}
+                  className="amir mt-6 rounded-xl bg-green-500 px-10 py-2 font-semibold text-white"
+                >
+                  Submit Answer
+                </button>
+                {showResult && (
+                  <p
+                    className={`mt-4 w-full  rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
+                      quizResult >= 50
+                        ? "bg-green-200 max-w-[230px]"
+                        : "bg-red-200 max-w-[200px]"
+                    }`}
                   >
-                    Submit Answer
-                  </button>
-                  {showResult && (
-                    <p
-                      className={`mt-4 w-full  rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
-                        quizResult >= 50 ? "bg-green-200 max-w-[230px]" : "bg-red-200 max-w-[200px]"
-                      }`}
-                    >
-                      Your result: {quizResult}%
-                    </p>
-                  )}
-                </div>
-              )}
-            </div>
-          ))}
+                    Your result: {quizResult}%
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        )}
         <div>
           <div className="my-10 w-full bg-[#B3CBD0]">
             <div className="my-5 flex w-full items-center justify-between gap-2 bg-[#B3CBD0] px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
-              <button className="rounded-xl bg-green-500 px-16 py-2 text-white ">
+              <button
+                onClick={handlePrevItem}
+                className="rounded-xl bg-green-500 px-16 py-2 text-white"
+              >
                 Prev
               </button>
-              <button className="rounded-xl bg-green-500 px-16 py-2 text-white ">
+              <button
+                onClick={handleNextItem}
+                className="rounded-xl bg-green-500 px-16 py-2 text-white"
+              >
                 Next
               </button>
             </div>
           </div>
           <div>
-            <div className="mt-10  flex items-center justify-between gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:px-10 lg:px-20">
+            <div className="mt-10 flex items-center justify-between gap-2 border-b-[1px] border-t-[1px] border-gray-300 px-2 py-3 sm:px-4 md:px-10 lg:px-20">
               <p
                 onClick={() => handleElement(1)}
                 className={

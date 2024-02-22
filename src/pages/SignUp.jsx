@@ -114,7 +114,7 @@ function SignUp() {
             {/* Right column container with form */}
             <div className="md:w-8/12 lg:ml-6 lg:w-5/12">
               <form onSubmit={handleSubmit}>
-                <h1 className="heading flex justify-center">Sign Up</h1>
+                <h1 className="heading flex justify-center">Sign Up </h1>
                 {/* Input first name */}
                 <div className=" w-full rounded-lg bg-white p-4 px-3">
                   <div className="relative w-full bg-inherit">

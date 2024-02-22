@@ -47,7 +47,7 @@ function All() {
         <VerticalCard />
         <br />
         {/* <LogOut/> */}
-        <HeaderLesson />
+
         <HeaderGov />
         {/* <HeaderOrg /> */}
         {/* <AboutUs /> */}
@@ -62,6 +62,7 @@ function All() {
         <br />
         <Four0four />
         <br />
+        <HeaderLesson />
         <Lessons />
         <br />
         <OrganizationHome />

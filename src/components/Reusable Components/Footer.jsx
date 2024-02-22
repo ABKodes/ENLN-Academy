@@ -7,10 +7,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
+import { FaRegCopyright } from "react-icons/fa";
+import logos from '../../assets/logos.png';
 
 const Footer = () => {
-
-  const [currentYear, setCurrentYear] = useState('');
+  const [currentYear, setCurrentYear] = useState("");
 
   useEffect(() => {
     const year = new Date().getFullYear();
@@ -99,8 +100,15 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <div></div>
-        <div></div>
+        <div>
+          <img src={logos} alt="logo" className="h-[105px] w-[101px]" />
+        </div>
+        <div>
+          <FaRegCopyright size={30} />
+          <p className="text-[#B3CBD0]">
+            Copyright {currentYear}. All Rights Reserved.
+          </p>
+        </div>
       </div>
     </div>
   );

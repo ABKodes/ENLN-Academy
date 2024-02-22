@@ -211,7 +211,7 @@ const CourseLine = () => {
         )}
         <div>
           <div className="my-10 w-full bg-[#B3CBD0]">
-            <div className="mx-0 my-5 flex w-full items-center justify-between gap-2 border-2 border-gray-200 bg-[#fff] px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
+            <div className="mx-0 my-5 flex w-full items-center justify-between gap-2 bg-white px-2 py-3 pt-8 sm:px-4 md:flex-row md:px-8 lg:gap-32">
               {selectedItemIndex > 0 && (
                 <button
                   onClick={handlePrevItem}

@@ -159,13 +159,18 @@ const CourseLine = () => {
             {blog[selectedItemIndex].content_type === "quiz" && (
               <div>
                 {blog[selectedItemIndex].quiz_questions.map((question, idx) => (
-                  <div key={idx} className="text-black">
-                    <h3>{question.question}</h3>
+                  <div
+                    key={idx}
+                    className="flex flex-col items-start justify-start px-2 text-black sm:px-4 md:px-8"
+                  >
+                    <h3 className="amir py-4 text-[18px] font-semibold text-gray-700">
+                      {question.question}
+                    </h3>
                     <div className="flex flex-col">
                       {question.choices.map((choice, cIdx) => (
                         <label
                           key={cIdx}
-                          className={`mb-2 flex items-center ${renderChoiceStyle(
+                          className={`mb-2 flex items-center px-2 text-[16px] font-medium text-gray-600 ${renderChoiceStyle(
                             idx,
                             cIdx,
                           )}`}
@@ -185,8 +190,21 @@ const CourseLine = () => {
                     </div>
                   </div>
                 ))}
-                <button onClick={handleSubmitQuiz}>Submit Answer</button>
-                {showResult && <p>Your result: {quizResult}%</p>}
+                <button
+                  onClick={handleSubmitQuiz}
+                  className="mt-4 w-full max-w-[200px] rounded border-2 border-green-500 bg-green-500 px-10  py-2 font-semibold  text-white hover:bg-white hover:text-green-500"
+                >
+                  Submit Answer
+                </button>
+                {showResult && (
+                  <p
+                    className={`mt-4 w-full max-w-[200px] rounded border-2 border-green-500 px-10 py-2 font-semibold text-green-500 ${
+                      quizResult >= 50 ? "bg-green-200" : "bg-red-200"
+                    }`}
+                  >
+                    Your result: {quizResult}%
+                  </p>
+                )}
               </div>
             )}
           </div>

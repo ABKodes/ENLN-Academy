@@ -94,7 +94,7 @@ const CourseLine = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-6 py-6 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid grid-cols-1 gap-6 bg-[#B3CBD0] py-6 md:grid-cols-2 lg:grid-cols-4">
       <div className="col-span-1 min-h-screen border-2 border-gray-100 bg-white py-5 shadow-xl">
         <p className="merb mb-5 pt-2 text-center text-[20px]">
           Course Progress

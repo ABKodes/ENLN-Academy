@@ -99,13 +99,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mx-2 flex items-center justify-between border-t-4 border-[#B3CBD0] sm:mx-4 md:mx-12 lg:mx-20">
         <div>
           <img src={logos} alt="logo" className="h-[105px] w-[101px]" />
         </div>
-        <div>
-          <FaRegCopyright size={30} />
-          <p className="text-[#B3CBD0]">
+        <div className="flex items-center gap-1">
+          <FaRegCopyright size={20} className="text-[#B3CBD0]" />
+          <p className="text-[16px] text-[#B3CBD0]">
             Copyright {currentYear}. All Rights Reserved.
           </p>
         </div>

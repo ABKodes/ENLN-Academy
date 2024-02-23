@@ -113,7 +113,7 @@ const BroadSelection = () => {
           </motion.li>
         ))}
         <motion.div
-          className="absolute bottom-0 left-1 h-0 md:h-1 bg-primary"
+          className="absolute bottom-0 left-1 h-0 lg:h-1 bg-primary"
           animate={underlineControls}
         />
       </ul>

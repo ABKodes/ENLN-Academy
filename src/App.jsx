@@ -29,12 +29,14 @@ import AboutUs from "./pages/About Us";
 import Footer from "./components/Reusable Components/Footer";
 import Instructor from "./pages/Instructor";
 import Lessons from "./pages/Lessons";
+import BroadSelection from "./components/Home Ind/BroadSelection";
 function App() {
   return (
       <div className="overflow-x-hidden">
         <HeaderBefore />
         <Routes>
           <Route path="/" index element={<IndHomePage />} />
+          <Route path="/broad" element={<BroadSelection />} />
           <Route path="profile" element={<Profile />} />
           <Route path="individualhomepage" index element={<All />} />
           <Route path="govform" element={<GovForm />} />

@@ -98,7 +98,7 @@ const BroadSelection = () => {
         Explore a selection of more than 210,000 online video courses, and
         discover new courses added every month.
       </p>
-      <ul className="relative flex justify-start">
+      <ul className="relative flex flex-col md:flex-wrap md:flex-row justify-start">
         {tabs.map((tab) => (
           <motion.li
             key={tab.id}
@@ -113,12 +113,12 @@ const BroadSelection = () => {
           </motion.li>
         ))}
         <motion.div
-          className="absolute bottom-0 left-1 h-1 bg-primary"
+          className="absolute bottom-0 left-1 h-0 md:h-1 bg-primary"
           animate={underlineControls}
         />
       </ul>
 
-      <div className="mt-4 h-[77vh] border border-secondary p-4 lg:max-h-screen lg:min-h-[77vh]">
+      <div className="mt-4 min-h-[77vh] border border-secondary p-4 lg:max-h-screen lg:min-h-[77vh]">
         {tabs.map(
           (tab) =>
             activeTab === tab.id && (
@@ -129,7 +129,7 @@ const BroadSelection = () => {
                 transition={{ duration: 0.3 }}
               >
                 <h1 className="subheading">{tab.heading}</h1>
-                <h1 className="text w-1/2 py-2">{tab.content}</h1>
+                <h1 className="text lg:w-1/2 py-2">{tab.content}</h1>
                 <Link to="/categories">
                   <motion.a
                     whileHover={{ scale: 1.1 }}

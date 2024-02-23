@@ -89,7 +89,7 @@ const CourseContent = () => {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="w-full overflow-hidden"
                 >
-                  <div className="w-7/12 border border-secondary bg-white p-4">
+                  <div className="lg:w-7/12 border border-secondary bg-white p-4">
                     <ul className="p-4">
                       <li className="flex">
                         <svg

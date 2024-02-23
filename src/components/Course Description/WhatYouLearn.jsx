@@ -46,7 +46,7 @@ function WhatYouLearn() {
       <div
         className={`relative mx-2 min-h-[510px] w-full border border-secondary p-5 md:w-7/12`}
       >
-        <h1 className="heading">What You'll Learn</h1>
+        <h1 className="heading pb-5">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
             <motion.div
@@ -58,8 +58,12 @@ function WhatYouLearn() {
               className="list-disc columns-2 gap-10 text-left"
             >
               {listItems.slice(0, 6).map((item, index) => (
-                <li key={index} className="amir text-start text-gray-700">
-                  {item}
+                <li
+                  key={index}
+                  className="amir text-start text-[16px] text-gray-700 flex gap-2"
+                >
+                  <p className="text-[32px] font-bold -mt-6">.</p>
+                  <p className="text-[15px]">{item}</p>
                 </li>
               ))}
             </motion.div>
@@ -76,8 +80,12 @@ function WhatYouLearn() {
             >
               {/* Show all items */}
               {listItems.map((item, index) => (
-                <li key={index} className="amir text-start text-gray-700">
-                  {item}
+                <li
+                  key={index}
+                  className="amir flex items-start justify-start gap-2 text-start text-gray-700"
+                >
+                  <p className="text-[32px] font-bold -mt-6">.</p>
+                  <p className="text-[15px]">{item}</p>
                 </li>
               ))}
             </motion.div>

@@ -92,7 +92,7 @@ const BroadSelection = () => {
   }, [activeTab]); // dependency on activeTab to reposition underline if the activeTab changes
 
   return (
-    <div className="mx-auto mt-8 w-11/12">
+    <div className="mx-auto mt-8 w-11/12 overflow-hidden">
       <h1 className="heading">Broad Selection of Courses</h1>
       <p className="text py-5">
         Explore a selection of more than 210,000 online video courses, and

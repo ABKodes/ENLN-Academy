@@ -6,7 +6,7 @@ import LeftSideBar from "../components/Lesson/Left Side Bar";
 function Lessons() {
   return (
     <div>
-      <div className="flex w-full lg:m-3">
+      <div className="flex w-full lg:m-3 p-2 sm:p-4 md:p-6">
         <div className="lg:w-1/4">
           <LeftSideBar />
         </div>

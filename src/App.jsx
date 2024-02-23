@@ -23,7 +23,7 @@ import AddedCourses from "./components/Add to Cart/AddedCourses";
 import Categories from "./pages/Categories";
 import OrderDetail from "./components/Check Out/Order Detail";
 import ForgetPassword from "./pages/ForgetPassword";
-import HeaderLesson from "./components/Reusable Components/Header Lesson";
+// import HeaderLesson from "./components/Reusable Components/Header Lesson";
 import GovForm from "./pages/Gov Form";
 import AboutUs from "./pages/About Us"; 
 import Footer from "./components/Reusable Components/Footer";
@@ -47,7 +47,7 @@ function App() {
           <Route path="categories" element={<Categories />} />
           <Route path="checkout" element={<OrderDetail/>} />
           <Route path="forgetpassword" element={<ForgetPassword/>} />
-          <Route path="lessonheader" element={< HeaderLesson/>} />
+          {/* <Route path="lessonheader" element={< HeaderLesson/>} /> */}
           <Route path = "instructor" element={<Instructor/>} />
           <Route path='lesson' element={<Lessons />} />
           <Route

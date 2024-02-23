@@ -106,7 +106,7 @@ function WhatYouLearn() {
           )}
         </button>
       </div>
-      <div className="mx-3 w-full rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block lg:w-3/12">
+      <div className="mx-3  rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block lg:w-3/12">
         <div className="flex items-center space-x-2">
           <img src={Money} className="h-20 w-20" />
           <div>
@@ -247,7 +247,6 @@ function WhatYouLearn() {
         </ul>
         <div className="gap-10 space-y-5">
           <Link to="/addtocart" className="pb-5">
-            {" "}
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

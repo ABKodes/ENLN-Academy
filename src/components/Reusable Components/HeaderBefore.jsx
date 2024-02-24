@@ -290,7 +290,7 @@ function Header() {
                   <li className="mb-1">
                     <Link
                       to="/individualhomepage"
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
                       Home
@@ -298,7 +298,7 @@ function Header() {
                   </li>
                   <li className="mb-1">
                     <a
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
                       Categories
@@ -307,7 +307,7 @@ function Header() {
                       <li>
                         <Link
                           to="/categories"
-                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
                           Nutrition Leadership
@@ -316,7 +316,7 @@ function Header() {
                       <li>
                         <Link
                           to="/categories"
-                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
                           Evidence to Policy
@@ -325,7 +325,7 @@ function Header() {
                       <li>
                         <Link
                           to="/categories"
-                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
                           Communication
@@ -334,7 +334,7 @@ function Header() {
                       <li>
                         <Link
                           to="/categories"
-                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
                           Advocacy
@@ -343,7 +343,7 @@ function Header() {
                       <li>
                         <Link
                           to="/categories"
-                          className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                          className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                           href="#"
                         >
                           Nutrition Courses
@@ -354,7 +354,7 @@ function Header() {
                   <li className="mb-1">
                     <Link
                       to="/addtocart"
-                      className="block rounded p-4 text-sm font-semibold text-gray-400 hover:bg-secondary hover:text-primary"
+                      className="block rounded p-4 text-sm font-semibold text-slate-800 hover:bg-secondary hover:text-primary"
                       href="#"
                     >
                       Add to Cart
@@ -383,7 +383,7 @@ function Header() {
                   <Link to="/individualhomepage" className="">
                     <img src={HeaderLogo} className="h-4" />
                   </Link>
-                  <p className="my-4 text-center text-xs text-gray-400">
+                  <p className="my-4 text-center text-xs text-slate-800">
                     <span>Copyright © 2021</span>
                   </p>
                 </div>

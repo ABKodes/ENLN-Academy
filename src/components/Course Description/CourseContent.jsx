@@ -36,13 +36,13 @@ const CourseContent = () => {
   };
 
   return (
-    <div className="mx-auto my-8 w-11/12">
+    <div className="mx-auto my-8 w-full lg:w-11/12">
       <h1 className="heading py-5">Course Content</h1>
       <div>
         {courseContent.map((item, index) => (
           <div key={index} className="">
             <div
-              className="flex w-7/12 cursor-pointer items-center justify-between border border-secondary p-4"
+              className="flex cursor-pointer flex-wrap items-center justify-between border border-secondary p-4 lg:w-7/12"
               onClick={() => handleToggle(index)}
             >
               <div className="flex items-center space-x-2">
@@ -72,7 +72,7 @@ const CourseContent = () => {
                 </span>
                 <div className="h-1 w-1 items-center justify-center rounded-full bg-primary"></div>
                 <span className="text font-light">
-                  {item.numberofhours}hr {item.numberofminutes} min
+                  {item.numberofhours} hr {item.numberofminutes} min
                 </span>
               </div>
             </div>
@@ -87,9 +87,9 @@ const CourseContent = () => {
                     collapsed: { opacity: 0, height: 0 },
                   }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="overflow-hidden"
+                  className="w-full overflow-hidden"
                 >
-                  <div className="w-7/12 border border-secondary bg-white p-4">
+                  <div className="lg:w-7/12 border border-secondary bg-white p-4">
                     <ul className="p-4">
                       <li className="flex">
                         <svg

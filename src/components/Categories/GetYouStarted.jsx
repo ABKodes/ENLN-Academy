@@ -74,7 +74,7 @@ const GetYouStarted = () => {
                 transition={{ duration: 0.3 }}
                 className="flex flex-row space-x-2"
               >
-                <VerticalCard />
+                <VerticalCard/>
               </motion.div>
             ),
         )}

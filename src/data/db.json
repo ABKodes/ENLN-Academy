@@ -23,6 +23,24 @@
       "name": "Haileab",
       "email": "haileab@gmail.com",
       "password": "12345678"
+    },
+    {
+      "id": "d802",
+      "name": "",
+      "email": "",
+      "password": "0000"
+    },
+    {
+      "id": "803b",
+      "name": "Beti Negash",
+      "email": "betelhemnegash10@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "d5c6",
+      "name": "abebe",
+      "email": "a@gmail.com",
+      "password": "1234"
     }
   ]
 }

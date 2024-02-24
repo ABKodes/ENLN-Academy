@@ -43,7 +43,7 @@ function LeftSideBar({ userData }) {
   };
 
   return (
-    <div className="lg:flex flex-col items-center border-r-2 bg-white p-4 hidden lg:w-full h-full">
+    <div className="h-full flex-col items-center border-r-2 bg-white p-4 lg:flex lg:w-full">
       <div className="relative h-40 w-40">
         <svg
           className="h-full w-full"
@@ -52,7 +52,6 @@ function LeftSideBar({ userData }) {
           viewBox="0 0 36 36"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Background Circle */}
           <circle
             cx={18}
             cy={18}
@@ -82,8 +81,8 @@ function LeftSideBar({ userData }) {
           </span>
         </div>
       </div>
-      <h2 className="text font-bold mt-5">The complete Nutrition Course</h2>
-      <div className="relative mt-4">
+      <h2 className="text mt-5 font-bold">The complete Nutrition Course</h2>
+      <div className="relative z-50 mt-4 min-h-full  overflow-y-hidden">
         <button
           onClick={() => setDropdownOpen(!isDropdownOpen)}
           className="text relative flex w-full items-center justify-between space-x-3 px-4 py-2 focus:outline-none"
@@ -108,7 +107,9 @@ function LeftSideBar({ userData }) {
           </svg>
         </button>
         {isDropdownOpen && (
-          <div className="absolute bg-white p-4 space-y-3 ml-5">{renderCheckboxes()}</div>
+          <div className="absolute ml-5 w-screen space-y-3 bg-white p-4 md:w-full">
+            {renderCheckboxes()}
+          </div>
         )}
       </div>
     </div>

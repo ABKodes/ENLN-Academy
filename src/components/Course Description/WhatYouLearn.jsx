@@ -42,9 +42,11 @@ function WhatYouLearn() {
   const shownItems = isTruncated ? listItems.slice(0, 5) : listItems;
 
   return (
-    <>
-      <div className={`relative w-7/12 border border-secondary p-5`}>
-        <h1 className="heading">What You'll Learn</h1>
+    <div className="flex flex-col items-center justify-center gap-10 py-10 md:flex-row md:flex-wrap lg:gap-20">
+      <div
+        className={`relative mx-2 min-h-[510px] w-full border border-secondary p-5 md:w-7/12`}
+      >
+        <h1 className="heading pb-5">What You'll Learn</h1>
         <AnimatePresence>
           {isTruncated && (
             <motion.div
@@ -55,9 +57,14 @@ function WhatYouLearn() {
               transition={{ duration: 0.5 }}
               className="list-disc columns-2 gap-10 text-left"
             >
-              {/* Only show the first 5 items */}
               {listItems.slice(0, 6).map((item, index) => (
-                <li key={index}>{item}</li>
+                <li
+                  key={index}
+                  className="amir text-start text-[16px] text-gray-700 flex gap-2"
+                >
+                  <p className="text-[32px] font-bold -mt-6">.</p>
+                  <p className="text-[15px]">{item}</p>
+                </li>
               ))}
             </motion.div>
           )}
@@ -73,7 +80,13 @@ function WhatYouLearn() {
             >
               {/* Show all items */}
               {listItems.map((item, index) => (
-                <li key={index}>{item}</li>
+                <li
+                  key={index}
+                  className="amir flex items-start justify-start gap-2 text-start text-gray-700"
+                >
+                  <p className="text-[32px] font-bold -mt-6">.</p>
+                  <p className="text-[15px]">{item}</p>
+                </li>
               ))}
             </motion.div>
           )}
@@ -93,13 +106,13 @@ function WhatYouLearn() {
           )}
         </button>
       </div>
-      <div className=" w-3/12 rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block">
+      <div className="mx-3  rounded-lg border border-primary bg-white p-4 shadow sm:p-8 lg:block lg:w-3/12">
         <div className="flex items-center space-x-2">
           <img src={Money} className="h-20 w-20" />
           <div>
             <div className="flex items-center space-x-2 text-justify">
               <h5 className="text dark:text-gray-400">One time</h5>
-              <p className=" text badge badge-primary badge-outline uppercase">
+              <p className=" text rounded-full border-2 border-primary px-2 py-1 uppercase">
                 virtual
               </p>
             </div>
@@ -232,9 +245,8 @@ function WhatYouLearn() {
             </span>
           </li>
         </ul>
-        <div className="space-y-5">
-          <Link to="/addtocart">
-            {" "}
+        <div className="gap-10 space-y-5">
+          <Link to="/addtocart" className="pb-5">
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -244,19 +256,21 @@ function WhatYouLearn() {
               Add to Cart
             </motion.a>
           </Link>
-          <Link to="/checkout">
-            <motion.a
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              className="buttontext btn btn-outline btn-primary flex lg:items-center"
-            >
-              Buy Now
-            </motion.a>
-          </Link>
+          <div>
+            <Link to="/checkout" className="pt-10">
+              <motion.a
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                className="buttontext btn btn-outline btn-primary flex lg:items-center"
+              >
+                Buy Now
+              </motion.a>
+            </Link>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

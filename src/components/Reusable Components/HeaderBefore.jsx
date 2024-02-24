@@ -44,13 +44,14 @@ function Header() {
 
   return (
     <>
-      <div className="hidden overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
-        <Link
+      <div className="hidden  overflow-y-auto whitespace-nowrap bg-accent px-4 py-3 lg:block">
+       <div className="flex">
+       <Link
           to="/individualhomepage"
-          className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
+          className={`smalltext group relative mx-4 transform uppercase leading-5 text-white  duration-300 dark:text-secondary md:my-0`}
           onClick={() => setActiveLink("individuals")}
         >
-          For individuals
+          <p className="text-white">For individuals</p>
           {activeLink === "individuals" && (
             <motion.div
               className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
@@ -67,7 +68,7 @@ function Header() {
           className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
           onClick={() => setActiveLink("government")}
         >
-          For government
+          <p className="text-white">For government</p>
           {activeLink === "government" && (
             <motion.div
               className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
@@ -83,7 +84,7 @@ function Header() {
           className={`smalltext group relative mx-4 transform uppercase leading-5 text-secondary duration-300 dark:text-secondary md:my-0`}
           onClick={() => setActiveLink("organization")}
         >
-          For organization
+          <p className="text-white">For organization</p>
           {activeLink === "organization" && (
             <motion.div
               className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-secondary underline"
@@ -94,6 +95,7 @@ function Header() {
             ></motion.div>
           )}
         </Link>
+       </div>
       </div>
       <div className="sticky top-0 z-50 bg-slate-300">
         <nav className="relative mx-auto flex w-11/12  items-center justify-between px-4 py-2">
@@ -265,7 +267,7 @@ function Header() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="navbar-menu cursor-pointer inset-0  fixed z-50 bg-gray-800 bg-opacity-25"
+            className="navbar-menu fixed inset-0  z-50 cursor-pointer bg-gray-800 bg-opacity-25"
             onClick={closeMenu}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -280,7 +282,7 @@ function Header() {
               </button>
             </div>
             <motion.nav
-              className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm flex-col overflow-y-auto border-r bg-white px-6 py-6 cursor-default"
+              className="fixed bottom-0 left-0 top-0 flex w-5/6 max-w-sm cursor-default flex-col overflow-y-auto border-r bg-white px-6 py-6"
               initial={{ x: "-100%" }}
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}

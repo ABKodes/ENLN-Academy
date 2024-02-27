@@ -16,7 +16,7 @@ const GovForm = () => {
               action=""
               method="POST"
               encType="multipart/form-data"
-              className="rounded bg-[#ddeef1] p-8"
+              className="rounded bg-[#ddeef1] p-8 "
             >
               <div className="grid w-full gap-x-10 gap-y-6 py-2 lg:grid-cols-2">
                 <div className="z-5 relative py-1">
@@ -148,7 +148,7 @@ const GovForm = () => {
                 SUMBIT
               </button>
             </form>
-            <div>
+            <div className="h-full">
               <figure>
                 <img src={fom} className="h-full w-full" />
               </figure>

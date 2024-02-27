@@ -10,7 +10,7 @@ function IndHomePage() {
   return (
     <div>
       <Hero />
-      <Companies />
+      <Companies/>
       <WhatWeOffer />
       <BroadSelection />
       <Benefits />

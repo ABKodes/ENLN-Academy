@@ -35,37 +35,37 @@ const BroadSelection = () => {
     {
       id: "tab1",
       label: "Nutrition Leadership",
-      heading: "Expand your carreer opportunities with Nutrition Leadership",
+      heading: "Expand your career opportunities with Nutrition Leadership",
       content:
         "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
     },
     {
       id: "tab2",
       label: "Evidence to Policy",
-      heading: "Expand your carreer opportunities with Evidence to Policy",
+      heading: "Expand your career opportunities with Evidence to Policy",
       content:
         "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
     },
     {
       id: "tab3",
       label: "Communication",
-      heading: "Expand your carreer opportunities with Communication",
+      heading: "Expand your career opportunities with Communication",
       content:
         "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.",
     },
     {
       id: "tab4",
       label: "Advocacy",
-      heading: "Expand your carreer opportunities with Advocacy",
+      heading: "Expand your career opportunities with Advocacy",
       content:
-        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your carreer opportunities with Nutrition Leadership",
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your career opportunities with Nutrition Leadership",
     },
     {
       id: "tab5",
       label: "Nutrition Courses",
-      heading: "Expand your carreer opportunities with Nutrition Courses",
+      heading: "Expand your career opportunities with Nutrition Courses",
       content:
-        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your carreer opportunities with Nutrition Leadership",
+        "Enhance your career prospects by delving into Nutrition Leadership. This program is designed to broaden your knowledge and skills in nutrition, providing valuable insights into leadership within the field. Elevate your career trajectory with a focus on nutrition leadership.Expand your career opportunities with Nutrition Leadership",
     },
   ];
 
